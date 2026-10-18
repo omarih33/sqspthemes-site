@@ -983,12 +983,6 @@
     var olderA = sec.querySelector(".blog-list-pagination .older a");
     var newerA = sec.querySelector(".blog-list-pagination .newer a");
 
-    var topicLinks = '<a href="' + base + '"' + (!cat && !tag ? ' aria-current="page"' : '') + '>All</a>' +
-      C.topics.map(function (t) {
-        return '<a href="' + base + '?category=' + encodeURIComponent(t) + '"' +
-          (cat && cat.toLowerCase() === t.toLowerCase() ? ' aria-current="page"' : '') + '>' + esc(t) + '</a>';
-      }).join("");
-
     var archiveHeading = cat ? "Articles: " + cat : tag ? "Articles: " + tag : "All Articles";
 
     var side = '<aside class="sqt-side sqt-sidebar sqt-stack" aria-label="Article tools">' +
@@ -1006,17 +1000,6 @@
             '<h1 class="sqt-h1 sqt-page-title">Articles</h1>' +
             '<p class="sqt-sub sqt-page-dek">News, practical solutions, tools, and ideas for people building with Squarespace.</p>' +
           '</div>' +
-          '<section class="sqt-panel sqt-archive-tools">' +
-            '<div class="sqt-panel__head">Browse Articles</div>' +
-            '<div class="sqt-panel__body">' +
-              '<form class="sqt-archive-search" role="search" action="' + esc(C.searchUrl) + '" method="get">' +
-                '<label class="sqt-sr" for="sqt-archive-q">Search articles</label>' +
-                '<input class="sqt-input" id="sqt-archive-q" type="search" name="q" autocomplete="off" placeholder="Search SQSPThemes articles…">' +
-                '<button class="sqt-btn sqt-btn--ghost" type="submit">Search</button>' +
-              '</form>' +
-              (C.topics.length ? '<nav class="sqt-archive-topics" aria-label="Article categories">' + topicLinks + '</nav>' : '') +
-            '</div>' +
-          '</section>' +
           '<div class="sqt-cols sqt-layout">' +
             '<div class="sqt-main sqt-stack">' +
               '<section class="sqt-panel sqt-blog-list-panel">' +
@@ -1036,21 +1019,6 @@
 
     sec.parentNode.insertBefore(root, sec.nextSibling);
     wireSubscribe(root);
-
-    var archiveSearch = root.querySelector(".sqt-archive-search");
-    if (archiveSearch) archiveSearch.addEventListener("submit", function (e) {
-      var input = archiveSearch.querySelector("input");
-      var q = input && input.value.trim();
-      if (!q) {
-        e.preventDefault();
-        if (input) input.focus();
-        return;
-      }
-      if (window.Monocle && typeof window.Monocle.showSearchWithQuery === "function") {
-        e.preventDefault();
-        window.Monocle.showSearchWithQuery(q);
-      }
-    });
 
     getJSON(location.pathname + location.search).then(function (data) {
       var byUrl = {};
