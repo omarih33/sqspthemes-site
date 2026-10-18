@@ -5652,3 +5652,73 @@ html[data-sqt-style="editorial"] #sqt-blog .sqt-post-toc li {
     overflow: visible;
   }
 }
+
+
+/* ======================= STICKY RAIL + COPYABLE BLOCKS ======================= */
+
+/* One sticky system only. Older nested .sqt-post-side sticky rules are
+   explicitly neutralized so the entire rail moves as one unit. */
+#sqt-blog .sqt-post-side,
+html[data-sqt-style="editorial"] #sqt-blog .sqt-post-side {
+  position: static !important;
+  top: auto !important;
+}
+
+@media (min-width: 900px) {
+  #sqt-blog .sqt-post .sqt-rail.sqt-sidebar,
+  html[data-sqt-style="editorial"] #sqt-blog .sqt-post .sqt-rail.sqt-sidebar {
+    position: sticky;
+    top: var(--sqt-sticky-top, 136px);
+    align-self: start;
+    max-height: calc(100vh - var(--sqt-sticky-room, 148px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+}
+
+@media (max-width: 899px) {
+  #sqt-blog .sqt-post .sqt-rail.sqt-sidebar {
+    position: static;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* Any real block-level code/prompt gets the same copy bar. */
+#sqt-blog .sqt-codebar {
+  min-height: 34px;
+}
+
+#sqt-blog .sqt-codebar .sqt-btn {
+  height: 28px;
+  min-height: 28px;
+  padding: 0 10px;
+  font-size: 10px;
+}
+
+#sqt-blog .sqt-body pre.sqt-code,
+#sqt-blog .sqt-body .sqt-code pre,
+#sqt-blog .sqt-body .sqs-block-code.sqt-code,
+#sqt-blog .sqt-body .sqs-code-container.sqt-code {
+  max-width: 100%;
+}
+
+/* Standalone PRE elements that were not Squarespace source-code blocks still
+   inherit a readable 2010 code treatment underneath the copy toolbar. */
+#sqt-blog .sqt-body pre.sqt-code:not(.source-code) {
+  display: block;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 14px 16px;
+  overflow: auto;
+  border: 1px solid var(--sqt-box-line);
+  border-top: 0;
+  background: var(--sqt-box);
+  color: var(--sqt-ink);
+  font-family: var(--sqt-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
