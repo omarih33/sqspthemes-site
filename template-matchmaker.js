@@ -83,7 +83,7 @@
   const status=mount.querySelector('.sqt-tm-status'), results=mount.querySelector('.sqt-tm-results');
   const loading=mount.querySelector('.sqt-tm-loading'), submitButton=mount.querySelector('.sqt-tm-submit');
   let requestId=0;
-  function setBusy(busy){loading.hidden=!busy;loading.classList.toggle('is-loading',busy);form.setAttribute('aria-busy',String(busy));submitButton.disabled=busy;submitButton.querySelector('span').textContent=busy?'Finding matches…':'Find templates';}
+  function setBusy(busy){loading.hidden=!busy;loading.classList.toggle('is-loading',busy);status.classList.toggle('is-busy',busy);form.setAttribute('aria-busy',String(busy));submitButton.disabled=busy;submitButton.classList.toggle('is-busy',busy);submitButton.querySelector('span').textContent=busy?'Finding matches…':'Find templates';}
   function render(items,q) {
     lastResults=items;
     if(!items.length){results.innerHTML='<p>No strong matches found. Try broadening the description or removing a price limit.</p>';return;}
