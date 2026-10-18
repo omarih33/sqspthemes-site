@@ -85,3 +85,40 @@ html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-card h4{font-s
 html[data-sqt-style="editorial"] #sqt-template-matchmaker a{color:var(--sqt-link-hover)}
 @media(max-width:700px){#sqt-template-matchmaker .sqt-tm-kicker-right{display:none}#sqt-template-matchmaker .sqt-tm-results-head{display:block}html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm{padding-top:25px}}
 @media(prefers-reduced-motion:reduce){#sqt-template-matchmaker .sqt-tm-spinner,#sqt-template-matchmaker .sqt-tm-loading-meter>span{animation:none}}
+
+
+/* Compact finder — 2010 utility first; editorial has the same tight layout. */
+#sqt-template-matchmaker .sqt-tm{padding-top:14px}
+#sqt-template-matchmaker .sqt-tm-head{max-width:100%;margin:0 0 19px}
+#sqt-template-matchmaker h1{font:700 clamp(27px,3.2vw,36px)/1.15 "Space Grotesk",Arial,sans-serif;letter-spacing:-.04em;margin:0 0 8px}
+#sqt-template-matchmaker h1 em{font-style:normal}
+#sqt-template-matchmaker .sqt-tm-dek{font:400 15px/1.5 Inter,Arial,sans-serif;max-width:none;margin:0;color:var(--sqt-body,#333)}
+#sqt-template-matchmaker .sqt-tm-search-panel{background:transparent;border:1px solid var(--tm-line);padding:19px 22px;box-shadow:none}
+#sqt-template-matchmaker .sqt-tm-form>label{margin:0 0 9px}
+#sqt-template-matchmaker textarea{min-height:85px;height:95px;padding:12px 13px}
+#sqt-template-matchmaker .sqt-tm-form-footer{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px}
+#sqt-template-matchmaker .sqt-tm-filters{flex:1 1 auto}
+#sqt-template-matchmaker .sqt-tm-filters label span{padding:8px 12px}
+#sqt-template-matchmaker .sqt-tm-actions{margin:0;gap:0}
+#sqt-template-matchmaker .sqt-tm-submit{white-space:nowrap;padding:10px 17px}
+#sqt-template-matchmaker .sqt-tm-status{display:block;margin-top:10px;font-size:11px}
+#sqt-template-matchmaker .sqt-tm-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm{padding-top:20px}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-head{margin:0 0 23px;max-width:100%}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker h1{font-size:clamp(32px,3.7vw,48px);letter-spacing:-.045em;margin:0 0 9px;max-width:none}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-dek{font-size:16px;line-height:1.45}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-search-panel{border:1px solid var(--sqt-rule-soft);padding:23px 27px;border-radius:12px;box-shadow:none;background:var(--sqt-box)}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker textarea{min-height:95px;height:100px;font-size:16px}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-filters label span{padding:9px 14px}
+html[data-sqt-style="editorial"] #sqt-template-matchmaker button{padding:11px 19px}
+@media(max-width:640px){
+  #sqt-template-matchmaker .sqt-tm{padding-top:8px}
+  #sqt-template-matchmaker .sqt-tm-search-panel{padding:15px}
+  #sqt-template-matchmaker .sqt-tm-form-footer{display:block}
+  #sqt-template-matchmaker .sqt-tm-actions{margin-top:13px}
+  #sqt-template-matchmaker .sqt-tm-submit{width:100%}
+  #sqt-template-matchmaker .sqt-tm-filters{gap:6px}
+  #sqt-template-matchmaker .sqt-tm-filters label span{padding:8px 10px;font-size:11px}
+  html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm{padding-top:12px}
+  html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-search-panel{padding:17px}
+}
