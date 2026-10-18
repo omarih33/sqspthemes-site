@@ -5497,3 +5497,48 @@ html[data-sqt-style="editorial"] #sqt-blog.sqt-blog-archive .sqt-archive-topics 
 #sqt-blog.sqt-blog-archive .sqt-index-intro {
   margin-bottom: 12px;
 }
+
+
+/* ======================= POST SIDEBAR CONTENTS ======================= */
+
+#sqt-blog .sqt-post-toc .sqt-panel__body {
+  padding: 4px 12px 6px;
+}
+
+#sqt-blog .sqt-post-toc ol {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sqt-blog .sqt-post-toc li {
+  margin: 0;
+  padding: 7px 0;
+  border-bottom: 1px dotted var(--sqt-rule);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+#sqt-blog .sqt-post-toc li:last-child {
+  border-bottom: 0;
+}
+
+#sqt-blog .sqt-post-toc a {
+  display: block;
+  color: var(--sqt-link);
+}
+
+#sqt-blog .sqt-post-toc a:hover {
+  text-decoration: underline;
+}
+
+html[data-sqt-style="editorial"] #sqt-blog .sqt-post-toc .sqt-panel__body {
+  padding: 8px 18px 10px;
+}
+
+html[data-sqt-style="editorial"] #sqt-blog .sqt-post-toc li {
+  padding: 9px 0;
+  font-size: 12px;
+}
