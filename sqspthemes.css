@@ -2675,3 +2675,21 @@ html.sqt-ready .sqsp-footer .sqsp-footer__disclaimer {
     display: none;
   }
 }
+
+
+/* footer section height fix */
+html.sqt-ready #footer-sections .page-section:has(.sqsp-footer),
+html.sqt-ready #footer-sections .page-section:has(.sqsp-footer) > .content-wrapper,
+html.sqt-ready #footer-sections .page-section:has(.sqsp-footer) .content-wrapper {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+html.sqt-ready #footer-sections .page-section:has(.sqsp-footer) {
+  display: block !important;
+}
+
+html.sqt-ready #footer-sections .page-section:has(.sqsp-footer) .section-background {
+  min-height: 0 !important;
+  height: 100% !important;
+}
