@@ -18,6 +18,7 @@
   let catalog = [];
   let lastResults = [];
   let lastPrompt = '';
+  let aiReasons = {};
   const stop = new Set('a an and are as at be by for from have i in is it like me my of on or our that the their this to want website with would you your something looking need site built design'.split(' '));
   const safe = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const tokens = s => [...new Set(String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').filter(x=>x.length>2&&!stop.has(x)))];
@@ -83,14 +84,15 @@
   function render(items,q) {
     lastResults=items;
     if(!items.length){results.innerHTML='<p>No strong matches found. Try broadening the description or removing a price limit.</p>';return;}
-    results.innerHTML='<h3>Recommended templates</h3><div class="sqt-tm-grid">'+items.map((t,i)=>'<article class="sqt-tm-card">'+(t.image?'<img loading="lazy" alt="" src="'+safe(t.image)+'">':'<div class="sqt-tm-placeholder">Preview unavailable</div>')+'<div class="sqt-tm-meta"><span>0'+(i+1)+'</span>'+(t.sourceType==='native'?'<span>Included with Squarespace</span>':t.price!=null?'<span>+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div>';
+    results.innerHTML='<h3>Recommended templates</h3><div class="sqt-tm-grid">'+items.map((t,i)=>'<article class="sqt-tm-card">'+(t.image?'<img loading="lazy" alt="" src="'+safe(t.image)+'">':'<div class="sqt-tm-placeholder">Preview unavailable</div>')+'<div class="sqt-tm-meta"><span>0'+(i+1)+'</span>'+(t.sourceType==='native'?'<span>Included with Squarespace</span>':t.price!=null?'<span>+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(aiReasons[t.id] || reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div>';
   }
   async function matching(q) {
     let ranked=catalog.filter(t=>sourceFilter==='all'||t.sourceType===sourceFilter).map(t=>({t,score:score(t,q)})).filter(v=>v.score>0).sort((a,b)=>b.score-a.score).slice(0,MAX_RESULTS).map(v=>v.t);
+    aiReasons = {};
     if (matchApi) {
       try {
-        const res=await fetch(matchApi,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,candidates:catalog.filter(t=>sourceFilter==='all'||t.sourceType===sourceFilter).map(t=>({id:t.id,name:t.name,designer:t.designer,description:t.description.slice(0,550),industry:t.industry,style:t.style,features:t.features,tags:t.tags,price:t.price,image_url:t.image,source_type:t.sourceType})).filter(t=>score(t,q)>0).slice(0,35)})});
-        if(res.ok) {const data=await res.json(); if(Array.isArray(data.ids)){const byId=new Map(catalog.map(t=>[t.id,t]));const selected=data.ids.map(id=>byId.get(String(id))).filter(Boolean); if(selected.length) ranked=selected.slice(0,MAX_RESULTS);}}
+        const res=await fetch(matchApi,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,candidates:catalog.filter(t=>sourceFilter==='all'||t.sourceType===sourceFilter).map(t=>({id:t.id,name:t.name,designer:t.designer,description:t.description.slice(0,350),industry:t.industry,style:t.style,features:t.features,tags:t.tags,price:t.price,image_url:t.image,source_type:t.sourceType})).sort((a,b)=>score(b,q)-score(a,q)).slice(0,18)})});
+        if(res.ok) {const data=await res.json(); if(Array.isArray(data.matches)){for(const m of data.matches){if(m&&m.id&&m.reason)aiReasons[String(m.id)]=String(m.reason);}} if(Array.isArray(data.ids)){const byId=new Map(catalog.map(t=>[t.id,t]));const selected=data.ids.map(id=>byId.get(String(id))).filter(Boolean); if(selected.length) ranked=selected.slice(0,MAX_RESULTS);}}
       } catch(e) { /* fall back to local matching */ }
     }
     return ranked;
