@@ -827,12 +827,6 @@
                 '<option value="support">Ongoing support</option>' +
               '</select></label>' +
             '</div>' +
-          '</div>' +
-          '<div class="sqt-dir-status sqt-panel__foot">' +
-            '<span id="sqt-dir-count" class="sqt-dir-visually-hidden" role="status" aria-live="polite">Loading listings…</span>' +
-            '<a class="sqt-dir-get-listed" href="/contact">Get listed →</a>' +
-            '<button id="sqt-dir-clear" type="button">Clear filters</button>' +
-          '</div>' +              '</div>' +
             '<div class="sqt-dir-toolbar-actions">' +
               '<button id="sqt-dir-search-toggle" type="button" aria-expanded="false" aria-controls="sqt-dir-search-panel">Search</button>' +
               '<a class="sqt-dir-get-listed" href="/contact">Get listed →</a>' +
