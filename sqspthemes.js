@@ -183,24 +183,45 @@
   }
 
   function styleMode() {
-    return html.getAttribute("data-sqt-style") === "editorial" ? "editorial" : "2010";
+    var mode = html.getAttribute("data-sqt-style");
+    return mode === "editorial" || mode === "win98" ? mode : "2010";
+  }
+
+  function nextStyleMode(mode) {
+    if (mode === "2010") return "editorial";
+    if (mode === "editorial") return "win98";
+    return "2010";
   }
 
   function setStyleMode(mode) {
-    mode = mode === "editorial" ? "editorial" : "2010";
+    mode = mode === "editorial" || mode === "win98" ? mode : "2010";
     html.setAttribute("data-sqt-style", mode);
     try { localStorage.setItem("sqt-style", mode); } catch (e) {}
+
+    var labels = {
+      "2010": "View: 2010 Blog",
+      editorial: "View: Modern Editorial",
+      win98: "View: Windows 98"
+    };
+
+    var next = nextStyleMode(mode);
+    var nextLabels = {
+      "2010": "2010 Blog",
+      editorial: "Modern Editorial",
+      win98: "Windows 98"
+    };
+
     d.querySelectorAll(".sqt-style").forEach(function (b) {
-      b.setAttribute("aria-pressed", mode === "editorial" ? "true" : "false");
-      b.textContent = mode === "editorial" ? "View: Modern Editorial" : "View: 2010 Blog";
-      b.setAttribute("title", mode === "editorial" ? "Switch to 2010 Blog" : "Switch to Modern Editorial");
+      b.setAttribute("aria-pressed", mode === "2010" ? "false" : "true");
+      b.textContent = labels[mode];
+      b.setAttribute("title", "Switch to " + nextLabels[next]);
     });
   }
 
   (function initStyleMode() {
     var saved = "";
     try { saved = localStorage.getItem("sqt-style") || ""; } catch (e) {}
-    setStyleMode(saved === "editorial" ? "editorial" : "2010");
+    setStyleMode(saved === "editorial" || saved === "win98" ? saved : "2010");
   })();
 
   /* ========================== subscribe (Kit) ============================ */
@@ -467,7 +488,7 @@
 
     var sbtn = hd.querySelector(".sqt-style");
     if (sbtn) sbtn.addEventListener("click", function () {
-      setStyleMode(styleMode() === "editorial" ? "2010" : "editorial");
+      setStyleMode(nextStyleMode(styleMode()));
     });
 
     var tbtn = hd.querySelector(".sqt-theme");
