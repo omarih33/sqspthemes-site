@@ -15,7 +15,7 @@
 
   var DEFAULTS = {
     wordmark: "SQSPThemes",
-    tagline: "Independent guide to the Squarespace ecosystem",
+    tagline: "",
     headline: "What's New Across the Squarespace Ecosystem",
     subhead: "Practical solutions, useful tools, design ideas, and Squarespace news worth your attention.",
     author: "Omari Harebin",
@@ -629,7 +629,6 @@
         '<main class="sqt-home-wrap" id="sqt-content" tabindex="-1">' +
           '<section class="sqt-home-intro">' +
             '<div class="sqt-home-intro-copy">' +
-              '<span class="sqt-home-eyebrow">Independent guide to the Squarespace ecosystem</span>' +
               '<h1>' + esc(title) + '</h1>' +
               '<p>' + esc(dek) + '</p>' +
             '</div>' +
@@ -643,18 +642,19 @@
                 '<div class="sqt-home-box-body" data-home-feature><div class="sqt-home-empty">Loading the latest from the ecosystem…</div></div>' +
               '</section>' +
 
-              '<section class="sqt-home-box sqt-home-bottom-newsletter">' +
-                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
-                '<div class="sqt-home-newsletter-wide">' +
-                  '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>New tools, fixes, standout work, and opportunities worth knowing about.</p></div>' +
-                  subscribeForm("Email address") +
-                '</div>' +
-              '</section>' +
 
               '<section class="sqt-home-box sqt-home-latest-box">' +
                 '<div class="sqt-home-box-head">Latest Articles</div>' +
                 '<div class="sqt-home-latest" data-home-latest><div class="sqt-home-empty">Loading latest articles…</div></div>' +
                 '<div class="sqt-home-box-foot"><a href="/blog">See all articles →</a></div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box sqt-home-bottom-newsletter">' +
+                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
+                '<div class="sqt-home-newsletter-wide">' +
+                  '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p></div>' +
+                  subscribeForm("Email address") +
+                '</div>' +
               '</section>' +
 
               '<section class="sqt-home-box sqt-home-explore-box">' +
@@ -718,7 +718,7 @@
 
       if (items.length) {
         var featured = items.find(function (p) { return p.featured; }) || items[0];
-        var latest = items.filter(function (p) { return p.url !== featured.url; }).slice(0, 8);
+        var latest = items.filter(function (p) { return p.url !== featured.url; }).slice(0, 5);
         root.querySelector("[data-home-feature]").innerHTML = homeFeatureMarkup(featured);
         root.querySelector("[data-home-latest]").innerHTML = homeLatestMarkup(latest);
       } else {
