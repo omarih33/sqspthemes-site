@@ -2150,3 +2150,175 @@ html.sqt-ready .sqt-directory-page .page-section:has(#sqt-directory-root) .sqs-b
     display: none;
   }
 }
+
+
+/* =================== existing Squarespace footer override =================== */
+/* Keep footer content in Squarespace; GitHub only applies the SQSPThemes look. */
+
+html.sqt-ready #footer-sections:has(.sqsp-footer),
+html.sqt-ready footer.sections:has(.sqsp-footer) {
+  display: block !important;
+  background: var(--sqt-bg-alt) !important;
+}
+
+html.sqt-ready .sqsp-footer.sqt-existing-footer,
+html.sqt-ready .sqsp-footer {
+  --footer-bg: var(--sqt-bg-alt);
+  --footer-text: var(--sqt-ink);
+  --footer-muted: var(--sqt-meta);
+  --footer-line: var(--sqt-rule);
+  --footer-accent: var(--sqt-link);
+
+  background: var(--footer-bg) !important;
+  color: var(--footer-text) !important;
+  padding: 22px var(--sqt-gutter) 16px !important;
+  border-top: 1px solid var(--sqt-rule) !important;
+  font-family: var(--sqt-text) !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__inner {
+  max-width: var(--sqt-max) !important;
+  margin: 0 auto !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__main {
+  display: grid !important;
+  grid-template-columns: minmax(260px, 1fr) minmax(0, 1.35fr) !important;
+  gap: 28px !important;
+  align-items: start !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__brand {
+  max-width: 420px !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__eyebrow {
+  margin: 0 0 7px !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  letter-spacing: .07em !important;
+  text-transform: uppercase !important;
+  color: var(--sqt-meta) !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__brand p:not(.sqsp-footer__eyebrow) {
+  margin: 0 !important;
+  max-width: 30rem !important;
+  font-family: var(--sqt-text) !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: var(--sqt-body) !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__actions {
+  margin-top: 10px !important;
+}
+
+html.sqt-ready .sqsp-footer a {
+  color: var(--sqt-link) !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  transition: none !important;
+}
+
+html.sqt-ready .sqsp-footer a:hover {
+  color: var(--sqt-link-hover) !important;
+  text-decoration: underline !important;
+  transform: none !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__button {
+  display: inline !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--sqt-link) !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__button::after {
+  content: " →";
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__nav {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(120px, 1fr)) !important;
+  gap: 18px !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__column h3 {
+  margin: 0 0 6px !important;
+  padding-bottom: 4px !important;
+  border-bottom: 1px solid var(--sqt-rule) !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  color: var(--sqt-meta) !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__column ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__column li + li {
+  margin-top: 3px !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__column a {
+  display: inline !important;
+  font-family: var(--sqt-text) !important;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  align-items: center !important;
+  margin-top: 18px !important;
+  padding-top: 8px !important;
+  border-top: 1px solid var(--sqt-rule) !important;
+}
+
+html.sqt-ready .sqsp-footer .sqsp-footer__asset {
+  margin: 0 !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 9px !important;
+  line-height: 1.35 !important;
+  color: var(--sqt-meta) !important;
+}
+
+@media (max-width: 760px) {
+  html.sqt-ready .sqsp-footer .sqsp-footer__main {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  html.sqt-ready .sqsp-footer .sqsp-footer__nav {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px 18px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html.sqt-ready .sqsp-footer .sqsp-footer__nav {
+    grid-template-columns: 1fr !important;
+  }
+
+  html.sqt-ready .sqsp-footer .sqsp-footer__column {
+    padding: 0 !important;
+    border: 0 !important;
+  }
+}
