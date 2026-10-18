@@ -630,11 +630,7 @@
               '<h1>' + esc(title) + '</h1>' +
               '<p>' + esc(dek) + '</p>' +
             '</div>' +
-            '<div class="sqt-home-proof" aria-label="SQSPThemes at a glance">' +
-              '<span>10+ years of Squarespace resources</span>' +
-              '<span data-home-template-proof>Hundreds of templates</span>' +
-              '<span data-home-designer-proof>Hand-picked designers</span>' +
-            '</div>' +
+
           '</section>' +
 
           '<div class="sqt-home-layout">' +
@@ -665,11 +661,6 @@
             '</div>' +
 
             '<aside class="sqt-home-sidebar" aria-label="Explore SQSPThemes">' +
-              '<section class="sqt-home-box">' +
-                '<div class="sqt-home-box-head">Search SQSPThemes</div>' +
-                '<div class="sqt-home-side-body"><strong>Looking for something specific?</strong><p>Search 10+ years of Squarespace articles, tools, templates, and resources.</p><button class="sqt-home-search-btn" type="button">⌕ Search SQSPThemes →</button></div>' +
-              '</section>' +
-
               '<section class="sqt-home-box">' +
                 '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
                 '<div class="sqt-home-side-body"><p>New tools, useful fixes, standout Squarespace work, and opportunities worth knowing about.</p>' + subscribeForm("Email address") + '</div>' +
@@ -716,21 +707,6 @@
     var skip = d.querySelector("#sqt-header .sqt-skip");
     if (skip) skip.href = "#sqt-content";
 
-    root.querySelectorAll(".sqt-home-search-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        if (window.Monocle && typeof window.Monocle.showSearch === "function") {
-          window.Monocle.showSearch();
-          return;
-        }
-        var input = d.querySelector("#sqt-q");
-        if (input) {
-          input.focus();
-          input.select();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
-    });
-
     wireSubscribe(root);
 
     Promise.all([
@@ -748,7 +724,7 @@
 
       if (items.length) {
         var featured = items.find(function (p) { return p.featured; }) || items[0];
-        var latest = items.filter(function (p) { return p.url !== featured.url; }).slice(0, 5);
+        var latest = items.filter(function (p) { return p.url !== featured.url; }).slice(0, 8);
         root.querySelector("[data-home-feature]").innerHTML = homeFeatureMarkup(featured);
         root.querySelector("[data-home-latest]").innerHTML = homeLatestMarkup(latest);
       } else {
@@ -759,8 +735,6 @@
       var designerCount = directory && (directory.count || (directory.designers && directory.designers.length)) || 0;
       var templateCount = catalog && (catalog.published_count || (catalog.templates && catalog.templates.length)) || 0;
 
-      if (templateCount) root.querySelector("[data-home-template-proof]").textContent = templateCount + " templates";
-      if (designerCount) root.querySelector("[data-home-designer-proof]").textContent = designerCount + " designers";
       root.querySelector("[data-home-explore]").innerHTML = homeExploreMarkup(templateCount, designerCount);
 
       var designers = directory && directory.designers || [];
