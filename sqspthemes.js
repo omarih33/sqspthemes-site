@@ -514,10 +514,21 @@
     mount.innerHTML =
       '<div id="sqt-directory" class="sqt">' +
         '<div class="sqt-dir-wrap" id="sqt-content" tabindex="-1">' +
-          '<div class="sqt-dir-head">' +
-            '<p class="sqt-dir-kicker">SQSPThemes Directory</p>' +
-            '<h1>Squarespace Designer Directory</h1>' +
-            '<p class="sqt-dir-sub">Independent Squarespace designers and studios. Filter by location, budget, or what you need help with.</p>' +
+          '<section class="sqt-dir-hero">' +
+            '<p class="sqt-dir-badge">Premium Squarespace Designer Directory</p>' +
+            '<h1>Find the Best Squarespace Designer</h1>' +
+            '<p class="sqt-dir-sub">Connect with hand-picked, professional Squarespace designers and agencies who create standout websites for businesses of all kinds.</p>' +
+            '<div class="sqt-dir-stats">' +
+              '<div class="sqt-dir-stat"><strong id="sqt-dir-hero-count">—</strong><span>Verified Designers</span></div>' +
+              '<div class="sqt-dir-stat"><strong>Global</strong><span>Coverage</span></div>' +
+              '<div class="sqt-dir-stat"><strong>Curated</strong><span>Professionals</span></div>' +
+            '</div>' +
+          '</section>' +
+          '<section class="sqt-dir-controls-shell">' +
+            '<div class="sqt-dir-controls-head">' +
+              '<h2>Browse the Directory</h2>' +
+              '<p>Filter by location, budget, and the kind of help you need.</p>' +
+            '</div>' +
             '<div class="sqt-dir-controls">' +
               '<label>Search<input id="sqt-dir-search" type="search" placeholder="Name, studio, location, specialty"></label>' +
               '<label>Region<select id="sqt-dir-region">' +
@@ -547,7 +558,7 @@
               '</select></label>' +
             '</div>' +
             '<div class="sqt-dir-status"><span id="sqt-dir-count">Loading listings…</span><button id="sqt-dir-clear" type="button">Clear filters</button></div>' +
-          '</div>' +
+          '</section>' +
           '<ol class="sqt-dir-list" id="sqt-dir-list"></ol>' +
           '<p class="sqt-dir-empty" id="sqt-dir-empty" hidden>No designers match those filters.</p>' +
         '</div>' +
@@ -555,6 +566,7 @@
 
     var list = mount.querySelector("#sqt-dir-list");
     var count = mount.querySelector("#sqt-dir-count");
+    var heroCount = mount.querySelector("#sqt-dir-hero-count");
     var empty = mount.querySelector("#sqt-dir-empty");
     var search = mount.querySelector("#sqt-dir-search");
     var region = mount.querySelector("#sqt-dir-region");
@@ -588,9 +600,9 @@
           (x.description ? '<p class="sqt-dir-desc">' + esc(x.description) + '</p>' : '') +
           (tags ? '<div class="sqt-dir-tags">' + tags + '</div>' : '') +
           '<p class="sqt-dir-links">' +
-            (x.portfolio ? '<a href="' + esc(x.portfolio) + '">Portfolio</a>' : '') +
+            (x.portfolio ? '<a href="' + esc(x.portfolio) + '">View portfolio</a>' : '') +
             (x.portfolio && x.contact ? ' <span>·</span> ' : '') +
-            (x.contact ? '<a href="' + esc(x.contact) + '">Contact</a>' : '') +
+            (x.contact ? '<a href="' + esc(x.contact) + '">Contact designer</a>' : '') +
           '</p>' +
         '</div>' +
       '</li>';
@@ -617,6 +629,7 @@
 
       list.innerHTML = visible.map(renderRow).join("");
       count.textContent = visible.length + (visible.length === 1 ? " designer" : " designers");
+      if (heroCount) heroCount.textContent = designers.length + "+";
       empty.hidden = visible.length !== 0;
       normalizeInternalLinks(mount);
     }
