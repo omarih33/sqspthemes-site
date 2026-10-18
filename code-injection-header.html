@@ -1,0 +1,68 @@
+<!-- ==========================================================
+     SQSPThemes site layer
+     Paste into: Website Tools → Code Injection → HEADER
+     Keep your member-login code where it is (Footer).
+     To release a new version, change @1.0.0 in the two links below.
+     ========================================================== -->
+
+<script>
+window.SQT_CONFIG = {
+  // Kit form action, from your Kit form's HTML embed
+  kitAction: "PASTE_KIT_FORM_ACTION_URL",
+  readers: "5,400 readers",
+
+  headline: "What's worth knowing in the Squarespace world.",
+  subhead: "News, opportunities, tools, and ideas for people building businesses around Squarespace.",
+
+  // Topics = Squarespace CATEGORIES (create these, assign one per post)
+  topics: ["Forms", "Navigation & headers", "Blog", "Commerce", "Member areas",
+           "Images & galleries", "Animations & scroll", "Mobile", "SEO", "Integrations"],
+
+  // Post types = Squarespace TAGS
+  types: ["How-to", "News", "Tools", "Opportunities"],
+
+  opportunity: {
+    name: "Bigger Budget Projects",
+    url: "/rfps",
+    text: "Website RFPs for independent designers and studios."
+  },
+
+  // Pages that get the dark mode switch (pages fully redrawn by the layer)
+  themePaths: ["/blog"],
+
+  footer: [
+    { title: "Projects", links: [["Bigger Budget Projects", "/rfps"], ["Upmarket Report", "/report"]] },
+    { title: "Squarespace", links: [["Resources", "/squarespace-resources"], ["Templates", "/templates"], ["Designer Directory", "/best-squarespace-designers"]] },
+    { title: "Company", links: [["Blog", "/blog"], ["Newsletter", "/newsletter"], ["Our Story", "/about-us"], ["Contact", "/contact"], ["Privacy", "/privacy-policy"]] }
+  ],
+  owner: "Vizier Media"
+};
+
+/* guard: turns the layer on before the page paints, picks light/dark,
+   and switches itself off if the files don't load within 4 seconds */
+(function (d) {
+  if (window.self !== window.top) return; // Squarespace editor: leave the native site editable
+  var h = d.documentElement, c = window.SQT_CONFIG || {};
+  var p = location.pathname.replace(/\/+$/, "") || "/";
+  var themed = (c.themePaths || ["/blog"]).some(function (x) {
+    x = x.replace(/\/+$/, "") || "/";
+    return x === "/" ? p === "/" : (p === x || p.indexOf(x + "/") === 0);
+  });
+  var t = "light";
+  if (themed) {
+    try { t = localStorage.getItem("sqt-theme") || ""; } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  h.setAttribute("data-theme", t);
+  h.classList.add("sqt-on");
+  setTimeout(function () {
+    if (!h.classList.contains("sqt-ready")) h.classList.remove("sqt-on");
+  }, 4000);
+})(document);
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GITHUB_USERNAME/sqspthemes-site@1.0.0/sqspthemes.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/GITHUB_USERNAME/sqspthemes-site@1.0.0/sqspthemes.min.js"></script>
