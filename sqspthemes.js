@@ -777,7 +777,7 @@
         '<div class="sqt-dir-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
           '<section class="sqt-dir-hero sqt-page-intro">' +
             '<h1 class="sqt-page-title">Find the Right Squarespace Designer</h1>' +
-            '<p class="sqt-dir-sub sqt-page-dek">Browse independent Squarespace designers and studios. Compare their work, specialties, and project budgets to find a fit.</p>' +
+            '<p class="sqt-dir-sub sqt-page-dek">Browse paid listings from Squarespace designers and studios. Compare their work, specialties, and project budgets to find a fit.</p>' +
           '</section>' +
           '<section class="sqt-dir-controls-shell sqt-panel">' +
             '<div class="sqt-panel__head">Browse the Directory</div>' +
