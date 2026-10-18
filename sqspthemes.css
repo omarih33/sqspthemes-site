@@ -2385,3 +2385,212 @@ html.sqt-ready .sqsp-footer .sqsp-footer__disclaimer {
     border: 0 !important;
   }
 }
+
+
+/* ======================= designer entry premium restyle ======================= */
+
+#sqt-directory .sqt-dir-list {
+  display: grid;
+  gap: 16px;
+}
+
+#sqt-directory .sqt-dir-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px 132px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin: 0;
+  padding: 24px;
+  border: 1px solid var(--sqt-rule);
+  background: var(--sqt-bg);
+}
+
+#sqt-directory .sqt-dir-row:hover {
+  background: var(--sqt-box);
+  border-color: var(--sqt-box-line);
+}
+
+#sqt-directory .sqt-dir-num {
+  padding-top: 2px;
+  font-family: var(--sqt-mono);
+  font-size: 10px;
+  line-height: 1;
+  color: var(--sqt-faint);
+}
+
+#sqt-directory .sqt-dir-thumb {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--sqt-rule);
+  background: var(--sqt-box);
+}
+
+#sqt-directory .sqt-dir-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#sqt-directory .sqt-dir-main {
+  min-width: 0;
+}
+
+#sqt-directory .sqt-dir-main h2 {
+  margin: -2px 0 8px;
+  font-family: var(--sqt-head);
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+#sqt-directory .sqt-dir-main h2 a {
+  color: var(--sqt-ink);
+  text-decoration: none;
+}
+
+#sqt-directory .sqt-dir-main h2 a:hover {
+  color: var(--sqt-link);
+  text-decoration: underline;
+}
+
+#sqt-directory .sqt-dir-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0 0 12px;
+  font-family: var(--sqt-mono);
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--sqt-meta);
+}
+
+#sqt-directory .sqt-dir-meta span {
+  position: relative;
+}
+
+#sqt-directory .sqt-dir-meta span + span::before {
+  content: "•";
+  margin-right: 14px;
+  color: var(--sqt-faint);
+}
+
+#sqt-directory .sqt-dir-desc {
+  margin: 0 0 14px;
+  max-width: 760px;
+  color: var(--sqt-body);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+#sqt-directory .sqt-dir-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+
+#sqt-directory .sqt-dir-tags span {
+  padding: 3px 7px;
+  border: 1px solid var(--sqt-rule);
+  background: var(--sqt-bg-alt);
+  font-family: var(--sqt-mono);
+  font-size: 9px;
+  line-height: 1.25;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--sqt-meta);
+}
+
+#sqt-directory .sqt-dir-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--sqt-mono);
+  font-size: 11px;
+}
+
+#sqt-directory .sqt-dir-links span {
+  display: none;
+}
+
+#sqt-directory .sqt-dir-links a {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid var(--sqt-rule);
+  background: var(--sqt-bg);
+  color: var(--sqt-link);
+  text-decoration: none;
+}
+
+#sqt-directory .sqt-dir-links a:hover {
+  background: var(--sqt-box-head);
+  color: var(--sqt-link-hover);
+  text-decoration: none;
+}
+
+#sqt-directory .sqt-dir-links a:last-of-type {
+  background: var(--sqt-ink);
+  border-color: var(--sqt-ink);
+  color: var(--sqt-bg);
+}
+
+#sqt-directory .sqt-dir-links a:last-of-type:hover {
+  opacity: .86;
+}
+
+@media (max-width: 760px) {
+  #sqt-directory .sqt-dir-list {
+    gap: 12px;
+  }
+
+  #sqt-directory .sqt-dir-row {
+    grid-template-columns: 24px 92px minmax(0,1fr);
+    gap: 14px;
+    padding: 18px;
+  }
+
+  #sqt-directory .sqt-dir-thumb {
+    width: 84px;
+    height: 84px;
+  }
+
+  #sqt-directory .sqt-dir-main h2 {
+    font-size: 20px;
+  }
+
+  #sqt-directory .sqt-dir-desc {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 560px) {
+  #sqt-directory .sqt-dir-row {
+    grid-template-columns: 22px minmax(0,1fr);
+  }
+
+  #sqt-directory .sqt-dir-thumb {
+    display: block;
+    grid-column: 2;
+    width: 96px;
+    height: 96px;
+    margin-bottom: 4px;
+  }
+
+  #sqt-directory .sqt-dir-main {
+    grid-column: 2;
+  }
+
+  #sqt-directory .sqt-dir-meta {
+    display: grid;
+    gap: 3px;
+  }
+
+  #sqt-directory .sqt-dir-meta span + span::before {
+    display: none;
+  }
+}
