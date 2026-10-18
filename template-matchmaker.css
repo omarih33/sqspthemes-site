@@ -122,3 +122,11 @@ html[data-sqt-style="editorial"] #sqt-template-matchmaker button{padding:11px 19
   html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm{padding-top:12px}
   html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-search-panel{padding:17px}
 }
+
+
+/* Animated inline status — visible throughout the matching request */
+#sqt-template-matchmaker .sqt-tm-status.is-busy{display:inline-flex;align-items:center;gap:9px;color:var(--tm-ink);font-weight:600}
+#sqt-template-matchmaker .sqt-tm-status.is-busy::before{content:"";width:13px;height:13px;flex:none;border:2px solid var(--tm-line);border-top-color:var(--tm-blue);border-radius:50%;animation:sqtm-spin .68s linear infinite}
+#sqt-template-matchmaker .sqt-tm-submit.is-busy>span:last-child{display:inline-block;animation:sqtm-busy-arrow .75s ease-in-out infinite alternate}
+@keyframes sqtm-busy-arrow{from{transform:translateX(0);opacity:.45}to{transform:translateX(5px);opacity:1}}
+@media(prefers-reduced-motion:reduce){#sqt-template-matchmaker .sqt-tm-status.is-busy::before,#sqt-template-matchmaker .sqt-tm-submit.is-busy>span:last-child{animation:none}#sqt-template-matchmaker .sqt-tm-status.is-busy::before{border-top-color:var(--tm-blue);border-right-color:var(--tm-blue)}}
