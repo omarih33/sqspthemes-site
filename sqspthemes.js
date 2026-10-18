@@ -497,75 +497,6 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
   }
 
-  function loadTemplateMatchmaker() {
-    var mount = d.getElementById("sqt-template-matchmaker");
-    if (!mount) return false;
-
-    if (!mount.dataset.catalogUrl) {
-      mount.dataset.catalogUrl = siteAssetUrl("template-catalog.json");
-    }
-
-    if (!d.getElementById("sqt-template-matchmaker-css")) {
-      var link = d.createElement("link");
-      link.id = "sqt-template-matchmaker-css";
-      link.rel = "stylesheet";
-      link.href = siteAssetUrl("template-matchmaker.css");
-      d.head.appendChild(link);
-    }
-
-    if (!mount.dataset.initialized && !d.getElementById("sqt-template-matchmaker-js")) {
-      var script = d.createElement("script");
-      script.id = "sqt-template-matchmaker-js";
-      script.src = siteAssetUrl("template-matchmaker.js");
-      script.async = true;
-      script.onerror = function () {
-        mount.innerHTML = '<p class="sqt-status">Template finder could not load. Please refresh the page.</p>';
-      };
-      d.body.appendChild(script);
-    }
-
-    return true;
-  }
-
-  function watchTemplateMatchmaker() {
-    if (loadTemplateMatchmaker()) return;
-
-    var stopped = false;
-    var observer;
-
-    function tryLoad() {
-      if (stopped) return;
-      if (loadTemplateMatchmaker()) {
-        stopped = true;
-        if (observer) observer.disconnect();
-      }
-    }
-
-    function start() {
-      if (stopped) return;
-      tryLoad();
-      if (stopped || !d.body || !window.MutationObserver) return;
-
-      observer = new MutationObserver(tryLoad);
-      observer.observe(d.body, { childList: true, subtree: true });
-
-      // Squarespace code blocks normally arrive almost immediately. Keep the
-      // observer bounded so it never becomes permanent background work.
-      setTimeout(function () {
-        if (observer) observer.disconnect();
-        stopped = true;
-      }, 15000);
-    }
-
-    if (d.body) start();
-    else d.addEventListener("DOMContentLoaded", start, { once: true });
-
-    // A second pass catches late Fluid Engine hydration even in browsers where
-    // the MutationObserver callback is batched after our initial page setup.
-    setTimeout(tryLoad, 250);
-    setTimeout(tryLoad, 1000);
-  }
-
   function homeTrim(s, max) {
     s = String(s || "").replace(/\s+/g, " ").trim();
     if (!s || s.length <= max) return s;
@@ -1353,7 +1284,6 @@
       header();
       syncStickyOffset();
       styleNativePage();
-      watchTemplateMatchmaker();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
       if (mountHomepage()) {}
