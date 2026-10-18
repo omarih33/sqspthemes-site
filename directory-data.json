@@ -1,0 +1,2088 @@
+{
+  "updated": "2026-10-18",
+  "count": 67,
+  "designers": [
+    {
+      "order": 1,
+      "name": "Sam Crawford – by Crawford",
+      "person": "Sam Crawford",
+      "studio": "by Crawford",
+      "location": "United Kingdom (Solo Designer)",
+      "region": "uk-europe",
+      "projectRange": "$3,000 – $70,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Corporates",
+        "Non-Profits",
+        "Enterprise",
+        "Tech",
+        "Medical",
+        "VC"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "support",
+        "branding"
+      ],
+      "portfolio": "https://bycrawford.com",
+      "contact": "https://bycrawford.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/1753273047949-G3KE9MYCL627FJFZSEDS/Sam%2BCrawford%2B%E2%80%93%2Bby%2BCrawford",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "by Crawford is led by Sam Crawford, a multi-award-winning Squarespace website designer with 700+ sites launched for clients in over 30 countries. He builds fast, mobile-friendly Squarespace 7.1 websites designed for SEO, clear structure, and conversion. As a Squarespace Expert, Enterprise Partner, Circle Member, and community speaker, Sam is known for pushing the platform’s limits, with clients highlighting his clarity, precision, stronger rankings, and lead-generation results."
+    },
+    {
+      "order": 2,
+      "name": "Kessiah – Radiant Websites",
+      "person": "Kessiah",
+      "studio": "Radiant Websites",
+      "location": "United States (Solo Designer)",
+      "region": "us",
+      "projectRange": "$2,500 – $12,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Creatives",
+        "Coaches",
+        "Small Businesses",
+        "Nonprofits",
+        "Visionary Entrepreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://kessiah.com",
+      "contact": "https://kessiah.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/c2a475e7-87b2-4254-8c77-005ee1a16df4/Kessiah%2Blaughing%2Bbio.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Radiant Websites is led by Kessiah, a long-time entrepreneur known for her warm, collaborative approach to web design. Since 2012, she has built hundreds of custom Squarespace websites, guiding clients to strategize, launch, and scale with user-friendly, visually strong, conversion-focused sites. As a Squarespace Marketplace Expert and Circle Platinum Partner with 50+ five-star reviews, Kessiah combines award-winning artistry with practical technology for entrepreneurs across industries."
+    },
+    {
+      "order": 3,
+      "name": "Bryan Jernigan – Abound Web Design",
+      "person": "Bryan Jernigan",
+      "studio": "Abound Web Design",
+      "location": "Alma, Arkansas, USA — Serving clients nationwide",
+      "region": "us",
+      "projectRange": "$3,000 – $12,000+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Professional Services",
+        "Nonprofits",
+        "Healthcare",
+        "Contractors & Trades",
+        "Local Businesses",
+        "Startups"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://www.aboundwebdesign.com",
+      "contact": "https://www.aboundwebdesign.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/dc198d54-fa2a-42f9-8f46-aa346ab588df/Bryan-Profile-Pic.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Abound Web Design is a Squarespace-focused studio led by Bryan Jernigan, a Squarespace Circle Platinum Partner and Marketplace Expert. Bryan helps businesses, nonprofits, and organizations build new sites and transform outdated or DIY websites into polished, strategic experiences centered on clarity, user experience, and real business goals. With 100+ website projects completed and 50+ five-star reviews, he handles projects directly from strategy through launch."
+    },
+    {
+      "order": 4,
+      "name": "Caresa – HopeSpring Digital",
+      "person": "Caresa",
+      "studio": "HopeSpring Digital",
+      "location": "Minnesota, USA",
+      "region": "us",
+      "projectRange": "$1,299+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://hopespringdigital.com",
+      "contact": "https://hopespringdigital.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/356f6776-9cfc-4567-8021-0a664f6b1405/caresa.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "HopeSpring Digital was founded by Caresa to help small businesses build an online presence that actually works. With 7+ years of experience and 200+ websites built, she brings together custom Squarespace design, SEO strategy, and conversion-focused copywriting in one process so design, messaging, and search visibility support each other from the start. The result is a polished, clear website built to attract the right people and turn visits into action."
+    },
+    {
+      "order": 5,
+      "name": "Emily Lewis – TwoFold",
+      "person": "Emily Lewis",
+      "studio": "TwoFold",
+      "location": "Wales, United Kingdom",
+      "region": "uk-europe",
+      "projectRange": "£1,500+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://twofold-studios.com",
+      "contact": "https://twofold-studios.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/f72b2360-fe93-4f71-9679-23b322502934/emily.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "TwoFold was founded by Emily Lewis, an award-winning Squarespace web designer and marketer, to help businesses build websites that look good, convert well, and are easy to manage. With a background in marketing, Emily saw how often companies were sending traffic to websites that were not optimized to turn visitors into customers. She combines Squarespace design, SEO, content writing, and marketing strategy for organizations around the world."
+    },
+    {
+      "order": 6,
+      "name": "Sueño and Co.",
+      "person": "Aaron Soto",
+      "studio": "Sueño and Co.",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$3,000+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://suenoandco.com",
+      "contact": "https://www.suenoandco.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/1eb019ae-2ab9-4acd-a1ce-65ff09212e31/Aaron.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Sueño and Co. is a creative studio specializing in strategic Squarespace websites, branding, and digital experiences built with clarity, structure, and long-term growth in mind. The studio blends strategy, storytelling, and intentional design to create online experiences that feel aligned, scalable, and easy to manage over time. Led by Squarespace Community Leader and Platinum Circle Member Aaron Soto, Sueño and Co. works across industries to build elevated, purpose-driven websites."
+    },
+    {
+      "order": 7,
+      "name": "Stephen Palacino – Page1 Branding",
+      "person": "Stephen Palacino",
+      "studio": "Page1 Branding",
+      "location": "Greenville, South Carolina — Serving clients nationwide and worldwide",
+      "region": "us",
+      "projectRange": "$4,000 – $15,000+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Professional Services",
+        "Nonprofits",
+        "Consultants",
+        "Creatives",
+        "E-commerce Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding",
+        "development",
+        "ecommerce"
+      ],
+      "portfolio": "https://www.page1branding.com",
+      "contact": "https://www.page1branding.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/c1281b77-52b6-4cf7-ab57-7d37f1f4f9e5/stephen%2Bpalacino.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Page1 Branding is a Greenville, South Carolina-based Squarespace studio led by founder and lead designer Stephen Palacino. With more than a decade of Squarespace experience and hundreds of client projects, Stephen helps businesses and nonprofits turn outdated, cluttered, or DIY sites into focused, professional websites. The studio combines custom Squarespace design, strategic redesigns, branding, and graphic design with a collaborative process that carries clients from strategy through launch."
+    },
+    {
+      "order": 8,
+      "name": "Priya Anand – Boston Graphic Design Studio",
+      "person": "Priya Anand",
+      "studio": "Boston Graphic Design Studio",
+      "location": "Boston, Massachusetts — Serving clients nationwide",
+      "region": "us",
+      "projectRange": "$2,500 – $13,000+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "B2B Service Firms",
+        "Professional Services",
+        "Healthcare Providers",
+        "Contractors",
+        "Trades",
+        "Consultants",
+        "Coaches"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://www.bostongraphicdesignstudio.com",
+      "contact": "https://www.bostongraphicdesignstudio.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/0f238a94-7c00-4b23-8db8-bceba2fca9bb/Priyaanand-founder.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Boston Graphic Design Studio is led by Priya Anand, a Squarespace Circle Platinum Partner and Marketplace Expert with more than 100 completed website projects. Priya helps service-based businesses turn outdated websites into strategic, professional sites focused on clarity, user experience, and business goals. Her work combines custom Squarespace design, redesigns, site structure and content planning, SEO foundations, and custom development, with Priya personally managing projects from strategy through launch."
+    },
+    {
+      "order": 9,
+      "name": "The SEO Answer",
+      "person": "",
+      "studio": "The SEO Answer",
+      "location": "Pensacola, FL | Oklahoma City, OK",
+      "region": "us",
+      "projectRange": "$2,500 – $15,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo"
+      ],
+      "portfolio": "https://theseoanswer.com",
+      "contact": "https://theseoanswer.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/d1300723-b87d-40bb-bfed-50c7d797bedb/the-seoo-answer-black-log0.webp",
+      "imageType": "Logo",
+      "avatarReady": "Review",
+      "description": "The SEO Answer combines strategic website design with search marketing expertise to create websites that do more than look polished—they are built to generate results. Every site is developed with user experience, lead generation, and long-term visibility in mind, helping businesses attract the right audience and convert more visitors into customers. Their work brings together sales-focused design, SEO, search strategy, and conversion thinking so the website works as hard as the business it represents."
+    },
+    {
+      "order": 10,
+      "name": "Gunter Graphics | Creative Design",
+      "person": "Kristina Marie Gunter",
+      "studio": "Gunter Graphics",
+      "location": "United States (San Diego, CA Based)",
+      "region": "us",
+      "projectRange": "$2,500+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://guntergrfx.com",
+      "contact": "https://guntergrfx.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/92080f8f-7608-4a77-831e-d710d1981861/Gunter.jpg",
+      "imageType": "Logo / brand graphic",
+      "avatarReady": "Review",
+      "description": "Gunter Graphics is the branding and design studio of Kristina Marie Gunter, who brings more than a decade of design experience to visual identities, Squarespace websites, and marketing collateral. Inspired by art, storytelling, symbolism, and human connection, Kristina approaches each project with creativity and purpose. She has supported businesses across beauty, wellness, hospitality, retail, and creative industries, helping them build cohesive brand systems that feel authentic, elevated, and memorable."
+    },
+    {
+      "order": 11,
+      "name": "Wellness Web Designers",
+      "person": "Claire O'Connor",
+      "studio": "Wellness Web Designers",
+      "location": "Tucson, AZ USA",
+      "region": "us",
+      "projectRange": "$2,500+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding"
+      ],
+      "portfolio": "https://wellnesswebdesigners.com",
+      "contact": "https://wellnesswebdesigners.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/13d9846d-856e-44e6-a39e-09fba585dd79/Claire-Oconnor.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Wellness Web Designers works exclusively with wellness professionals and healing arts practitioners who want to elevate their online presence. Drawing on decades of experience inside the wellness world, the studio brings a collaborative, supportive approach to Squarespace design, branding, copywriting, SEO and AIO strategy, graphic design, and email marketing. The goal is to create a welcoming digital presence that clearly communicates each practitioner’s work and helps the right people feel confident taking the next step."
+    },
+    {
+      "order": 12,
+      "name": "Just Websites NZ",
+      "person": "Jan Dunlop",
+      "studio": "Just Websites NZ",
+      "location": "Auckland, New Zealand",
+      "region": "aus-nz",
+      "projectRange": "NZ$1,995 – NZ$4,500+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo"
+      ],
+      "portfolio": "https://www.justwebsites.co.nz",
+      "contact": "https://www.justwebsites.co.nz",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/3c15f918-a204-4096-99ab-fa8fe25ebb83/jan.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Just Websites NZ is led by Jan Dunlop, an Auckland-based digital strategist with 25+ years of experience helping small and owner-led businesses build clearer, more effective websites. The studio specializes in practical Squarespace websites for New Zealand service businesses that need a stronger foundation, better local visibility, and a clearer path to enquiries. Jan combines clean design, messaging, local SEO, Google Business Profile support, analytics, and enquiry-focused page structure."
+    },
+    {
+      "order": 13,
+      "name": "Ina – Pink Fig Creative",
+      "person": "Ina",
+      "studio": "Pink Fig Creative",
+      "location": "Sydney, Australia",
+      "region": "aus-nz",
+      "projectRange": "$800 – $5,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Startups",
+        "Small Businesses",
+        "Service-Based Entrepreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo"
+      ],
+      "portfolio": "https://www.pinkfigcreative.com.au",
+      "contact": "https://www.pinkfigcreative.com.au",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/320daf24-5d9f-47de-9d6a-719b48eddbdb/Ina%2B%E2%80%93%2BPink%2BFig%2BCreative",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Ina, founder of Pink Fig Creative, helps small businesses launch high-converting Squarespace websites quickly. A formally trained graphic designer with 6+ years of experience, she offers VIP Days, one-page websites, and one-week builds tailored to each brand. Known for an empathetic, practical approach, Ina creates results-driven websites designed to captivate audiences, generate leads, and give startups and service-based entrepreneurs a professional online presence they can grow with."
+    },
+    {
+      "order": 14,
+      "name": "Web Goyat",
+      "person": "Ankush Goyat",
+      "studio": "Web Goyat",
+      "location": "Canada",
+      "region": "canada",
+      "projectRange": "$1,500 – $15,000 USD",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://webgoyat.com",
+      "contact": "https://webgoyat.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/be98bf9c-9c53-4e4f-a232-a0d11f89a778/ankush%2Bwebgoyat-min.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Web Goyat, led by Ankush Goyat, creates premium Squarespace websites designed to elevate brands, build credibility, and support meaningful business growth. A long-standing Squarespace Circle Member and recognized Squarespace Forum Expert, Ankush is known for highly customized websites that combine aesthetics with strategy. His work emphasizes user experience, mobile responsiveness, SEO, and conversion-focused structure, with clear communication and thoughtful customization throughout the process."
+    },
+    {
+      "order": 15,
+      "name": "Studio Starlet",
+      "person": "Francisca Li",
+      "studio": "Studio Starlet",
+      "location": "Austin, TX and Colorado Springs, CO",
+      "region": "us",
+      "projectRange": "$2,500+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Creative Businesses",
+        "Professional Services",
+        "Wedding & Event Professionals",
+        "Interior & Home Brands",
+        "Wellness & Hospitality",
+        "Contractors & Trade Businesses",
+        "Local Service Companies",
+        "Nonprofits"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "development"
+      ],
+      "portfolio": "https://www.studiostarlet.com",
+      "contact": "https://www.studiostarlet.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/035d0df4-7391-4095-b6e0-f2351f0bba12/Francisca%2BLi%2BHeadshot%2B1.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Studio Starlet is a Texas- and Colorado-based branding and website design studio creating thoughtful brands and custom websites designed to grow alongside the businesses they serve. Squarespace is central to the studio’s work, alongside select Shopify, Showit, and Wix projects. Studio Starlet also partners with design studios and marketing agencies through white-label design and development, bringing the same focus on timeless design, strategy, and collaboration to both direct and behind-the-scenes work."
+    },
+    {
+      "order": 16,
+      "name": "Guiding Brands",
+      "person": "Karen Vick",
+      "studio": "Guiding Brands",
+      "location": "Fort Lauderdale, FL",
+      "region": "us",
+      "projectRange": "$1,500 – $10,000+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "development"
+      ],
+      "portfolio": "https://www.guidingbrands.com",
+      "contact": "https://www.guidingbrands.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/a834cbdd-476f-462a-a9e9-f0d22d52d003/MF9pHanD.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Guiding Brands is a Fort Lauderdale-based web design and brand strategy agency helping nonprofits, community organizations, municipalities, and purpose-driven businesses grow their impact online. As a Squarespace Circle Gold Partner with more than 20 years of experience, the agency creates custom websites that build trust, clarify messaging, and drive action. Led by Karen Vick, Guiding Brands also supports migrations, fundraising systems, custom forms, strategic branding, and local visibility through Google Business Profile optimization."
+    },
+    {
+      "order": 17,
+      "name": "Hulo.dev – Squarespace Partner",
+      "person": "",
+      "studio": "Hulo.dev",
+      "location": "Global Team",
+      "region": "global",
+      "projectRange": "$1,000 – $70,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Ecommerce Brands",
+        "Agencies",
+        "Founders",
+        "Growth-Focused Businesses"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://hulo.dev",
+      "contact": "https://hulo.dev",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/114aaf9a-35f1-4926-b913-24bad2b8def3/Hulo.dev%2B%E2%80%93%2B%2BSquarespace%2BPartner",
+      "imageType": "Logo",
+      "avatarReady": "Review",
+      "description": "Hulo.dev is a Platinum Squarespace Partner and Shopify Select Partner known for high-performing, design-driven websites. With 680+ successful projects completed, the team helps brands of all sizes—from startups to multi-million-dollar businesses—launch, scale, and optimize their online presence. Hulo.dev specializes in custom builds, migrations, performance optimization, ecommerce, and seamless integrations, with an agile approach that can cover anything from a fast technical fix to a complex custom build."
+    },
+    {
+      "order": 18,
+      "name": "CV Brands",
+      "person": "",
+      "studio": "CV Brands",
+      "location": "Remote studio serving clients throughout the United States",
+      "region": "us",
+      "projectRange": "Projects typically begin around $2,500",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.cvbrands.com",
+      "contact": "https://www.cvbrands.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/bc86c5c5-f0e2-46fe-b8a6-3a1ea60ef86d/image0.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "CV Brands is a web design, branding, and SEO studio helping weight-inclusive dietitians, therapists, and other healthcare professionals build thoughtful, values-aligned brands that are clear, human, and easier to find online. Their work combines Squarespace design and redesign, brand identity, website copywriting, SEO strategy, local search, Google Business Profile optimization, and ongoing support. The result is a cohesive online presence built around both client experience and discoverability."
+    },
+    {
+      "order": 19,
+      "name": "Hello-World Studio – Squarespace & Shopify Design Experts",
+      "person": "",
+      "studio": "Hello-World Studio",
+      "location": "Global",
+      "region": "global",
+      "projectRange": "$5,800 – $15,000+",
+      "budgets": [
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Luxury Brands",
+        "Lifestyle Businesses",
+        "Fashion",
+        "Education",
+        "Creative Studios"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.hello-world.studio",
+      "contact": "https://www.hello-world.studio",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/6cddfd71-0b1e-4d4a-843f-09f1bcaa6db7/Hello-World%2BStudio%2B%E2%80%93%2BSquarespace%2B%26%2BShopify%2BDesign%2BExperts",
+      "imageType": "Team portrait",
+      "avatarReady": "Yes",
+      "description": "Hello-World Studio crafts bold, immersive digital spaces for visionary brands, including work for clients featured in Vogue, Forbes, and Architectural Digest. With a focus on Squarespace, Shopify, and Webflow, the studio creates scalable websites that blend creativity with performance. From brand foundations to fully custom builds, Hello-World offers tailored solutions designed to evolve with the business, using an agile, hands-on process without the red tape or bloated timelines of a traditional agency."
+    },
+    {
+      "order": 20,
+      "name": "Elaine – Squarespace Web Designer & SEO Expert",
+      "person": "Elaine",
+      "studio": "Champion Creatives",
+      "location": "United States (Global Client Base)",
+      "region": "us",
+      "projectRange": "$1,000 – $7,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Creatives",
+        "Photographers",
+        "Artists",
+        "Small Business Owners"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://www.championcreatives.com",
+      "contact": "https://www.championcreatives.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/97f5280d-f3cd-46b0-9d00-c5b0358b90a0/Elaine%2B%E2%80%93%2BSquarespace%2BWeb%2BDesigner%2B%26%2BSEO%2BExpert",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Elaine is a Squarespace web designer and SEO expert helping creatives and small business owners share their work with a wider audience. With a background as a photojournalist, she transitioned into web design when Squarespace launched and has since built dynamic, search-optimized websites for clients globally. Her work spans custom site builds, migrations, SEO strategy, mobile-friendly design, long-term traffic growth, and hands-on support so clients can confidently manage what comes next."
+    },
+    {
+      "order": 21,
+      "name": "Yangu Web Studio – Squarespace Marketplace Expert",
+      "person": "Marya",
+      "studio": "Yangu Web Studio",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$2,500 – $12,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Creatives",
+        "Small Business Owners",
+        "Coaches",
+        "Service-Based Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.yanguweb.studio",
+      "contact": "https://www.yanguweb.studio",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/c26213b8-5194-4d0f-817c-e380df052895/Yangu%2BWeb%2BStudio%2B%E2%80%93%2BSquarespace%2BMarketplace%2BExpert",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Founded by Marya after a career in Los Angeles marketing, Yangu Web Studio creates custom Squarespace websites and templates designed to feel as original as the brands they represent. With 100+ sites launched and 50+ five-star reviews, Yangu helps creatives and small business owners build functional, personality-driven websites that work as around-the-clock sales tools. The studio combines website strategy, brand positioning, responsive design, clear architecture, and ongoing support."
+    },
+    {
+      "order": 22,
+      "name": "Dan Cohen – NYC-Based Squarespace Web Designer & Circle Partner",
+      "person": "Dan Cohen",
+      "studio": "",
+      "location": "New York City, NY, USA (Solo Designer)",
+      "region": "us",
+      "projectRange": "$1,500+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Creatives",
+        "Service Providers",
+        "Local Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.candohen.com",
+      "contact": "https://www.candohen.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/65432365-656c-40f5-b15e-1f4f1f9dd95d/Dan%2BCohen-Profile.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Dan Cohen is a New York City-based Squarespace web designer and Circle Partner who builds clean, strategic websites for businesses across more than 20 industries. Known for a streamlined, collaborative approach, he blends design expertise with a background in business and accounting to create sites that are polished, easy to use, and aligned with each client’s goals. His work focuses on clarity, functionality, responsive design, SEO, and a smooth client experience from start to finish."
+    },
+    {
+      "order": 23,
+      "name": "Clare Butler – UK Based Squarespace Website Designer",
+      "person": "Clare Butler",
+      "studio": "Clare Butler",
+      "location": "United Kingdom (Solo Designer)",
+      "region": "uk-europe",
+      "projectRange": "£950 – £4,000",
+      "budgets": [
+        "under2500",
+        "2500to5000"
+      ],
+      "clientTypes": [
+        "Creatives",
+        "Wellness Professionals",
+        "Small Businesses",
+        "Female Founders"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding"
+      ],
+      "portfolio": "https://www.clarebutler.co",
+      "contact": "https://www.clarebutler.co",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/92d903ec-9200-4b3a-a083-f221f70c6a23/squarespace-web-designer-uk",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Clare Butler is a UK-based Squarespace web designer and Accredited SEO Space Expert creating clean, elegant websites for small businesses, creatives, wellness professionals, and female founders. Recommended by Squarespace and known for a warm, collaborative approach, she blends visual design with strategic SEO so sites are not only beautiful and easy to use, but also better positioned to attract the right audience. Her offers include VIP Days, websites in a week, SEO, and branding support."
+    },
+    {
+      "order": 24,
+      "name": "Tiffany Davidson – Squarespace Designer & SEO Expert",
+      "person": "Tiffany Davidson",
+      "studio": "",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$3,600+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Coaches",
+        "Therapists",
+        "Entrepreneurs",
+        "eCommerce Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.tiffany-davidson.com",
+      "contact": "https://www.tiffany-davidson.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/1753436941699-MNH3B102MFL5870PBXUA/Tiffany%2BDavidson%2B%E2%80%93%2BSquarespace%2BDesigner%2B%26%2BSEO%2BExpert",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Tiffany Davidson is a Squarespace web designer and SEO specialist known for high-converting, search-optimized websites. Her portfolio spans a wide range of industries, and her work is centered on creating professional, goal-driven sites that perform in search and support business growth. In addition to custom Squarespace design, Tiffany offers SEO training, monthly retainers, ecommerce website design, branding, and strategic consultation for clients who want visibility to continue improving after launch."
+    },
+    {
+      "order": 25,
+      "name": "Kashaf Abid – Designer & SEO/AIO Expert",
+      "person": "Kashaf Abid",
+      "studio": "Kashaf Abid",
+      "location": "Dubai, UAE (Solo Designer, working worldwide)",
+      "region": "global",
+      "projectRange": "$3,500+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Coaches",
+        "Consultants",
+        "Therapists",
+        "Photographers",
+        "Creative Founders"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://www.kashafabid.com",
+      "contact": "https://www.kashafabid.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/af95a86e-5224-4e98-9145-7bfb68ad0152/picofme%2B%283%29.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Kashaf Abid is a Squarespace web designer and SEO expert with years of search experience, including work behind SEOSpace, the first SEO plugin built for Squarespace. She has worked on hundreds of sites for coaches, consultants, photographers, therapists, and creative founders. Kashaf combines design and SEO in one engagement, creating websites that look strong and get found. As a Circle Member and top-rated Upwork professional, she stays involved from strategy through build and post-launch support."
+    },
+    {
+      "order": 26,
+      "name": "Jennifer Barden – Squarespace Designer & Website Engagement Strategist",
+      "person": "Jennifer Barden",
+      "studio": "Jen X Web Design",
+      "location": "United States (Solo Designer)",
+      "region": "us",
+      "projectRange": "$2,000+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.jenxwebdesign.com",
+      "contact": "https://www.jenxwebdesign.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/249b916b-386e-4c18-9b2d-caca169796bc/Jen-X.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Jennifer Barden is a Squarespace web designer and website engagement strategist focused on turning websites into harder-working business tools. Through Jen X Web Design, she helps small businesses and solopreneurs attract more of the right traffic, generate stronger leads, and communicate more clearly online. Her work combines Squarespace design with brand messaging, website copy, SEO, blogging, and email campaign support so clients can improve both the site itself and the marketing around it."
+    },
+    {
+      "order": 27,
+      "name": "Nikki Butler – Lit Path Co.",
+      "person": "Nikki Butler",
+      "studio": "Lit Path Co.",
+      "location": "Minnesota, USA",
+      "region": "us",
+      "projectRange": "$1k – $5k",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Short-Term Rentals",
+        "Restaurants",
+        "Local Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://www.litpathco.com",
+      "contact": "https://www.litpathco.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/f8339353-67d1-4c0f-af31-6d613173d71e/nicolebutler-ss.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Nikki Butler is a Minnesota-based marketing strategist and Squarespace web designer with 20+ years of marketing experience and 7 years specializing in Squarespace builds. Through Lit Path Co., she helps small businesses—especially short-term rentals, restaurants, and local brands—create strategic online presences that reflect who they are and what they value. Her work blends positioning, practical site structure, SEO support, and marketing clarity so the website is useful, not simply attractive."
+    },
+    {
+      "order": 28,
+      "name": "Susana Nikravesh – YStrategize Inc.",
+      "person": "Susana Nikravesh",
+      "studio": "YStrategize Inc.",
+      "location": "United States (Solo Designer)",
+      "region": "us",
+      "projectRange": "$1.2k – $12k",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small & Medium-Sized Businesses",
+        "Growing Teams",
+        "Service-Based Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://ystrategize.com",
+      "contact": "https://ystrategize.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/abdc553b-e242-460f-b3a5-6d830332b60c/Ystrategize.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "YStrategize Inc. is led by Susana Nikravesh, a strategic web designer building thoughtful, high-performing websites since 2014. She partners with small and medium-sized businesses ready to move beyond DIY or outdated sites and step into a confident, professional online presence. Susana’s approach combines clarity, structure, and user experience with SEO-ready foundations, automation, and smart integrations so the website can become a lead-generating asset that supports long-term growth."
+    },
+    {
+      "order": 29,
+      "name": "Olga Kolgusheva — Applet Studio",
+      "person": "Olga Kolgusheva",
+      "studio": "Applet Studio",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$800–$15,000+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Therapists",
+        "Coaches",
+        "Consultants",
+        "Photographers",
+        "Small Businesses",
+        "Law Firms",
+        "Wellness Brands",
+        "Startups",
+        "Non-Profits"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development"
+      ],
+      "portfolio": "https://www.applet.studio",
+      "contact": "https://www.applet.studio/brief",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/53649f64-d97e-4cdf-94fe-d3e99352f88d/Portrait-Olga-Kolgusheva-2025-Applet-Studio-Squarespace-Templates.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Applet Studio is run by Olga Kolgusheva, a marketing specialist and Squarespace designer who helps therapists, photographers, nonprofits, law firms, wellness brands, and other small businesses create clear, modern websites optimized for marketing. Olga focuses on clean layouts, intuitive UX, and conversion-friendly structure using a guided, low-overwhelm process. Her work includes WordPress-to-Squarespace migrations, Squarespace 7.0-to-7.1 transitions, redesigns, template customization, and thoughtful improvements that get sites live without dragging out the process."
+    },
+    {
+      "order": 30,
+      "name": "Love Ajayi — Novule",
+      "person": "Love Ajayi",
+      "studio": "Novule",
+      "location": "United Kingdom",
+      "region": "uk-europe",
+      "projectRange": "$3,000 – $25,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Creatives",
+        "Small Business Owners",
+        "Coaches",
+        "Service-Based Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://www.novule.com",
+      "contact": "https://www.novule.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/f150b8a2-4bba-428a-8ff7-436d25478d4c/ajayi.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Novule is run by Love Ajayi, a creative Squarespace web designer and SEO expert who builds high-end websites designed to be discovered across Google and AI-driven search. Her work combines striking visual design with search-first strategy to help brands build visibility and authority over time. Love’s performance-focused Squarespace work has earned multiple industry features and design recognition, and her offers span custom builds, quick-launch websites, ongoing SEO retainers, and maintenance."
+    },
+    {
+      "order": 31,
+      "name": "Jay Van Dyke – Bergen Design Co",
+      "person": "Jay Van Dyke",
+      "studio": "Bergen Design Co",
+      "location": "New Jersey, USA",
+      "region": "us",
+      "projectRange": "$1k – $6k",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Businesses Across Industries"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://bergendesign.co",
+      "contact": "https://bergendesign.co",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/7ccc48b4-9efb-423e-a8f1-0ee024722f90/jayvandykeHeadshot%2B%281%29.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Bergen Design Co. is led by Jay Van Dyke, a Squarespace web designer and developer known for a practical, detail-oriented approach to websites that hold up over time. With more than a decade of Squarespace experience, Jay focuses on clean, well-structured builds that balance thoughtful design with real-world usability. His projects include new builds, redesigns, custom CSS and JavaScript, technical setup, ongoing improvements, and training so clients can confidently manage their sites after launch."
+    },
+    {
+      "order": 32,
+      "name": "Lucy – Failte Studio",
+      "person": "Lucy",
+      "studio": "Failte Studio",
+      "location": "Australia",
+      "region": "aus-nz",
+      "projectRange": "$1.9k – $10k",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Purpose-Driven Founders"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding"
+      ],
+      "portfolio": "https://www.failtestudio.com",
+      "contact": "https://www.failtestudio.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/06006f6a-59e2-49b1-9dc4-a1613d5c6200/Failte-Studio-Squarespace-Web-Designer-Australia-01.webp",
+      "imageType": "Portrait / workspace",
+      "avatarReady": "Yes",
+      "description": "Lucy is the founder of Failte Studio, a Squarespace designer, graphic designer, and illustrator who builds websites rooted in belonging, warmth, and connection. After a 15-year career in graphic design and illustration, she created Failte Studio to give small and purpose-driven businesses a more supportive design experience. Her custom Squarespace websites combine brand styling, strategy, and thoughtful functionality to create online homes that feel welcoming, distinctive, and built to grow with the business."
+    },
+    {
+      "order": 33,
+      "name": "Derek O’Brien – Get Going Design",
+      "person": "Derek O’Brien",
+      "studio": "Get Going Design",
+      "location": "Dublin, Ireland",
+      "region": "uk-europe",
+      "projectRange": "€1k – €20k",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Startups",
+        "Small Businesses",
+        "Established Companies"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.getgoingdesign.ie",
+      "contact": "https://www.getgoingdesign.ie",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/73f60aff-e313-4a7f-bff4-b8dcc31b77e2/Derek-O-Brien-Profile-Pic.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Get Going Design is led by Derek O’Brien and brings more than two decades of experience helping businesses improve visibility and connect with customers through standout websites and branding. As a Squarespace Marketplace Expert and Circle Platinum Partner, the studio focuses on high-quality, forward-thinking builds that perform in the real world. Projects range from startup websites to established-business redesigns and can include ecommerce, memberships, booking systems, Squarespace 7.1 upgrades, SEO, branding, and ongoing support."
+    },
+    {
+      "order": 34,
+      "name": "Diane Green Design",
+      "person": "Diane Green",
+      "studio": "Diane Green Design",
+      "location": "Based in Wyoming, serving clients across the U.S.",
+      "region": "us",
+      "projectRange": "$2,725+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Entrepreneurs",
+        "Coaches",
+        "Therapists",
+        "Creatives"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo"
+      ],
+      "portfolio": "https://dianegreendesign.com",
+      "contact": "https://dianegreendesign.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/2b122f41-28e3-4c60-8474-2fe68a3eb4ae/diane-green-design-1.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Diane Green Design specializes in Squarespace websites built around client-specific SEO strategy. Each site is designed with intention, using clean layouts, approachable visuals, and page structures that support visibility in search. Diane’s process is collaborative and supportive, making it a strong fit for entrepreneurs, coaches, therapists, creatives, and other service-based businesses that want more clarity and confidence online. Her work also includes VIP design days, one-page builds, blogging support, and AI/search visibility."
+    },
+    {
+      "order": 35,
+      "name": "Nick Croce – Design by Ency",
+      "person": "Nick Croce",
+      "studio": "Design by Ency",
+      "location": "United Kingdom",
+      "region": "uk-europe",
+      "projectRange": "$3k – $20k+",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Businesses Across the UK, US & Internationally"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "support"
+      ],
+      "portfolio": "https://designbyency.com",
+      "contact": "https://designbyency.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/dcf450d0-bce3-4919-9f71-144d0d487fc7/NickCroce.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Design by Ency is led by Nick Croce, a Squarespace website designer who has launched 200+ sites for clients across the UK, US, and internationally. A certified Squarespace Expert and Circle Platinum Partner, Nick specializes in bold, conversion-focused Squarespace design and development. Every project is personally managed from start to finish, giving clients a hands-on, collaborative experience while producing polished, high-performing websites built around clarity, customization, and business growth."
+    },
+    {
+      "order": 36,
+      "name": "Hannah Shaw – Studio Founded",
+      "person": "Hannah Shaw",
+      "studio": "Studio Founded",
+      "location": "London, UK",
+      "region": "uk-europe",
+      "projectRange": "$2.5k – $25k",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Creative Founders",
+        "Premium Brands",
+        "Service Providers"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://www.studiofounded.com",
+      "contact": "https://www.studiofounded.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/b46dd2f7-7131-4402-92c6-1535580f7dfa/Studio-Founded.jpg",
+      "imageType": "Lifestyle / cropped body image",
+      "avatarReady": "Review",
+      "description": "Hannah Shaw is a London-based Squarespace Circle Platinum Member and Marketplace Expert who has supported more than 1,000 business owners through bespoke design, strategic development, and premium templates. Through Studio Founded, she creates high-end, interactive Squarespace websites that blend artistry with strategy and communicate depth and intention. Her work spans custom builds, branding, website strategy, SEO, designer days, fast launches, conversion optimization, luxury templates, and ongoing support."
+    },
+    {
+      "order": 37,
+      "name": "Howard Wilson – Smallsky Creative",
+      "person": "Howard Wilson",
+      "studio": "Smallsky Creative",
+      "location": "Leamington Spa, UK (Solo Designer)",
+      "region": "uk-europe",
+      "projectRange": "£500 – £5,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Startups",
+        "Small Businesses",
+        "Service Providers",
+        "Local Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://www.smallskycreative.com",
+      "contact": "https://www.smallskycreative.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/bda5c57a-bf97-44cc-9e0e-aac60727d828/Howard%2Bfrom%2Bsmallsky%2BCreative.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Howard Wilson is a UK-based Squarespace web designer and founder of Smallsky Creative, a studio that combines clean, intentional design with practical business insight. With decades of experience in international sales, marketing, and operations, Howard understands how customers think, choose, and buy. He helps startups, service providers, and local brands create fast, manageable websites aligned with their brand and built to convert, with support spanning redesigns, SEO, content guidance, training, and maintenance."
+    },
+    {
+      "order": 38,
+      "name": "Beverly Yeager – The Design Wonder",
+      "person": "Beverly Yeager",
+      "studio": "The Design Wonder",
+      "location": "Boston, MA",
+      "region": "us",
+      "projectRange": "$2,000 - $30,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.thedesignwonder.com",
+      "contact": "https://www.thedesignwonder.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/6bb68a61-c815-4086-8593-f33ad4ee0131/bev-proof-211.webp",
+      "imageType": "Lifestyle portrait",
+      "avatarReady": "Yes",
+      "description": "Beverly Yeager brings more than a decade of award-winning design experience and a deep interest in storytelling to The Design Wonder. She creates strategic brands and custom Squarespace websites for small businesses, authors, educators, and solopreneurs, with an emphasis on work that supports growth as well as aesthetics. Beverly is known for a fluid process that can include website strategy, copywriting, brand identity, custom visuals, VIP days, website-in-a-week offers, and ongoing support."
+    },
+    {
+      "order": 39,
+      "name": "Vic King – Strong Sites",
+      "person": "Vic King",
+      "studio": "Strong Sites",
+      "location": "Lakeland, FL, USA",
+      "region": "us",
+      "projectRange": "$500-$5,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo"
+      ],
+      "portfolio": "https://strongsites.co",
+      "contact": "https://strongsites.co",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/7e6f743b-eb09-4fa4-88f9-ffd67919168a/Strong%2BSites%2BVic%2BWide.jpg",
+      "imageType": "Lifestyle portrait",
+      "avatarReady": "Yes",
+      "description": "Vic King has been helping busy business owners look good and win work online for 15 years. Through Strong Sites, he has built hundreds of websites and advised business owners on digital marketing strategy, systems, and tools. His Squarespace work includes full-custom web design, template customization, and local SEO, with a practical focus on helping small businesses and solopreneurs improve how they present themselves online and turn their websites into more useful business assets."
+    },
+    {
+      "order": 40,
+      "name": "Deanna Burks – The Brandess™",
+      "person": "Deanna Burks",
+      "studio": "The Brandess™",
+      "location": "US and Abroad",
+      "region": "global",
+      "projectRange": "$2,500 to $20,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "branding",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://deannaburks.com",
+      "contact": "https://deannaburks.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/efaef04e-f774-442c-9883-d82e6caaa04f/deanna.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Deanna Burks brings more than 25 years of creative direction and brand strategy experience to elevated brand and web experiences for architects, interior designers, wedding professionals, luxury service providers, and entrepreneurs. As a Squarespace, HoneyBook, Adobe Creative Cloud, and Flodesk expert with advanced CSS knowledge, she blends strategic thinking with timeless design. Her work spans custom websites, complete brand identities, CRM setup, marketing collateral, and ongoing creative partnership."
+    },
+    {
+      "order": 41,
+      "name": "Khara Wolf – Websites by Khara",
+      "person": "Khara Wolf",
+      "studio": "Websites by Khara",
+      "location": "United States (Solo Designer)",
+      "region": "us",
+      "projectRange": "$3,500 – $10,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Service-Based Businesses",
+        "Local Businesses"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.websitesbykhara.com",
+      "contact": "https://www.websitesbykhara.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/f96eaf1f-4c09-4d27-b97a-fb2efff05c50/khara-wolf-2025-headshot-square.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Khara Wolf is a certified Squarespace SEO expert and Platinum Circle Marketplace designer serving service-based businesses and local brands across the United States. Through Websites by Khara, she combines more than a decade of experience in SEO, website design, development, marketing, and graphic design. Khara’s highly personalized process digs deeply into each business to create Squarespace websites that are discoverable, strategic, aligned with the brand, and built for long-term growth."
+    },
+    {
+      "order": 42,
+      "name": "Scott Spencer – Powell Creative",
+      "person": "Scott Spencer",
+      "studio": "Powell Creative",
+      "location": "Nashville TN",
+      "region": "us",
+      "projectRange": "$2,500 – $15,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "seo",
+        "branding",
+        "development"
+      ],
+      "portfolio": "https://powellcreative.com",
+      "contact": "https://powellcreative.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/215f5a61-e658-4620-814f-9450dbd97491/scott-spencer-1.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Scott Spencer is the owner and Chief Creative Officer of Powell Creative, a Nashville-based branding and design studio with more than 20 years of experience. His work is grounded in purposeful, thoughtful design rather than cookie-cutter solutions, whether he is shaping a logo, refining brand messaging, or building a custom Squarespace website. Scott combines branding, SEO, graphic design, advanced CSS, and custom integrations to help companies stand apart with resilient, original creative."
+    },
+    {
+      "order": 43,
+      "name": "Maggie Schneider – Hilltop Help",
+      "person": "Maggie Schneider",
+      "studio": "Hilltop Help",
+      "location": "Frederick, MD USA",
+      "region": "us",
+      "projectRange": "$500-$20,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "support"
+      ],
+      "portfolio": "https://hilltophelp.com",
+      "contact": "https://hilltophelp.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/ab3b9e71-7ab5-4531-8350-f66a10529c01/maggie.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Maggie Schneider, founder of Hilltop Help, is a Squarespace web designer and SEO consultant who builds SEO-first websites for therapists, healthcare providers, and wellness businesses. Her sites are backed by keyword research, content strategy, and a plan to attract ideal clients over time. A former registered nurse, Maggie brings empathy, precision, and data-driven thinking to custom Squarespace design, SEO audits and optimization, blogging, and ongoing content management."
+    },
+    {
+      "order": 44,
+      "name": "Meg Desjarlais – Floating Lotus Design",
+      "person": "Meg Desjarlais",
+      "studio": "Floating Lotus Design",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$150+ consultations; $1,500 design days; custom websites from $4,300",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo"
+      ],
+      "portfolio": "https://floatinglotusdesign.com",
+      "contact": "https://floatinglotusdesign.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/341b027a-708c-4464-991d-43485fca0e5a/Standard%2BBio%2BPhoto.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Meg Desjarlais is a Squarespace web designer and SEO specialist who creates custom websites for established women service providers and musicians. Drawing from her background teaching mindfulness meditation, she brings a calm, supportive process to website projects and is known for clear guidance and distinctive designs that reflect each client’s personality. Through Floating Lotus Design, Meg offers custom Squarespace websites, SEO strategy, VIP design days, and focused consultation sessions."
+    },
+    {
+      "order": 45,
+      "name": "Dave Hawkins – Made by Dave",
+      "person": "Dave Hawkins",
+      "studio": "Made by Dave",
+      "location": "United Kingdom",
+      "region": "uk-europe",
+      "projectRange": "£2,500 - £25,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://madebydave.org",
+      "contact": "https://madebydave.org",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/2361b72f-4827-4b85-ae38-70b3ff85bfab/Dave-Hawkins-Made-by-Dave-Headshot.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Made by Dave helps businesses, creatives, and entrepreneurs bring their ideas to life through polished Squarespace websites. The studio specializes in Squarespace 7.1, blending clean, modern design with thoughtful functionality so sites are easy to navigate and straightforward to manage. Every project is approached as something personal and purposeful, with services spanning new site design, branding, ecommerce, scheduling, courses, site migrations, custom functionality, training, and support."
+    },
+    {
+      "order": 46,
+      "name": "Katie – PEARLER",
+      "person": "Katie",
+      "studio": "PEARLER",
+      "location": "Australia",
+      "region": "aus-nz",
+      "projectRange": "$1,500-$15,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "branding"
+      ],
+      "portfolio": "https://pearler.work",
+      "contact": "https://pearler.work",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/035aba54-403e-453a-9f1d-4cdf04be7a6a/PEARLERWORK_HEADSHOTS2023.webp",
+      "imageType": "Lifestyle portrait",
+      "avatarReady": "Yes",
+      "description": "Katie of PEARLER combines web and brand design with teaching to help solopreneurs create unique, authentic, high-converting online experiences. With a decade of website design experience and an intuitive approach to translating the practical and emotional sides of a brand, she creates sites that connect and convert. PEARLER also helps clients feel more capable with the tools they already have, offering templates, design days, and guidance that makes the website process less daunting."
+    },
+    {
+      "order": 47,
+      "name": "Hope Himel-Benson – Dreamtime Marketing",
+      "person": "Hope Himel-Benson",
+      "studio": "Dreamtime Marketing",
+      "location": "Baton Rouge, Louisiana",
+      "region": "us",
+      "projectRange": "$1,200-$6,500",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://dreamtimemarketing.com",
+      "contact": "https://dreamtimemarketing.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/e357b122-8464-4ac3-9a3b-4b14f1f3f345/hopehimelbensonheadshot.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Hope Himel-Benson designs welcoming, easy-to-use Squarespace websites for therapists, coaches, and wellness professionals. With more than 20 years of experience across clinical social work and marketing in healthcare, mental health, and senior care, she brings a deep understanding of both practitioners and the people they serve. Her collaborative process combines thoughtful design with booking systems, client portals, email marketing, and integrations to help practices grow their business and impact."
+    },
+    {
+      "order": 48,
+      "name": "Miles Noble – Altitude Design",
+      "person": "Miles Noble",
+      "studio": "Altitude Design",
+      "location": "United Kingdom",
+      "region": "uk-europe",
+      "projectRange": "$1,000 – $100,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.designbyaltitude.com",
+      "contact": "https://www.designbyaltitude.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/9c222f6f-c579-4079-b7e7-a99e01f5f03e/51altitude-93.webp",
+      "imageType": "Team photo",
+      "avatarReady": "Review",
+      "description": "Altitude Design is a multi-award-winning Squarespace agency with hundreds of websites launched for clients around the world. The team creates fast, mobile-optimized Squarespace 7.1 sites built for search visibility, intuitive navigation, and conversion. As a recognized Squarespace Expert and Premium Circle Member, Altitude is known for stretching the platform through custom development, ecommerce, migrations, integrations, automation, and performance optimization. The B Corp-certified agency also places social responsibility and sustainability at the center of its work."
+    },
+    {
+      "order": 49,
+      "name": "Dominique Marshall – Dmarzdesigns",
+      "person": "Dominique Marshall",
+      "studio": "Dmarzdesigns",
+      "location": "London, UK",
+      "region": "uk-europe",
+      "projectRange": "£350-£4,000",
+      "budgets": [
+        "under2500",
+        "2500to5000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development"
+      ],
+      "portfolio": "https://dmarzdesigns.com",
+      "contact": "https://dmarzdesigns.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/047bf125-186a-4f25-9979-aba60e64ec68/dominique_marshall_Dmarzdesigns_website_designer.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Dominique Marshall is the founder of Dmarzdesigns, a London-based Squarespace studio for socially conscious small businesses, coaches, and service providers. With a background in UX and branding, she helps clients create sites that reflect their expertise and support outcomes such as membership growth, aligned client bookings, and speaking opportunities. Her people-first approach puts accessibility and a smooth user experience alongside strong visual design, with offers ranging from audits and design days to full builds."
+    },
+    {
+      "order": 50,
+      "name": "Luka Živko – Sitekik",
+      "person": "Luka Živko",
+      "studio": "Sitekik",
+      "location": "Croatia",
+      "region": "uk-europe",
+      "projectRange": "$800-$3,500",
+      "budgets": [
+        "under2500",
+        "2500to5000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://www.sitekik.com",
+      "contact": "https://www.sitekik.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/524b6138-019a-4602-815d-28c0e66732b7/luka.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Luka Živko is a Croatia-based Squarespace web designer focused exclusively on the platform. He creates clean, easy-to-use websites designed to make running the site simpler for small businesses and solopreneurs. As a Squarespace Circle member, he can also offer clients program perks such as extended trials and discounts. His background in occupational therapy informs a listening-first approach to projects, which span custom design, redesigns, mobile optimization, SEO setup, animations, reviews, training, and support."
+    },
+    {
+      "order": 51,
+      "name": "Whitney Delaney – Delaney Consulting",
+      "person": "Whitney Delaney",
+      "studio": "Delaney Consulting",
+      "location": "Central Virginia",
+      "region": "us",
+      "projectRange": "$360–$1,200/month",
+      "budgets": [
+        "under2500"
+      ],
+      "clientTypes": [
+        "Small & Local Businesses",
+        "Service Providers",
+        "Hospitality & Food",
+        "Experiences & Events",
+        "Retail & Ecommerce",
+        "Education & Nonprofits"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.delaneyconsulting.co",
+      "contact": "https://www.delaneyconsulting.co",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/907ddfb5-0c86-49dc-a6a4-7c796b518482/Whitney_headshot.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Delaney Co. makes websites a simpler part of running a business through a collaborative subscription model. The small team builds custom websites in about two weeks, using live working sessions, monthly payments, and ongoing expert support instead of a large upfront project and long timeline. Every site is built with SEO, UX, and conversion in mind, and unlimited updates allow the website to keep evolving alongside the business. The team also supports ecommerce, booking, automation, marketing, and strategy."
+    },
+    {
+      "order": 52,
+      "name": "Nicolette Yates – Happy Little Websites",
+      "person": "Nicolette Yates",
+      "studio": "Happy Little Websites",
+      "location": "Asheville, North Carolina, USA",
+      "region": "us",
+      "projectRange": "$1,200 – $7,000+; Hourly $110",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Therapists",
+        "Creatives/Artists",
+        "E-Commerce",
+        "Service-Based Businesses"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://www.happylittlewebsites.com",
+      "contact": "https://www.happylittlewebsites.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/f534a6f9-e392-4c39-a4fa-5a93f445bdcf/DSC_2250.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Nicolette Yates is an expert-level Squarespace and brand designer and the founder of Happy Little Websites. She creates sites that balance creativity with function through consistent brand expression, clear calls to action, strategic content, and accessibility best practices. Nicolette works with entrepreneurs focused on social good, including therapists, artists, ecommerce brands, and service-based businesses, and supports them with Squarespace design, maintenance, branding, consulting, and SEO."
+    },
+    {
+      "order": 53,
+      "name": "Tong Chen – Chase e-Design",
+      "person": "Tong Chen",
+      "studio": "Chase e-Design",
+      "location": "Sydney, Australia",
+      "region": "aus-nz",
+      "projectRange": "$2,000+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "seo",
+        "branding"
+      ],
+      "portfolio": "https://behance.net",
+      "contact": "https://chaseedesign.com.au",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/3af36592-44a7-4f4f-9345-77527c916c2e/tong%2Bchen.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Tong Chen brings more than 10 years of experience and 800+ custom websites launched to Chase e-Design. A certified Squarespace Expert and Authorized Trainer, Tong helps businesses translate their vision into beautifully branded, high-converting websites. His approach blends design expertise with marketing insight so the finished site is not only polished but positioned to support business growth, with services spanning graphic design, custom Squarespace website design, and SEO."
+    },
+    {
+      "order": 54,
+      "name": "Dylan Bindrup – Highr Labs",
+      "person": "Dylan Bindrup",
+      "studio": "Highr Labs",
+      "location": "Utah, United States (Global Client Base)",
+      "region": "us",
+      "projectRange": "$2,000+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development",
+        "ecommerce"
+      ],
+      "portfolio": "https://highrlabs.com",
+      "contact": "https://highrlabs.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/916118df-4466-4b38-a5d2-3a080f417016/Dylan%2BBindrup%2BSquarespace%2BWebsite%2BDesigner%2BHeadshot.png",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Highr Labs, founded by Dylan Bindrup, creates custom Squarespace websites for business owners around the world, from straightforward builds to highly customized sites with advanced code. The studio specializes in custom builds, Figma-to-Squarespace migrations, ecommerce, and coding support, with a focus on stretching the platform while keeping performance strong. Clients value the personalized attention and seamless process, and the goal is always a website that works as hard as the business behind it."
+    },
+    {
+      "order": 55,
+      "name": "Visuable",
+      "person": "",
+      "studio": "Visuable",
+      "location": "London",
+      "region": "uk-europe",
+      "projectRange": "$1,000 – $20,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "development",
+        "ecommerce"
+      ],
+      "portfolio": "https://www.visuable.co",
+      "contact": "https://www.visuable.co",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/90675434-9b60-4fbd-8853-a38be69ac6bc/Visuable%2Bteam%2Bcollaborating.webp",
+      "imageType": "Team / workspace",
+      "avatarReady": "Review",
+      "description": "Visuable is a London-based digital brand agency helping businesses stand out through Squarespace design, branding, copywriting, and SEO. Since 2015, the agency has launched 1,500+ brands across more than 50 countries, working with organizations ranging from Adobe and Asics to ambitious founders and startups. Visuable brings strategy and creativity together to build custom, accessible platforms for growth, with support across brand identity, digital platforms, copywriting, SEO strategy, and brand consultancy."
+    },
+    {
+      "order": 56,
+      "name": "Josh Cohen – Squarely",
+      "person": "Josh Cohen",
+      "studio": "Squarely",
+      "location": "Melbourne, Australia",
+      "region": "aus-nz",
+      "projectRange": "$2,000–$30,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Businesses",
+        "Entrepreneurs",
+        "Local Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://squarely.com.au",
+      "contact": "https://squarely.com.au",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/1c3a1df2-f946-424e-b515-93825f48b513/josh-cohen.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Squarely is a dedicated Squarespace and SEO agency helping businesses build polished, high-performing websites. The team combines custom Squarespace design with strategic SEO and ongoing support so brands can improve both how they look and how they are discovered. Services include new builds, maintenance, site migrations and upgrades to Squarespace 7.1, local SEO and AI-search optimization, plus brand design and refresh work for businesses, entrepreneurs, and local brands."
+    },
+    {
+      "order": 57,
+      "name": "Mikka Cruz – Studio Elias",
+      "person": "Mikka Cruz",
+      "studio": "Studio Elias",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$2,500-$10,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://studioelias.com",
+      "contact": "https://studioelias.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/8d595ea9-7825-4ad6-aaec-9ac1af340d66/MIKKA%2BCRUZ%2B-%2BSTUDIO%2BELIAS-1.webp",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Mikka Cruz founded Studio Elias to provide high-quality, fully managed design solutions and ongoing support to businesses worldwide. With more than 250 Squarespace websites in the portfolio, Mikka is recognized as one of the platform’s early certified Experts and Authorized Trainers. After nearly a decade in graphic design and years of full-service Squarespace development, she built Studio Elias into a trusted partner for clients across the US, UK, Australia, Singapore, and beyond."
+    },
+    {
+      "order": 58,
+      "name": "Shannon – Luminary Studio",
+      "person": "Shannon",
+      "studio": "Luminary Studio",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$2,500 – $50,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://luminarystudio.co",
+      "contact": "https://luminarystudio.co",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/277c4645-25be-4a1d-bac4-42c235106526/%C2%A9AliciaLeigh-2024-Shannon%2BCasey-73.jpg",
+      "imageType": "Lifestyle portrait",
+      "avatarReady": "Yes",
+      "description": "Shannon of Luminary Studio designs Squarespace websites that build trust, make it easier for the right clients to say yes, and support business growth. Her work ranges from focused one-page sites to full digital ecosystems with automations, sales funnels, ecommerce, courses, memberships, and integrated booking tools. With a background spanning business strategy, systems, and design, Shannon bridges the gap between how a brand looks and how it performs, creating sites that save time and support scale."
+    },
+    {
+      "order": 59,
+      "name": "Connie Holen – Pixality Design",
+      "person": "Connie Holen",
+      "studio": "Pixality Design",
+      "location": "Lincoln, Nebraska, USA",
+      "region": "us",
+      "projectRange": "$2,000 – $10,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding"
+      ],
+      "portfolio": "https://pixalitydesign.com",
+      "contact": "https://pixalitydesign.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/a82a8bb3-9653-41de-a4ad-487f46aa4976/Connie%2BHolen.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Pixality Design, led by Squarespace Platinum Partner and digital strategist Connie Holen, specializes in websites for fitness and wellness studios. With 300+ studio websites launched, Connie creates conversion-focused Squarespace 7.1 sites that are easy to manage, optimized for local search, and integrated with booking and membership platforms. As a Certified Mindbody Business Consultant, Mariana Tek Preferred Partner, and Google Search Certified Marketer, she brings deep industry knowledge to design, local SEO, branding, and copywriting."
+    },
+    {
+      "order": 60,
+      "name": "John Macpherson – Media Surgery",
+      "person": "John Macpherson",
+      "studio": "Media Surgery",
+      "location": "Scotland, UK",
+      "region": "uk-europe",
+      "projectRange": "£2,000-£5,000",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "development"
+      ],
+      "portfolio": "https://mediasurgery.co.uk",
+      "contact": "https://mediasurgery.co.uk",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/498be959-4d8c-4c7b-ba48-4b0f9a1a5d5a/media%2Bsurgery.jpg",
+      "imageType": "Logo",
+      "avatarReady": "Review",
+      "description": "Media Surgery is a small design agency based in Scotland specializing in Squarespace design and development. The studio works with small businesses and solopreneurs on custom website design, Squarespace edits, and platform-specific design support. With projects typically ranging from £2,000–£5,000, Media Surgery is a fit for clients who want focused Squarespace expertise from a compact team without the complexity of a larger agency process."
+    },
+    {
+      "order": 61,
+      "name": "Ken Roberson – Kue Studio",
+      "person": "Ken Roberson",
+      "studio": "Kue Studio",
+      "location": "Los Angeles, CA",
+      "region": "us",
+      "projectRange": "$4,000–$20,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Solopreneurs",
+        "E-Commerce Brands"
+      ],
+      "needs": [
+        "new-site",
+        "branding",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.kue.studio",
+      "contact": "https://www.kue.studio",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/1c6d0620-3b6c-466a-bbc4-f12d0097e5a9/kue-social-sharing.webp",
+      "imageType": "Brand graphic",
+      "avatarReady": "Review",
+      "description": "Kue Studio delivers brand strategy, identity, web design, motion, and AI-powered creative built for speed, clarity, and impact. The Los Angeles studio helps brands cut through noise with bold ideas and fast execution through focused two-week or one-month sprints, as well as ongoing monthly support. Its capabilities span positioning, ecommerce, motion, AI image and video, automations, integrations, APIs, and creative direction—without the bloated process of a traditional agency."
+    },
+    {
+      "order": 62,
+      "name": "Farrah B Fox – Night Swim",
+      "person": "Farrah B Fox",
+      "studio": "Night Swim",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$3,000–$10,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000"
+      ],
+      "clientTypes": [
+        "Small to Medium-Sized Businesses"
+      ],
+      "needs": [
+        "new-site",
+        "branding",
+        "development",
+        "ecommerce"
+      ],
+      "portfolio": "https://nightswim.studio",
+      "contact": "https://nightswim.studio",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/3920908d-e7f9-4ee8-afeb-ee6337cf8504/Night%2BSwim%2B12.webp",
+      "imageType": "Team portrait",
+      "avatarReady": "Yes",
+      "description": "Night Swim was founded by Farrah B Fox and Kenly after a combined decade of agency, in-house, and freelance branding experience. They created the studio to address common gaps they saw in traditional branding: language and design treated separately, rushed client relationships, and rebrands priced out of reach for many smaller businesses. Night Swim takes an investigative approach that brings language, strategy, and design together to create cohesive brands and digital experiences."
+    },
+    {
+      "order": 63,
+      "name": "Iane – Squarespace Web Designer",
+      "person": "Iane",
+      "studio": "",
+      "location": "Canada",
+      "region": "canada",
+      "projectRange": "$999–$3,000",
+      "budgets": [
+        "under2500",
+        "2500to5000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Entrepreneurs",
+        "Global Clients"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "support"
+      ],
+      "portfolio": "https://iane.ca",
+      "contact": "https://iane.ca",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/c68d94d0-4cdc-4385-9dbb-41f3df1f3bfb/iane-profile.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Iane is a Montreal-based Squarespace Circle Platinum Partner, Community Leader, and global speaker serving clients worldwide. His work centers on strategic, simple website design for small businesses and entrepreneurs that want a professional online presence without unnecessary complexity. Iane offers three-week custom website builds, focused one-page sites, and ongoing support and updates, bringing deep Squarespace community experience to projects while keeping the client experience straightforward."
+    },
+    {
+      "order": 64,
+      "name": "Gia Bocci – gia b design",
+      "person": "Gia Bocci",
+      "studio": "gia b design",
+      "location": "United States",
+      "region": "us",
+      "projectRange": "$1,000–$4,000",
+      "budgets": [
+        "under2500",
+        "2500to5000"
+      ],
+      "clientTypes": [
+        "Small Businesses",
+        "Entrepreneurs",
+        "Creative Professionals"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "support"
+      ],
+      "portfolio": "https://giabdesign.com",
+      "contact": "https://giabdesign.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/d4c8f9e3-08d6-4538-bf16-13dca80b24c0/gia%2Bb%2Bdesign.webp",
+      "imageType": "Lifestyle / distant portrait",
+      "avatarReady": "Review",
+      "description": "Gia Bocci brings fourteen years of film production experience to her web and graphic design work, combining strong organization with a fresh creative perspective. As a former commercial production manager, she managed budgets, coordinated teams, and built systems that now shape her design process. Clients value her simple, colorful, organic style and collaborative approach. Through gia b design, she supports Squarespace websites, branding, SEO, email marketing, and a wide range of digital and print collateral."
+    },
+    {
+      "order": 65,
+      "name": "Jared Gibbons – Pocketknife",
+      "person": "Jared Gibbons",
+      "studio": "Pocketknife",
+      "location": "Columbus, Ohio",
+      "region": "us",
+      "projectRange": "$3,000–$30,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Service Businesses",
+        "Creatives",
+        "Growing Brands"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "branding",
+        "development",
+        "support"
+      ],
+      "portfolio": "https://www.pocketknife.design",
+      "contact": "https://www.pocketknife.design",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/5625b1b0-e07d-48b9-a3d7-cbe7672bdc71/pocketknife.webp",
+      "imageType": "Team portrait",
+      "avatarReady": "Yes",
+      "description": "Pocketknife is led by Jared Gibbons, a seasoned Squarespace designer and founder with more than a decade of experience building custom websites for service businesses, creatives, and growing brands across the U.S. The studio creates fast, mobile-friendly sites designed around SEO, clear messaging, and conversion. Pocketknife blends strategy, design, development, and copy to produce websites that look sharp while supporting stronger search visibility, lead generation, and long-term growth."
+    },
+    {
+      "order": 66,
+      "name": "Ana Lea Amelio – Ley Design",
+      "person": "Ana Lea Amelio",
+      "studio": "Ley Design",
+      "location": "Spain",
+      "region": "uk-europe",
+      "projectRange": "$1,200–$5,000+",
+      "budgets": [
+        "under2500",
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Entrepreneurs",
+        "Coaches",
+        "Small Businesses"
+      ],
+      "needs": [
+        "new-site",
+        "redesign"
+      ],
+      "portfolio": "https://leydesignstudio.com",
+      "contact": "https://leydesignstudio.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/4c35d8cd-896e-4729-adc5-a5f68e46ccf6/Ana%2BLea%2BAmelio%2Bowner%2Bof%2BLey%2BDesign_500px.jpg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Ana Lea Amelio has been designing websites since 2012 and working exclusively with Squarespace since 2018. Through Ley Design, she creates minimal, clean websites that showcase both expertise and personality, helping entrepreneurs, coaches, and small businesses stand out with sites that are simple, functional, and elegant. Her work includes custom Squarespace design, template restyling, and setup for course and email marketing platforms, with an emphasis on clarity and an uncluttered client experience."
+    },
+    {
+      "order": 67,
+      "name": "Mikkel Calmann – Typza",
+      "person": "Mikkel Calmann",
+      "studio": "Typza",
+      "location": "Denmark",
+      "region": "uk-europe",
+      "projectRange": "$2,500–$35,000",
+      "budgets": [
+        "2500to5000",
+        "5000to10000",
+        "10000plus"
+      ],
+      "clientTypes": [
+        "Businesses",
+        "Creatives",
+        "Entrepreneurs"
+      ],
+      "needs": [
+        "new-site",
+        "redesign",
+        "seo",
+        "development",
+        "ecommerce",
+        "support"
+      ],
+      "portfolio": "https://www.typza.com",
+      "contact": "https://www.typza.com",
+      "image": "https://images.squarespace-cdn.com/content/v1/558ae872e4b06e5cac195ad7/57c7842a-efcb-4e26-8d27-dfbbb047dfb4/mikkel.jpeg",
+      "imageType": "Portrait",
+      "avatarReady": "Yes",
+      "description": "Typza, led by Mikkel Calmann, creates high-performing Squarespace websites for businesses, creatives, and entrepreneurs worldwide. Every site is built for speed, mobile usability, SEO foundations, and a clear structure that helps turn visitors into clients. As a long-time Squarespace Circle Member, Mikkel is known for deep customization beyond templates, transparent communication, and results-driven design. Typza also supports migrations, redesigns, ecommerce, maintenance, and ongoing optimization for long-term scalability."
+    }
+  ]
+}
