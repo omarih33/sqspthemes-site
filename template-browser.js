@@ -29,7 +29,8 @@ const params=new URLSearchParams(location.search);
 const legacyCategory=params.get("choose-a-category");
 let state={q:params.get("q")||"",category:params.get("category")||(legacyCategory?(legacy[norm(legacyCategory)]||"All templates"):"All templates"),sort:params.get("sort")||"az",price:params.get("price")||"any"};
 if(!groups.some(x=>x[0]===state.category))state.category="All templates";
-const html='<div class="sqt-dir-top"><div><h2>Browse Squarespace templates.</h2><p>Explore independent designers, compare prices, and find a design that fits your project. <a href="/find-templates">Or find your match with AI →</a></p></div></div>'
+const html='<nav class="sqt-template-switch" aria-label="Template navigation"><a href="/templates" aria-current="page">Browse Templates</a><a href="/find-templates">Find Templates</a></nav>'
++'<div class="sqt-dir-top"><div><h2>Browse Squarespace templates.</h2><p>Explore independent designers, compare prices, and find a design that fits your project.</p></div></div>'
 +'<div class="sqt-dir-controls"><label class="sqt-dir-search-label" for="sqt-dir-q">Search templates<input type="search" id="sqt-dir-q" placeholder="Search names, designers, styles…" autocomplete="off"></label>'
 +'<label>Category<select id="sqt-dir-cat"></select></label><label>Price<select id="sqt-dir-price"><option value="any">Any price</option><option value="under100">Under $100</option><option value="100to249">$100–$249</option><option value="250plus">$250+</option></select></label>'
 +'<label>Sort by<select id="sqt-dir-sort"><option value="az">Name: A–Z</option><option value="za">Name: Z–A</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label></div>'
