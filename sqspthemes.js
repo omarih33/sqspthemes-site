@@ -518,11 +518,7 @@
             '<p class="sqt-dir-badge">Premium Squarespace Designer Directory</p>' +
             '<h1>Find the Best Squarespace Designer</h1>' +
             '<p class="sqt-dir-sub">Connect with hand-picked, professional Squarespace designers and agencies who create standout websites for businesses of all kinds.</p>' +
-            '<div class="sqt-dir-stats">' +
-              '<div class="sqt-dir-stat"><strong id="sqt-dir-hero-count">—</strong><span>Verified Designers</span></div>' +
-              '<div class="sqt-dir-stat"><strong>Global</strong><span>Coverage</span></div>' +
-              '<div class="sqt-dir-stat"><strong>Curated</strong><span>Professionals</span></div>' +
-            '</div>' +
+
           '</section>' +
           '<section class="sqt-dir-controls-shell">' +
             '<div class="sqt-dir-controls-head">' +
@@ -566,7 +562,6 @@
 
     var list = mount.querySelector("#sqt-dir-list");
     var count = mount.querySelector("#sqt-dir-count");
-    var heroCount = mount.querySelector("#sqt-dir-hero-count");
     var empty = mount.querySelector("#sqt-dir-empty");
     var search = mount.querySelector("#sqt-dir-search");
     var region = mount.querySelector("#sqt-dir-region");
@@ -576,7 +571,7 @@
     var designers = [];
 
     function profileUrl(x) {
-      return "/best-squarespace-designers/" + slug(x.person || x.studio || x.name);
+      return x.profileUrl || x.portfolio || x.contact || "#";
     }
 
     function renderRow(x, i) {
@@ -629,7 +624,6 @@
 
       list.innerHTML = visible.map(renderRow).join("");
       count.textContent = visible.length + (visible.length === 1 ? " designer" : " designers");
-      if (heroCount) heroCount.textContent = designers.length + "+";
       empty.hidden = visible.length !== 0;
       normalizeInternalLinks(mount);
     }
