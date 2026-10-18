@@ -799,14 +799,7 @@
             '<h1 class="sqt-page-title">Find the Right Squarespace Designer</h1>' +
             '<p class="sqt-dir-sub sqt-page-dek">Browse paid listings from Squarespace designers and studios. Compare their work, specialties, and project budgets to find a fit.</p>' +
           '</section>' +
-          '<section class="sqt-dir-controls-shell sqt-panel">' +
-            '<div class="sqt-panel__head">Browse the Directory</div>' +
-            '<div class="sqt-panel__body">' +
-              '<p class="sqt-dir-controls-copy">Search by name, studio, location, or specialty. Narrow results with the filters below.</p>' +
-              '<label class="sqt-dir-search-label" for="sqt-dir-search">Search<input id="sqt-dir-search" type="search" placeholder="Name, studio, location, specialty" autocomplete="off"></label>' +
-            '</div>' +
-          '</section>' +
-          '<div class="sqt-dir-sticky-filters sqt-panel" role="group" aria-label="Filter directory listings">' +
+          '<div id="sqt-dir-sticky-filters" class="sqt-dir-sticky-filters sqt-panel" role="group" aria-label="Filter directory listings">' +
             '<div class="sqt-dir-controls sqt-filterbar">' +
               '<label>Region<select id="sqt-dir-region">' +
                 '<option value="">All regions</option>' +
@@ -839,6 +832,18 @@
             '<span id="sqt-dir-count" class="sqt-dir-visually-hidden" role="status" aria-live="polite">Loading listings…</span>' +
             '<a class="sqt-dir-get-listed" href="/contact">Get listed →</a>' +
             '<button id="sqt-dir-clear" type="button">Clear filters</button>' +
+          '</div>' +              '</div>' +
+            '<div class="sqt-dir-toolbar-actions">' +
+              '<button id="sqt-dir-search-toggle" type="button" aria-expanded="false" aria-controls="sqt-dir-search-panel">Search</button>' +
+              '<a class="sqt-dir-get-listed" href="/contact">Get listed →</a>' +
+              '<button id="sqt-dir-clear" type="button">Clear filters</button>' +
+            '</div>' +
+            '<div class="sqt-dir-search-panel" id="sqt-dir-search-panel" hidden>' +
+              '<label class="sqt-dir-search-label" for="sqt-dir-search">Search by name, studio or specialty' +
+                '<input id="sqt-dir-search" type="search" placeholder="Search designers…" autocomplete="off">' +
+              '</label>' +
+            '</div>' +
+            '<span id="sqt-dir-count" class="sqt-dir-visually-hidden" role="status" aria-live="polite">Loading listings…</span>' +
           '</div>' +
           '<section class="sqt-dir-results sqt-panel">' +
             '<div class="sqt-panel__head">Directory Listings</div>' +
@@ -856,7 +861,40 @@
     var budget = mount.querySelector("#sqt-dir-budget");
     var need = mount.querySelector("#sqt-dir-need");
     var clear = mount.querySelector("#sqt-dir-clear");
+    var searchToggle = mount.querySelector("#sqt-dir-search-toggle");
+    var searchPanel = mount.querySelector("#sqt-dir-search-panel");
+    var toolbar = mount.querySelector("#sqt-dir-sticky-filters");
     var designers = [];
+
+    searchToggle.addEventListener("click", function () {
+      var opening = searchPanel.hidden;
+      searchPanel.hidden = !opening;
+      searchToggle.setAttribute("aria-expanded", opening ? "true" : "false");
+      searchToggle.textContent = opening ? "Close search" : "Search";
+      if (opening) search.focus();
+    });
+
+    // On phones the filter bar belongs immediately below the site header
+    // from the first frame, rather than appearing only after scrolling
+    // past the directory intro. On desktop it returns to its source position.
+    var toolbarSlot = d.createComment("SQSPThemes directory filter position");
+    toolbar.parentNode.insertBefore(toolbarSlot, toolbar);
+    function positionDirectoryToolbar() {
+      var siteHeader = d.getElementById("sqt-header");
+      if (!siteHeader) return;
+      if (window.matchMedia("(max-width: 760px)").matches) {
+        if (toolbar.previousElementSibling !== siteHeader ||
+            toolbar.parentNode !== siteHeader.parentNode) {
+          siteHeader.parentNode.insertBefore(toolbar, siteHeader.nextSibling);
+        }
+      } else if (toolbarSlot.parentNode &&
+                 (toolbar.parentNode !== toolbarSlot.parentNode ||
+                  toolbar.previousSibling !== toolbarSlot)) {
+        toolbarSlot.parentNode.insertBefore(toolbar, toolbarSlot.nextSibling);
+      }
+    }
+    positionDirectoryToolbar();
+    window.addEventListener("resize", positionDirectoryToolbar, { passive: true });
 
     function profileUrl(x) {
       return x.profileUrl || x.portfolio || x.contact || "#";
@@ -926,7 +964,7 @@
       budget.value = "";
       need.value = "";
       apply();
-      search.focus();
+      clear.focus();
     });
 
     fetch("https://sqspthemes-assets.pages.dev/directory-data.json", { cache: "no-cache" })
@@ -1301,7 +1339,7 @@
   /* ================================= run ================================= */
 
   function fallback(err) {
-    ["sqt-header", "sqt-modes", "sqt-home", "sqt-blog", "sqt-footer"].forEach(function (id) {
+    ["sqt-header", "sqt-modes", "sqt-dir-sticky-filters", "sqt-home", "sqt-blog", "sqt-footer"].forEach(function (id) {
       var el = d.getElementById(id);
       if (el) el.remove();
     });

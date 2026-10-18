@@ -6333,3 +6333,162 @@ html.sqt-directory-route #sqt-header .sqt-searchbar { display: none !important; 
     border-right: 0 !important;
   }
 }
+
+
+/* ===================== DIRECTORY COMPACT FILTER TOOLBAR =====================
+   Mobile: the single functional toolbar moves directly after the site header.
+   Desktop: the same element stays in the directory where it was authored.
+   The original 3 selectors and the filter/search logic are unchanged.
+   ======================================================================== */
+
+#sqt-dir-sticky-filters {
+  box-sizing: border-box;
+  margin: 0 0 12px;
+  padding: 11px 12px 7px;
+  border: 1px solid var(--sqt-box-line);
+  border-radius: 0;
+  background: var(--sqt-bg-alt);
+  color: var(--sqt-ink);
+  font-family: var(--sqt-text);
+  max-width: 100%;
+}
+#sqt-dir-sticky-filters *, #sqt-dir-sticky-filters *::before,
+#sqt-dir-sticky-filters *::after { box-sizing: border-box; }
+#sqt-dir-sticky-filters .sqt-dir-controls.sqt-filterbar {
+  display: grid !important;
+  grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#sqt-dir-sticky-filters .sqt-dir-controls label {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+  margin: 0;
+  color: var(--sqt-meta);
+  font: 10px/1.35 var(--sqt-mono);
+}
+#sqt-dir-sticky-filters .sqt-dir-controls select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  margin: 0;
+  padding: 0 21px 0 8px;
+  border: 1px solid var(--sqt-box-line);
+  border-radius: 0;
+  background: var(--sqt-bg);
+  color: var(--sqt-ink);
+  font: 12px/1.2 var(--sqt-text);
+  text-overflow: ellipsis;
+}
+#sqt-dir-sticky-filters .sqt-dir-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+#sqt-dir-sticky-filters .sqt-dir-toolbar-actions button,
+#sqt-dir-sticky-filters .sqt-dir-toolbar-actions a {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-height: 30px;
+  padding: 0 2px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--sqt-link);
+  font: 10px/1.3 var(--sqt-mono);
+  cursor: pointer;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+#sqt-dir-sticky-filters .sqt-dir-toolbar-actions button:hover,
+#sqt-dir-sticky-filters .sqt-dir-toolbar-actions a:hover {
+  color: var(--sqt-link-hover);
+}
+#sqt-dir-sticky-filters .sqt-dir-search-panel[hidden] {
+  display: none !important;
+}
+#sqt-dir-sticky-filters .sqt-dir-search-panel {
+  padding: 8px 0 4px;
+  border-top: 1px solid var(--sqt-rule);
+}
+#sqt-dir-sticky-filters .sqt-dir-search-panel label {
+  display: grid;
+  gap: 5px;
+  color: var(--sqt-meta);
+  font: 10px/1.3 var(--sqt-mono);
+}
+#sqt-dir-sticky-filters .sqt-dir-search-panel input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--sqt-box-line);
+  border-radius: 0;
+  background: var(--sqt-bg);
+  color: var(--sqt-ink);
+  font: 14px/1.2 var(--sqt-text);
+}
+#sqt-dir-sticky-filters :is(button,a,input,select):focus-visible {
+  outline: 2px solid var(--sqt-focus);
+  outline-offset: 2px;
+}
+#sqt-dir-sticky-filters .sqt-dir-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+html[data-sqt-style="editorial"] #sqt-dir-sticky-filters {
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  /* The parent site shell owns both header and mobile toolbar: no gutter,
+     no duplicate search panel, no jump while reaching the top of the page. */
+  #sqt-dir-sticky-filters,
+  html[data-sqt-style="editorial"] #sqt-dir-sticky-filters,
+  html[data-sqt-style="editorial"] #sqt-directory #sqt-dir-sticky-filters {
+    position: sticky !important;
+    top: calc(var(--sqt-sticky-top, 85px) - 12px) !important;
+    z-index: 999 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 9px 12px 5px !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+    background: var(--sqt-bg-alt) !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,.09) !important;
+    overflow: visible !important;
+  }
+  #sqt-dir-sticky-filters .sqt-dir-controls select {
+    height: 38px !important;
+    font-size: 12px !important;
+  }
+  #sqt-dir-sticky-filters .sqt-dir-toolbar-actions {
+    margin-top: 3px;
+  }
+  #sqt-directory .sqt-dir-wrap.sqt-page-shell,
+  html[data-sqt-style="editorial"] #sqt-directory .sqt-dir-wrap.sqt-page-shell {
+    padding-top: 16px !important;
+  }
+}
