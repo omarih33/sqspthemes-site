@@ -979,51 +979,54 @@
       if (n > 1) u.searchParams.set("n", n); else u.searchParams.delete("n");
       return u.pathname + u.search;
     }
+
     var olderA = sec.querySelector(".blog-list-pagination .older a");
     var newerA = sec.querySelector(".blog-list-pagination .newer a");
 
-    var filters = '<a href="' + base + '"' + (!cat && !tag ? ' aria-current="page"' : '') + '>All</a>' +
+    var topicLinks = '<a href="' + base + '"' + (!cat && !tag ? ' aria-current="page"' : '') + '>All</a>' +
       C.topics.map(function (t) {
         return '<a href="' + base + '?category=' + encodeURIComponent(t) + '"' +
           (cat && cat.toLowerCase() === t.toLowerCase() ? ' aria-current="page"' : '') + '>' + esc(t) + '</a>';
       }).join("");
 
-    var heading = cat ? "Topic: " + cat : tag ? "Type: " + tag : "Latest";
-    var intro = readBlogIntro(sec);
+    var archiveHeading = cat ? "Articles: " + cat : tag ? "Articles: " + tag : "All Articles";
 
-    var side = '<aside class="sqt-side sqt-sidebar sqt-stack" aria-label="More">' +
+    var side = '<aside class="sqt-side sqt-sidebar sqt-stack" aria-label="Article tools">' +
       (C.types.length ? '<section class="sqt-panel"><div class="sqt-panel__head">Browse by type</div><div class="sqt-panel__body"><ul>' + C.types.map(function (t) {
         return '<li><a href="' + base + '?tag=' + encodeURIComponent(t) + '"' +
           (tag && tag.toLowerCase() === t.toLowerCase() ? ' aria-current="page"' : '') + '>' + esc(t) + '</a></li>';
       }).join("") + '</ul></div></section>' : '') +
-      (C.opportunity ? '<section class="sqt-panel"><div class="sqt-panel__head">Opportunities</div><div class="sqt-panel__body"><a class="sqt-feature" href="' + esc(C.opportunity.url) + '">' +
-        esc(C.opportunity.name) + '</a><p>' + esc(C.opportunity.text) + '</p></div></section>' : '') +
-      '<section class="sqt-panel"><div class="sqt-panel__head">Send a tip</div><div class="sqt-panel__body"><p>Spotted a release, a new tool, or a solution worth sharing?</p>' +
-        '<a href="' + esc(C.tipUrl) + '">Tell us →</a></div></section>' +
+      (C.kitAction ? '<section class="sqt-panel sqt-archive-newsletter"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
     '</aside>';
 
-    var showFeatured = !cat && !tag && posts.length > 0;
-    var archivePosts = showFeatured ? posts.slice(1) : posts;
-    var archiveStart = showFeatured ? start + 1 : start;
-
     var root = make(
-      '<div id="sqt-blog" class="sqt">' +
+      '<div id="sqt-blog" class="sqt sqt-blog-archive">' +
         '<div class="sqt-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
           '<div class="sqt-index-intro sqt-page-intro">' +
-            '<h1 class="sqt-h1 sqt-page-title">' + esc(intro.headline) + '</h1>' +
-            '<p class="sqt-sub sqt-page-dek">' + esc(intro.subhead) + '</p>' +
+            '<h1 class="sqt-h1 sqt-page-title">Articles</h1>' +
+            '<p class="sqt-sub sqt-page-dek">News, practical solutions, tools, and ideas for people building with Squarespace.</p>' +
           '</div>' +
-          (showFeatured ? featuredHtml(posts[0]) : '') +
-          (C.kitAction ? '<section class="sqt-index-newsletter sqt-panel"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body sqt-index-newsletter-body"><div><h2>Useful Squarespace finds without having to go looking for them.</h2><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p></div>' + subscribeForm("Email address") + '</div></section>' : '') +
-          (C.topics.length ? '<nav class="sqt-filter sqt-filterbar" aria-label="Topics">' + filters + '</nav>' : '') +
+          '<section class="sqt-panel sqt-archive-tools">' +
+            '<div class="sqt-panel__head">Browse Articles</div>' +
+            '<div class="sqt-panel__body">' +
+              '<form class="sqt-archive-search" role="search" action="' + esc(C.searchUrl) + '" method="get">' +
+                '<label class="sqt-sr" for="sqt-archive-q">Search articles</label>' +
+                '<input class="sqt-input" id="sqt-archive-q" type="search" name="q" autocomplete="off" placeholder="Search SQSPThemes articles…">' +
+                '<button class="sqt-btn sqt-btn--ghost" type="submit">Search</button>' +
+              '</form>' +
+              (C.topics.length ? '<nav class="sqt-archive-topics" aria-label="Article categories">' + topicLinks + '</nav>' : '') +
+            '</div>' +
+          '</section>' +
           '<div class="sqt-cols sqt-layout">' +
             '<div class="sqt-main sqt-stack">' +
-              '<section class="sqt-panel sqt-blog-list-panel"><div class="sqt-panel__head">' + esc(showFeatured ? "Latest" : heading) + '</div>' +
-              '<ol class="sqt-list sqt-list-rows" start="' + archiveStart + '">' + rowsHtml(archivePosts, archiveStart) + '</ol>' +
-              '<nav class="sqt-pager sqt-pagination sqt-panel__foot" aria-label="Pages">' +
-                (newerA ? '<a href="' + esc(pagerHref(newerA, Math.max(1, start - posts.length))) + '">← Newer</a>' : '<span></span>') +
-                (olderA ? '<a href="' + esc(pagerHref(olderA, start + posts.length)) + '">Older →</a>' : '<span></span>') +
-              '</nav></section>' +
+              '<section class="sqt-panel sqt-blog-list-panel">' +
+                '<div class="sqt-panel__head">' + esc(archiveHeading) + '</div>' +
+                '<ol class="sqt-list sqt-list-rows" start="' + start + '">' + rowsHtml(posts, start) + '</ol>' +
+                '<nav class="sqt-pager sqt-pagination sqt-panel__foot" aria-label="Pages">' +
+                  (newerA ? '<a href="' + esc(pagerHref(newerA, Math.max(1, start - posts.length))) + '">← Newer</a>' : '<span></span>') +
+                  (olderA ? '<a href="' + esc(pagerHref(olderA, start + posts.length)) + '">Older →</a>' : '<span></span>') +
+                '</nav>' +
+              '</section>' +
             '</div>' +
             side +
           '</div>' +
@@ -1031,10 +1034,23 @@
       '</div>'
     );
 
-    // insert AFTER Squarespace's blog section, so the CSS that hides the old
-    // intro section (the one directly before the blog) keeps matching
     sec.parentNode.insertBefore(root, sec.nextSibling);
     wireSubscribe(root);
+
+    var archiveSearch = root.querySelector(".sqt-archive-search");
+    if (archiveSearch) archiveSearch.addEventListener("submit", function (e) {
+      var input = archiveSearch.querySelector("input");
+      var q = input && input.value.trim();
+      if (!q) {
+        e.preventDefault();
+        if (input) input.focus();
+        return;
+      }
+      if (window.Monocle && typeof window.Monocle.showSearchWithQuery === "function") {
+        e.preventDefault();
+        window.Monocle.showSearchWithQuery(q);
+      }
+    });
 
     getJSON(location.pathname + location.search).then(function (data) {
       var byUrl = {};
@@ -1047,13 +1063,7 @@
         if (it.excerpt) p.excerpt = stripHtml(it.excerpt);
         if (it.publishOn) p.date = new Date(it.publishOn);
       });
-      if (showFeatured) {
-        var feature = root.querySelector(".sqt-featured");
-        if (feature) feature.outerHTML = featuredHtml(posts[0]);
-        root.querySelector(".sqt-list").innerHTML = rowsHtml(posts.slice(1), start + 1);
-      } else {
-        root.querySelector(".sqt-list").innerHTML = rowsHtml(posts, start);
-      }
+      root.querySelector(".sqt-list").innerHTML = rowsHtml(posts, start);
     }).catch(function () {});
   }
 
