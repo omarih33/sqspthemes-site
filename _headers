@@ -1,8 +1,11 @@
 /sqspthemes.css
   Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
 
 /sqspthemes.js
   Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
 
 /directory-data.json
   Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
