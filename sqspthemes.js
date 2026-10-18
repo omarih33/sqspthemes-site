@@ -112,9 +112,53 @@
     });
   }
 
+  function isInternalUrl(url) {
+    if (!url || url.charAt(0) === "#") return true;
+    try {
+      return new URL(url, location.origin).origin === location.origin;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function normalizeInternalLinks(root) {
+    (root || d).querySelectorAll('a[target="_blank"]').forEach(function (a) {
+      if (isInternalUrl(a.getAttribute("href"))) {
+        a.removeAttribute("target");
+        a.removeAttribute("rel");
+      }
+    });
+  }
+
+  function styleNativePage() {
+    var page = d.getElementById("page");
+    if (!page) return;
+    page.classList.add("sqt-native-page");
+    page.querySelectorAll("section.page-section").forEach(function (sec) {
+      if (sec.matches('[data-sqsp-section="blog-list"]') || sec.querySelector(".blog-item-wrapper")) return;
+      var hasMedia = !!sec.querySelector(".section-background img, .section-background video, .background-video, video");
+      if (!hasMedia) sec.classList.add("sqt-native-plain");
+    });
+  }
+
+  function readBlogIntro(sec) {
+    var source = sec && sec.previousElementSibling;
+    if (!source || !source.matches("section.page-section")) {
+      return { headline: C.headline, subhead: C.subhead };
+    }
+    var heading = source.querySelector(".sqs-html-content h1, .sqs-html-content h2, .sqs-html-content h3, h1, h2, h3");
+    var paras = [].slice.call(source.querySelectorAll(".sqs-html-content p, p")).filter(function (p) {
+      return text(p);
+    });
+    return {
+      headline: text(heading) || C.headline,
+      subhead: paras.length ? text(paras[0]) : C.subhead
+    };
+  }
+
   /* ================================ theme ================================ */
 
-  var themeOK = onPath(C.themePaths);
+  var themeOK = C.themePaths.indexOf("*") > -1 || onPath(C.themePaths);
 
   function theme() {
     return html.getAttribute("data-theme") === "dark" ? "dark" : "light";
@@ -330,8 +374,8 @@
 
   function navLink(n) {
     var current = n.url && n.url.charAt(0) === "/" && onPath([n.url.split("?")[0]]);
-    return '<a href="' + esc(n.url) + '"' +
-      (n.target ? ' target="' + esc(n.target) + '" rel="noopener"' : "") +
+    var target = n.target && !isInternalUrl(n.url) ? ' target="' + esc(n.target) + '" rel="noopener"' : "";
+    return '<a href="' + esc(n.url) + '"' + target +
       (current ? ' aria-current="page"' : "") + '>' + esc(n.label) + '</a>';
   }
 
@@ -490,6 +534,7 @@
       }).join("");
 
     var heading = cat ? "Topic: " + cat : tag ? "Type: " + tag : "Latest";
+    var intro = readBlogIntro(sec);
 
     var side = '<aside class="sqt-side" aria-label="More">' +
       (C.types.length ? '<section><h2>Browse by type</h2><ul>' + C.types.map(function (t) {
@@ -505,8 +550,8 @@
     var root = make(
       '<div id="sqt-blog" class="sqt">' +
         '<div class="sqt-wrap" id="sqt-content" tabindex="-1">' +
-          '<h1 class="sqt-h1">' + esc(C.headline) + '</h1>' +
-          '<p class="sqt-sub">' + esc(C.subhead) + '</p>' +
+          '<h1 class="sqt-h1">' + esc(intro.headline) + '</h1>' +
+          '<p class="sqt-sub">' + esc(intro.subhead) + '</p>' +
           (C.kitAction ? subscribeForm("Every post by email.") : '') +
           (C.topics.length ? '<nav class="sqt-filter" aria-label="Topics">' + filters + '</nav>' : '') +
           '<div class="sqt-cols">' +
@@ -732,6 +777,7 @@
     if (!html.classList.contains("sqt-on")) return;
     try {
       header();
+      styleNativePage();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
       if (list && list.querySelector("article.blog-item")) listPage(list);
@@ -743,6 +789,7 @@
         if (skip && page) skip.href = "#" + page.id;
       }
       footer();
+      normalizeInternalLinks(d);
       html.classList.add("sqt-ready");
     } catch (e) {
       fallback(e);
