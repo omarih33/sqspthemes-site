@@ -36,7 +36,7 @@
       features:array(get(t,'features','feature_tags','Sections','sections')),
       tags:array(get(t,'tags','keywords','Keywords','Template_Type')),
       price:Number(String(get(t,'price','Price')||'').replace(/[^\d.]/g,'')) || null,
-      image:absoluteUrl(get(t,'image_url','Image_url','image','thumbnail')),
+      image:(String(get(t,'source_type')||'')==='native' && /imghippo\.com/i.test(String(get(t,'image_url','Image_url','image','thumbnail')))) ? '' : absoluteUrl(get(t,'image_url','Image_url','image','thumbnail')),
       demo:absoluteUrl(get(t,'demo_url','Demo URL','demo')),
       product:absoluteUrl(get(t,'product_url','purchase_url','affiliate_url','Link')),
       detail:absoluteUrl(get(t,'url','detail_url','Template Link')),
