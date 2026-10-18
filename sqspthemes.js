@@ -1038,9 +1038,10 @@
   /* ============================== blog post ============================== */
 
   function copyText(str, btn) {
+    var original = btn.getAttribute("data-copy-label") || btn.textContent || "Copy";
     function done() {
       btn.textContent = "Copied";
-      setTimeout(function () { btn.textContent = "Copy code"; }, 2000);
+      setTimeout(function () { btn.textContent = original; }, 1600);
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(str).then(done, function () {});
@@ -1057,18 +1058,33 @@
   var CODE_PREVIEW_LINES = 24;
 
   function enhanceCode(body) {
-    body.querySelectorAll("pre.source-code").forEach(function (pre, i) {
-      var box = pre.closest(".sqs-code-container") || pre;
-      box.classList.add("sqt-code");
-      var lines = pre.textContent.replace(/\s+$/, "").split("\n").length;
-      var bar = make('<div class="sqt-codebar"><span>Code · ' + lines + ' lines</span></div>');
+    var blocks = [];
+    body.querySelectorAll("pre, .sqs-block-code code, .sqs-code-container code").forEach(function (node) {
+      if (node.tagName === "CODE" && node.closest("pre")) return;
+      if (blocks.indexOf(node) === -1) blocks.push(node);
+    });
+
+    blocks.forEach(function (source, i) {
+      var box = source.closest(".sqs-code-container, .sqs-block-code") || source;
+      if (box.classList.contains("sqt-code-ready")) return;
+      box.classList.add("sqt-code", "sqt-code-ready");
+
+      var raw = source.textContent.replace(/\s+$/, "");
+      var lines = raw ? raw.split("\n").length : 0;
+      var context = "";
+      var prev = box.previousElementSibling;
+      if (prev) context = text(prev);
+      var kind = /prompt/i.test(context) ? "Prompt" : "Code";
+
+      var bar = make('<div class="sqt-codebar"><span>' + kind + (lines > 1 ? ' · ' + lines + ' lines' : '') + '</span></div>');
       if (i === 0) bar.id = "get-the-code";
-      var btn = make('<button class="sqt-btn sqt-btn--ghost" type="button">Copy code</button>');
-      btn.addEventListener("click", function () { copyText(pre.textContent, btn); });
+
+      var btn = make('<button class="sqt-btn sqt-btn--ghost" type="button" data-copy-label="Copy">Copy</button>');
+      btn.addEventListener("click", function () { copyText(raw, btn); });
       bar.appendChild(btn);
       box.parentNode.insertBefore(bar, box);
 
-      if (lines > CODE_PREVIEW_LINES + 6) {
+      if (source.tagName === "PRE" && lines > CODE_PREVIEW_LINES + 6) {
         box.classList.add("is-collapsed");
         var more = make('<button class="sqt-code-more" type="button" aria-expanded="false">Show all ' + lines + ' lines</button>');
         more.addEventListener("click", function () {
@@ -1102,7 +1118,7 @@
       glance.remove();
       if (gb && !text(gb)) gb.remove();
     }
-    var hasCode = !!body.querySelector("pre.source-code");
+    var hasCode = !!body.querySelector("pre, .sqs-block-code code, .sqs-code-container code");
 
     function pag(a, dir) {
       if (!a) return '<span></span>';
@@ -1231,6 +1247,27 @@
     }).catch(function () {});
   }
 
+  function syncStickyOffset() {
+    var hd = d.getElementById("sqt-header");
+    if (!hd) return;
+
+    function update() {
+      var h = Math.ceil(hd.getBoundingClientRect().height || 0);
+      html.style.setProperty("--sqt-sticky-top", (h + 12) + "px");
+      html.style.setProperty("--sqt-sticky-room", (h + 24) + "px");
+    }
+
+    update();
+
+    if (window.ResizeObserver) {
+      if (window.__sqtHeaderObserver) window.__sqtHeaderObserver.disconnect();
+      window.__sqtHeaderObserver = new ResizeObserver(update);
+      window.__sqtHeaderObserver.observe(hd);
+    } else {
+      window.addEventListener("resize", update, { passive: true });
+    }
+  }
+
   /* ================================= run ================================= */
 
   function fallback(err) {
@@ -1248,6 +1285,7 @@
     if (!html.classList.contains("sqt-on")) return;
     try {
       header();
+      syncStickyOffset();
       styleNativePage();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
