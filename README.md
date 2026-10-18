@@ -1,48 +1,34 @@
-# sqspthemes-site
+# SQSPThemes site layer
 
-The SQSPThemes 2.0 layer for sqspthemes.com: the header, search, footer and
-blog drawn on top of Squarespace 7.1. Squarespace still holds the content;
-these files decide how it looks.
+GitHub is the source of truth for the SQSPThemes presentation layer. Squarespace owns the content; this repo owns the shared presentation and custom experiences.
 
-| File | What it is |
+## Live deployment
+
+Cloudflare Pages project: `sqspthemes-assets`
+
+Production asset host:
+
+- `https://sqspthemes-assets.pages.dev/sqspthemes.css`
+- `https://sqspthemes-assets.pages.dev/sqspthemes.js`
+- `https://sqspthemes-assets.pages.dev/directory-data.json`
+
+Every commit to `main` automatically deploys to Cloudflare Pages. No release tags, SHA edits, jsDelivr purges, or manual asset version bumps.
+
+## Files
+
+| File | Purpose |
 | --- | --- |
-| `sqspthemes.css` | All styles, light and dark |
-| `sqspthemes.js` | Header, search, footer, blog list, blog posts |
-| `code-injection-header.html` | The one paste for Squarespace (settings + loader) |
-| `snippets/post-snippets.html` | Optional blocks for posts: At a glance, plugin box |
+| `sqspthemes.css` | Site-wide SQSPThemes styling |
+| `sqspthemes.js` | Header, footer, blog, directory, and site behavior |
+| `directory-data.json` | Designer directory data |
+| `code-injection-header.html` | One permanent Squarespace Header injection |
+| `_headers` | Cache policy for live assets |
+| `snippets/post-snippets.html` | Optional post blocks |
+| `template-matchmaker.css` | Template Matchmaker styles |
+| `template-matchmaker.js` | Template Matchmaker behavior |
 
-## Install
+## Squarespace
 
-1. Upload this folder to a public GitHub repo named `sqspthemes-site`.
-2. On GitHub: **Releases → Draft a new release**, tag `1.0.0`, publish.
-3. In `code-injection-header.html`, replace `GITHUB_USERNAME` with your
-   GitHub username and paste your Kit form action URL.
-4. Squarespace: **Website Tools → Code Injection → Header**, paste the whole file.
-5. Remove the old blog code from Code Injection → Footer (keep the member-login code)
-   and anything from the first attempt in Custom CSS.
+Paste `code-injection-header.html` into Website Tools → Code Injection → Header once. After that, normal design/code changes happen in GitHub only.
 
-jsDelivr serves the files from GitHub at
-`https://cdn.jsdelivr.net/gh/GITHUB_USERNAME/sqspthemes-site@1.0.0/…`
-and minifies them automatically (`.min.css` / `.min.js`).
-
-## Releasing a change
-
-1. Edit the files on GitHub and commit.
-2. Publish a new release with the next tag (`1.0.1`, `1.1.0`…).
-3. In Code Injection → Header, change `@1.0.0` to the new tag in both links.
-
-Tagged versions never change on the CDN, so the site only updates when you
-change the tag, and rolling back is changing it back.
-
-## Settings
-
-Everything editable lives in `window.SQT_CONFIG` in Code Injection: headline,
-Kit form, topics, post types, footer links, which pages get dark mode.
-The header nav comes from Squarespace's own main navigation. Add, rename or
-reorder pages there and the header follows.
-
-## Safety
-
-- The layer stays off inside the Squarespace editor, so the native site stays editable.
-- If the files take longer than 4 seconds or the script hits an error,
-  the page falls back to the normal Squarespace site.
+The layer stays off inside the Squarespace editor so native Squarespace content remains editable.
