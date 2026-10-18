@@ -182,6 +182,27 @@
     });
   }
 
+  function styleMode() {
+    return html.getAttribute("data-sqt-style") === "editorial" ? "editorial" : "2010";
+  }
+
+  function setStyleMode(mode) {
+    mode = mode === "editorial" ? "editorial" : "2010";
+    html.setAttribute("data-sqt-style", mode);
+    try { localStorage.setItem("sqt-style", mode); } catch (e) {}
+    d.querySelectorAll(".sqt-style").forEach(function (b) {
+      b.setAttribute("aria-pressed", mode === "editorial" ? "true" : "false");
+      b.textContent = mode === "editorial" ? "View: Modern Editorial" : "View: 2010 Blog";
+      b.setAttribute("title", mode === "editorial" ? "Switch to 2010 Blog" : "Switch to Modern Editorial");
+    });
+  }
+
+  (function initStyleMode() {
+    var saved = "";
+    try { saved = localStorage.getItem("sqt-style") || ""; } catch (e) {}
+    setStyleMode(saved === "editorial" ? "editorial" : "2010");
+  })();
+
   /* ========================== subscribe (Kit) ============================ */
 
   function subscribeForm(label) {
@@ -423,6 +444,7 @@
             '<span class="sqt-tagline">' + esc(C.tagline) + '</span>' +
           '</div>' +
           '<div class="sqt-hd-tools">' +
+            '<button class="sqt-tool sqt-style" type="button" aria-pressed="false" title="Switch visual style">View: 2010 Blog</button>' +
             (themeOK ? '<button class="sqt-tool sqt-theme" type="button" aria-pressed="false">Dark: off</button>' : '') +
             '<button class="sqt-tool sqt-menu" type="button" aria-expanded="false" aria-controls="sqt-nav">Menu</button>' +
           '</div>' +
@@ -443,6 +465,11 @@
       menu.textContent = openNow ? "Close" : "Menu";
     });
 
+    var sbtn = hd.querySelector(".sqt-style");
+    if (sbtn) sbtn.addEventListener("click", function () {
+      setStyleMode(styleMode() === "editorial" ? "2010" : "editorial");
+    });
+
     var tbtn = hd.querySelector(".sqt-theme");
     if (tbtn) tbtn.addEventListener("click", function () {
       setTheme(theme() === "dark" ? "light" : "dark");
@@ -451,6 +478,7 @@
     if (native) native.parentNode.insertBefore(hd, native);
     else d.body.insertBefore(hd, d.body.firstChild);
 
+    setStyleMode(styleMode());
     if (themeOK) setTheme(theme());
   }
 
