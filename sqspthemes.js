@@ -497,6 +497,36 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
   }
 
+  function loadTemplateMatchmaker() {
+    var mount = d.getElementById("sqt-template-matchmaker");
+    if (!mount) return false;
+
+    if (!mount.dataset.catalogUrl) {
+      mount.dataset.catalogUrl = siteAssetUrl("template-catalog.json");
+    }
+
+    if (!d.getElementById("sqt-template-matchmaker-css")) {
+      var link = d.createElement("link");
+      link.id = "sqt-template-matchmaker-css";
+      link.rel = "stylesheet";
+      link.href = siteAssetUrl("template-matchmaker.css");
+      d.head.appendChild(link);
+    }
+
+    if (!mount.dataset.initialized && !d.getElementById("sqt-template-matchmaker-js")) {
+      var script = d.createElement("script");
+      script.id = "sqt-template-matchmaker-js";
+      script.src = siteAssetUrl("template-matchmaker.js");
+      script.async = true;
+      script.onerror = function () {
+        mount.innerHTML = '<p class="sqt-status">Template finder could not load. Please refresh the page.</p>';
+      };
+      d.body.appendChild(script);
+    }
+
+    return true;
+  }
+
   function homeTrim(s, max) {
     s = String(s || "").replace(/\s+/g, " ").trim();
     if (!s || s.length <= max) return s;
@@ -1284,6 +1314,7 @@
       header();
       syncStickyOffset();
       styleNativePage();
+      loadTemplateMatchmaker();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
       if (mountHomepage()) {}
