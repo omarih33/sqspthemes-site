@@ -927,12 +927,12 @@
       if (p.type) meta.push('<span>' + esc(p.type) + '</span>');
       if (p.topic) meta.push('<a href="' + esc(blogBase()) + '?category=' + encodeURIComponent(p.topic) + '">' + esc(p.topic) + '</a>');
       if (p.date) meta.push('<span>' + esc(fmtDate(p.date)) + '</span>');
-      return '<li class="sqt-row">' +
+      return '<li class="sqt-row sqt-list-row">' +
         '<span class="sqt-num" aria-hidden="true">' + String(start + i).padStart(2, "0") + '</span>' +
-        '<div class="sqt-row-body">' +
-          '<a class="sqt-row-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
-          (p.excerpt ? '<p class="sqt-row-dek">' + esc(p.excerpt) + '</p>' : '') +
-          '<div class="sqt-meta">' + meta.join("") + '</div>' +
+        '<div class="sqt-row-body sqt-list-row__body">' +
+          '<a class="sqt-row-title sqt-list-row__title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
+          (p.excerpt ? '<p class="sqt-row-dek sqt-list-row__dek">' + esc(p.excerpt) + '</p>' : '') +
+          '<div class="sqt-meta sqt-meta-row">' + meta.join("") + '</div>' +
         '</div></li>';
     }).join("");
   }
@@ -943,12 +943,14 @@
     if (p.topic) meta.push(p.topic);
     if (p.type) meta.push(p.type);
     if (p.date) meta.push(fmtDate(p.date));
-    return '<section class="sqt-featured" aria-label="Featured story">' +
-      '<div class="sqt-featured-kicker">Featured</div>' +
-      '<a class="sqt-featured-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
-      (p.excerpt ? '<p class="sqt-featured-dek">' + esc(p.excerpt) + '</p>' : '') +
-      (meta.length ? '<div class="sqt-featured-meta">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
-      '<a class="sqt-featured-link" href="' + esc(p.url) + '">Read story →</a>' +
+    return '<section class="sqt-featured sqt-panel" aria-label="Featured story">' +
+      '<div class="sqt-panel__head">Featured</div>' +
+      '<div class="sqt-panel__body sqt-featured-body">' +
+        '<a class="sqt-featured-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
+        (p.excerpt ? '<p class="sqt-featured-dek">' + esc(p.excerpt) + '</p>' : '') +
+        (meta.length ? '<div class="sqt-featured-meta sqt-meta-row">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+        '<a class="sqt-featured-link" href="' + esc(p.url) + '">Read story →</a>' +
+      '</div>' +
     '</section>';
   }
 
@@ -989,15 +991,15 @@
     var heading = cat ? "Topic: " + cat : tag ? "Type: " + tag : "Latest";
     var intro = readBlogIntro(sec);
 
-    var side = '<aside class="sqt-side" aria-label="More">' +
-      (C.types.length ? '<section><h2>Browse by type</h2><ul>' + C.types.map(function (t) {
+    var side = '<aside class="sqt-side sqt-sidebar sqt-stack" aria-label="More">' +
+      (C.types.length ? '<section class="sqt-panel"><div class="sqt-panel__head">Browse by type</div><div class="sqt-panel__body"><ul>' + C.types.map(function (t) {
         return '<li><a href="' + base + '?tag=' + encodeURIComponent(t) + '"' +
           (tag && tag.toLowerCase() === t.toLowerCase() ? ' aria-current="page"' : '') + '>' + esc(t) + '</a></li>';
-      }).join("") + '</ul></section>' : '') +
-      (C.opportunity ? '<section><h2>Opportunities</h2><a class="sqt-feature" href="' + esc(C.opportunity.url) + '">' +
-        esc(C.opportunity.name) + '</a><p>' + esc(C.opportunity.text) + '</p></section>' : '') +
-      '<section><h2>Send a tip</h2><p>Spotted a release, a new tool, or a fix worth sharing?</p>' +
-        '<a href="' + esc(C.tipUrl) + '">Tell us →</a></section>' +
+      }).join("") + '</ul></div></section>' : '') +
+      (C.opportunity ? '<section class="sqt-panel"><div class="sqt-panel__head">Opportunities</div><div class="sqt-panel__body"><a class="sqt-feature" href="' + esc(C.opportunity.url) + '">' +
+        esc(C.opportunity.name) + '</a><p>' + esc(C.opportunity.text) + '</p></div></section>' : '') +
+      '<section class="sqt-panel"><div class="sqt-panel__head">Send a tip</div><div class="sqt-panel__body"><p>Spotted a release, a new tool, or a solution worth sharing?</p>' +
+        '<a href="' + esc(C.tipUrl) + '">Tell us →</a></div></section>' +
     '</aside>';
 
     var showFeatured = !cat && !tag && posts.length > 0;
@@ -1006,22 +1008,22 @@
 
     var root = make(
       '<div id="sqt-blog" class="sqt">' +
-        '<div class="sqt-wrap" id="sqt-content" tabindex="-1">' +
-          '<div class="sqt-index-intro">' +
-            '<h1 class="sqt-h1">' + esc(intro.headline) + '</h1>' +
-            '<p class="sqt-sub">' + esc(intro.subhead) + '</p>' +
+        '<div class="sqt-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
+          '<div class="sqt-index-intro sqt-page-intro">' +
+            '<h1 class="sqt-h1 sqt-page-title">' + esc(intro.headline) + '</h1>' +
+            '<p class="sqt-sub sqt-page-dek">' + esc(intro.subhead) + '</p>' +
           '</div>' +
-          (C.kitAction ? '<section class="sqt-index-newsletter"><div><span class="sqt-index-newsletter-kicker">The SQSPThemes newsletter</span><h2>Get the good stuff by email.</h2><p>New tools, useful fixes, standout Squarespace work, and opportunities worth knowing about.</p></div>' + subscribeForm("Email address") + '</section>' : '') +
           (showFeatured ? featuredHtml(posts[0]) : '') +
-          (C.topics.length ? '<nav class="sqt-filter" aria-label="Topics">' + filters + '</nav>' : '') +
-          '<div class="sqt-cols">' +
-            '<div class="sqt-main">' +
-              '<h2 class="sqt-label">' + esc(showFeatured ? "Latest" : heading) + '</h2>' +
-              '<ol class="sqt-list" start="' + archiveStart + '">' + rowsHtml(archivePosts, archiveStart) + '</ol>' +
-              '<nav class="sqt-pager" aria-label="Pages">' +
+          (C.kitAction ? '<section class="sqt-index-newsletter sqt-panel"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body sqt-index-newsletter-body"><div><h2>Useful Squarespace finds without having to go looking for them.</h2><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p></div>' + subscribeForm("Email address") + '</div></section>' : '') +
+          (C.topics.length ? '<nav class="sqt-filter sqt-filterbar" aria-label="Topics">' + filters + '</nav>' : '') +
+          '<div class="sqt-cols sqt-layout">' +
+            '<div class="sqt-main sqt-stack">' +
+              '<section class="sqt-panel sqt-blog-list-panel"><div class="sqt-panel__head">' + esc(showFeatured ? "Latest" : heading) + '</div>' +
+              '<ol class="sqt-list sqt-list-rows" start="' + archiveStart + '">' + rowsHtml(archivePosts, archiveStart) + '</ol>' +
+              '<nav class="sqt-pager sqt-pagination sqt-panel__foot" aria-label="Pages">' +
                 (newerA ? '<a href="' + esc(pagerHref(newerA, Math.max(1, start - posts.length))) + '">← Newer</a>' : '<span></span>') +
                 (olderA ? '<a href="' + esc(pagerHref(olderA, start + posts.length)) + '">Older →</a>' : '<span></span>') +
-              '</nav>' +
+              '</nav></section>' +
             '</div>' +
             side +
           '</div>' +
@@ -1133,12 +1135,12 @@
 
     var root = make(
       '<div id="sqt-blog" class="sqt">' +
-        '<div class="sqt-wrap sqt-wrap--post" id="sqt-content" tabindex="-1">' +
+        '<div class="sqt-wrap sqt-wrap--post sqt-page-shell" id="sqt-content" tabindex="-1">' +
           '<nav class="sqt-crumbs" aria-label="Breadcrumb"><a href="' + base + '">Blog</a></nav>' +
-          '<div class="sqt-post">' +
-            '<div class="sqt-head">' +
-              '<h1 class="sqt-title">' + esc(title) + '</h1>' +
-              '<div class="sqt-meta"><span class="sqt-type" hidden></span>' +
+          '<div class="sqt-post sqt-layout">' +
+            '<div class="sqt-head sqt-page-intro">' +
+              '<h1 class="sqt-title sqt-page-title">' + esc(title) + '</h1>' +
+              '<div class="sqt-meta sqt-meta-row"><span class="sqt-type" hidden></span>' +
                 '<span class="sqt-date">' + esc(dateText) + '</span><span>By ' + esc(author) + '</span></div>' +
               (hasCode ? '<a class="sqt-btn" href="#get-the-code">Skip to the code ↓</a>' : '') +
             '</div>' +
@@ -1151,14 +1153,14 @@
               '</div>' +
               '<nav class="sqt-next" aria-label="More posts">' + pag(prevA, "prev") + pag(nextA, "next") + '</nav>' +
             '</article>' +
-            '<div class="sqt-rail">' +
+            '<div class="sqt-rail sqt-sidebar sqt-stack">' +
               (glance ? '<div class="sqt-rail-glance"></div>' : '') +
-              '<aside class="sqt-side sqt-post-side" aria-label="More">' +
-                '<section class="sqt-side-search"><h2>Looking for something specific?</h2><p>Search 10+ years of Squarespace articles, tools, templates, and resources.</p><button class="sqt-side-action sqt-open-search" type="button">Search SQSPThemes →</button></section>' +
-                (C.kitAction ? '<section class="sqt-side-newsletter"><h2>Get the good stuff by email.</h2><p>Useful Squarespace finds without having to go looking for them.</p>' + subscribeForm("Email address") + '</section>' : '') +
-                '<section class="sqt-related" hidden><h2>More like this</h2><ul></ul></section>' +
-                '<section class="sqt-topic" hidden><h2>Browse this topic</h2><a class="sqt-feature" href="#"></a></section>' +
-                '<section class="sqt-next-step" hidden><h2>Keep going</h2><a class="sqt-feature" href="#"></a><p></p></section>' +
+              '<aside class="sqt-side sqt-post-side sqt-stack" aria-label="More">' +
+                '<section class="sqt-side-search sqt-panel"><div class="sqt-panel__head">Search SQSPThemes</div><div class="sqt-panel__body"><h2>Looking for something specific?</h2><p>Search articles, tools, templates, and resources.</p><button class="sqt-side-action sqt-open-search" type="button">Search SQSPThemes →</button></div></section>' +
+                (C.kitAction ? '<section class="sqt-side-newsletter sqt-panel"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><h2>Useful Squarespace finds without having to go looking for them.</h2><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
+                '<section class="sqt-related sqt-panel" hidden><div class="sqt-panel__head">More like this</div><div class="sqt-panel__body"><ul></ul></div></section>' +
+                '<section class="sqt-topic sqt-panel" hidden><div class="sqt-panel__head">Browse this topic</div><div class="sqt-panel__body"><a class="sqt-feature" href="#"></a></div></section>' +
+                '<section class="sqt-next-step sqt-panel" hidden><div class="sqt-panel__head">Keep going</div><div class="sqt-panel__body"><a class="sqt-feature" href="#"></a><p></p></div></section>' +
               '</aside>' +
             '</div>' +
           '</div>' +
