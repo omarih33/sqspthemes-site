@@ -2,7 +2,7 @@
      SQSPThemes site layer
      Paste into: Website Tools → Code Injection → HEADER
      Keep your member-login code where it is (Footer).
-     To release a new version, change @1.0.0 in the two links below.
+     To release a new version, change @1.0.1 in the two links below.
      ========================================================== -->
 
 <script>
@@ -28,7 +28,7 @@ window.SQT_CONFIG = {
   },
 
   // Pages that get the dark mode switch (pages fully redrawn by the layer)
-  themePaths: ["/blog"],
+  themePaths: ["*"],
 
   footer: [
     { title: "Projects", links: [["Bigger Budget Projects", "/rfps"], ["Upmarket Report", "/report"]] },
@@ -44,7 +44,8 @@ window.SQT_CONFIG = {
   if (window.self !== window.top) return; // Squarespace editor: leave the native site editable
   var h = d.documentElement, c = window.SQT_CONFIG || {};
   var p = location.pathname.replace(/\/+$/, "") || "/";
-  var themed = (c.themePaths || ["/blog"]).some(function (x) {
+  var themed = (c.themePaths || ["*"]).some(function (x) {
+    if (x === "*") return true;
     x = x.replace(/\/+$/, "") || "/";
     return x === "/" ? p === "/" : (p === x || p.indexOf(x + "/") === 0);
   });
@@ -64,5 +65,5 @@ window.SQT_CONFIG = {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GITHUB_USERNAME/sqspthemes-site@1.0.0/sqspthemes.min.css">
-<script defer src="https://cdn.jsdelivr.net/gh/GITHUB_USERNAME/sqspthemes-site@1.0.0/sqspthemes.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@1.0.1/sqspthemes.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@1.0.1/sqspthemes.min.js"></script>
