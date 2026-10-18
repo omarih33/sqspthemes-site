@@ -125,3 +125,56 @@ html[data-sqt-style="editorial"] #sqt-template-browser .sqt-dir-filter-toggle{
     border-radius:0;
   }
 }
+
+
+/* /templates only: there is already a directory search, so hide the duplicate
+   global header search without changing site-wide navigation or other pages. */
+html:has(#sqt-template-browser) #sqt-header .sqt-searchbar {
+  display:none!important;
+}
+
+/* Let the sticky filter read as a continuous utility strip under the header,
+   not a floating card; the actual controls stay aligned with the grid. */
+#sqt-template-browser .sqt-dir-controls {
+  margin-block:0;
+  border-top:0;
+  border-radius:0;
+}
+#sqt-template-browser .sqt-dir-controls.is-stuck {
+  border-top:0;
+  box-shadow:none;
+  background:transparent;
+  isolation:isolate;
+}
+#sqt-template-browser .sqt-dir-controls.is-stuck::before {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:100vw;
+  transform:translateX(-50%);
+  border-bottom:1px solid var(--db-rule);
+  background:var(--sqt-bg-alt,#f3f3f3);
+  z-index:0;
+  pointer-events:none;
+}
+#sqt-template-browser .sqt-dir-controls.is-stuck > *{
+  position:relative;
+  z-index:1;
+}
+html[data-sqt-style="editorial"] #sqt-template-browser .sqt-dir-controls.is-stuck{
+  border-radius:0;
+  box-shadow:none;
+}
+html[data-sqt-style="editorial"] #sqt-template-browser .sqt-dir-controls.is-stuck::before{
+  background:var(--sqt-box,var(--sqt-bg,#fff));
+}
+@media(max-width:640px){
+  #sqt-template-browser .sqt-dir-controls.is-stuck {
+    border-radius:0;
+  }
+  #sqt-template-browser .sqt-dir-controls.is-stuck::before {
+    border-bottom:1px solid var(--db-rule);
+  }
+}
