@@ -130,6 +130,16 @@
     });
   }
 
+  function enforceInternalSameTab() {
+    d.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a[href]");
+      if (!a || !isInternalUrl(a.getAttribute("href"))) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
+      a.removeAttribute("target");
+      a.removeAttribute("rel");
+    }, true);
+  }
+
   function styleNativePage() {
     var page = d.getElementById("page");
     if (!page) return;
@@ -785,6 +795,7 @@
       }
       footer();
       normalizeInternalLinks(d);
+      enforceInternalSameTab();
       html.classList.add("sqt-ready");
     } catch (e) {
       fallback(e);
