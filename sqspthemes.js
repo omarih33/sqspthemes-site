@@ -489,6 +489,166 @@
     wireSubscribe(f);
   }
 
+
+  /* ============================== directory ============================== */
+
+  function mountDirectory() {
+    var mount = d.getElementById("sqt-directory-root");
+    if (!mount) return false;
+
+    var page = d.getElementById("page");
+    if (page) page.classList.add("sqt-directory-page");
+
+    var containingSection = mount.closest("section.page-section");
+    if (page) {
+      page.querySelectorAll("section.page-section").forEach(function (sec) {
+        if (sec !== containingSection) sec.classList.add("sqt-directory-old");
+      });
+    }
+
+    mount.innerHTML =
+      '<div id="sqt-directory" class="sqt">' +
+        '<div class="sqt-dir-wrap" id="sqt-content" tabindex="-1">' +
+          '<div class="sqt-dir-head">' +
+            '<p class="sqt-dir-kicker">SQSPThemes Directory</p>' +
+            '<h1>Squarespace Designer Directory</h1>' +
+            '<p class="sqt-dir-sub">Independent Squarespace designers and studios. Filter by location, budget, or what you need help with.</p>' +
+            '<div class="sqt-dir-controls">' +
+              '<label>Search<input id="sqt-dir-search" type="search" placeholder="Name, studio, location, specialty"></label>' +
+              '<label>Region<select id="sqt-dir-region">' +
+                '<option value="">All regions</option>' +
+                '<option value="us">United States</option>' +
+                '<option value="canada">Canada</option>' +
+                '<option value="uk-europe">UK & Europe</option>' +
+                '<option value="aus-nz">Australia & New Zealand</option>' +
+                '<option value="global">Global</option>' +
+              '</select></label>' +
+              '<label>Budget<select id="sqt-dir-budget">' +
+                '<option value="">Any budget</option>' +
+                '<option value="under2500">Under $2.5k</option>' +
+                '<option value="2500to5000">$2.5k–$5k</option>' +
+                '<option value="5000to10000">$5k–$10k</option>' +
+                '<option value="10000plus">$10k+</option>' +
+              '</select></label>' +
+              '<label>Need<select id="sqt-dir-need">' +
+                '<option value="">Anything</option>' +
+                '<option value="new-site">New website</option>' +
+                '<option value="redesign">Redesign</option>' +
+                '<option value="seo">SEO</option>' +
+                '<option value="branding">Branding</option>' +
+                '<option value="development">Custom development</option>' +
+                '<option value="ecommerce">Ecommerce</option>' +
+                '<option value="support">Ongoing support</option>' +
+              '</select></label>' +
+            '</div>' +
+            '<div class="sqt-dir-status"><span id="sqt-dir-count">Loading listings…</span><button id="sqt-dir-clear" type="button">Clear filters</button></div>' +
+          '</div>' +
+          '<ol class="sqt-dir-list" id="sqt-dir-list"></ol>' +
+          '<p class="sqt-dir-empty" id="sqt-dir-empty" hidden>No designers match those filters.</p>' +
+        '</div>' +
+      '</div>';
+
+    var list = mount.querySelector("#sqt-dir-list");
+    var count = mount.querySelector("#sqt-dir-count");
+    var empty = mount.querySelector("#sqt-dir-empty");
+    var search = mount.querySelector("#sqt-dir-search");
+    var region = mount.querySelector("#sqt-dir-region");
+    var budget = mount.querySelector("#sqt-dir-budget");
+    var need = mount.querySelector("#sqt-dir-need");
+    var clear = mount.querySelector("#sqt-dir-clear");
+    var designers = [];
+
+    function profileUrl(x) {
+      return "/best-squarespace-designers/" + slug(x.person || x.studio || x.name);
+    }
+
+    function renderRow(x, i) {
+      var img = x.image
+        ? '<a class="sqt-dir-thumb" href="' + esc(profileUrl(x)) + '"><img src="' + esc(x.image) + '" alt="" loading="lazy"></a>'
+        : '<span class="sqt-dir-thumb sqt-dir-thumb--empty" aria-hidden="true"></span>';
+
+      var tags = (x.needs || []).slice(0,5).map(function (n) {
+        return '<span>' + esc(n.replace(/-/g," ")) + '</span>';
+      }).join("");
+
+      return '<li class="sqt-dir-row">' +
+        '<div class="sqt-dir-num">' + String(i + 1).padStart(2,"0") + '</div>' +
+        img +
+        '<div class="sqt-dir-main">' +
+          '<h2><a href="' + esc(profileUrl(x)) + '">' + esc(x.name) + '</a></h2>' +
+          '<div class="sqt-dir-meta">' +
+            (x.location ? '<span>' + esc(x.location) + '</span>' : '') +
+            (x.projectRange ? '<span>' + esc(x.projectRange) + '</span>' : '') +
+          '</div>' +
+          (x.description ? '<p class="sqt-dir-desc">' + esc(x.description) + '</p>' : '') +
+          (tags ? '<div class="sqt-dir-tags">' + tags + '</div>' : '') +
+          '<p class="sqt-dir-links">' +
+            (x.portfolio ? '<a href="' + esc(x.portfolio) + '">Portfolio</a>' : '') +
+            (x.portfolio && x.contact ? ' <span>·</span> ' : '') +
+            (x.contact ? '<a href="' + esc(x.contact) + '">Contact</a>' : '') +
+          '</p>' +
+        '</div>' +
+      '</li>';
+    }
+
+    function apply() {
+      var q = search.value.trim().toLowerCase();
+      var r = region.value;
+      var b = budget.value;
+      var n = need.value;
+
+      var visible = designers.filter(function (x) {
+        var hay = [
+          x.name, x.person, x.studio, x.location, x.projectRange, x.description,
+          (x.clientTypes || []).join(" "), (x.needs || []).join(" ")
+        ].join(" ").toLowerCase();
+
+        if (q && hay.indexOf(q) === -1) return false;
+        if (r && x.region !== r) return false;
+        if (b && (x.budgets || []).indexOf(b) === -1) return false;
+        if (n && (x.needs || []).indexOf(n) === -1) return false;
+        return true;
+      });
+
+      list.innerHTML = visible.map(renderRow).join("");
+      count.textContent = visible.length + (visible.length === 1 ? " designer" : " designers");
+      empty.hidden = visible.length !== 0;
+      normalizeInternalLinks(mount);
+    }
+
+    [search, region, budget, need].forEach(function (el) {
+      el.addEventListener(el === search ? "input" : "change", apply);
+    });
+
+    clear.addEventListener("click", function () {
+      search.value = "";
+      region.value = "";
+      budget.value = "";
+      need.value = "";
+      apply();
+      search.focus();
+    });
+
+    fetch("https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/directory-data.json", { cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        designers = (data.designers || []).slice().sort(function (a,b) {
+          return (a.order || 999) - (b.order || 999);
+        });
+        apply();
+      })
+      .catch(function () {
+        count.textContent = "Directory data could not load.";
+        empty.hidden = false;
+        empty.textContent = "Please refresh the page in a moment.";
+      });
+
+    return true;
+  }
+
   /* ============================== blog list ============================== */
 
   function rowsHtml(posts, start) {
@@ -785,7 +945,8 @@
       styleNativePage();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
-      if (list && list.querySelector("article.blog-item")) listPage(list);
+      if (mountDirectory()) {}
+      else if (list && list.querySelector("article.blog-item")) listPage(list);
       else if (post && post.querySelector(".blog-item-content")) postPage(post);
       else {
         var page = d.getElementById("page");
