@@ -527,6 +527,45 @@
     return true;
   }
 
+  function watchTemplateMatchmaker() {
+    if (loadTemplateMatchmaker()) return;
+
+    var stopped = false;
+    var observer;
+
+    function tryLoad() {
+      if (stopped) return;
+      if (loadTemplateMatchmaker()) {
+        stopped = true;
+        if (observer) observer.disconnect();
+      }
+    }
+
+    function start() {
+      if (stopped) return;
+      tryLoad();
+      if (stopped || !d.body || !window.MutationObserver) return;
+
+      observer = new MutationObserver(tryLoad);
+      observer.observe(d.body, { childList: true, subtree: true });
+
+      // Squarespace code blocks normally arrive almost immediately. Keep the
+      // observer bounded so it never becomes permanent background work.
+      setTimeout(function () {
+        if (observer) observer.disconnect();
+        stopped = true;
+      }, 15000);
+    }
+
+    if (d.body) start();
+    else d.addEventListener("DOMContentLoaded", start, { once: true });
+
+    // A second pass catches late Fluid Engine hydration even in browsers where
+    // the MutationObserver callback is batched after our initial page setup.
+    setTimeout(tryLoad, 250);
+    setTimeout(tryLoad, 1000);
+  }
+
   function homeTrim(s, max) {
     s = String(s || "").replace(/\s+/g, " ").trim();
     if (!s || s.length <= max) return s;
@@ -1314,7 +1353,7 @@
       header();
       syncStickyOffset();
       styleNativePage();
-      loadTemplateMatchmaker();
+      watchTemplateMatchmaker();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
       if (mountHomepage()) {}
