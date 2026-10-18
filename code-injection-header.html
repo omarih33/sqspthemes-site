@@ -65,5 +65,18 @@ window.SQT_CONFIG = {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/sqspthemes.min.css">
-<script defer src="https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/sqspthemes.min.js"></script>
+<script>
+(function () {
+  var v = Math.floor(Date.now() / 300000); // refresh asset URL every 5 minutes
+
+  var css = document.createElement("link");
+  css.rel = "stylesheet";
+  css.href = "https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/sqspthemes.min.css?v=" + v;
+  document.head.appendChild(css);
+
+  var js = document.createElement("script");
+  js.defer = true;
+  js.src = "https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/sqspthemes.min.js?v=" + v;
+  document.head.appendChild(js);
+})();
+</script>
