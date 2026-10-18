@@ -299,6 +299,572 @@ html.sqt-on #itemPagination {
 }
 
 
+/* ======================= SHARED COMPONENT SYSTEM — 2010 ======================= */
+/*
+  Canonical SQSPThemes building blocks.
+
+  New custom renderers should compose these classes before adding page-specific
+  selectors. The 2010 view is the baseline design language; alternate views
+  override presentation without changing the component architecture.
+
+  Core composition:
+    .sqt-page-shell
+      .sqt-page-intro
+      .sqt-layout
+        .sqt-main .sqt-stack
+        .sqt-sidebar .sqt-stack
+
+  Panels:
+    .sqt-panel
+      .sqt-panel__head
+      .sqt-panel__body
+      .sqt-panel__foot
+
+  Lists:
+    .sqt-list-rows
+      .sqt-list-row
+        .sqt-list-row__media
+        .sqt-list-row__body
+          .sqt-list-row__title
+          .sqt-list-row__dek
+          .sqt-meta-row
+*/
+
+:root {
+  --sqt-unit: 4px;
+  --sqt-gap-xs: 4px;
+  --sqt-gap-sm: 8px;
+  --sqt-gap-md: 12px;
+  --sqt-gap-lg: 20px;
+  --sqt-gap-xl: 32px;
+  --sqt-page-top: 24px;
+  --sqt-page-bottom: 56px;
+  --sqt-panel-pad: 12px;
+  --sqt-panel-head-pad-y: 5px;
+  --sqt-panel-head-pad-x: 9px;
+  --sqt-list-pad-y: 10px;
+  --sqt-list-pad-x: 12px;
+}
+
+/* Page shell + intro */
+
+.sqt-page-shell {
+  width: 100%;
+  max-width: var(--sqt-max);
+  margin: 0 auto;
+  padding: var(--sqt-page-top) var(--sqt-gutter) var(--sqt-page-bottom);
+}
+
+.sqt-page-shell:focus {
+  outline: none;
+}
+
+.sqt-page-intro {
+  margin: 0 0 16px;
+  padding: 10px 0 14px;
+  border-bottom: 1px solid var(--sqt-rule);
+}
+
+.sqt-page-intro > :is(h1, .sqt-page-title) {
+  max-width: 820px;
+  margin: 0 0 4px;
+  font-family: var(--sqt-head);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -.025em;
+}
+
+.sqt-page-intro > :is(p, .sqt-page-dek) {
+  max-width: 700px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--sqt-body);
+}
+
+/* Primary page composition */
+
+.sqt-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--sqt-rail);
+  gap: var(--sqt-gap-md);
+  align-items: start;
+}
+
+.sqt-main,
+.sqt-sidebar {
+  min-width: 0;
+}
+
+.sqt-stack {
+  display: grid;
+  gap: var(--sqt-gap-md);
+}
+
+.sqt-sidebar {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Panel / section box */
+
+.sqt-panel {
+  min-width: 0;
+  border: 1px solid var(--sqt-box-line);
+  background: var(--sqt-bg);
+}
+
+.sqt-panel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 26px;
+  padding: var(--sqt-panel-head-pad-y) var(--sqt-panel-head-pad-x);
+  border-bottom: 1px solid var(--sqt-box-line);
+  background: var(--sqt-box-head);
+  font-family: var(--sqt-mono);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  color: var(--sqt-ink);
+}
+
+.sqt-panel__head a {
+  font-size: 10px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.sqt-panel__body {
+  min-width: 0;
+  padding: var(--sqt-panel-pad);
+}
+
+.sqt-panel__foot {
+  padding: 7px 10px;
+  border-top: 1px solid var(--sqt-rule-soft);
+  font-family: var(--sqt-mono);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.sqt-panel--note {
+  background: var(--sqt-note);
+}
+
+.sqt-panel--plain {
+  border-color: var(--sqt-rule);
+}
+
+/* Sidebar modules use the exact same panel language */
+
+.sqt-sidebar .sqt-panel__body > :is(h2, h3, strong):first-child {
+  display: block;
+  margin: 0 0 5px;
+  font-family: var(--sqt-head);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.sqt-sidebar .sqt-panel__body > p {
+  margin: 4px 0 8px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--sqt-body);
+}
+
+/* Reusable list rows */
+
+.sqt-list-rows {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sqt-list-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  min-width: 0;
+  padding: var(--sqt-list-pad-y) var(--sqt-list-pad-x);
+  border-bottom: 1px dotted var(--sqt-rule);
+}
+
+.sqt-list-row:last-child {
+  border-bottom: 0;
+}
+
+.sqt-list-row.has-image,
+.sqt-list-row--media {
+  grid-template-columns: 148px minmax(0, 1fr);
+}
+
+.sqt-list-row__media {
+  display: block;
+  width: 100%;
+  height: 88px;
+  overflow: hidden;
+  border: 1px solid var(--sqt-rule);
+  background: var(--sqt-box);
+}
+
+.sqt-list-row__media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sqt-list-row__body {
+  min-width: 0;
+}
+
+.sqt-list-row__title {
+  font-family: var(--sqt-head);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sqt-list-row__dek {
+  margin: 3px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--sqt-body);
+}
+
+/* Metadata */
+
+.sqt-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 6px;
+  font-family: var(--sqt-mono);
+  font-size: 9px;
+  line-height: 1.35;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--sqt-meta);
+}
+
+.sqt-meta-row > * + *::before {
+  content: "|";
+  margin-right: 12px;
+  color: var(--sqt-faint);
+}
+
+/* Filter / control bars */
+
+.sqt-filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 8px 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--sqt-box-line);
+  background: var(--sqt-bg-alt);
+}
+
+.sqt-filterbar label,
+.sqt-field label {
+  display: grid;
+  gap: 4px;
+  font-family: var(--sqt-mono);
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--sqt-meta);
+}
+
+.sqt-filterbar :is(input, select, textarea),
+.sqt-field :is(input, select, textarea) {
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  margin: 0;
+  padding: 0 9px;
+  border: 1px solid var(--sqt-box-line);
+  border-radius: 2px;
+  background: var(--sqt-bg);
+  color: var(--sqt-ink);
+  font: 13px/1.2 var(--sqt-text);
+  box-shadow: none;
+  appearance: none;
+}
+
+.sqt-field textarea {
+  height: auto;
+  min-height: 110px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  resize: vertical;
+}
+
+/* Form composition */
+
+.sqt-form-row {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.sqt-form-row > :first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.sqt-form-panel {
+  min-width: 0;
+}
+
+/* Buttons/links intended to look like compact 2010 controls */
+
+.sqt-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--sqt-ink);
+  border-radius: 2px;
+  background: var(--sqt-bg);
+  color: var(--sqt-ink);
+  font-family: var(--sqt-head);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sqt-action:hover {
+  background: var(--sqt-box-head);
+  color: var(--sqt-ink);
+  text-decoration: none;
+}
+
+.sqt-action--primary {
+  background: var(--sqt-btn);
+  border-color: var(--sqt-btn);
+  color: var(--sqt-btn-ink);
+}
+
+.sqt-action--primary:hover {
+  background: var(--sqt-btn-hover);
+  border-color: var(--sqt-btn-hover);
+  color: var(--sqt-btn-ink);
+}
+
+/* Tables */
+
+.sqt-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--sqt-box-line);
+  background: var(--sqt-bg);
+}
+
+.sqt-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.sqt-table th,
+.sqt-table td {
+  padding: 8px 10px;
+  border-right: 1px solid var(--sqt-rule-soft);
+  border-bottom: 1px solid var(--sqt-rule-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.sqt-table th:last-child,
+.sqt-table td:last-child {
+  border-right: 0;
+}
+
+.sqt-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.sqt-table th {
+  background: var(--sqt-box-head);
+  font-family: var(--sqt-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* Pagination */
+
+.sqt-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding-top: 10px;
+  font-family: var(--sqt-mono);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Empty/status messages */
+
+.sqt-empty,
+.sqt-status {
+  padding: 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--sqt-meta);
+}
+
+/* Responsive contract shared by all renderer pages */
+
+@media (max-width: 899px) {
+  .sqt-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sqt-sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --sqt-page-top: 16px;
+    --sqt-page-bottom: 40px;
+  }
+
+  .sqt-page-intro > :is(h1, .sqt-page-title) {
+    font-size: 28px;
+  }
+
+  .sqt-list-row.has-image,
+  .sqt-list-row--media {
+    grid-template-columns: 92px minmax(0, 1fr);
+  }
+
+  .sqt-list-row__media {
+    height: 72px;
+  }
+
+  .sqt-form-row {
+    flex-direction: column;
+  }
+}
+
+/* Modern Editorial overrides the same architecture rather than inventing
+   different components. Pages can therefore switch views without changing DOM. */
+
+html[data-sqt-style="editorial"] .sqt-page-shell {
+  max-width: 1280px;
+  padding-top: 64px;
+  padding-bottom: 88px;
+}
+
+html[data-sqt-style="editorial"] .sqt-page-intro {
+  margin-bottom: 36px;
+  padding: 0 0 28px;
+  border-bottom: 1px solid var(--sqt-rule);
+}
+
+html[data-sqt-style="editorial"] .sqt-page-intro > :is(h1, .sqt-page-title) {
+  max-width: 1040px;
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: .94;
+  letter-spacing: -.06em;
+}
+
+html[data-sqt-style="editorial"] .sqt-page-intro > :is(p, .sqt-page-dek) {
+  max-width: 760px;
+  margin-top: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+html[data-sqt-style="editorial"] .sqt-layout {
+  gap: 56px;
+}
+
+html[data-sqt-style="editorial"] .sqt-stack {
+  gap: 24px;
+}
+
+html[data-sqt-style="editorial"] .sqt-panel {
+  border-color: var(--sqt-rule);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--sqt-box);
+  box-shadow: var(--sqt-shadow);
+}
+
+html[data-sqt-style="editorial"] .sqt-panel__head {
+  min-height: 0;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--sqt-rule);
+  background: transparent;
+  font-size: 10px;
+  color: var(--sqt-meta);
+}
+
+html[data-sqt-style="editorial"] .sqt-panel__body {
+  padding: 20px;
+}
+
+html[data-sqt-style="editorial"] .sqt-panel__foot {
+  padding: 11px 18px;
+}
+
+html[data-sqt-style="editorial"] .sqt-list-row {
+  padding: 18px 20px;
+  border-bottom-style: solid;
+}
+
+html[data-sqt-style="editorial"] .sqt-list-row__title {
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -.025em;
+  text-decoration: none;
+}
+
+html[data-sqt-style="editorial"] .sqt-list-row__dek {
+  margin-top: 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+html[data-sqt-style="editorial"] .sqt-meta-row {
+  font-size: 9px;
+  color: var(--sqt-meta);
+}
+
+html[data-sqt-style="editorial"] .sqt-filterbar {
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--sqt-box);
+  box-shadow: var(--sqt-shadow);
+}
+
+html[data-sqt-style="editorial"] .sqt-action {
+  border-radius: 999px;
+}
+
+
 /* ================================ header ================================ */
 
 #sqt-header {
