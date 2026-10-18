@@ -84,7 +84,7 @@
   function render(items,q) {
     lastResults=items;
     if(!items.length){results.innerHTML='<p>No strong matches found. Try broadening the description or removing a price limit.</p>';return;}
-    results.innerHTML='<h3>Recommended templates</h3><div class="sqt-tm-grid">'+items.map((t,i)=>'<article class="sqt-tm-card">'+(t.image?'<img loading="lazy" alt="" src="'+safe(t.image)+'">':'<div class="sqt-tm-placeholder">Preview unavailable</div>')+'<div class="sqt-tm-meta"><span>0'+(i+1)+'</span>'+(t.sourceType==='native'?'<span>Included with Squarespace</span>':t.price!=null?'<span>+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(aiReasons[t.id] || reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div>';
+    results.innerHTML='<h3>Recommended templates</h3><div class="sqt-tm-grid">'+items.map((t,i)=>'<article class="sqt-tm-card">'+(t.image?'<img loading="lazy" alt="" src="'+safe(t.image)+'">':'<div class="sqt-tm-placeholder">Preview unavailable</div>')+'<div class="sqt-tm-meta"><span>0'+(i+1)+'</span>'+(t.sourceType==='native'?'<span>Included with Squarespace</span>':t.price!=null?'<span>$'+t.price+'</span>':'<span>Price on seller site</span>')+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(aiReasons[t.id] || reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div>';
   }
   async function matching(q) {
     let ranked=catalog.filter(t=>sourceFilter==='all'||t.sourceType===sourceFilter).map(t=>({t,score:score(t,q)})).filter(v=>v.score>0).sort((a,b)=>b.score-a.score).slice(0,MAX_RESULTS).map(v=>v.t);
@@ -110,29 +110,4 @@
     catalog=list.map(normalize).filter(t=>t.status==='active'&&t.name!=='Untitled template');
     status.textContent=catalog.length+' templates ready (native and premium)';
   }).catch(()=>{status.textContent='Template catalog unavailable. Please try again later.';});
-})();+t.price+'</span>':'<span>Price on seller site</span>')+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div>';
-  }
-  async function matching(q) {
-    let ranked=catalog.map(t=>({t,score:score(t,q)})).filter(v=>v.score>0).sort((a,b)=>b.score-a.score).slice(0,MAX_RESULTS).map(v=>v.t);
-    if (matchApi) {
-      try {
-        const res=await fetch(matchApi,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,candidates:catalog.map(t=>({id:t.id,name:t.name,designer:t.designer,description:t.description.slice(0,550),industry:t.industry,style:t.style,features:t.features,tags:t.tags,price:t.price})).filter(t=>score(t,q)>0).slice(0,35)})});
-        if(res.ok) {const data=await res.json(); if(Array.isArray(data.ids)){const byId=new Map(catalog.map(t=>[t.id,t]));const selected=data.ids.map(id=>byId.get(String(id))).filter(Boolean); if(selected.length) ranked=selected.slice(0,MAX_RESULTS);}}
-      } catch(e) { /* fall back to local matching */ }
-    }
-    return ranked;
-  }
-  form.addEventListener('submit',async e=>{
-    e.preventDefault();const q=input.value.trim();if(!q||!catalog.length)return;
-    lastPrompt=q;status.textContent='Finding matches…';
-    const items=await matching(q);if(q!==lastPrompt)return;
-    render(items,q);status.textContent=items.length+' matches';
-  });
-  if(!catalogUrl){status.textContent='Catalog URL not configured.';return;}
-  fetch(catalogUrl,{credentials:'omit'}).then(async r=>{if(!r.ok)throw new Error('Catalog '+r.status);return r.json();}).then(data=>{
-    const list=Array.isArray(data)?data:data.templates;
-    if(!Array.isArray(list))throw new Error('Invalid catalog');
-    catalog=list.map(normalize).filter(t=>t.status==='active'&&t.name!=='Untitled template');
-    status.textContent=catalog.length+' templates ready';
-  }).catch(()=>{status.textContent='Template catalog unavailable. Please try again later.';});
-})();
+})()
