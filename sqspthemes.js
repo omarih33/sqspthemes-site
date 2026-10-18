@@ -460,6 +460,25 @@
     var existing = d.querySelector(".sqsp-footer");
     if (existing) {
       existing.classList.add("sqt-existing-footer");
+
+      if (!existing.hasAttribute("data-sqt-footer-upgraded")) {
+        existing.setAttribute("data-sqt-footer-upgraded", "true");
+
+        var desc = existing.querySelector(".sqsp-footer__description");
+        if (desc) desc.textContent = "Do more with Squarespace.";
+
+        var brand = existing.querySelector(".sqsp-footer__brand");
+        if (brand && !brand.querySelector(".sqsp-footer__note")) {
+          var note = d.createElement("p");
+          note.className = "sqsp-footer__note";
+          note.textContent = "Tools, designers, templates, and opportunities for people building with Squarespace.";
+          if (desc && desc.nextSibling) brand.insertBefore(note, desc.nextSibling);
+          else brand.appendChild(note);
+        }
+
+        var newsletter = existing.querySelector(".sqsp-footer__brand-link a");
+        if (newsletter) newsletter.textContent = "Get the SQSPThemes newsletter →";
+      }
       return;
     }
     if (d.getElementById("sqt-footer")) return;
