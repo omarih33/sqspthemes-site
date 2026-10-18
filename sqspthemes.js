@@ -773,7 +773,7 @@
       '<div id="sqt-directory" class="sqt">' +
         '<div class="sqt-dir-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
           '<section class="sqt-dir-hero sqt-page-intro">' +
-            '<h1 class="sqt-page-title">Find the Best Squarespace Designer</h1>' +
+            '<h1 class="sqt-page-title">Find the Right Squarespace Designer</h1>' +
             '<p class="sqt-dir-sub sqt-page-dek">Connect with hand-picked, professional Squarespace designers and agencies who create standout websites for businesses of all kinds.</p>' +
           '</section>' +
           '<section class="sqt-dir-controls-shell sqt-panel">' +
