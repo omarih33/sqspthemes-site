@@ -5542,3 +5542,113 @@ html[data-sqt-style="editorial"] #sqt-blog .sqt-post-toc li {
   padding: 9px 0;
   font-size: 12px;
 }
+
+
+/* ======================= POST RAIL + WIDTH CONTAINMENT ======================= */
+
+/* The article and rail are true siblings. Nothing inside a Squarespace block
+   is allowed to use the old full-post width and drift underneath the rail. */
+@media (min-width: 900px) {
+  #sqt-blog .sqt-post.sqt-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, var(--sqt-rail));
+    column-gap: 28px;
+  }
+
+  #sqt-blog .sqt-post .sqt-article {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #sqt-blog .sqt-post .sqt-rail.sqt-sidebar {
+    position: sticky;
+    top: 16px;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+
+  html[data-sqt-style="editorial"] #sqt-blog .sqt-post .sqt-rail.sqt-sidebar {
+    top: 92px;
+    max-height: calc(100vh - 108px);
+  }
+}
+
+/* Squarespace moved-content containment */
+#sqt-blog .sqt-post .sqt-article,
+#sqt-blog .sqt-body,
+#sqt-blog .sqt-body .blog-item-content,
+#sqt-blog .sqt-body .sqs-layout,
+#sqt-blog .sqt-body .sqs-row,
+#sqt-blog .sqt-body .sqs-block,
+#sqt-blog .sqt-body .sqs-block-content,
+#sqt-blog .sqt-body .form-wrapper,
+#sqt-blog .sqt-body .form-inner-wrapper,
+#sqt-blog .sqt-body .field-list,
+#sqt-blog .sqt-body form,
+#sqt-blog .sqt-body fieldset {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+#sqt-blog .sqt-body .sqs-layout,
+#sqt-blog .sqt-body .sqs-row,
+#sqt-blog .sqt-body .blog-item-content,
+#sqt-blog .sqt-body .form-wrapper,
+#sqt-blog .sqt-body form,
+#sqt-blog .sqt-body fieldset {
+  width: 100% !important;
+}
+
+#sqt-blog .sqt-body [class*="sqs-col-"] {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+#sqt-blog .sqt-body :is(
+  input,
+  select,
+  textarea,
+  button,
+  iframe,
+  video,
+  canvas,
+  table,
+  pre,
+  img,
+  svg
+) {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#sqt-blog .sqt-body :is(.form-item, .field, .option, .form-input-effects) {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Imported/custom post markup occasionally carries viewport-ish widths or
+   negative margins. Keep it inside the reading column without clipping text. */
+#sqt-blog .sqt-body {
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+#sqt-blog .sqt-body > * {
+  max-width: 100%;
+}
+
+@media (max-width: 899px) {
+  #sqt-blog .sqt-post .sqt-rail.sqt-sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}
