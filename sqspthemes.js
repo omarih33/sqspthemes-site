@@ -16,8 +16,8 @@
   var DEFAULTS = {
     wordmark: "SQSPThemes",
     tagline: "Do more with Squarespace.",
-    headline: "What's worth knowing in the Squarespace world.",
-    subhead: "News, opportunities, tools, and ideas for people building businesses around Squarespace.",
+    headline: "What's New Across the Squarespace Ecosystem",
+    subhead: "Practical fixes, useful tools, design ideas, and Squarespace news worth your attention.",
     author: "Omari Harebin",
     kitAction: "https://app.kit.com/forms/8682133/subscriptions",
     readers: "",
@@ -165,10 +165,15 @@
     var paras = [].slice.call(source.querySelectorAll(".sqs-html-content p, p")).filter(function (p) {
       return text(p);
     });
-    return {
-      headline: text(heading) || C.headline,
-      subhead: paras.length ? text(paras[0]) : C.subhead
-    };
+    var headline = text(heading) || C.headline;
+    var subhead = paras.length ? text(paras[0]) : C.subhead;
+    if (/^what.?s worth knowing in the squarespace world\.?$/i.test(headline)) {
+      headline = "What's New Across the Squarespace Ecosystem";
+    }
+    if (/^news, opportunities, tools, and ideas for people building businesses around squarespace\.?$/i.test(subhead)) {
+      subhead = "Practical fixes, useful tools, design ideas, and Squarespace news worth your attention.";
+    }
+    return { headline: headline, subhead: subhead };
   }
 
   /* ================================ theme ================================ */
@@ -664,6 +669,21 @@
     }).join("");
   }
 
+  function featuredHtml(p) {
+    if (!p) return "";
+    var meta = [];
+    if (p.topic) meta.push(p.topic);
+    if (p.type) meta.push(p.type);
+    if (p.date) meta.push(fmtDate(p.date));
+    return '<section class="sqt-featured" aria-label="Featured story">' +
+      '<div class="sqt-featured-kicker">Featured</div>' +
+      '<a class="sqt-featured-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
+      (p.excerpt ? '<p class="sqt-featured-dek">' + esc(p.excerpt) + '</p>' : '') +
+      (meta.length ? '<div class="sqt-featured-meta">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+      '<a class="sqt-featured-link" href="' + esc(p.url) + '">Read story →</a>' +
+    '</section>';
+  }
+
   function listPage(sec) {
     var params = new URLSearchParams(location.search);
     var cat = params.get("category");
@@ -712,17 +732,24 @@
         '<a href="' + esc(C.tipUrl) + '">Tell us →</a></section>' +
     '</aside>';
 
+    var showFeatured = !cat && !tag && posts.length > 0;
+    var archivePosts = showFeatured ? posts.slice(1) : posts;
+    var archiveStart = showFeatured ? start + 1 : start;
+
     var root = make(
       '<div id="sqt-blog" class="sqt">' +
         '<div class="sqt-wrap" id="sqt-content" tabindex="-1">' +
-          '<h1 class="sqt-h1">' + esc(intro.headline) + '</h1>' +
-          '<p class="sqt-sub">' + esc(intro.subhead) + '</p>' +
-          (C.kitAction ? subscribeForm("Every post by email.") : '') +
+          '<div class="sqt-index-intro">' +
+            '<h1 class="sqt-h1">' + esc(intro.headline) + '</h1>' +
+            '<p class="sqt-sub">' + esc(intro.subhead) + '</p>' +
+          '</div>' +
+          (C.kitAction ? '<section class="sqt-index-newsletter"><div><span class="sqt-index-newsletter-kicker">The SQSPThemes newsletter</span><h2>Get the good stuff by email.</h2><p>New tools, useful fixes, standout Squarespace work, and opportunities worth knowing about.</p></div>' + subscribeForm("Email address") + '</section>' : '') +
+          (showFeatured ? featuredHtml(posts[0]) : '') +
           (C.topics.length ? '<nav class="sqt-filter" aria-label="Topics">' + filters + '</nav>' : '') +
           '<div class="sqt-cols">' +
             '<div class="sqt-main">' +
-              '<h2 class="sqt-label">' + esc(heading) + '</h2>' +
-              '<ol class="sqt-list" start="' + start + '">' + rowsHtml(posts, start) + '</ol>' +
+              '<h2 class="sqt-label">' + esc(showFeatured ? "Latest" : heading) + '</h2>' +
+              '<ol class="sqt-list" start="' + archiveStart + '">' + rowsHtml(archivePosts, archiveStart) + '</ol>' +
               '<nav class="sqt-pager" aria-label="Pages">' +
                 (newerA ? '<a href="' + esc(pagerHref(newerA, Math.max(1, start - posts.length))) + '">← Newer</a>' : '<span></span>') +
                 (olderA ? '<a href="' + esc(pagerHref(olderA, start + posts.length)) + '">Older →</a>' : '<span></span>') +
@@ -750,7 +777,13 @@
         if (it.excerpt) p.excerpt = stripHtml(it.excerpt);
         if (it.publishOn) p.date = new Date(it.publishOn);
       });
-      root.querySelector(".sqt-list").innerHTML = rowsHtml(posts, start);
+      if (showFeatured) {
+        var feature = root.querySelector(".sqt-featured");
+        if (feature) feature.outerHTML = featuredHtml(posts[0]);
+        root.querySelector(".sqt-list").innerHTML = rowsHtml(posts.slice(1), start + 1);
+      } else {
+        root.querySelector(".sqt-list").innerHTML = rowsHtml(posts, start);
+      }
     }).catch(function () {});
   }
 
@@ -852,9 +885,12 @@
             '</article>' +
             '<div class="sqt-rail">' +
               (glance ? '<div class="sqt-rail-glance"></div>' : '') +
-              '<aside class="sqt-side" aria-label="More">' +
+              '<aside class="sqt-side sqt-post-side" aria-label="More">' +
+                '<section class="sqt-side-search"><h2>Looking for something specific?</h2><p>Search 10+ years of Squarespace articles, tools, templates, and resources.</p><button class="sqt-side-action sqt-open-search" type="button">Search SQSPThemes →</button></section>' +
+                (C.kitAction ? '<section class="sqt-side-newsletter"><h2>Get the good stuff by email.</h2><p>Useful Squarespace finds without having to go looking for them.</p>' + subscribeForm("Email address") + '</section>' : '') +
                 '<section class="sqt-related" hidden><h2>More like this</h2><ul></ul></section>' +
-                '<section class="sqt-topic" hidden><h2>Topic</h2><a class="sqt-feature" href="#"></a></section>' +
+                '<section class="sqt-topic" hidden><h2>Browse this topic</h2><a class="sqt-feature" href="#"></a></section>' +
+                '<section class="sqt-next-step" hidden><h2>Keep going</h2><a class="sqt-feature" href="#"></a><p></p></section>' +
               '</aside>' +
             '</div>' +
           '</div>' +
@@ -864,6 +900,20 @@
 
     root.querySelector(".sqt-body").appendChild(body);
     if (glance) root.querySelector(".sqt-rail-glance").appendChild(glance);
+
+    var openSearch = root.querySelector(".sqt-open-search");
+    if (openSearch) openSearch.addEventListener("click", function () {
+      if (window.Monocle && typeof window.Monocle.showSearch === "function") {
+        window.Monocle.showSearch();
+      } else {
+        var headerSearch = d.querySelector("#sqt-q");
+        if (headerSearch) {
+          headerSearch.focus();
+          headerSearch.select();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+    });
 
     // images moved out of Squarespace's wrapper: make sure they load
     body.querySelectorAll("img[data-src]").forEach(function (img) {
@@ -901,6 +951,30 @@
         te.textContent = type;
         te.hidden = false;
       }
+
+      var nextStep = root.querySelector(".sqt-next-step");
+      var haystack = (title + " " + (it.excerpt || "") + " " + (it.tags || []).join(" ") + " " + (it.categories || []).join(" ")).toLowerCase();
+      var nextLink = nextStep && nextStep.querySelector("a");
+      var nextCopy = nextStep && nextStep.querySelector("p");
+      if (nextStep && nextLink && nextCopy) {
+        if (type === "Opportunities" || /\brfp\b|request for proposal|bigger budget|web project/.test(haystack)) {
+          nextLink.textContent = "Bigger Budget Projects";
+          nextLink.href = "/rfps";
+          nextCopy.textContent = "Browse current website projects and opportunities with real budgets.";
+          nextStep.hidden = false;
+        } else if (/template/.test(haystack)) {
+          nextLink.textContent = "Browse Squarespace Templates";
+          nextLink.href = "/templates";
+          nextCopy.textContent = "Explore the template directory and find a stronger starting point.";
+          nextStep.hidden = false;
+        } else if (/designer|agency|studio/.test(haystack)) {
+          nextLink.textContent = "Find a Squarespace Designer";
+          nextLink.href = "/best-squarespace-designers";
+          nextCopy.textContent = "Browse hand-picked Squarespace designers and studios.";
+          nextStep.hidden = false;
+        }
+      }
+
       var topic = topicOf(it.categories);
       if (!topic) return;
       var q = "?category=" + encodeURIComponent(topic);
