@@ -771,19 +771,16 @@
 
     mount.innerHTML =
       '<div id="sqt-directory" class="sqt">' +
-        '<div class="sqt-dir-wrap" id="sqt-content" tabindex="-1">' +
-          '<section class="sqt-dir-hero">' +
-            '<p class="sqt-dir-badge">Premium Squarespace Designer Directory</p>' +
-            '<h1>Find the Best Squarespace Designer</h1>' +
-            '<p class="sqt-dir-sub">Connect with hand-picked, professional Squarespace designers and agencies who create standout websites for businesses of all kinds.</p>' +
-
+        '<div class="sqt-dir-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
+          '<section class="sqt-dir-hero sqt-page-intro">' +
+            '<h1 class="sqt-page-title">Find the Best Squarespace Designer</h1>' +
+            '<p class="sqt-dir-sub sqt-page-dek">Connect with hand-picked, professional Squarespace designers and agencies who create standout websites for businesses of all kinds.</p>' +
           '</section>' +
-          '<section class="sqt-dir-controls-shell">' +
-            '<div class="sqt-dir-controls-head">' +
-              '<h2>Browse the Directory</h2>' +
-              '<p>Filter by location, budget, and the kind of help you need.</p>' +
-            '</div>' +
-            '<div class="sqt-dir-controls">' +
+          '<section class="sqt-dir-controls-shell sqt-panel">' +
+            '<div class="sqt-panel__head">Browse the Directory</div>' +
+            '<div class="sqt-panel__body">' +
+              '<p class="sqt-dir-controls-copy">Filter by location, budget, and the kind of help you need.</p>' +
+              '<div class="sqt-dir-controls sqt-filterbar">' +
               '<label>Search<input id="sqt-dir-search" type="search" placeholder="Name, studio, location, specialty"></label>' +
               '<label>Region<select id="sqt-dir-region">' +
                 '<option value="">All regions</option>' +
@@ -810,11 +807,15 @@
                 '<option value="ecommerce">Ecommerce</option>' +
                 '<option value="support">Ongoing support</option>' +
               '</select></label>' +
+              '</div>' +
             '</div>' +
-            '<div class="sqt-dir-status"><span id="sqt-dir-count">Loading listings…</span><button id="sqt-dir-clear" type="button">Clear filters</button></div>' +
+            '<div class="sqt-dir-status sqt-panel__foot"><span id="sqt-dir-count">Loading listings…</span><button id="sqt-dir-clear" type="button">Clear filters</button></div>' +
           '</section>' +
-          '<ol class="sqt-dir-list" id="sqt-dir-list"></ol>' +
-          '<p class="sqt-dir-empty" id="sqt-dir-empty" hidden>No designers match those filters.</p>' +
+          '<section class="sqt-dir-results sqt-panel">' +
+            '<div class="sqt-panel__head">Directory Listings</div>' +
+            '<ol class="sqt-dir-list sqt-list-rows" id="sqt-dir-list"></ol>' +
+            '<p class="sqt-dir-empty sqt-empty" id="sqt-dir-empty" hidden>No designers match those filters.</p>' +
+          '</section>' +
         '</div>' +
       '</div>';
 
@@ -841,12 +842,12 @@
         return '<span>' + esc(n.replace(/-/g," ")) + '</span>';
       }).join("");
 
-      return '<li class="sqt-dir-row">' +
+      return '<li class="sqt-dir-row sqt-list-row">' +
         '<div class="sqt-dir-num">' + String(i + 1).padStart(2,"0") + '</div>' +
         img +
-        '<div class="sqt-dir-main">' +
+        '<div class="sqt-dir-main sqt-list-row__body">' +
           '<h2><a href="' + esc(profileUrl(x)) + '">' + esc(x.name) + '</a></h2>' +
-          '<div class="sqt-dir-meta">' +
+          '<div class="sqt-dir-meta sqt-meta-row">' +
             (x.location ? '<span>' + esc(x.location) + '</span>' : '') +
             (x.projectRange ? '<span>' + esc(x.projectRange) + '</span>' : '') +
           '</div>' +
