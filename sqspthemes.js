@@ -485,6 +485,306 @@
   }
 
 
+
+  /* =============================== homepage ============================== */
+
+  function siteAssetUrl(name) {
+    var script = [].slice.call(d.scripts).find(function (s) {
+      return /\/sqspthemes\.js(?:\?|$)/.test(s.src || "");
+    });
+    if (script && script.src) return script.src.replace(/[^/?]+(?:\?.*)?$/, name);
+    return "https://sqspthemes-assets.pages.dev/" + name;
+  }
+
+  function fetchAssetJSON(name) {
+    return fetch(siteAssetUrl(name), { credentials: "omit" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+
+  function homeTrim(s, max) {
+    s = String(s || "").replace(/\s+/g, " ").trim();
+    if (!s || s.length <= max) return s;
+    return s.slice(0, max).replace(/\s+\S*$/, "") + "…";
+  }
+
+  function homeItemImage(it) {
+    var direct = it && (
+      it.assetUrl ||
+      it.featuredImageUrl ||
+      it.imageUrl ||
+      (it.image && (it.image.assetUrl || it.image.url)) ||
+      (it.thumbnail && (it.thumbnail.assetUrl || it.thumbnail.url))
+    );
+    if (direct) return direct;
+
+    if (it && it.body) {
+      var box = d.createElement("div");
+      box.innerHTML = it.body;
+      var img = box.querySelector("img");
+      if (img) return img.getAttribute("data-src") || img.getAttribute("src") || "";
+    }
+    return "";
+  }
+
+  function homePost(it) {
+    it = it || {};
+    var tags = it.tags || [];
+    return {
+      title: stripHtml(it.title || "Untitled"),
+      url: it.fullUrl || it.url || "#",
+      excerpt: homeTrim(stripHtml(it.excerpt || it.body || ""), 190),
+      date: it.publishOn ? new Date(it.publishOn) : null,
+      topic: topicOf(it.categories || []),
+      type: typeOf(tags),
+      image: homeItemImage(it),
+      featured: tags.some ? tags.some(function (t) { return String(t).toLowerCase() === "featured"; }) : false
+    };
+  }
+
+  function homePostMeta(p) {
+    var bits = [];
+    if (p.topic) bits.push(p.topic);
+    else if (p.type) bits.push(p.type);
+    if (p.date) bits.push(fmtDate(p.date));
+    return bits;
+  }
+
+  function homeFeatureMarkup(p) {
+    if (!p) {
+      return '<div class="sqt-home-empty">Latest Squarespace stories will appear here automatically from the Blog collection.</div>';
+    }
+    var meta = homePostMeta(p);
+    return '<article class="sqt-home-feature-card' + (p.image ? ' has-image' : '') + '">' +
+      (p.image ? '<a class="sqt-home-feature-media" href="' + esc(p.url) + '"><img src="' + esc(p.image) + '" alt="" loading="eager"></a>' : '') +
+      '<div class="sqt-home-feature-copy">' +
+        '<a class="sqt-home-feature-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
+        (p.excerpt ? '<p>' + esc(p.excerpt) + '</p>' : '') +
+        '<a class="sqt-home-read" href="' + esc(p.url) + '">Read the full post →</a>' +
+        (meta.length ? '<div class="sqt-home-meta">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+      '</div>' +
+    '</article>';
+  }
+
+  function homeLatestMarkup(posts) {
+    if (!posts.length) {
+      return '<div class="sqt-home-empty">The latest articles will appear here automatically.</div>';
+    }
+    return posts.map(function (p) {
+      var meta = homePostMeta(p);
+      return '<article class="sqt-home-latest-row' + (p.image ? ' has-image' : '') + '">' +
+        (p.image ? '<a class="sqt-home-latest-media" href="' + esc(p.url) + '"><img src="' + esc(p.image) + '" alt="" loading="lazy"></a>' : '') +
+        '<div class="sqt-home-latest-copy">' +
+          '<a class="sqt-home-latest-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
+          (p.excerpt ? '<p>' + esc(homeTrim(p.excerpt, 145)) + '</p>' : '') +
+          (meta.length ? '<div class="sqt-home-meta">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+        '</div>' +
+      '</article>';
+    }).join("");
+  }
+
+  function homeTopicsMarkup() {
+    var topics = C.topics && C.topics.length ? C.topics : [
+      "Squarespace News", "Templates", "Customization", "Plugins & Integrations", "SEO", "Business & Marketing"
+    ];
+    return '<ol class="sqt-home-topic-list">' + topics.slice(0, 10).map(function (t, i) {
+      return '<li><span>' + String(i + 1).padStart(2, "0") + '</span><a href="/blog?category=' + encodeURIComponent(t) + '">' + esc(t) + '</a></li>';
+    }).join("") + '</ol>';
+  }
+
+  function homeExploreMarkup(templateCount, designerCount) {
+    var items = [
+      ["Templates", "/templates", templateCount ? templateCount + " Squarespace templates to browse." : "Standout Squarespace templates for every kind of project."],
+      ["Designers", "/best-squarespace-designers", designerCount ? designerCount + " hand-picked Squarespace designers and studios." : "Find trusted Squarespace designers and studios."],
+      ["Plugins", "/squarespace-integrations", "Tools and integrations that extend what Squarespace can do."],
+      ["Resources", "/squarespace-resources", "Guides, tools, and freebies to help you do more with Squarespace."],
+      ["Opportunities", (C.opportunity && C.opportunity.url) || "/rfps", "Bigger-budget website projects, RFPs, and opportunities."]
+    ];
+    return items.map(function (x) {
+      return '<article class="sqt-home-explore-card">' +
+        '<a class="sqt-home-explore-title" href="' + esc(x[1]) + '">' + esc(x[0]) + '</a>' +
+        '<p>' + esc(x[2]) + '</p>' +
+        '<a class="sqt-home-explore-link" href="' + esc(x[1]) + '">Explore ' + esc(x[0].toLowerCase()) + ' →</a>' +
+      '</article>';
+    }).join("");
+  }
+
+  function mountHomepage() {
+    var marker = d.getElementById("sqt-home-source");
+    if (!marker) return false;
+
+    var page = d.getElementById("page");
+    var source = marker.closest("section.page-section") || page;
+    var sourceHeading = source && source.querySelector(".sqs-html-content h1, .sqs-html-content h2, h1, h2");
+    var sourcePara = source && source.querySelector(".sqs-html-content p, p");
+    var title = text(sourceHeading) || "Do more with Squarespace.";
+    var dek = text(sourcePara) || "News, tools, templates, designers, and practical fixes for people building with Squarespace.";
+
+    html.classList.add("sqt-home-active");
+
+    var root = make(
+      '<div id="sqt-home" class="sqt">' +
+        '<main class="sqt-home-wrap" id="sqt-content" tabindex="-1">' +
+          '<section class="sqt-home-intro">' +
+            '<div class="sqt-home-intro-copy">' +
+              '<span class="sqt-home-eyebrow">Independent guide to the Squarespace ecosystem</span>' +
+              '<h1>' + esc(title) + '</h1>' +
+              '<p>' + esc(dek) + '</p>' +
+            '</div>' +
+            '<div class="sqt-home-proof" aria-label="SQSPThemes at a glance">' +
+              '<span>10+ years of Squarespace resources</span>' +
+              '<span data-home-template-proof>Hundreds of templates</span>' +
+              '<span data-home-designer-proof>Hand-picked designers</span>' +
+            '</div>' +
+          '</section>' +
+
+          '<div class="sqt-home-layout">' +
+            '<div class="sqt-home-main">' +
+              '<section class="sqt-home-box sqt-home-feature-box">' +
+                '<div class="sqt-home-box-head">Featured</div>' +
+                '<div class="sqt-home-box-body" data-home-feature><div class="sqt-home-empty">Loading the latest from the ecosystem…</div></div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box sqt-home-latest-box">' +
+                '<div class="sqt-home-box-head">Latest Articles</div>' +
+                '<div class="sqt-home-latest" data-home-latest><div class="sqt-home-empty">Loading latest articles…</div></div>' +
+                '<div class="sqt-home-box-foot"><a href="/blog">See all articles →</a></div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box sqt-home-explore-box">' +
+                '<div class="sqt-home-box-head">Explore More</div>' +
+                '<div class="sqt-home-explore" data-home-explore>' + homeExploreMarkup(0, 0) + '</div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box sqt-home-bottom-newsletter">' +
+                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
+                '<div class="sqt-home-newsletter-wide">' +
+                  '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>New tools, fixes, standout work, and opportunities worth knowing about.</p></div>' +
+                  subscribeForm("Email address") +
+                '</div>' +
+              '</section>' +
+            '</div>' +
+
+            '<aside class="sqt-home-sidebar" aria-label="Explore SQSPThemes">' +
+              '<section class="sqt-home-box">' +
+                '<div class="sqt-home-box-head">Search SQSPThemes</div>' +
+                '<div class="sqt-home-side-body"><strong>Looking for something specific?</strong><p>Search 10+ years of Squarespace articles, tools, templates, and resources.</p><button class="sqt-home-search-btn" type="button">⌕ Search SQSPThemes →</button></div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box">' +
+                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
+                '<div class="sqt-home-side-body"><p>New tools, useful fixes, standout Squarespace work, and opportunities worth knowing about.</p>' + subscribeForm("Email address") + '</div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box">' +
+                '<div class="sqt-home-box-head">Browse by Topic</div>' +
+                '<div class="sqt-home-side-body">' + homeTopicsMarkup() + '</div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box">' +
+                '<div class="sqt-home-box-head">Start Here</div>' +
+                '<div class="sqt-home-side-body"><ol class="sqt-home-start-list">' +
+                  '<li><a href="/templates">Find a Squarespace template</a></li>' +
+                  '<li><a href="/best-squarespace-designers">Hire a Squarespace designer</a></li>' +
+                  '<li><a href="/squarespace-integrations">Explore plugins & integrations</a></li>' +
+                  '<li><a href="/squarespace-resources">Browse Squarespace resources</a></li>' +
+                  '<li><a href="/blog">Read the latest articles</a></li>' +
+                '</ol></div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box sqt-home-resource-box">' +
+                '<div class="sqt-home-box-head">Featured Resource</div>' +
+                '<div class="sqt-home-side-body">' +
+                  '<a class="sqt-home-side-title" href="' + esc((C.opportunity && C.opportunity.url) || "/rfps") + '">' + esc((C.opportunity && C.opportunity.name) || "Bigger Budget Projects") + '</a>' +
+                  '<p>' + esc((C.opportunity && C.opportunity.text) || "Website RFPs and opportunities for independent designers and studios.") + '</p>' +
+                  '<a href="' + esc((C.opportunity && C.opportunity.url) || "/rfps") + '">Explore opportunities →</a>' +
+                '</div>' +
+              '</section>' +
+
+              '<section class="sqt-home-box">' +
+                '<div class="sqt-home-box-head">From the Directory</div>' +
+                '<div class="sqt-home-side-body" data-home-designer><div class="sqt-home-empty">Loading a featured designer…</div></div>' +
+              '</section>' +
+            '</aside>' +
+          '</div>' +
+        '</main>' +
+      '</div>'
+    );
+
+    if (page && page.parentNode) page.parentNode.insertBefore(root, page.nextSibling);
+    else marker.parentNode.insertBefore(root, marker.nextSibling);
+
+    var skip = d.querySelector("#sqt-header .sqt-skip");
+    if (skip) skip.href = "#sqt-content";
+
+    root.querySelectorAll(".sqt-home-search-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (window.Monocle && typeof window.Monocle.showSearch === "function") {
+          window.Monocle.showSearch();
+          return;
+        }
+        var input = d.querySelector("#sqt-q");
+        if (input) {
+          input.focus();
+          input.select();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+    });
+
+    wireSubscribe(root);
+
+    Promise.all([
+      getJSON("/blog").catch(function () { return null; }),
+      fetchAssetJSON("directory-data.json").catch(function () { return null; }),
+      fetchAssetJSON("template-catalog.json").catch(function () { return null; })
+    ]).then(function (results) {
+      var blog = results[0];
+      var directory = results[1];
+      var catalog = results[2];
+
+      var items = blog && blog.items ? blog.items.map(homePost).filter(function (p) {
+        return p.title && p.url && p.url !== "#";
+      }) : [];
+
+      if (items.length) {
+        var featured = items.find(function (p) { return p.featured; }) || items[0];
+        var latest = items.filter(function (p) { return p.url !== featured.url; }).slice(0, 5);
+        root.querySelector("[data-home-feature]").innerHTML = homeFeatureMarkup(featured);
+        root.querySelector("[data-home-latest]").innerHTML = homeLatestMarkup(latest);
+      } else {
+        root.querySelector("[data-home-feature]").innerHTML = homeFeatureMarkup(null);
+        root.querySelector("[data-home-latest]").innerHTML = homeLatestMarkup([]);
+      }
+
+      var designerCount = directory && (directory.count || (directory.designers && directory.designers.length)) || 0;
+      var templateCount = catalog && (catalog.published_count || (catalog.templates && catalog.templates.length)) || 0;
+
+      if (templateCount) root.querySelector("[data-home-template-proof]").textContent = templateCount + " templates";
+      if (designerCount) root.querySelector("[data-home-designer-proof]").textContent = designerCount + " designers";
+      root.querySelector("[data-home-explore]").innerHTML = homeExploreMarkup(templateCount, designerCount);
+
+      var designers = directory && directory.designers || [];
+      var designer = designers.find(function (x) { return x.avatarReady === "Yes" && x.image; }) || designers[0];
+      var designerBox = root.querySelector("[data-home-designer]");
+      if (designerBox) {
+        if (designer) {
+          designerBox.innerHTML =
+            '<article class="sqt-home-designer">' +
+              (designer.image ? '<img src="' + esc(designer.image) + '" alt="" loading="lazy">' : '') +
+              '<div><a class="sqt-home-side-title" href="/best-squarespace-designers">' + esc(designer.studio || designer.person || designer.name) + '</a>' +
+              '<p>' + esc(homeTrim(designer.description, 120)) + '</p>' +
+              '<a href="/best-squarespace-designers">Browse the directory →</a></div>' +
+            '</article>';
+        } else {
+          designerBox.innerHTML = '<a href="/best-squarespace-designers">Browse the Squarespace Designer Directory →</a>';
+        }
+      }
+    });
+
+    return true;
+  }
+
+
   /* ============================== directory ============================== */
 
   function mountDirectory() {
@@ -999,11 +1299,11 @@
   /* ================================= run ================================= */
 
   function fallback(err) {
-    ["sqt-header", "sqt-blog", "sqt-footer"].forEach(function (id) {
+    ["sqt-header", "sqt-home", "sqt-blog", "sqt-footer"].forEach(function (id) {
       var el = d.getElementById(id);
       if (el) el.remove();
     });
-    html.classList.remove("sqt-on", "sqt-ready");
+    html.classList.remove("sqt-on", "sqt-ready", "sqt-home-active");
     if (window.console) console.warn("SQSPThemes layer turned itself off:", err);
   }
 
@@ -1016,7 +1316,8 @@
       styleNativePage();
       var list = d.querySelector('section[data-sqsp-section="blog-list"]');
       var post = d.querySelector(".blog-item-wrapper");
-      if (mountDirectory()) {}
+      if (mountHomepage()) {}
+      else if (mountDirectory()) {}
       else if (list && list.querySelector("article.blog-item")) listPage(list);
       else if (post && post.querySelector(".blog-item-content")) postPage(post);
       else {
