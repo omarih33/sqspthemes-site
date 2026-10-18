@@ -89,35 +89,8 @@
   function render(items,q) {
     lastResults=items;
     if(!items.length){results.innerHTML='<p>No strong matches found. Try broadening the description or removing a price limit.</p>';return;}
-    results.innerHTML='<section class="sqt-tm-results-panel sqt-panel"><div class="sqt-panel__head">Your Shortlist</div><div class="sqt-panel__body"><div class="sqt-tm-results-head"><div><h2>Our recommendations</h2></div><p>Matched to your project, style and priorities.</p></div><div class="sqt-tm-grid">'+items.map((t,i)=>'<article class="sqt-tm-card">'+(t.image?'<img loading="lazy" alt="" src="'+safe(t.image)+'">':'<div class="sqt-tm-placeholder">Preview unavailable</div>')+'<div class="sqt-tm-meta"><span>0'+(i+1)+'</span>'+(t.sourceType==='native'?'<span>Included with Squarespace</span>':t.price!=null?'<span>
-    results.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{const p=document.createElement('div');p.className='sqt-tm-placeholder';p.textContent='Preview being updated';img.replaceWith(p)},{once:true}));
-  }
-  async function matching(q) {
-    let ranked=catalog.filter(t=>sourceFilter==='all'||t.sourceType===sourceFilter).map(t=>({t,score:score(t,q)})).filter(v=>v.score>0).sort((a,b)=>b.score-a.score).slice(0,MAX_RESULTS).map(v=>v.t);
-    aiReasons = {};
-    if (matchApi) {
-      try {
-        const res=await fetch(matchApi,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,candidates:catalog.filter(t=>sourceFilter==='all'||t.sourceType===sourceFilter).map(t=>({id:t.id,name:t.name,designer:t.designer,description:t.description.slice(0,350),industry:t.industry,style:t.style,features:t.features,tags:t.tags,price:t.price,image_url:t.image,source_type:t.sourceType})).sort((a,b)=>score(b,q)-score(a,q)).slice(0,18)})});
-        if(res.ok) {const data=await res.json(); if(Array.isArray(data.matches)){for(const m of data.matches){if(m&&m.id&&m.reason)aiReasons[String(m.id)]=String(m.reason);}} if(Array.isArray(data.ids)){const byId=new Map(catalog.map(t=>[t.id,t]));const selected=data.ids.map(id=>byId.get(String(id))).filter(Boolean); if(selected.length) ranked=selected.slice(0,MAX_RESULTS);}}
-      } catch(e) { /* fall back to local matching */ }
-    }
-    return ranked;
-  }
-  form.addEventListener('submit',async e=>{
-    e.preventDefault();const q=input.value.trim();if(!catalog.length)return;
-    if(q.length<4){input.focus();status.textContent='Tell us a little about the site you want.';return;}
-    const current=++requestId;lastPrompt=q;setBusy(true);results.innerHTML='';status.textContent='Analyzing your brief…';
-    try{const items=await matching(q);if(current!==requestId)return;setBusy(false);render(items,q);status.textContent=items.length+' recommendations';}
-    catch(error){if(current!==requestId)return;setBusy(false);status.textContent='Could not finish matching. Please try again.';console.error('Template matching failed',error);}
-  });
-  if(!catalogUrl){status.textContent='Catalog URL not configured.';return;}
-  fetch(catalogUrl,{credentials:'omit'}).then(async r=>{if(!r.ok)throw new Error('Catalog '+r.status);return r.json();}).then(data=>{
-    const list=Array.isArray(data)?data:data.templates;
-    if(!Array.isArray(list))throw new Error('Invalid catalog');
-    catalog=list.map(normalize).filter(t=>t.status==='active'&&t.name!=='Untitled template');
-    status.textContent=catalog.length+' templates available';
-  }).catch(()=>{status.textContent='Template catalog unavailable. Please try again later.';});
-})()+t.price+'</span>':'<span>Price on seller site</span>')+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(aiReasons[t.id] || reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div></div></section>';
+    results.innerHTML='<div class="sqt-tm-results-head"><div><span class="sqt-tm-overline">YOUR SHORTLIST</span><h2>Our recommendations</h2></div><p>Matched to your project, style and priorities.</p></div><div class="sqt-tm-grid">'+items.map((t,i)=>'<article class="sqt-tm-card">'+(t.image?'<img loading="lazy" alt="" src="'+safe(t.image)+'">':'<div class="sqt-tm-placeholder">Preview unavailable</div>')+'<div class="sqt-tm-meta"><span>0'+(i+1)+'</span>'+(t.sourceType==='native'?'<span>Included with Squarespace</span>':t.price!=null?'<span>$'+t.price+'</span>':'<span>Price on seller site</span>')+'</div><h4>'+safe(t.name)+'</h4><p class="sqt-tm-designer">'+safe(t.designer)+'</p><p>'+safe(aiReasons[t.id] || reason(t,q))+'</p><div class="sqt-tm-links">'+(t.detail?'<a href="'+safe(t.detail)+'">Details ↗</a>':'')+(t.demo?'<a href="'+safe(t.demo)+'" target="_blank" rel="noopener noreferrer">Live demo ↗</a>':'')+(t.product?'<a href="'+safe(t.product)+'" target="_blank" rel="sponsored noopener noreferrer">Get template ↗</a>':'')+'</div></article>').join('')+'</div>';
+    results.innerHTML = '<section class="sqt-tm-results-panel sqt-panel"><div class="sqt-panel__head">Your Shortlist</div><div class="sqt-panel__body">' + results.innerHTML + '</div></section>';
     results.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{const p=document.createElement('div');p.className='sqt-tm-placeholder';p.textContent='Preview being updated';img.replaceWith(p)},{once:true}));
   }
   async function matching(q) {
