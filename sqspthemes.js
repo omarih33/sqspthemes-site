@@ -356,6 +356,25 @@
     var native = d.getElementById("header");
     var nav = readNav(native);
     if (!nav.length) nav = C.nav;
+    nav = nav.slice();
+    // Two distinct template destinations in the actual site menu.
+    var browseAt = -1, findAt = -1;
+    nav.forEach(function (n, i) {
+      var path = String(n.url || "").split("?")[0].replace(/\/$/, "");
+      if (path === "/templates") browseAt = i;
+      if (path === "/find-templates") findAt = i;
+    });
+    if (browseAt >= 0) {
+      nav[browseAt] = Object.assign({}, nav[browseAt], { label: "Browse Templates" });
+    } else {
+      browseAt = nav.length;
+      nav.push({ label: "Browse Templates", url: "/templates" });
+    }
+    if (findAt >= 0) {
+      nav[findAt] = Object.assign({}, nav[findAt], { label: "Find Templates" });
+    } else {
+      nav.splice(browseAt + 1, 0, { label: "Find Templates", url: "/find-templates" });
+    }
 
     var items = nav.map(function (n) {
       if (n.children && n.children.length) {
