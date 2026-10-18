@@ -560,7 +560,7 @@
         '<a class="sqt-home-feature-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
         (p.excerpt ? '<p>' + esc(p.excerpt) + '</p>' : '') +
         '<a class="sqt-home-read" href="' + esc(p.url) + '">Read the full post →</a>' +
-        (meta.length ? '<div class="sqt-home-meta">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+        (meta.length ? '<div class="sqt-home-meta sqt-meta-row">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
       '</div>' +
     '</article>';
   }
@@ -571,12 +571,12 @@
     }
     return posts.map(function (p) {
       var meta = homePostMeta(p);
-      return '<article class="sqt-home-latest-row' + (p.image ? ' has-image' : '') + '">' +
-        (p.image ? '<a class="sqt-home-latest-media" href="' + esc(p.url) + '"><img src="' + esc(p.image) + '" alt="" loading="lazy"></a>' : '') +
-        '<div class="sqt-home-latest-copy">' +
-          '<a class="sqt-home-latest-title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
+      return '<article class="sqt-home-latest-row sqt-list-row' + (p.image ? ' has-image' : '') + '">' +
+        (p.image ? '<a class="sqt-home-latest-media sqt-list-row__media" href="' + esc(p.url) + '"><img src="' + esc(p.image) + '" alt="" loading="lazy"></a>' : '') +
+        '<div class="sqt-home-latest-copy sqt-list-row__body">' +
+          '<a class="sqt-home-latest-title sqt-list-row__title" href="' + esc(p.url) + '">' + esc(p.title) + '</a>' +
           (p.excerpt ? '<p>' + esc(homeTrim(p.excerpt, 145)) + '</p>' : '') +
-          (meta.length ? '<div class="sqt-home-meta">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
+          (meta.length ? '<div class="sqt-home-meta sqt-meta-row">' + meta.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join("") + '</div>' : '') +
         '</div>' +
       '</article>';
     }).join("");
@@ -626,8 +626,8 @@
 
     var root = make(
       '<div id="sqt-home" class="sqt">' +
-        '<main class="sqt-home-wrap" id="sqt-content" tabindex="-1">' +
-          '<section class="sqt-home-intro">' +
+        '<main class="sqt-home-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
+          '<section class="sqt-home-intro sqt-page-intro">' +
             '<div class="sqt-home-intro-copy">' +
               '<h1>' + esc(title) + '</h1>' +
               '<p>' + esc(dek) + '</p>' +
@@ -635,39 +635,39 @@
 
           '</section>' +
 
-          '<div class="sqt-home-layout">' +
-            '<div class="sqt-home-main">' +
-              '<section class="sqt-home-box sqt-home-feature-box">' +
-                '<div class="sqt-home-box-head">Featured</div>' +
-                '<div class="sqt-home-box-body" data-home-feature><div class="sqt-home-empty">Loading the latest from the ecosystem…</div></div>' +
+          '<div class="sqt-home-layout sqt-layout">' +
+            '<div class="sqt-home-main sqt-main sqt-stack">' +
+              '<section class="sqt-home-box sqt-home-feature-box sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Featured</div>' +
+                '<div class="sqt-home-box-body sqt-panel__body" data-home-feature><div class="sqt-home-empty">Loading the latest from the ecosystem…</div></div>' +
               '</section>' +
 
 
-              '<section class="sqt-home-box sqt-home-latest-box">' +
-                '<div class="sqt-home-box-head">Latest Articles</div>' +
+              '<section class="sqt-home-box sqt-home-latest-box sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Latest Articles</div>' +
                 '<div class="sqt-home-latest" data-home-latest><div class="sqt-home-empty">Loading latest articles…</div></div>' +
-                '<div class="sqt-home-box-foot"><a href="/blog">See all articles →</a></div>' +
+                '<div class="sqt-home-box-foot sqt-panel__foot"><a href="/blog">See all articles →</a></div>' +
               '</section>' +
 
-              '<section class="sqt-home-box sqt-home-bottom-newsletter">' +
-                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
-                '<div class="sqt-home-newsletter-wide">' +
+              '<section class="sqt-home-box sqt-home-bottom-newsletter sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Get the Good Stuff by Email</div>' +
+                '<div class="sqt-home-newsletter-wide sqt-form-panel">' +
                   '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p></div>' +
                   subscribeForm("Email address") +
                 '</div>' +
               '</section>' +
 
-              '<section class="sqt-home-box sqt-home-explore-box">' +
-                '<div class="sqt-home-box-head">Explore More</div>' +
+              '<section class="sqt-home-box sqt-home-explore-box sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Explore More</div>' +
                 '<div class="sqt-home-explore" data-home-explore>' + homeExploreMarkup(0, 0) + '</div>' +
               '</section>' +
 
             '</div>' +
 
-            '<aside class="sqt-home-sidebar" aria-label="Explore SQSPThemes">' +
-              '<section class="sqt-home-box">' +
-                '<div class="sqt-home-box-head">Start Here</div>' +
-                '<div class="sqt-home-side-body"><ol class="sqt-home-start-list">' +
+            '<aside class="sqt-home-sidebar sqt-sidebar sqt-stack" aria-label="Explore SQSPThemes">' +
+              '<section class="sqt-home-box sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Start Here</div>' +
+                '<div class="sqt-home-side-body sqt-panel__body"><ol class="sqt-home-start-list">' +
                   '<li><a href="/templates">Find a Squarespace template</a></li>' +
                   '<li><a href="/best-squarespace-designers">Hire a Squarespace designer</a></li>' +
                   '<li><a href="/squarespace-integrations">Explore plugins & integrations</a></li>' +
@@ -676,18 +676,18 @@
                 '</ol></div>' +
               '</section>' +
 
-              '<section class="sqt-home-box sqt-home-resource-box">' +
-                '<div class="sqt-home-box-head">Featured Resource</div>' +
-                '<div class="sqt-home-side-body">' +
+              '<section class="sqt-home-box sqt-home-resource-box sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Featured Resource</div>' +
+                '<div class="sqt-home-side-body sqt-panel__body">' +
                   '<a class="sqt-home-side-title" href="' + esc((C.opportunity && C.opportunity.url) || "/rfps") + '">' + esc((C.opportunity && C.opportunity.name) || "Bigger Budget Projects") + '</a>' +
                   '<p>' + esc((C.opportunity && C.opportunity.text) || "Website RFPs and opportunities for independent designers and studios.") + '</p>' +
                   '<a href="' + esc((C.opportunity && C.opportunity.url) || "/rfps") + '">Explore opportunities →</a>' +
                 '</div>' +
               '</section>' +
 
-              '<section class="sqt-home-box">' +
-                '<div class="sqt-home-box-head">From the Directory</div>' +
-                '<div class="sqt-home-side-body" data-home-designer><div class="sqt-home-empty">Loading a featured designer…</div></div>' +
+              '<section class="sqt-home-box sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">From the Directory</div>' +
+                '<div class="sqt-home-side-body sqt-panel__body" data-home-designer><div class="sqt-home-empty">Loading a featured designer…</div></div>' +
               '</section>' +
             '</aside>' +
           '</div>' +
