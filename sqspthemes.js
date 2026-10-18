@@ -12,6 +12,7 @@
   var d = document;
   var html = d.documentElement;
   var C = window.SQT_CONFIG || {};
+  if (/^\/find-templates\/?$/.test(location.pathname)) html.classList.add("sqt-matchmaker-page");
 
   var DEFAULTS = {
     wordmark: "SQSPThemes",
@@ -384,8 +385,10 @@
             '<span class="sqt-tagline">' + esc(C.tagline) + '</span>' +
           '</div>' +
           '<div class="sqt-hd-tools">' +
-            '<button class="sqt-tool sqt-style" type="button" aria-pressed="false" title="Switch visual style">View: 2010 Blog</button>' +
-            (themeOK ? '<button class="sqt-tool sqt-theme" type="button" aria-pressed="false">Dark: off</button>' : '') +
+            '<div id="sqt-modes" class="sqt-modes" role="group" aria-label="Display preferences">' +
+              '<button class="sqt-tool sqt-style" type="button" aria-pressed="false" title="Switch visual style">View: 2010 Blog</button>' +
+              (themeOK ? '<button class="sqt-tool sqt-theme" type="button" aria-pressed="false">Dark: off</button>' : '') +
+            '</div>' +
             '<button class="sqt-tool sqt-menu" type="button" aria-expanded="false" aria-controls="sqt-nav">Menu</button>' +
           '</div>' +
           '<nav class="sqt-nav" id="sqt-nav" aria-label="Main">' +
@@ -421,6 +424,20 @@
     if (native) native.parentNode.insertBefore(hd, native);
     else d.body.insertBefore(hd, d.body.firstChild);
 
+    // Move the actual buttons outside the sticky header on mobile, so their
+    // fixed position is relative to the viewport rather than backdrop-filter.
+    var modes = hd.querySelector(".sqt-modes");
+    var tools = hd.querySelector(".sqt-hd-tools");
+    function placeModes() {
+      if (window.matchMedia("(max-width: 760px)").matches) {
+        if (modes.parentNode !== d.body) d.body.appendChild(modes);
+      } else if (modes.parentNode !== tools) {
+        tools.insertBefore(modes, menu);
+      }
+    }
+    placeModes();
+    window.addEventListener("resize", placeModes, { passive: true });
+
     setStyleMode(styleMode());
     if (themeOK) setTheme(theme());
   }
@@ -439,23 +456,17 @@
           '<div class="sqsp-footer__main">' +
             '<section class="sqsp-footer__brand">' +
               '<p class="sqsp-footer__eyebrow">SQSPThemes</p>' +
-              '<p class="sqsp-footer__description">Do more with Squarespace.</p>' +
-              '<p class="sqsp-footer__note">Tools, designers, templates, and opportunities for people building with Squarespace.</p>' +
-              '<p class="sqsp-footer__brand-link"><a href="/newsletter">Get the SQSPThemes newsletter →</a></p>' +
+              '<p class="sqsp-footer__note">An independent directory of useful tools, ideas, and people.</p>' +
+              '<p class="sqsp-footer__brand-link"><a href="/newsletter">Get the newsletter →</a></p>' +
             '</section>' +
             '<nav class="sqsp-footer__nav" aria-label="Footer navigation">' +
               '<div class="sqsp-footer__column">' +
-                '<h2>Opportunities</h2><ul>' +
-                  '<li><a href="/rfps">Bigger Budget Projects</a></li>' +
-                  '<li><a href="/report">Upmarket Report</a></li>' +
-                '</ul>' +
-              '</div>' +
-              '<div class="sqsp-footer__column">' +
-                '<h2>Squarespace</h2><ul>' +
-                  '<li><a href="/squarespace-resources">Resources</a></li>' +
-                  '<li><a href="/templates">Templates</a></li>' +
+                '<h2>Explore</h2><ul>' +
+                  '<li><a href="/templates">Browse Templates</a></li>' +
+                  '<li><a href="/find-templates">Find Templates</a></li>' +
                   '<li><a href="/best-squarespace-designers">Designer Directory</a></li>' +
-                  '<li><a href="/squarespace-resources#plugins">Plugins</a></li>' +
+                  '<li><a href="/squarespace-integrations">Plugins &amp; Integrations</a></li>' +
+                  '<li><a href="/squarespace-resources">Resources</a></li>' +
                 '</ul>' +
               '</div>' +
               '<div class="sqsp-footer__column">' +
@@ -470,13 +481,11 @@
             '</nav>' +
           '</div>' +
           '<div class="sqsp-footer__bottom">' +
-            '<p class="sqsp-footer__asset">© ' + new Date().getFullYear() + ' Vizier Media</p>' +
-            '<p class="sqsp-footer__disclaimer">Independent. Not affiliated with Squarespace.</p>' +
+            '<p class="sqsp-footer__asset">© ' + new Date().getFullYear() + ' Vizier Media. Independent publication.</p>' +
           '</div>' +
         '</div>' +
       '</footer>'
     );
-    // Outside the native section: no Squarespace minimum-height or background.
     if (native && native.parentNode) native.parentNode.insertBefore(f, native.nextSibling);
     else d.body.appendChild(f);
   }
@@ -590,7 +599,7 @@
   function homeExploreMarkup(templateCount, designerCount) {
     var items = [
       ["Templates", "/templates", templateCount ? templateCount + " Squarespace templates to browse." : "Standout Squarespace templates for every kind of project."],
-      ["Designers", "/best-squarespace-designers", designerCount ? designerCount + " hand-picked Squarespace designers and studios." : "Find trusted Squarespace designers and studios."],
+      ["Designers", "/best-squarespace-designers", designerCount ? designerCount + " listed designers and studios." : "Explore independent designers and studios."],
       ["Plugins", "/squarespace-integrations", "Tools and integrations that extend what Squarespace can do."],
       ["Resources", "/squarespace-resources", "Guides, tools, and freebies to help you do more with Squarespace."],
       ["Opportunities", (C.opportunity && C.opportunity.url) || "/rfps", "Bigger-budget website projects, RFPs, and opportunities."]
@@ -613,10 +622,7 @@
     var sourceHeading = source && source.querySelector(".sqs-html-content h1, .sqs-html-content h2, h1, h2");
     var sourcePara = source && source.querySelector(".sqs-html-content p, p");
     var title = text(sourceHeading) || "Do more with Squarespace.";
-    var dek = text(sourcePara) || "The number 1 destination for news, tools, and templates for people building with Squarespace.";
-    if (/^news, tools, templates, designers, and practical fixes for people building with squarespace\.?$/i.test(dek)) {
-      dek = "The number 1 destination for news, tools, and templates for people building with Squarespace.";
-    }
+    var dek = "Tools, templates and opportunities for people building with Squarespace.";
 
     html.classList.add("sqt-home-active");
 
@@ -664,7 +670,8 @@
               '<section class="sqt-home-box sqt-panel">' +
                 '<div class="sqt-home-box-head sqt-panel__head">Start Here</div>' +
                 '<div class="sqt-home-side-body sqt-panel__body"><ol class="sqt-home-start-list">' +
-                  '<li><a href="/templates">Find a Squarespace template</a></li>' +
+                  '<li><a href="/templates">Browse Templates</a></li>' +
+                  '<li><a href="/find-templates">Find Templates</a></li>' +
                   '<li><a href="/best-squarespace-designers">Hire a Squarespace designer</a></li>' +
                   '<li><a href="/squarespace-integrations">Explore plugins & integrations</a></li>' +
                   '<li><a href="/squarespace-resources">Browse Squarespace resources</a></li>' +
@@ -770,7 +777,7 @@
         '<div class="sqt-dir-wrap sqt-page-shell" id="sqt-content" tabindex="-1">' +
           '<section class="sqt-dir-hero sqt-page-intro">' +
             '<h1 class="sqt-page-title">Find the Right Squarespace Designer</h1>' +
-            '<p class="sqt-dir-sub sqt-page-dek">Connect with hand-picked, professional Squarespace designers and agencies who create standout websites for businesses of all kinds.</p>' +
+            '<p class="sqt-dir-sub sqt-page-dek">Browse independent Squarespace designers and studios. Compare their work, specialties, and project budgets to find a fit.</p>' +
           '</section>' +
           '<section class="sqt-dir-controls-shell sqt-panel">' +
             '<div class="sqt-panel__head">Browse the Directory</div>' +
@@ -1218,7 +1225,7 @@
         } else if (/designer|agency|studio/.test(haystack)) {
           nextLink.textContent = "Find a Squarespace Designer";
           nextLink.href = "/best-squarespace-designers";
-          nextCopy.textContent = "Browse hand-picked Squarespace designers and studios.";
+          nextCopy.textContent = "Explore listed Squarespace designers and studios.";
           nextStep.hidden = false;
         }
       }
@@ -1268,7 +1275,7 @@
   /* ================================= run ================================= */
 
   function fallback(err) {
-    ["sqt-header", "sqt-home", "sqt-blog", "sqt-footer"].forEach(function (id) {
+    ["sqt-header", "sqt-modes", "sqt-home", "sqt-blog", "sqt-footer"].forEach(function (id) {
       var el = d.getElementById(id);
       if (el) el.remove();
     });
