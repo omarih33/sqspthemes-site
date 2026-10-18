@@ -15,9 +15,9 @@
 
   var DEFAULTS = {
     wordmark: "SQSPThemes",
-    tagline: "Do more with Squarespace.",
+    tagline: "Independent guide to the Squarespace ecosystem",
     headline: "What's New Across the Squarespace Ecosystem",
-    subhead: "Practical fixes, useful tools, design ideas, and Squarespace news worth your attention.",
+    subhead: "Practical solutions, useful tools, design ideas, and Squarespace news worth your attention.",
     author: "Omari Harebin",
     kitAction: "https://app.kit.com/forms/8682133/subscriptions",
     readers: "",
@@ -171,7 +171,7 @@
       headline = "What's New Across the Squarespace Ecosystem";
     }
     if (/^news, opportunities, tools, and ideas for people building businesses around squarespace\.?$/i.test(subhead)) {
-      subhead = "Practical fixes, useful tools, design ideas, and Squarespace news worth your attention.";
+      subhead = "Practical solutions, useful tools, design ideas, and Squarespace news worth your attention.";
     }
     return { headline: headline, subhead: subhead };
   }
@@ -617,7 +617,10 @@
     var sourceHeading = source && source.querySelector(".sqs-html-content h1, .sqs-html-content h2, h1, h2");
     var sourcePara = source && source.querySelector(".sqs-html-content p, p");
     var title = text(sourceHeading) || "Do more with Squarespace.";
-    var dek = text(sourcePara) || "News, tools, templates, designers, and practical fixes for people building with Squarespace.";
+    var dek = text(sourcePara) || "The number 1 destination for news, tools, and templates for people building with Squarespace.";
+    if (/^news, tools, templates, designers, and practical fixes for people building with squarespace\.?$/i.test(dek)) {
+      dek = "The number 1 destination for news, tools, and templates for people building with Squarespace.";
+    }
 
     html.classList.add("sqt-home-active");
 
@@ -640,6 +643,14 @@
                 '<div class="sqt-home-box-body" data-home-feature><div class="sqt-home-empty">Loading the latest from the ecosystem…</div></div>' +
               '</section>' +
 
+              '<section class="sqt-home-box sqt-home-bottom-newsletter">' +
+                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
+                '<div class="sqt-home-newsletter-wide">' +
+                  '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>New tools, fixes, standout work, and opportunities worth knowing about.</p></div>' +
+                  subscribeForm("Email address") +
+                '</div>' +
+              '</section>' +
+
               '<section class="sqt-home-box sqt-home-latest-box">' +
                 '<div class="sqt-home-box-head">Latest Articles</div>' +
                 '<div class="sqt-home-latest" data-home-latest><div class="sqt-home-empty">Loading latest articles…</div></div>' +
@@ -651,26 +662,9 @@
                 '<div class="sqt-home-explore" data-home-explore>' + homeExploreMarkup(0, 0) + '</div>' +
               '</section>' +
 
-              '<section class="sqt-home-box sqt-home-bottom-newsletter">' +
-                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
-                '<div class="sqt-home-newsletter-wide">' +
-                  '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>New tools, fixes, standout work, and opportunities worth knowing about.</p></div>' +
-                  subscribeForm("Email address") +
-                '</div>' +
-              '</section>' +
             '</div>' +
 
             '<aside class="sqt-home-sidebar" aria-label="Explore SQSPThemes">' +
-              '<section class="sqt-home-box">' +
-                '<div class="sqt-home-box-head">Get the Good Stuff by Email</div>' +
-                '<div class="sqt-home-side-body"><p>New tools, useful fixes, standout Squarespace work, and opportunities worth knowing about.</p>' + subscribeForm("Email address") + '</div>' +
-              '</section>' +
-
-              '<section class="sqt-home-box">' +
-                '<div class="sqt-home-box-head">Browse by Topic</div>' +
-                '<div class="sqt-home-side-body">' + homeTopicsMarkup() + '</div>' +
-              '</section>' +
-
               '<section class="sqt-home-box">' +
                 '<div class="sqt-home-box-head">Start Here</div>' +
                 '<div class="sqt-home-side-body"><ol class="sqt-home-start-list">' +
