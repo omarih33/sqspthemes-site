@@ -420,7 +420,6 @@
             items.join('<span class="sqt-pipe" aria-hidden="true">|</span>') +
           '</nav>' +
         '</div>' +
-        searchMarkup() +
       '</header>'
     );
 
@@ -443,7 +442,6 @@
     else d.body.insertBefore(hd, d.body.firstChild);
 
     if (themeOK) setTheme(theme());
-    wireSearch(hd);
   }
 
   /* ================================ footer =============================== */
@@ -688,11 +686,8 @@
             '<div class="sqt-rail">' +
               (glance ? '<div class="sqt-rail-glance"></div>' : '') +
               '<aside class="sqt-side" aria-label="More">' +
-                '<section class="sqt-related" hidden><h2>More fixes like this</h2><ul></ul></section>' +
+                '<section class="sqt-related" hidden><h2>More like this</h2><ul></ul></section>' +
                 '<section class="sqt-topic" hidden><h2>Topic</h2><a class="sqt-feature" href="#"></a></section>' +
-                (C.kitAction ? subscribeForm("Get the next fix by email.") : '') +
-                '<section><h2>Didn’t work?</h2><p>Tell us what broke and on which template.</p>' +
-                  '<a href="' + esc(C.reportUrl) + '">Report it →</a></section>' +
               '</aside>' +
             '</div>' +
           '</div>' +
