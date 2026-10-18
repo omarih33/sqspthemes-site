@@ -261,122 +261,49 @@
   function searchMarkup() {
     return '<div class="sqt-searchbar">' +
       '<form class="sqt-search" role="search" action="' + esc(C.searchUrl) + '" method="get">' +
-        '<label class="sqt-sr" for="sqt-q">What do you need Squarespace to do?</label>' +
+        '<label class="sqt-sr" for="sqt-q">Search SQSPThemes</label>' +
         '<div class="sqt-search-field">' +
           '<input class="sqt-input" id="sqt-q" type="search" name="q" autocomplete="off" spellcheck="false" ' +
-            'aria-controls="sqt-results" aria-describedby="sqt-q-hint" ' +
-            'placeholder="What do you need Squarespace to do? e.g. pricing table, sticky header, styled member login">' +
+            'placeholder="Search articles, templates, designers, and Squarespace resources…">' +
           '<kbd class="sqt-kbd" id="sqt-q-hint" title="Press / to search">/</kbd>' +
         '</div>' +
-        '<button class="sqt-btn" type="submit">Find a fix</button>' +
+        '<button class="sqt-btn" type="submit">Search</button>' +
       '</form>' +
-      '<div class="sqt-results" id="sqt-results" hidden>' +
-        '<p class="sqt-results-status" role="status" aria-live="polite"></p>' +
-        '<ol class="sqt-results-list"></ol>' +
-        '<a class="sqt-results-all" href="#">See all results</a>' +
-      '</div>' +
     '</div>';
   }
 
-  function snippet(body, q) {
-    body = String(body || "").replace(/\s+/g, " ").trim();
-    if (!body) return "";
-    var i = body.toLowerCase().indexOf(q.toLowerCase().split(" ")[0]);
-    var start = i > 60 ? i - 60 : 0;
-    var out = body.slice(start, start + 160);
-    return (start ? "…" : "") + out + (start + 160 < body.length ? "…" : "");
-  }
-
   function wireSearch(root) {
+    var form = root.querySelector(".sqt-search");
     var input = root.querySelector("#sqt-q");
-    var panel = root.querySelector("#sqt-results");
-    if (!input || !panel) return;
-    var list = panel.querySelector(".sqt-results-list");
-    var status = panel.querySelector(".sqt-results-status");
-    var all = panel.querySelector(".sqt-results-all");
-    var timer, ctrl, last = "";
+    if (!form || !input) return;
 
-    function close() {
-      panel.hidden = true;
-      input.setAttribute("aria-expanded", "false");
-    }
-    function open() {
-      panel.hidden = false;
-      input.setAttribute("aria-expanded", "true");
-    }
-    function links() {
-      return [].slice.call(list.querySelectorAll("a")).concat([all]);
-    }
-
-    function run(q) {
-      if (ctrl) ctrl.abort();
-      ctrl = window.AbortController ? new AbortController() : null;
-      status.textContent = "Searching…";
-      list.innerHTML = "";
-      all.href = C.searchUrl + "?q=" + encodeURIComponent(q);
-      all.textContent = "See all results for “" + q + "” →";
-      open();
-      fetch("/api/search/GeneralSearch?q=" + encodeURIComponent(q) + "&p=0",
-        { credentials: "same-origin", signal: ctrl ? ctrl.signal : undefined })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .then(function (data) {
-          var items = (data.items || []).slice(0, 8);
-          if (!items.length) {
-            status.textContent = "Nothing yet for “" + q + "”. Try fewer words.";
-            return;
-          }
-          status.textContent = data.totalCount > items.length
-            ? items.length + " of " + data.totalCount + " results"
-            : items.length + (items.length === 1 ? " result" : " results");
-          list.innerHTML = items.map(function (it) {
-            var seg = String(it.itemUrl || "").split("/").filter(Boolean)[0] || "";
-            var label = SECTION_LABELS[seg] || seg.replace(/-/g, " ");
-            return '<li><a href="' + esc(it.itemUrl) + '">' +
-              '<span class="sqt-result-title">' + esc(it.title) + '</span>' +
-              '<span class="sqt-result-meta">' + esc(label) + '</span>' +
-              '<span class="sqt-result-snip">' + esc(snippet(it.body, q)) + '</span>' +
-            '</a></li>';
-          }).join("");
-        })
-        .catch(function (e) {
-          if (e && e.name === "AbortError") return;
-          status.textContent = "Search isn't responding. Press Enter to use the full search page.";
-        });
-    }
-
-    input.setAttribute("aria-expanded", "false");
-    input.addEventListener("input", function () {
-      var q = input.value.trim();
-      clearTimeout(timer);
-      if (q.length < 2) { close(); last = ""; return; }
-      if (q === last) return;
-      timer = setTimeout(function () { last = q; run(q); }, 220);
-    });
-    input.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowDown" && !panel.hidden) {
-        e.preventDefault();
-        var first = links()[0];
-        if (first) first.focus();
-      } else if (e.key === "Escape") {
-        close();
+    function openMonocle(q, attempt) {
+      if (window.Monocle && typeof window.Monocle.showSearchWithQuery === "function") {
+        window.Monocle.showSearchWithQuery(q);
+        return;
       }
+
+      // Monocle loads async from Code Injection. Give it a brief moment on
+      // very fast submits, then fall back to the normal search URL.
+      if ((attempt || 0) < 12) {
+        setTimeout(function () { openMonocle(q, (attempt || 0) + 1); }, 100);
+        return;
+      }
+
+      location.href = C.searchUrl + "?q=" + encodeURIComponent(q);
+    }
+
+    form.addEventListener("submit", function (e) {
+      var q = input.value.trim();
+      if (!q) {
+        e.preventDefault();
+        input.focus();
+        return;
+      }
+      e.preventDefault();
+      openMonocle(q, 0);
     });
-    panel.addEventListener("keydown", function (e) {
-      var ls = links();
-      var i = ls.indexOf(d.activeElement);
-      if (e.key === "ArrowDown") { e.preventDefault(); (ls[i + 1] || ls[i]).focus(); }
-      else if (e.key === "ArrowUp") { e.preventDefault(); if (i <= 0) input.focus(); else ls[i - 1].focus(); }
-      else if (e.key === "Escape") { close(); input.focus(); }
-    });
-    // clicking back into the box re-opens earlier results (focus alone doesn't,
-    // so Escape can close the panel and return to the box)
-    input.addEventListener("click", function () {
-      if (panel.hidden && input.value.trim().length >= 2 && list.children.length) open();
-    });
-    d.addEventListener("click", function (e) {
-      if (!root.querySelector(".sqt-searchbar").contains(e.target)) close();
-    });
-    // "/" focuses search, as on old-web directories and code sites
+
     d.addEventListener("keydown", function (e) {
       if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
       var t = e.target;
@@ -385,7 +312,10 @@
       input.focus();
       input.select();
     });
-    if (window.innerWidth < 640) input.placeholder = "What do you need?";
+
+    if (window.innerWidth < 640) {
+      input.placeholder = "Search SQSPThemes…";
+    }
   }
 
   /* ================================ header =============================== */
@@ -457,6 +387,7 @@
             items.join('<span class="sqt-pipe" aria-hidden="true">|</span>') +
           '</nav>' +
         '</div>' +
+        searchMarkup() +
       '</header>'
     );
 
@@ -479,6 +410,8 @@
     if (tbtn) tbtn.addEventListener("click", function () {
       setTheme(theme() === "dark" ? "light" : "dark");
     });
+
+    wireSearch(hd);
 
     if (native) native.parentNode.insertBefore(hd, native);
     else d.body.insertBefore(hd, d.body.firstChild);
