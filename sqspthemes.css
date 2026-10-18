@@ -5485,3 +5485,15 @@ html[data-sqt-style="editorial"] #sqt-blog.sqt-blog-archive .sqt-archive-topics 
     width: 100%;
   }
 }
+
+
+/* /blog archive is intentionally direct: intro → article list. */
+#sqt-blog.sqt-blog-archive .sqt-archive-tools,
+#sqt-blog.sqt-blog-archive .sqt-archive-search,
+#sqt-blog.sqt-blog-archive .sqt-archive-topics {
+  display: none !important;
+}
+
+#sqt-blog.sqt-blog-archive .sqt-index-intro {
+  margin-bottom: 12px;
+}
