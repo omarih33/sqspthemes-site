@@ -457,6 +457,11 @@
   /* ================================ footer =============================== */
 
   function footer() {
+    var existing = d.querySelector(".sqsp-footer");
+    if (existing) {
+      existing.classList.add("sqt-existing-footer");
+      return;
+    }
     if (d.getElementById("sqt-footer")) return;
     var native = d.getElementById("footer-sections") || d.querySelector("footer.sections");
     var cols = [];
