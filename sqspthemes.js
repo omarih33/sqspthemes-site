@@ -647,7 +647,7 @@
       search.focus();
     });
 
-    fetch("https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/directory-data.json", { cache: "no-cache" })
+    fetch("https://sqspthemes-assets.pages.dev/directory-data.json", { cache: "no-cache" })
       .then(function (r) {
         if (!r.ok) throw new Error(r.status);
         return r.json();
