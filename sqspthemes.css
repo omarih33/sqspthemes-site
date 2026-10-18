@@ -2203,7 +2203,7 @@ html.sqt-ready .sqsp-footer .sqsp-footer__eyebrow {
   color: var(--sqt-meta) !important;
 }
 
-html.sqt-ready .sqsp-footer .sqsp-footer__brand p:not(.sqsp-footer__eyebrow) {
+html.sqt-ready .sqsp-footer .sqsp-footer__description {
   margin: 0 !important;
   max-width: 30rem !important;
   font-family: var(--sqt-text) !important;
@@ -2212,8 +2212,11 @@ html.sqt-ready .sqsp-footer .sqsp-footer__brand p:not(.sqsp-footer__eyebrow) {
   color: var(--sqt-body) !important;
 }
 
-html.sqt-ready .sqsp-footer .sqsp-footer__actions {
-  margin-top: 10px !important;
+html.sqt-ready .sqsp-footer .sqsp-footer__brand-link {
+  margin: 8px 0 0 !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
 }
 
 html.sqt-ready .sqsp-footer a {
@@ -2229,30 +2232,13 @@ html.sqt-ready .sqsp-footer a:hover {
   transform: none !important;
 }
 
-html.sqt-ready .sqsp-footer .sqsp-footer__button {
-  display: inline !important;
-  min-height: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  color: var(--sqt-link) !important;
-  font-family: var(--sqt-mono) !important;
-  font-size: 10px !important;
-  line-height: 1.4 !important;
-}
-
-html.sqt-ready .sqsp-footer .sqsp-footer__button::after {
-  content: " →";
-}
-
 html.sqt-ready .sqsp-footer .sqsp-footer__nav {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(120px, 1fr)) !important;
   gap: 18px !important;
 }
 
-html.sqt-ready .sqsp-footer .sqsp-footer__column h3 {
+html.sqt-ready .sqsp-footer .sqsp-footer__column h2 {
   margin: 0 0 6px !important;
   padding-bottom: 4px !important;
   border-bottom: 1px solid var(--sqt-rule) !important;
@@ -2292,7 +2278,8 @@ html.sqt-ready .sqsp-footer .sqsp-footer__bottom {
   border-top: 1px solid var(--sqt-rule) !important;
 }
 
-html.sqt-ready .sqsp-footer .sqsp-footer__asset {
+html.sqt-ready .sqsp-footer .sqsp-footer__asset,
+html.sqt-ready .sqsp-footer .sqsp-footer__disclaimer {
   margin: 0 !important;
   font-family: var(--sqt-mono) !important;
   font-size: 9px !important;
