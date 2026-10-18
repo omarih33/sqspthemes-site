@@ -2,7 +2,7 @@
      SQSPThemes site layer
      Paste into: Website Tools → Code Injection → HEADER
      Keep your member-login code where it is (Footer).
-     Development loader: tracks @main so GitHub commits update the live site.
+     Development loader: tracks main from raw GitHub so committed changes stay fresh.
      ========================================================== -->
 
 <script>
@@ -65,12 +65,12 @@ window.SQT_CONFIG = {
 
   var css = document.createElement("link");
   css.rel = "stylesheet";
-  css.href = "https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/sqspthemes.css?v=" + v;
+  css.href = "https://raw.githubusercontent.com/omarih33/sqspthemes-site/main/sqspthemes.css?v=" + v;
   document.head.appendChild(css);
 
   var js = document.createElement("script");
   js.defer = true;
-  js.src = "https://cdn.jsdelivr.net/gh/omarih33/sqspthemes-site@main/sqspthemes.js?v=" + v;
+  js.src = "https://raw.githubusercontent.com/omarih33/sqspthemes-site/main/sqspthemes.js?v=" + v;
   document.head.appendChild(js);
 })();
 </script>
