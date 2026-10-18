@@ -11,7 +11,9 @@
   const mount = document.querySelector('#sqt-template-matchmaker');
   if (!mount || mount.dataset.initialized === 'true') return;
   mount.dataset.initialized = 'true';
-  const catalogUrl = mount.dataset.catalogUrl;
+  const ownScript = document.currentScript && document.currentScript.src ? document.currentScript.src : '';
+  const assetBase = ownScript ? ownScript.replace(/[^/?]+(?:\?.*)?$/, '') : 'https://sqspthemes-assets.pages.dev/';
+  const catalogUrl = mount.dataset.catalogUrl || (assetBase + 'template-catalog.json');
   const matchApi = mount.dataset.matchApi || '';
   const MAX_RESULTS = 6;
   let sourceFilter='all';
