@@ -13,6 +13,7 @@
   var html = d.documentElement;
   var C = window.SQT_CONFIG || {};
   if (/^\/find-templates\/?$/.test(location.pathname)) html.classList.add("sqt-matchmaker-page");
+  if (/^\/best-squarespace-designers\/?$/.test(location.pathname)) html.classList.add("sqt-directory-route");
 
   var DEFAULTS = {
     wordmark: "SQSPThemes",
@@ -618,7 +619,7 @@
   function homeExploreMarkup(templateCount, designerCount) {
     var items = [
       ["Templates", "/templates", templateCount ? templateCount + " Squarespace templates to browse." : "Standout Squarespace templates for every kind of project."],
-      ["Designers", "/best-squarespace-designers", designerCount ? designerCount + " listed designers and studios." : "Explore independent designers and studios."],
+      ["Designers", "/best-squarespace-designers", "Explore directory listings from independent designers and studios."],
       ["Plugins", "/squarespace-integrations", "Tools and integrations that extend what Squarespace can do."],
       ["Resources", "/squarespace-resources", "Guides, tools, and freebies to help you do more with Squarespace."],
       ["Opportunities", (C.opportunity && C.opportunity.url) || "/rfps", "Bigger-budget website projects, RFPs, and opportunities."]
@@ -801,15 +802,18 @@
           '<section class="sqt-dir-controls-shell sqt-panel">' +
             '<div class="sqt-panel__head">Browse the Directory</div>' +
             '<div class="sqt-panel__body">' +
-              '<p class="sqt-dir-controls-copy">Filter by location, budget, and the kind of help you need.</p>' +
-              '<div class="sqt-dir-controls sqt-filterbar">' +
-              '<label>Search<input id="sqt-dir-search" type="search" placeholder="Name, studio, location, specialty"></label>' +
+              '<p class="sqt-dir-controls-copy">Search by name, studio, location, or specialty. Narrow results with the filters below.</p>' +
+              '<label class="sqt-dir-search-label" for="sqt-dir-search">Search<input id="sqt-dir-search" type="search" placeholder="Name, studio, location, specialty" autocomplete="off"></label>' +
+            '</div>' +
+          '</section>' +
+          '<div class="sqt-dir-sticky-filters sqt-panel" role="group" aria-label="Filter directory listings">' +
+            '<div class="sqt-dir-controls sqt-filterbar">' +
               '<label>Region<select id="sqt-dir-region">' +
                 '<option value="">All regions</option>' +
                 '<option value="us">United States</option>' +
                 '<option value="canada">Canada</option>' +
-                '<option value="uk-europe">UK & Europe</option>' +
-                '<option value="aus-nz">Australia & New Zealand</option>' +
+                '<option value="uk-europe">UK &amp; Europe</option>' +
+                '<option value="aus-nz">Australia &amp; New Zealand</option>' +
                 '<option value="global">Global</option>' +
               '</select></label>' +
               '<label>Budget<select id="sqt-dir-budget">' +
@@ -829,10 +833,13 @@
                 '<option value="ecommerce">Ecommerce</option>' +
                 '<option value="support">Ongoing support</option>' +
               '</select></label>' +
-              '</div>' +
             '</div>' +
-            '<div class="sqt-dir-status sqt-panel__foot"><span id="sqt-dir-count">Loading listings…</span><button id="sqt-dir-clear" type="button">Clear filters</button></div>' +
-          '</section>' +
+          '</div>' +
+          '<div class="sqt-dir-status sqt-panel__foot">' +
+            '<span id="sqt-dir-count" class="sqt-dir-visually-hidden" role="status" aria-live="polite">Loading listings…</span>' +
+            '<a class="sqt-dir-get-listed" href="/contact">Get listed →</a>' +
+            '<button id="sqt-dir-clear" type="button">Clear filters</button>' +
+          '</div>' +
           '<section class="sqt-dir-results sqt-panel">' +
             '<div class="sqt-panel__head">Directory Listings</div>' +
             '<ol class="sqt-dir-list sqt-list-rows" id="sqt-dir-list"></ol>' +
