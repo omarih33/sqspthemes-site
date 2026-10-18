@@ -425,65 +425,61 @@
     if (themeOK) setTheme(theme());
   }
 
-  /* ================================ footer =============================== */
+
+  /* ============================ sitewide footer ========================== */
+  /* All published footer links and markup live here, not in a Code Block.
+     Squarespace's native footer remains available if this site layer fails. */
 
   function footer() {
-    var existing = d.querySelector(".sqsp-footer");
-    if (existing) {
-      existing.classList.add("sqt-existing-footer");
-
-      if (!existing.hasAttribute("data-sqt-footer-upgraded")) {
-        existing.setAttribute("data-sqt-footer-upgraded", "true");
-
-        var desc = existing.querySelector(".sqsp-footer__description");
-        if (desc) desc.textContent = "Do more with Squarespace.";
-
-        var brand = existing.querySelector(".sqsp-footer__brand");
-        if (brand && !brand.querySelector(".sqsp-footer__note")) {
-          var note = d.createElement("p");
-          note.className = "sqsp-footer__note";
-          note.textContent = "Tools, designers, templates, and opportunities for people building with Squarespace.";
-          if (desc && desc.nextSibling) brand.insertBefore(note, desc.nextSibling);
-          else brand.appendChild(note);
-        }
-
-        var newsletter = existing.querySelector(".sqsp-footer__brand-link a");
-        if (newsletter) newsletter.textContent = "Get the SQSPThemes newsletter →";
-      }
-      return;
-    }
     if (d.getElementById("sqt-footer")) return;
     var native = d.getElementById("footer-sections") || d.querySelector("footer.sections");
-    var cols = [];
-    if (C.topics.length) {
-      cols.push({ title: "Topics", links: C.topics.map(function (t) {
-        return [t, "/blog?category=" + encodeURIComponent(t)];
-      }) });
-    }
-    cols = cols.concat(C.footer || []);
     var f = make(
-      '<footer id="sqt-footer" class="sqt">' +
-        '<div class="sqt-ft">' +
-          '<div class="sqt-ft-cols">' +
-            cols.map(function (c) {
-              return '<section><h2>' + esc(c.title) + '</h2><ul>' +
-                c.links.map(function (l) { return '<li><a href="' + esc(l[1]) + '">' + esc(l[0]) + '</a></li>'; }).join("") +
-                '</ul></section>';
-            }).join("") +
-            (C.kitAction ? '<section class="sqt-ft-sub">' + subscribeForm("The newsletter") + '</section>' : '') +
+      '<footer id="sqt-footer" class="sqt sqsp-footer" aria-label="SQSPThemes footer">' +
+        '<div class="sqsp-footer__inner">' +
+          '<div class="sqsp-footer__main">' +
+            '<section class="sqsp-footer__brand">' +
+              '<p class="sqsp-footer__eyebrow">SQSPThemes</p>' +
+              '<p class="sqsp-footer__description">Do more with Squarespace.</p>' +
+              '<p class="sqsp-footer__note">Tools, designers, templates, and opportunities for people building with Squarespace.</p>' +
+              '<p class="sqsp-footer__brand-link"><a href="/newsletter">Get the SQSPThemes newsletter →</a></p>' +
+            '</section>' +
+            '<nav class="sqsp-footer__nav" aria-label="Footer navigation">' +
+              '<div class="sqsp-footer__column">' +
+                '<h2>Opportunities</h2><ul>' +
+                  '<li><a href="/rfps">Bigger Budget Projects</a></li>' +
+                  '<li><a href="/report">Upmarket Report</a></li>' +
+                '</ul>' +
+              '</div>' +
+              '<div class="sqsp-footer__column">' +
+                '<h2>Squarespace</h2><ul>' +
+                  '<li><a href="/squarespace-resources">Resources</a></li>' +
+                  '<li><a href="/templates">Templates</a></li>' +
+                  '<li><a href="/best-squarespace-designers">Designer Directory</a></li>' +
+                  '<li><a href="/squarespace-resources#plugins">Plugins</a></li>' +
+                '</ul>' +
+              '</div>' +
+              '<div class="sqsp-footer__column">' +
+                '<h2>SQSPThemes</h2><ul>' +
+                  '<li><a href="/blog">Blog</a></li>' +
+                  '<li><a href="/newsletter">Newsletter</a></li>' +
+                  '<li><a href="/about-us">Our Story</a></li>' +
+                  '<li><a href="/contact">Contact</a></li>' +
+                  '<li><a href="/privacy-policy">Privacy</a></li>' +
+                '</ul>' +
+              '</div>' +
+            '</nav>' +
           '</div>' +
-          '<div class="sqt-ft-base">' +
-            '<span>' + esc(C.wordmark) + ' — ' + esc(C.footerNote) + '</span>' +
-            '<span>© ' + new Date().getFullYear() + (C.owner ? " " + esc(C.owner) : "") + '</span>' +
+          '<div class="sqsp-footer__bottom">' +
+            '<p class="sqsp-footer__asset">© ' + new Date().getFullYear() + ' Vizier Media</p>' +
+            '<p class="sqsp-footer__disclaimer">Independent. Not affiliated with Squarespace.</p>' +
           '</div>' +
         '</div>' +
       '</footer>'
     );
-    if (native) native.parentNode.insertBefore(f, native.nextSibling);
+    // Outside the native section: no Squarespace minimum-height or background.
+    if (native && native.parentNode) native.parentNode.insertBefore(f, native.nextSibling);
     else d.body.appendChild(f);
-    wireSubscribe(f);
   }
-
 
 
   /* =============================== homepage ============================== */
