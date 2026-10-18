@@ -1134,7 +1134,7 @@
             '<div class="sqt-rail sqt-sidebar sqt-stack">' +
               (glance ? '<div class="sqt-rail-glance"></div>' : '') +
               '<aside class="sqt-side sqt-post-side sqt-stack" aria-label="More">' +
-                '<section class="sqt-side-search sqt-panel"><div class="sqt-panel__head">Search SQSPThemes</div><div class="sqt-panel__body"><h2>Looking for something specific?</h2><p>Search articles, tools, templates, and resources.</p><button class="sqt-side-action sqt-open-search" type="button">Search SQSPThemes →</button></div></section>' +
+                '<nav class="sqt-post-toc sqt-panel" aria-label="Contents" hidden><div class="sqt-panel__head">Contents</div><div class="sqt-panel__body"><ol></ol></div></nav>' +
                 (C.kitAction ? '<section class="sqt-side-newsletter sqt-panel"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><h2>Useful Squarespace finds without having to go looking for them.</h2><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
                 '<section class="sqt-related sqt-panel" hidden><div class="sqt-panel__head">More like this</div><div class="sqt-panel__body"><ul></ul></div></section>' +
                 '<section class="sqt-topic sqt-panel" hidden><div class="sqt-panel__head">Browse this topic</div><div class="sqt-panel__body"><a class="sqt-feature" href="#"></a></div></section>' +
@@ -1148,20 +1148,6 @@
 
     root.querySelector(".sqt-body").appendChild(body);
     if (glance) root.querySelector(".sqt-rail-glance").appendChild(glance);
-
-    var openSearch = root.querySelector(".sqt-open-search");
-    if (openSearch) openSearch.addEventListener("click", function () {
-      if (window.Monocle && typeof window.Monocle.showSearch === "function") {
-        window.Monocle.showSearch();
-      } else {
-        var headerSearch = d.querySelector("#sqt-q");
-        if (headerSearch) {
-          headerSearch.focus();
-          headerSearch.select();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      }
-    });
 
     // images moved out of Squarespace's wrapper: make sure they load
     body.querySelectorAll("img[data-src]").forEach(function (img) {
@@ -1177,13 +1163,14 @@
     enhanceCode(body);
 
     var hs = body.querySelectorAll("h2");
-    if (hs.length >= 3) {
-      var toc = make('<nav class="sqt-toc" aria-label="Contents"><div class="sqt-toc-title">Contents</div><ol></ol></nav>');
-      hs.forEach(function (h) {
-        if (!h.id) h.id = slug(text(h));
-        toc.querySelector("ol").insertAdjacentHTML("beforeend", '<li><a href="#' + h.id + '">' + esc(text(h)) + '</a></li>');
+    var sideToc = root.querySelector(".sqt-post-toc");
+    if (sideToc && hs.length >= 2) {
+      var tocList = sideToc.querySelector("ol");
+      hs.forEach(function (h, i) {
+        if (!h.id) h.id = slug(text(h)) || ("section-" + (i + 1));
+        tocList.insertAdjacentHTML("beforeend", '<li><a href="#' + esc(h.id) + '">' + esc(text(h)) + '</a></li>');
       });
-      hs[0].parentNode.insertBefore(toc, hs[0]);
+      sideToc.hidden = false;
     }
 
     sec.parentNode.insertBefore(root, sec);
