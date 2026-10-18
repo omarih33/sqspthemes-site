@@ -3790,7 +3790,7 @@ html.sqt-ready.sqt-home-active #page {
 
 #sqt-home .sqt-home-intro {
   display: grid;
-  grid-template-columns: minmax(0,1fr) auto;
+  grid-template-columns: minmax(0,1fr);
   gap: 22px;
   align-items: end;
   margin-bottom: 14px;
