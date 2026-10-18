@@ -6314,3 +6314,22 @@ html.sqt-directory-route #sqt-header .sqt-searchbar { display: none !important; 
     overflow: visible !important;
   }
 }
+
+
+/* DIRECTORY MOBILE BLEED + FLUSH STICKY HEADER */
+@media (max-width: 760px) {
+  #sqt-directory .sqt-dir-sticky-filters.sqt-panel,
+  html[data-sqt-style="editorial"] #sqt-directory .sqt-dir-sticky-filters.sqt-panel {
+    /* Bleed beyond the directory's padded column to the phone edges. */
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+    /* --sqt-sticky-top includes a 12px reading gap; remove it here. */
+    top: calc(var(--sqt-sticky-top, 85px) - 12px) !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+}
