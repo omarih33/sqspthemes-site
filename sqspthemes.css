@@ -1509,3 +1509,11 @@ html[data-theme="dark"].sqt-ready .sqt-native-page img { opacity: .96; }
   html.sqt-ready .sqt-native-page .sqs-html-content h1 { font-size: 36px !important; }
   html.sqt-ready .sqt-native-page .sqs-html-content h2 { font-size: 27px !important; }
 }
+
+
+/* =========================== persistent site shell =========================== */
+#sqt-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
