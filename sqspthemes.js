@@ -19,7 +19,7 @@
     headline: "What's worth knowing in the Squarespace world.",
     subhead: "News, opportunities, tools, and ideas for people building businesses around Squarespace.",
     author: "Omari Harebin",
-    kitAction: "",
+    kitAction: "https://app.kit.com/forms/8682133/subscriptions",
     readers: "",
     searchUrl: "/search",
     tipUrl: "/contact",
@@ -37,6 +37,11 @@
   Object.keys(DEFAULTS).forEach(function (k) {
     if (C[k] == null) C[k] = DEFAULTS[k];
   });
+
+  // Keep all SQSPThemes-rendered newsletter forms on the current Kit form.
+  if (!C.kitAction || /PASTE_KIT_FORM_ACTION_URL|PASTE_/i.test(C.kitAction)) {
+    C.kitAction = "https://app.kit.com/forms/8682133/subscriptions";
+  }
 
   /* ============================== utilities ============================== */
 
