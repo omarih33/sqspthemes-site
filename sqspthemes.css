@@ -7044,3 +7044,144 @@ html[data-sqt-style="editorial"] #sqt-customizer .sqt-pref-choice {
   html[data-sqt-style="editorial"] #sqt-customizer { border-radius: 16px; }
   #sqt-customizer .sqt-customizer__title { font-size: 20px; }
 }
+
+
+/* ================ MAKE IT YOUR OWN — CUSTOM COLORS + GLOBAL SCALE ================ */
+
+/* True custom background / accent values are injected on <html> by JS and the
+   pre-paint guard. Keep readable foreground text automatically. */
+html[data-sqt-bg="custom"] {
+  --sqt-bg: var(--sqt-custom-bg, #ffffff);
+  --sqt-bg-alt: color-mix(in srgb, var(--sqt-custom-bg, #ffffff) 92%, var(--sqt-custom-ink, #111111));
+  --sqt-box: color-mix(in srgb, var(--sqt-custom-bg, #ffffff) 96%, var(--sqt-custom-ink, #111111));
+  --sqt-box-head: color-mix(in srgb, var(--sqt-custom-bg, #ffffff) 87%, var(--sqt-custom-ink, #111111));
+  --sqt-ink: var(--sqt-custom-ink, #111111);
+  --sqt-body: color-mix(in srgb, var(--sqt-custom-ink, #111111) 80%, var(--sqt-custom-bg, #ffffff));
+  --sqt-meta: color-mix(in srgb, var(--sqt-custom-ink, #111111) 66%, var(--sqt-custom-bg, #ffffff));
+  --sqt-faint: color-mix(in srgb, var(--sqt-custom-ink, #111111) 52%, var(--sqt-custom-bg, #ffffff));
+  --sqt-rule: color-mix(in srgb, var(--sqt-custom-ink, #111111) 24%, var(--sqt-custom-bg, #ffffff));
+  --sqt-rule-soft: color-mix(in srgb, var(--sqt-custom-ink, #111111) 13%, var(--sqt-custom-bg, #ffffff));
+  --sqt-box-line: color-mix(in srgb, var(--sqt-custom-ink, #111111) 34%, var(--sqt-custom-bg, #ffffff));
+  --sqt-btn: var(--sqt-custom-ink, #111111);
+  --sqt-btn-ink: var(--sqt-custom-bg, #ffffff);
+}
+html[data-sqt-accent="custom"] {
+  --sqt-accent: var(--sqt-custom-accent, #0645ad);
+  --sqt-accent-ink: var(--sqt-custom-accent-ink, #ffffff);
+  --sqt-link: var(--sqt-custom-accent, #0645ad);
+  --sqt-link-hover: color-mix(in srgb, var(--sqt-custom-accent, #0645ad) 78%, var(--sqt-ink));
+  --sqt-focus: var(--sqt-custom-accent, #0645ad);
+}
+
+/* Make the custom picker feel deliberate, not like an extra browser control. */
+#sqt-customizer .sqt-custom-color-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0,1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+#sqt-customizer .sqt-color-wheel,
+#sqt-customizer .sqt-hex {
+  display: grid;
+  gap: 5px;
+  color: var(--sqt-meta);
+  font: 10px/1.2 var(--sqt-mono);
+}
+#sqt-customizer .sqt-color-wheel input[type="color"] {
+  width: 100%;
+  height: 38px;
+  padding: 2px;
+  border: 1px solid var(--sqt-rule);
+  border-radius: 4px;
+  background: var(--sqt-bg);
+  cursor: pointer;
+}
+#sqt-customizer .sqt-hex-input {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--sqt-rule);
+  border-radius: 4px;
+  background: var(--sqt-bg);
+  color: var(--sqt-ink);
+  font: 12px var(--sqt-mono);
+  text-transform: uppercase;
+}
+#sqt-customizer .sqt-swatch--custom {
+  display: inline-grid;
+  place-items: center;
+}
+#sqt-customizer .sqt-swatch--custom span {
+  position: relative;
+  z-index: 1;
+  color: var(--sqt-custom-accent-ink, #fff);
+  font: 700 17px/1 var(--sqt-text);
+}
+
+/* Text size: scale the entire SQSPThemes interface, not only article text. */
+html[data-sqt-text-size="large"] {
+  --sqt-type-scale: 1.13;
+}
+html:not([data-sqt-text-size="large"]) {
+  --sqt-type-scale: 1;
+}
+html[data-sqt-text-size="large"] :is(#sqt-home,#sqt-blog,#sqt-directory,#sqt-template-browser,#sqt-template-matchmaker,#sqt-plugin-finder,#sqt-footer) {
+  font-size: calc(16px * var(--sqt-type-scale));
+}
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-intro h1 { font-size: 29px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-intro p { font-size: 15px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-feature-title { font-size: 28px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-feature-copy > p { font-size: 16px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-latest-title { font-size: 18px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-latest-copy > p { font-size: 14px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-explore-title,
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-side-title,
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-side-body > strong { font-size: 16px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-topic-list a,
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-start-list a { font-size: 13px; }
+html[data-sqt-text-size="large"] #sqt-home .sqt-home-side-body > p { font-size: 13px; }
+
+html[data-sqt-text-size="large"] #sqt-template-browser,
+html[data-sqt-text-size="large"] #sqt-template-matchmaker,
+html[data-sqt-text-size="large"] #sqt-plugin-finder {
+  font-size: 16px;
+}
+html[data-sqt-text-size="large"] #sqt-template-browser .sqt-dir-card h3,
+html[data-sqt-text-size="large"] #sqt-plugin-finder .pf-card h3 { font-size: 21px; }
+html[data-sqt-text-size="large"] #sqt-template-matchmaker textarea,
+html[data-sqt-text-size="large"] #sqt-plugin-finder .pf-searchbox input { font-size: 17px; }
+
+/* Density: affect the actual shell, boxes and list rhythm sitewide. */
+html[data-sqt-density="compact"] {
+  --sqt-density-gap: .72;
+}
+html:not([data-sqt-density="compact"]) {
+  --sqt-density-gap: 1;
+}
+html[data-sqt-density="compact"] #sqt-home .sqt-home-wrap { padding-top: 10px; padding-bottom: 34px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-intro { gap: 12px; margin-bottom: 8px; padding: 6px 0 9px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-layout,
+html[data-sqt-density="compact"] #sqt-home .sqt-home-main,
+html[data-sqt-density="compact"] #sqt-home .sqt-home-sidebar { gap: 7px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-box-body,
+html[data-sqt-density="compact"] #sqt-home .sqt-home-side-body { padding: 8px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-feature-card { gap: 9px; padding: 8px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-latest-row { min-height: 84px; padding: 6px 8px; gap: 7px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-explore-card { padding: 8px 7px; }
+html[data-sqt-density="compact"] #sqt-home .sqt-home-newsletter-wide { padding: 10px 12px; }
+
+html[data-sqt-density="compact"] #sqt-template-browser { padding-top: 8px; padding-bottom: 36px; }
+html[data-sqt-density="compact"] #sqt-template-browser .sqt-dir-grid { gap: 20px 12px; }
+html[data-sqt-density="compact"] #sqt-template-browser .sqt-dir-controls { padding: 10px; gap: 7px; }
+html[data-sqt-density="compact"] #sqt-template-matchmaker .sqt-tm { padding-top: 14px; padding-bottom: 14px; }
+html[data-sqt-density="compact"] #sqt-template-matchmaker .sqt-panel__body { padding: 12px; }
+html[data-sqt-density="compact"] #sqt-plugin-finder { padding-top: 12px; padding-bottom: 40px; }
+html[data-sqt-density="compact"] #sqt-plugin-finder .pf-grid { gap: 10px; }
+html[data-sqt-density="compact"] #sqt-plugin-finder .pf-card__main { padding: 11px 12px; }
+
+@media (max-width: 520px) {
+  #sqt-customizer .sqt-custom-color-row {
+    grid-template-columns: 78px minmax(0,1fr);
+  }
+  html[data-sqt-text-size="large"] #sqt-home .sqt-home-intro h1 { font-size: 25px; }
+}
