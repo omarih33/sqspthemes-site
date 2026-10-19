@@ -1,0 +1,206 @@
+{
+  "version": "2026-10-19-initial-20",
+  "note": "Direct official-site image links; not downloaded or uploaded to R2. Credit sources in interface; obtain clearance before rehosting.",
+  "products": {
+    "SOL-009": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/504fafcf84ae1835d7e5c807/1525981199708-O7A257FI3XKW2OS9ETRM/Universal+Filter+-+Modern+View.png",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/504fafcf84ae1835d7e5c807/c2df20df-0f81-4dc7-a2dd-393a85135ee9/universal-filter-gif.gif",
+      "demoUrl": "https://www.youtube.com/watch?v=wBbqBOqebl4",
+      "sourceUrl": "https://www.squarewebsites.org/squarespace-plugins/p/universal-filter",
+      "credit": "squarewebsites.org",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-001": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/1675916359401-HGEU64LULRY9XEX15T5Z/Detailed+Image.jpg",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.will-myers.com/products/p/section-loader-supreme",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-130": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/e7dfe40d-ecc3-496a-a007-1b11a7a8f914/Mega+Menu+-+Full+Width.gif",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/c2bdb514-9332-4629-90fb-dea4182d0799/Mega+Menu+-+Inset+Layout.gif",
+      "demoUrl": "https://mega-menu-plugin.squarespace.com/?password=demo",
+      "sourceUrl": "https://www.will-myers.com/products/p/mega-menu-for-squarespace-71",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-028": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5ba5e044b10f25cb908c506f/1680218641408-QODD2VDJLPI441OCCFJ9/lightbox.png",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/5ba5e044b10f25cb908c506f/1663611560763-RHKPQ7ZE98ZWHKA1ZEE2/ligtbox_vid.gif",
+      "demoUrl": "https://ghostpluginssuper.squarespace.com/",
+      "sourceUrl": "https://www.ghostplugins.com/products/p/easy-video-lightbox",
+      "credit": "ghostplugins.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-860": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5faed57913eba3050d670768/53a7c3cf-2e5a-4d73-8063-55c95694d759/697_1x_shots_so.jpeg",
+      "demoImage": "",
+      "demoUrl": "https://mods-blog.squarespace.com/",
+      "sourceUrl": "https://www.sqsmods.com/squarespace-blog-filter",
+      "credit": "sqsmods.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-010": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/ca6ff749-cf06-42c6-986c-8bcbf71d2717/Genius%2BSquarespace%2Bfilter%2Bplugin%2Bby%2BtheSquare%2BgeniusScreenshot+2026-03-10+at+08.30.46-browser-2554x1366-extended.png",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/554e42f9-0dcb-4f94-9fa7-fea464d7d734/Portfolio.gif",
+      "demoUrl": "https://squarespace-filter-demo.squarespace.com/portfolio-2?password=demo",
+      "sourceUrl": "https://www.thesquaregenius.com/squarespace-plugins/p/genius-squarespace-filter-plugin",
+      "credit": "thesquaregenius.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-069": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/2a7ef6bb-2391-4d05-ae99-f94fd9282c62/Gallery-Filter-Plugin-example.jpg",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/51de8f7b-17a7-427e-bc67-f658865d92b4/Gallery-filter-plugin-for-Squarespace-live-prview.gif",
+      "demoUrl": "https://squarespace-filter-demo.squarespace.com/gallery-filter?password=demo",
+      "sourceUrl": "https://www.thesquaregenius.com/squarespace-plugins/p/squarespace-gallery-filter-plugin",
+      "credit": "thesquaregenius.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-086": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/4532beef-1ec3-4779-a179-1bdc7b781ee8/Screenshot+2026-09-16+at+13.13.23.png",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.will-myers.com/products/p/store-filter",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-101": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/1135bd73-35de-4934-85e8-8d7cb15dd58d/Product+Items.jpg",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/90077d92-440d-438c-bd33-80c07f81e48c/Free+Mode.gif",
+      "demoUrl": "https://collection-carousel.squarespace.com/?password=demo",
+      "sourceUrl": "https://www.will-myers.com/products/p/collection-carousel",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-103": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/89a09811-88f0-4615-9aaa-50d2ae2224dd/Tab+Buttons+-+Default+Styling.jpg",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/1719534540909-9CYS6L73YNG2HAW98NGE/Tabs+Pro+Thumbnail.gif",
+      "demoUrl": "https://tabs-plugin-demo.squarespace.com?password=demo",
+      "sourceUrl": "https://www.will-myers.com/products/p/tabs-plugin-for-squarespace",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-070": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/6699beb0946c0f4e15b9cb69/946d8bcb-b253-4a5c-b3d6-fcfffebba5f3/product-table.png",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.squarehero.store/plugins/advanced-product-manager",
+      "credit": "squarehero.store",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-285": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/600d8fdcf983552f0a57b975/014b8284-7d32-4edf-ab1e-ae0013416908/Add+a+Mega+Menu+in+Squarespace+%28No+Code%29.png",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.sparkplugin.com/mega-menu",
+      "credit": "sparkplugin.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-063": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/d27f14a3-07ea-4ad2-abb9-3ba5c239adcd/Hotspot-image-plugin-interior-design-example.jpg",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/e9ba3144-2a6e-4d87-8c74-1a709b9bc4cf/Hotspot-image-plugin-for-squarespace.gif",
+      "demoUrl": "https://sqg-plugins.squarespace.com/image-hotspots/?password=demo",
+      "sourceUrl": "https://www.thesquaregenius.com/squarespace-plugins/p/image-hotspots-plugin",
+      "credit": "thesquaregenius.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-854": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/641260bc3155d748b2f63ffa/1687387602727-EX998P36JDABHEUJOGVM/Iris_TextBlock.gif",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://squarekicker.com/squarespace-extension",
+      "credit": "squarekicker.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-016": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/600d8fdcf983552f0a57b975/3f77dae7-2eda-4fca-a5e5-03f45c3d02e8/block-styler.jpg",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.sparkplugin.com/",
+      "credit": "sparkplugin.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-081": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/6699beb0946c0f4e15b9cb69/acd608f2-8aab-451e-b78e-98a5bf89541b/Main+Window.png?content-type=image%2Fpng",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.squarehero.store/plugins/squarehero-studio",
+      "credit": "squarehero.store",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-068": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/605806d0-34cf-40a2-a706-8a765f2d72b4/Squarespace-search-directory.jpg",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/62c2c3cdb503a23ea69c8834/c60869a5-8ddf-4f3a-a850-78a1bde27f3f/Search-directory-plugin-for-Squarespace.gif",
+      "demoUrl": "https://sqg-plugins.squarespace.com/blog/?password=demo",
+      "sourceUrl": "https://www.thesquaregenius.com/squarespace-plugins/p/squarespace-directory-plugin",
+      "credit": "thesquaregenius.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-085": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/3952b3f8-a0ab-4fb5-9c6c-7ce4d3bccc28/showcase-carousel-desktop-1.jpg",
+      "demoImage": "",
+      "demoUrl": "",
+      "sourceUrl": "https://www.will-myers.com/products/p/showcase-carousel",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-096": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/d179004a-ec7b-4fb2-a18e-a2c8849beac9/Blog+Pagination.gif",
+      "demoImage": "",
+      "demoUrl": "https://blog-pagination-glide.squarespace.com/blog/golden-milk-jbsel?password=demo",
+      "sourceUrl": "https://www.will-myers.com/products/p/blog-pagination-glide",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    },
+    "SOL-098": {
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/3444d354-c4e2-4fc3-aa3d-3e831d682996/Image+Hotspot+-+Product+Image.jpg",
+      "demoImage": "",
+      "demoUrl": "https://image-hotspots.squarespace.com/?password=demo",
+      "sourceUrl": "https://www.will-myers.com/products/p/image-hotspots-plugin-for-squarespace",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19"
+    }
+  }
+}
