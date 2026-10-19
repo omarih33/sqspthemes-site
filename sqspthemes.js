@@ -1713,6 +1713,41 @@
     }
   }
 
+
+  /* ================= secure template matchmaker route ================= */
+  function mountSecureTemplateMatchmaker() {
+    if (location.pathname.replace(/\/+$/, "") !== "/find-templates") return false;
+    var page = d.getElementById("page");
+    var root = d.getElementById("sqt-template-matchmaker");
+    if (!root) {
+      root = d.createElement("div");
+      root.id = "sqt-template-matchmaker";
+      if (page) page.insertBefore(root, page.firstChild);
+      else d.body.appendChild(root);
+    }
+    if (root.dataset.secureInitialized === "true") return true;
+
+    // Prevent the historical Squarespace-hosted matcher from initializing,
+    // then mount the secure API-backed asset in the exact same container.
+    root.dataset.initialized = "true";
+    root.dataset.apiBase = "https://sqspthemes-directory-api.omari-6b8.workers.dev";
+    root.dataset.matchApi = "https://sqspthemes-ai-solution-finder.omari-6b8.workers.dev/api/templates/match";
+    root.removeAttribute("data-catalog-url");
+    root.innerHTML = '<p role="status">Loading templates…</p>';
+
+    var previous = d.querySelector('script[data-sqt-secure-matchmaker]');
+    if (previous) previous.remove();
+    var script = d.createElement("script");
+    script.src = "https://sqspthemes-assets.pages.dev/template-matchmaker.js?v=secure-20261019a";
+    script.defer = true;
+    script.setAttribute("data-sqt-secure-matchmaker", "true");
+    script.onerror = function () {
+      root.innerHTML = '<p role="alert">The template finder could not load. Please refresh this page.</p>';
+    };
+    d.body.appendChild(script);
+    return true;
+  }
+
   /* ======================= plugins directory route ======================= */
   // Squarespace owns the blank /plugin-directory page, but the actual finder
   // lives in this repository. No Code Block or page-specific injection needed.
@@ -1739,11 +1774,13 @@
     } else {
       root = d.createElement("div");
       root.id = "sqt-plugin-finder";
-      root.dataset.catalogUrl = "https://sqspthemes-assets.pages.dev/plugin-solutions.json";
-      root.dataset.mediaUrl = "https://sqspthemes-assets.pages.dev/plugin-media.json";
+      root.dataset.apiBase = "https://sqspthemes-directory-api.omari-6b8.workers.dev";
       root.innerHTML = '<p role="status">Loading Squarespace solutions…</p>';
       shell.appendChild(root);
     }
+    root.dataset.apiBase = "https://sqspthemes-directory-api.omari-6b8.workers.dev";
+    root.removeAttribute("data-catalog-url");
+    root.removeAttribute("data-media-url");
     root.setAttribute("tabindex", "-1");
     html.classList.add("sqt-plugin-directory-autoload");
     var skip = d.querySelector("#sqt-header .sqt-skip");
@@ -1789,6 +1826,7 @@
       var post = d.querySelector(".blog-item-wrapper");
       if (mountHomepage()) {}
       else if (mountDirectory()) {}
+      else if (mountSecureTemplateMatchmaker()) {}
       else if (mountPluginDirectory()) {}
       else if (list && list.querySelector("article.blog-item")) listPage(list);
       else if (post && post.querySelector(".blog-item-content")) postPage(post);
