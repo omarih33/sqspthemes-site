@@ -2,6 +2,12 @@
 (function(){
 "use strict";
 var root=document.getElementById("sqt-our-story");if(!root)return;
+// Move the rendered site page out of Squarespace's narrow Code Block and fluid section.
+// Only do this on the public site, leaving the editor's native blocks intact.
+if(document.documentElement.classList.contains("sqt-on")){
+  var page=document.getElementById("page");
+  if(page&&page.parentNode){page.parentNode.insertBefore(root,page.nextSibling);document.documentElement.classList.add("sqt-story-active");}
+}
 root.innerHTML=`<div class="sqt-story-wrap" id="sqt-content" tabindex="-1">
  <header class="sqt-story-intro"><p class="sqt-story-kicker">SQSPTHEMES / INDEPENDENT SINCE 2015</p>
  <h1>Our Story</h1><p>How an unfinished theme shop became an independent guide to the Squarespace ecosystem.</p></header>
