@@ -179,42 +179,209 @@
     return { headline: headline, subhead: subhead };
   }
 
-  /* ================================ theme ================================ */
+  /* ============================ appearance system ============================ */
 
   var themeOK = C.themePaths.indexOf("*") > -1 || onPath(C.themePaths);
+  var PREF_KEY = "sqt-preferences";
+  var DEFAULT_PREFS = {
+    vibe: "2010",
+    mode: "auto",
+    background: "default",
+    accent: "default",
+    textSize: "default",
+    density: "comfortable"
+  };
+
+  function clonePrefs(src) {
+    var out = {};
+    Object.keys(DEFAULT_PREFS).forEach(function (k) { out[k] = src && src[k] ? src[k] : DEFAULT_PREFS[k]; });
+    return out;
+  }
+
+  function loadPrefs() {
+    var prefs = clonePrefs(DEFAULT_PREFS);
+    try {
+      var raw = localStorage.getItem(PREF_KEY);
+      if (raw) return clonePrefs(JSON.parse(raw));
+      var legacyTheme = localStorage.getItem("sqt-theme") || "";
+      var legacyStyle = localStorage.getItem("sqt-style") || "";
+      if (legacyTheme === "light" || legacyTheme === "dark") prefs.mode = legacyTheme;
+      if (legacyStyle === "editorial" || legacyStyle === "2010") prefs.vibe = legacyStyle;
+    } catch (e) {}
+    return prefs;
+  }
+
+  var appearancePrefs = loadPrefs();
+
+  function savePrefs() {
+    try {
+      localStorage.setItem(PREF_KEY, JSON.stringify(appearancePrefs));
+      localStorage.removeItem("sqt-theme");
+      localStorage.removeItem("sqt-style");
+    } catch (e) {}
+  }
+
+  function resolvedTheme(mode) {
+    if (mode === "light" || mode === "dark") return mode;
+    return window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
 
   function theme() {
     return html.getAttribute("data-theme") === "dark" ? "dark" : "light";
-  }
-  function setTheme(t) {
-    html.setAttribute("data-theme", t);
-    try { localStorage.setItem("sqt-theme", t); } catch (e) {}
-    d.querySelectorAll(".sqt-theme").forEach(function (b) {
-      b.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
-      b.textContent = t === "dark" ? "Dark: on" : "Dark: off";
-    });
   }
 
   function styleMode() {
     return html.getAttribute("data-sqt-style") === "editorial" ? "editorial" : "2010";
   }
 
-  function setStyleMode(mode) {
-    mode = mode === "editorial" ? "editorial" : "2010";
-    html.setAttribute("data-sqt-style", mode);
-    try { localStorage.setItem("sqt-style", mode); } catch (e) {}
-    d.querySelectorAll(".sqt-style").forEach(function (b) {
-      b.setAttribute("aria-pressed", mode === "editorial" ? "true" : "false");
-      b.textContent = mode === "editorial" ? "View: Modern Editorial" : "View: 2010 Blog";
-      b.setAttribute("title", mode === "editorial" ? "Switch to 2010 Blog" : "Switch to Modern Editorial");
+  function syncCustomizerUI() {
+    var root = d.getElementById("sqt-customizer");
+    if (!root) return;
+    root.querySelectorAll("[data-pref][data-value]").forEach(function (b) {
+      var key = b.getAttribute("data-pref");
+      var value = b.getAttribute("data-value");
+      b.classList.toggle("is-active", appearancePrefs[key] === value);
+      b.setAttribute("aria-pressed", appearancePrefs[key] === value ? "true" : "false");
     });
+    var status = root.querySelector(".sqt-save-status");
+    if (status) status.textContent = "Saved automatically";
   }
 
-  (function initStyleMode() {
-    var saved = "";
-    try { saved = localStorage.getItem("sqt-style") || ""; } catch (e) {}
-    setStyleMode(saved === "editorial" ? "editorial" : "2010");
-  })();
+  function applyPrefs(save) {
+    html.setAttribute("data-sqt-style", appearancePrefs.vibe === "editorial" ? "editorial" : "2010");
+    html.setAttribute("data-sqt-mode", appearancePrefs.mode || "auto");
+    html.setAttribute("data-theme", resolvedTheme(appearancePrefs.mode));
+    html.setAttribute("data-sqt-bg", appearancePrefs.background || "default");
+    html.setAttribute("data-sqt-accent", appearancePrefs.accent || "default");
+    html.setAttribute("data-sqt-text-size", appearancePrefs.textSize || "default");
+    html.setAttribute("data-sqt-density", appearancePrefs.density || "comfortable");
+    if (save) savePrefs();
+    syncCustomizerUI();
+  }
+
+  function setPreference(key, value) {
+    if (!(key in DEFAULT_PREFS)) return;
+    appearancePrefs[key] = value || DEFAULT_PREFS[key];
+    applyPrefs(true);
+  }
+
+  function resetPreferences() {
+    appearancePrefs = clonePrefs(DEFAULT_PREFS);
+    applyPrefs(true);
+  }
+
+  function makeCustomizer() {
+    if (d.getElementById("sqt-customizer")) return d.getElementById("sqt-customizer");
+    var panel = make(
+      '<aside id="sqt-customizer" hidden aria-label="Customize SQSPThemes">' +
+        '<div class="sqt-customizer__head">' +
+          '<h2 class="sqt-customizer__title">Make it your own.</h2>' +
+          '<p class="sqt-customizer__dek">Customize how SQSPThemes looks and feels. We\'ll remember your setup.</p>' +
+          '<button class="sqt-customizer__close" type="button" aria-label="Close customizer">×</button>' +
+        '</div>' +
+        prefGroup("Vibe", "vibe", [
+          ["2010", "Classic Directory"],
+          ["editorial", "Modern Editorial"]
+        ]) +
+        prefGroup("Mode", "mode", [
+          ["light", "Day"],
+          ["dark", "Night"],
+          ["auto", "Auto"]
+        ], true) +
+        swatchGroup("Background", "background", [
+          ["default", "Default", "linear-gradient(135deg,#fff 50%,#111 50%)"],
+          ["white", "White", "#ffffff"],
+          ["paper", "Paper", "#f6f4ef"],
+          ["cool", "Cool", "#eaf0f4"],
+          ["sage", "Sage", "#e7ede4"]
+        ]) +
+        swatchGroup("Accent", "accent", [
+          ["default", "Default", "linear-gradient(135deg,#0645ad 50%,#e24a2a 50%)"],
+          ["blue", "Blue", "#1769e0"],
+          ["orange", "Orange", "#e24a2a"],
+          ["green", "Green", "#17734b"],
+          ["purple", "Purple", "#6b4ba1"]
+        ]) +
+        prefGroup("Text size", "textSize", [
+          ["default", "Default"],
+          ["large", "Large"]
+        ]) +
+        prefGroup("Density", "density", [
+          ["compact", "Compact"],
+          ["comfortable", "Comfortable"]
+        ]) +
+        '<div class="sqt-customizer__foot">' +
+          '<button class="sqt-reset" type="button">Reset to default</button>' +
+          '<span class="sqt-save-status" aria-live="polite">Saved automatically</span>' +
+        '</div>' +
+      '</aside>'
+    );
+    d.body.appendChild(panel);
+    panel.addEventListener("click", function (e) {
+      var pref = e.target.closest("[data-pref][data-value]");
+      if (pref) {
+        setPreference(pref.getAttribute("data-pref"), pref.getAttribute("data-value"));
+        return;
+      }
+      if (e.target.closest(".sqt-customizer__close")) closeCustomizer();
+      if (e.target.closest(".sqt-reset")) resetPreferences();
+    });
+    syncCustomizerUI();
+    return panel;
+  }
+
+  function prefGroup(label, key, values, three) {
+    return '<fieldset class="sqt-pref-group">' +
+      '<legend>' + esc(label) + '</legend>' +
+      '<div class="sqt-pref-options' + (three ? ' sqt-pref-options--three' : '') + '">' +
+        values.map(function (v) {
+          return '<button class="sqt-pref-choice" type="button" data-pref="' + esc(key) + '" data-value="' + esc(v[0]) + '" aria-pressed="false">' + esc(v[1]) + '</button>';
+        }).join("") +
+      '</div>' +
+    '</fieldset>';
+  }
+
+  function swatchGroup(label, key, values) {
+    return '<fieldset class="sqt-pref-group">' +
+      '<legend>' + esc(label) + '</legend>' +
+      '<div class="sqt-swatches">' +
+        values.map(function (v) {
+          return '<button class="sqt-pref-choice sqt-swatch" type="button" data-pref="' + esc(key) + '" data-value="' + esc(v[0]) + '" aria-pressed="false" aria-label="' + esc(v[1]) + '" title="' + esc(v[1]) + '" style="--sqt-swatch:' + esc(v[2]) + '"></button>';
+        }).join("") +
+      '</div>' +
+    '</fieldset>';
+  }
+
+  function openCustomizer() {
+    var panel = makeCustomizer();
+    panel.hidden = false;
+    d.querySelectorAll(".sqt-customize").forEach(function (b) { b.setAttribute("aria-expanded", "true"); });
+    var close = panel.querySelector(".sqt-customizer__close");
+    if (close) close.focus();
+  }
+
+  function closeCustomizer() {
+    var panel = d.getElementById("sqt-customizer");
+    if (!panel) return;
+    panel.hidden = true;
+    d.querySelectorAll(".sqt-customize").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+  }
+
+  function toggleCustomizer() {
+    var panel = makeCustomizer();
+    if (panel.hidden) openCustomizer(); else closeCustomizer();
+  }
+
+  applyPrefs(false);
+
+  if (window.matchMedia) {
+    var scheme = matchMedia("(prefers-color-scheme: dark)");
+    var schemeHandler = function () {
+      if (appearancePrefs.mode === "auto") applyPrefs(false);
+    };
+    if (scheme.addEventListener) scheme.addEventListener("change", schemeHandler);
+    else if (scheme.addListener) scheme.addListener(schemeHandler);
+  }
 
   /* ========================== subscribe (Kit) ============================ */
 
@@ -395,8 +562,7 @@
           '</div>' +
           '<div class="sqt-hd-tools">' +
             '<div id="sqt-modes" class="sqt-modes" role="group" aria-label="Display preferences">' +
-              '<button class="sqt-tool sqt-style" type="button" aria-pressed="false" title="Switch visual style">View: 2010 Blog</button>' +
-              (themeOK ? '<button class="sqt-tool sqt-theme" type="button" aria-pressed="false">Dark: off</button>' : '') +
+              '<button class="sqt-tool sqt-customize" type="button" aria-expanded="false" aria-controls="sqt-customizer">Make it your own</button>' +
             '</div>' +
             '<button class="sqt-tool sqt-menu" type="button" aria-expanded="false" aria-controls="sqt-nav">Menu</button>' +
           '</div>' +
@@ -418,15 +584,8 @@
       menu.textContent = openNow ? "Close" : "Menu";
     });
 
-    var sbtn = hd.querySelector(".sqt-style");
-    if (sbtn) sbtn.addEventListener("click", function () {
-      setStyleMode(styleMode() === "editorial" ? "2010" : "editorial");
-    });
-
-    var tbtn = hd.querySelector(".sqt-theme");
-    if (tbtn) tbtn.addEventListener("click", function () {
-      setTheme(theme() === "dark" ? "light" : "dark");
-    });
+    var cbtn = hd.querySelector(".sqt-customize");
+    if (cbtn) cbtn.addEventListener("click", toggleCustomizer);
 
     wireSearch(hd);
 
@@ -447,14 +606,24 @@
     placeModes();
     window.addEventListener("resize", placeModes, { passive: true });
 
-    setStyleMode(styleMode());
-    if (themeOK) setTheme(theme());
+    applyPrefs(false);
   }
 
 
   /* ============================ sitewide footer ========================== */
   /* All published footer links and markup live here, not in a Code Block.
      Squarespace's native footer remains available if this site layer fails. */
+
+  d.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeCustomizer();
+  });
+
+  d.addEventListener("click", function (e) {
+    var panel = d.getElementById("sqt-customizer");
+    if (!panel || panel.hidden) return;
+    if (panel.contains(e.target) || e.target.closest(".sqt-customize")) return;
+    closeCustomizer();
+  });
 
   function footer() {
     if (d.getElementById("sqt-footer")) return;
