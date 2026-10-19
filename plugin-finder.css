@@ -105,3 +105,56 @@ html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-dialog{border-radius:9px
 #sqt-plugin-finder .pf-palette--real img{width:100%;height:100%;object-fit:contain;background:var(--sqt-bg-alt,#f5f5f5)}
 #sqt-plugin-finder .pf-palette--real .pf-palette__tag{background:var(--sqt-bg,#fff);color:var(--sqt-meta,#555);border:1px solid var(--sqt-rule,#ddd)}
 #sqt-plugin-finder .pf-demo-links a{font-weight:600}
+
+
+/* 2026-10-19: directory polish, using /home for typography and density.
+   Hidden must beat the base display:grid — previously an empty gray panel rendered. */
+#sqt-plugin-finder .pf-gap[hidden],
+#sqt-plugin-finder .pf-load[hidden] { display:none!important; }
+#sqt-plugin-finder {
+  max-width:none;
+  width:100%;
+  padding:0 0 48px;
+  --pf-text:var(--sqt-ink,#111);
+  --pf-muted:var(--sqt-body,#333);
+  --pf-line:var(--sqt-rule,#c8c8c8);
+  --pf-panel:var(--sqt-box,#f5f5f5);
+  --pf-blue:var(--sqt-link,#0645ad);
+}
+#sqt-plugin-finder .pf-topline {margin:0 0 10px;}
+#sqt-plugin-finder h1 {
+  font-family:var(--sqt-head,"Space Grotesk",sans-serif);
+  font-size:clamp(25px,3.1vw,32px);
+  line-height:1.08;
+  margin:0 0 7px;
+  letter-spacing:-.025em;
+}
+#sqt-plugin-finder .pf-sub {
+  max-width:710px;
+  font-size:14px;
+  line-height:1.5;
+  margin:0 0 18px;
+}
+#sqt-plugin-finder .pf-try {margin:11px 0 17px}
+#sqt-plugin-finder .pf-workspace {padding-top:13px}
+#sqt-plugin-finder .pf-controls {margin-bottom:12px}
+#sqt-plugin-finder .pf-status {margin:0 0 10px}
+#sqt-plugin-finder .pf-gap:not([hidden]) {
+  background:var(--sqt-box,#f5f5f5);
+  border-radius:0;
+}
+html[data-sqt-style="editorial"] #sqt-plugin-finder {max-width:none;padding:0 0 70px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder h1 {
+  font-size:clamp(37px,4.8vw,55px);
+  letter-spacing:-.045em;
+  margin:0 0 11px;
+}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-sub {
+  font-size:17px;
+  margin-bottom:22px;
+}
+@media(max-width:620px) {
+  #sqt-plugin-finder {padding:0 0 40px}
+  #sqt-plugin-finder h1 {font-size:clamp(26px,7vw,34px)}
+  #sqt-plugin-finder .pf-sub {font-size:13px}
+}
