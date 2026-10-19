@@ -1471,26 +1471,37 @@
   // Squarespace owns the blank /plugin-directory page, but the actual finder
   // lives in this repository. No Code Block or page-specific injection needed.
   function mountPluginDirectory() {
-    if (!/^\/plugin-directory\/?$/.test(location.pathname)) return false;
+    if (location.pathname.replace(/\/+$/, "") !== "/plugin-directory") return false;
     var page = d.getElementById("page");
     var root = d.getElementById("sqt-plugin-finder");
-    if (!root) {
-      var shell = d.createElement("main");
+    var shell = d.getElementById("sqt-plugin-directory-shell");
+    // A Squarespace Code Block often starts several empty Fluid Engine grid
+    // rows below the nav. Reuse its live node in our native homepage shell.
+    if (!shell) {
+      shell = d.createElement("main");
       shell.id = "sqt-plugin-directory-shell";
       shell.setAttribute("aria-label", "Squarespace plugin and solution directory");
-      shell.innerHTML = '<div id="sqt-plugin-finder" data-catalog-url="https://sqspthemes-assets.pages.dev/plugin-solutions.json" data-media-url="https://sqspthemes-assets.pages.dev/plugin-media.json"><p role="status">Loading the Squarespace solution directory…</p></div>';
-      if (page) {
-        page.insertBefore(shell, page.firstChild);
-      } else {
-        var anchor = d.getElementById("footer-sections") || d.querySelector("footer.sections") || d.getElementById("sqt-footer");
-        if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(shell,anchor);
+      if (page) page.insertBefore(shell, page.firstChild);
+      else {
+        var anchor = d.getElementById("footer-sections") || d.querySelector("footer.sections");
+        if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(shell, anchor);
         else d.body.appendChild(shell);
       }
-      html.classList.add("sqt-plugin-directory-autoload");
-      root = shell.querySelector("#sqt-plugin-finder");
     }
+    if (root) {
+      if (root.parentNode !== shell) shell.appendChild(root);
+    } else {
+      root = d.createElement("div");
+      root.id = "sqt-plugin-finder";
+      root.dataset.catalogUrl = "https://sqspthemes-assets.pages.dev/plugin-solutions.json";
+      root.dataset.mediaUrl = "https://sqspthemes-assets.pages.dev/plugin-media.json";
+      root.innerHTML = '<p role="status">Loading Squarespace solutions…</p>';
+      shell.appendChild(root);
+    }
+    root.setAttribute("tabindex", "-1");
+    html.classList.add("sqt-plugin-directory-autoload");
     var skip = d.querySelector("#sqt-header .sqt-skip");
-    if (skip) { root.id = "sqt-plugin-finder"; root.setAttribute("tabindex","-1"); skip.href = "#sqt-plugin-finder"; }
+    if (skip) skip.href = "#sqt-plugin-finder";
     if (!d.querySelector('link[href*="plugin-finder.css"]')) {
       var style = d.createElement("link");
       style.rel = "stylesheet";
