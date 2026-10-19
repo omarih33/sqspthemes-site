@@ -1,0 +1,70 @@
+{
+  "title": "Recent website RFPs · stated budgets",
+  "asOf": "2026-10-19",
+  "note": "Curated example projects from BBP research, not a live feed. Deadlines may have passed. Amounts apply to stated scope and may include non-website services; see source documents for terms.",
+  "items": [
+    {
+      "org": "Capital City College",
+      "amount": "£250K",
+      "scope": "Website redevelopment",
+      "deadline": "2026-10-27",
+      "currency": "GBP"
+    },
+    {
+      "org": "JASS (Just Associates)",
+      "amount": "US$60K",
+      "scope": "Brand + website (combined)",
+      "deadline": "2026-10-20",
+      "currency": "USD"
+    },
+    {
+      "org": "Firstport",
+      "amount": "Up to £15K",
+      "scope": "Website redevelopment",
+      "deadline": "2026-10-26",
+      "currency": "GBP"
+    },
+    {
+      "org": "City of Edgerton",
+      "amount": "Under US$30K",
+      "scope": "Municipal website base scope",
+      "deadline": "2026-10-22",
+      "currency": "USD"
+    },
+    {
+      "org": "San Joaquin COG",
+      "amount": "US$100K–$200K",
+      "scope": "4-year website contract",
+      "deadline": "2026-10-15",
+      "currency": "USD"
+    },
+    {
+      "org": "Global Covenant of Mayors",
+      "amount": "Up to US$125K",
+      "scope": "Digital project budget cap",
+      "deadline": "2026-10-16",
+      "currency": "USD"
+    },
+    {
+      "org": "Landforce",
+      "amount": "US$40K",
+      "scope": "Website project",
+      "deadline": "2026-10-07",
+      "currency": "USD"
+    },
+    {
+      "org": "Vancouver Writers Fest",
+      "amount": "CAD$20K–$30K",
+      "scope": "Website project",
+      "deadline": "2026-10-07",
+      "currency": "CAD"
+    },
+    {
+      "org": "Columbia County Tourism",
+      "amount": "US$25K",
+      "scope": "Tourism website · Year 1 cap",
+      "deadline": "2026-10-15",
+      "currency": "USD"
+    }
+  ]
+}
