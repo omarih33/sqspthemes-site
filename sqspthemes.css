@@ -84,6 +84,20 @@ html.sqt-on #itemPagination {
   display: none !important;
 }
 
+/* Native homepage content is replaced by #sqt-home only after the main
+   deferred script runs. Keep the original Squarespace page out of view
+   during that short handoff. If initialization fails, the 4s guard
+   removes sqt-on and the native page becomes visible again. */
+html.sqt-on:not(.sqt-ready) #page:has(#sqt-home-source) {
+  visibility: hidden !important;
+}
+
+/* Same handoff for the designer directory: the original Squarespace
+   sections are only hidden by JS after mounting its custom renderer. */
+html.sqt-on:not(.sqt-ready) #page:has(#sqt-directory-root) > section.page-section:not(:has(#sqt-directory-root)) {
+  visibility: hidden !important;
+}
+
 
 
 /* The newsletter's Squarespace section adds padding around its embedded
