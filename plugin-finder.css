@@ -158,3 +158,15 @@ html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-sub {
   #sqt-plugin-finder h1 {font-size:clamp(26px,7vw,34px)}
   #sqt-plugin-finder .pf-sub {font-size:13px}
 }
+
+
+/* SQSPThemes appearance bridge */
+#sqt-plugin-finder {
+  --pf-blue: var(--sqt-accent, var(--sqt-link, #0645ad));
+  --pf-bg: var(--sqt-bg, #fff);
+  --pf-text: var(--sqt-ink, #151515);
+  --pf-muted: var(--sqt-meta, #595959);
+  --pf-line: var(--sqt-rule, #d0d0d0);
+  --pf-panel: var(--sqt-bg-alt, #f8f9fa);
+}
+#sqt-plugin-finder :focus-visible { outline-color: var(--sqt-focus, var(--pf-blue)); }
