@@ -10,8 +10,8 @@ const MAX_PER_BLOG = 3;
 const MAX_VISIBLE = 9;
 
 function xmlValue(block, tag) {
-  const safeTag = tag.replace(/:/g, "\\:");
-  const found = block.match(new RegExp("<" + safeTag + "(?:\s[^>]*)?>([\s\S]*?)<\\/" + safeTag + "\s*>", "i"));
+  const pattern = new RegExp("<" + tag + "(?:\\s[^>]*)?>([\\s\\S]*?)<\\/" + tag + "\\s*>", "i");
+  const found = block.match(pattern);
   return found ? found[1] : "";
 }
 
@@ -47,8 +47,8 @@ function linkFrom(block, base) {
 }
 
 function extractPosts(xml, feed, now) {
-  const blocks = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\\/item\s*>/gi) ||
-                 xml.match(/<entry(?:\s[^>]*)?>[\s\S]*?<\\/entry\s*>/gi) || [];
+  const blocks = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\/item\s*>/gi) ||
+                 xml.match(/<entry(?:\s[^>]*)?>[\s\S]*?<\/entry\s*>/gi) || [];
   const posts = [];
   const seen = new Set();
   for (const block of blocks) {
