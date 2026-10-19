@@ -9,3 +9,19 @@
 /directory-data.json
   Cache-Control: no-cache, must-revalidate
   Access-Control-Allow-Origin: *
+
+/plugin-finder.css
+  Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/plugin-finder.js
+  Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/plugin-solutions.json
+  Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/plugin-media.json
+  Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
