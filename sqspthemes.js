@@ -791,6 +791,7 @@
       topic: topicOf(it.categories || []),
       type: typeOf(tags),
       image: homeItemImage(it),
+      comments: Number.isFinite(Number(it.publicCommentCount)) ? Number(it.publicCommentCount) : 0,
       featured: tags.some ? tags.some(function (t) { return String(t).toLowerCase() === "featured"; }) : false
     };
   }
@@ -800,6 +801,7 @@
     if (p.topic) bits.push(p.topic);
     else if (p.type) bits.push(p.type);
     if (p.date) bits.push(fmtDate(p.date));
+    bits.push((p.comments || 0) + " comment" + ((p.comments || 0) === 1 ? "" : "s"));
     return bits;
   }
 
@@ -1359,6 +1361,7 @@
       if (p.type) meta.push('<span>' + esc(p.type) + '</span>');
       if (p.topic) meta.push('<a href="' + esc(blogBase()) + '?category=' + encodeURIComponent(p.topic) + '">' + esc(p.topic) + '</a>');
       if (p.date) meta.push('<span>' + esc(fmtDate(p.date)) + '</span>');
+      meta.push('<a class="sqt-comment-count" href="' + esc(p.url) + '#discussion">' + (p.comments || 0) + ' comment' + ((p.comments || 0) === 1 ? '' : 's') + '</a>');
       return '<li class="sqt-row sqt-list-row">' +
         '<span class="sqt-num" aria-hidden="true">' + String(start + i).padStart(2, "0") + '</span>' +
         '<div class="sqt-row-body sqt-list-row__body">' +
@@ -1400,6 +1403,7 @@
         url: link ? link.getAttribute("href") : "#",
         date: parseListDate(text(a.querySelector("time.blog-date"))),
         excerpt: text(a.querySelector(".blog-excerpt-wrapper")),
+        comments: 0,
         type: "",
         topic: ""
       };
@@ -1462,6 +1466,7 @@
         p.topic = topicOf(it.categories);
         if (it.excerpt) p.excerpt = stripHtml(it.excerpt);
         if (it.publishOn) p.date = new Date(it.publishOn);
+        p.comments = Number.isFinite(Number(it.publicCommentCount)) ? Number(it.publicCommentCount) : 0;
       });
       root.querySelector(".sqt-list").innerHTML = rowsHtml(posts, start);
     }).catch(function () {});
