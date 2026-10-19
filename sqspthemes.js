@@ -460,7 +460,6 @@
         '<input class="sqt-input" id="' + id + '" type="email" name="email_address" required autocomplete="email" placeholder="you@studio.com">' +
         '<button class="sqt-btn sqt-btn--ghost" type="submit">Subscribe</button>' +
       '</div>' +
-      (C.readers ? '<span class="sqt-count">' + esc(C.readers) + '</span>' : '') +
       '<p class="sqt-subscribe-status" role="status" aria-live="polite"></p>' +
     '</form>';
   }
@@ -1032,14 +1031,6 @@
                 '<div class="sqt-home-box-foot sqt-panel__foot"><a href="/blog">See all articles →</a></div>' +
               '</section>' +
 
-              '<section class="sqt-home-box sqt-home-bottom-newsletter sqt-panel">' +
-                '<div class="sqt-home-box-head sqt-panel__head">Get the Good Stuff by Email</div>' +
-                '<div class="sqt-home-newsletter-wide sqt-form-panel">' +
-                  '<div><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p></div>' +
-                  subscribeForm("Email address") +
-                '</div>' +
-              '</section>' +
-
               '<section class="sqt-home-box sqt-home-explore-box sqt-panel">' +
                 '<div class="sqt-home-box-head sqt-panel__head">Explore More</div>' +
                 '<div class="sqt-home-explore" data-home-explore>' + homeExploreMarkup(0, 0) + '</div>' +
@@ -1048,6 +1039,12 @@
             '</div>' +
 
             '<aside class="sqt-home-sidebar sqt-sidebar sqt-stack" aria-label="Explore SQSPThemes">' +
+              '<section class="sqt-home-box sqt-side-newsletter sqt-panel">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Get the Good Stuff by Email</div>' +
+                '<div class="sqt-home-side-body sqt-panel__body"><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join <span data-subscriber-total>5,393</span> designers, business owners, and Squarespace pros getting the good stuff by email.</p>' +
+                  subscribeForm("Email address") +
+                '</div>' +
+              '</section>' +
               '<section class="sqt-home-box sqt-panel">' +
                 '<div class="sqt-home-box-head sqt-panel__head">Start Here</div>' +
                 '<div class="sqt-home-side-body sqt-panel__body"><ol class="sqt-home-start-list">' +
@@ -1425,7 +1422,7 @@
         return '<li><a href="' + base + '?tag=' + encodeURIComponent(t) + '"' +
           (tag && tag.toLowerCase() === t.toLowerCase() ? ' aria-current="page"' : '') + '>' + esc(t) + '</a></li>';
       }).join("") + '</ul></div></section>' : '') +
-      (C.kitAction ? '<section class="sqt-panel sqt-archive-newsletter"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
+      (C.kitAction ? '<section class="sqt-panel sqt-archive-newsletter"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><strong>Useful Squarespace finds without having to go looking for them.</strong><p>Join <span data-subscriber-total>5,393</span> designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
     '</aside>';
 
     var root = make(
@@ -1586,7 +1583,7 @@
               (glance ? '<div class="sqt-rail-glance"></div>' : '') +
               '<aside class="sqt-side sqt-post-side sqt-stack" aria-label="More">' +
                 '<nav class="sqt-post-toc sqt-panel" aria-label="Contents" hidden><div class="sqt-panel__head">Contents</div><div class="sqt-panel__body"><ol></ol></div></nav>' +
-                (C.kitAction ? '<section class="sqt-side-newsletter sqt-panel"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><h2>Useful Squarespace finds without having to go looking for them.</h2><p>Join 5,436 designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
+                (C.kitAction ? '<section class="sqt-side-newsletter sqt-panel"><div class="sqt-panel__head">Get the Good Stuff by Email</div><div class="sqt-panel__body"><h2>Useful Squarespace finds without having to go looking for them.</h2><p>Join <span data-subscriber-total>5,393</span> designers, business owners, and Squarespace pros getting the good stuff by email.</p>' + subscribeForm("Email address") + '</div></section>' : '') +
                 '<section class="sqt-related sqt-panel" hidden><div class="sqt-panel__head">More like this</div><div class="sqt-panel__body"><ul></ul></div></section>' +
                 '<section class="sqt-topic sqt-panel" hidden><div class="sqt-panel__head">Browse this topic</div><div class="sqt-panel__body"><a class="sqt-feature" href="#"></a></div></section>' +
                 '<section class="sqt-next-step sqt-panel" hidden><div class="sqt-panel__head">Keep going</div><div class="sqt-panel__body"><a class="sqt-feature" href="#"></a><p></p></div></section>' +
@@ -1805,21 +1802,22 @@
       // Site-activity widgets only appear when the live API returns real data.
       (function activity() {
         var host = d.querySelector(".sqt-home-sidebar");
-        if (!host) return;
         var panel = d.createElement("section");
         panel.className = "sqt-home-box sqt-panel sqt-site-activity";
         panel.hidden = true;
         panel.innerHTML = '<div class="sqt-home-box-head sqt-panel__head">On the site</div><div class="sqt-home-side-body sqt-panel__body"><p class="sqt-presence"></p><p class="sqt-subscribers"></p></div>';
-        host.appendChild(panel);
+        if (host) host.insertBefore(panel, host.firstElementChild);
         var sid;
         try {sid=sessionStorage.getItem("sqt-presence-id");if(!sid){sid=crypto.randomUUID();sessionStorage.setItem("sqt-presence-id",sid);}}catch(e){return;}
         var endpoint="https://sqspthemes-site-activity.omari-6b8.workers.dev/activity";
         function refresh() {
           if(d.visibilityState==="hidden")return;
-          fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({session:sid}),cache:"no-store"})
+          fetch(endpoint,{method:host?"POST":"GET",headers:{"Content-Type":"application/json"},body:host?JSON.stringify({session:sid}):undefined,cache:"no-store"})
             .then(function(r){if(!r.ok)throw Error("activity API unavailable");return r.json();})
             .then(function(data){
-              if(!Number.isInteger(data.online)||!Number.isInteger(data.subscribers))return;
+              if(!Number.isInteger(data.subscribers))return;
+              d.querySelectorAll("[data-subscriber-total]").forEach(function(el){el.textContent=data.subscribers.toLocaleString();});
+              if(!host || !Number.isInteger(data.online))return;
               panel.hidden=false;
               panel.querySelector(".sqt-presence").textContent="● "+data.online+" visitor"+(data.online===1?"":"s")+" online now";
               var movement="";
@@ -1828,7 +1826,7 @@
                 movement=" "+(delta>0?"↑ +":delta<0?"↓ ":"→ ")+(delta>0?delta:delta)+" since "+data.change_baseline;
               }
               panel.querySelector(".sqt-subscribers").textContent=data.subscribers.toLocaleString()+" email subscribers"+movement;
-            }).catch(function(){panel.hidden=true;});
+            }).catch(function(){if(panel) panel.hidden=true;});
         }
         refresh();
         window.setInterval(refresh,30000);
