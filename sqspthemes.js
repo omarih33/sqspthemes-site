@@ -615,6 +615,101 @@
     }).join("");
   }
 
+
+  // A shuffled bag makes each spotlight different on consecutive homepage loads
+  // and shows every eligible entry once before starting another cycle.
+  function homeRotationPick(items, group, getKey) {
+    if (!items.length) return null;
+    if (items.length === 1) return items[0];
+
+    var keys = items.map(getKey);
+    var storageKey = "sqt-home-rotation-v1-" + group;
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch (e) {}
+    var remaining = Array.isArray(saved.remaining) ? saved.remaining.filter(function (key, i, all) {
+      return keys.indexOf(key) !== -1 && all.indexOf(key) === i;
+    }) : [];
+
+    if (!remaining.length || (remaining.length === 1 && remaining[0] === saved.last)) {
+      remaining = keys.slice();
+      for (var i = remaining.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var swap = remaining[i];
+        remaining[i] = remaining[j];
+        remaining[j] = swap;
+      }
+    }
+
+    // Avoid the last selection even at the boundary between two shuffled bags.
+    if (remaining[0] === saved.last) {
+      var alternative = remaining.findIndex(function (key) { return key !== saved.last; });
+      if (alternative > 0) {
+        var next = remaining[0];
+        remaining[0] = remaining[alternative];
+        remaining[alternative] = next;
+      }
+    }
+
+    var chosen = remaining.shift();
+    try {
+      localStorage.setItem(storageKey, JSON.stringify({ last: chosen, remaining: remaining }));
+    } catch (e) {}
+    return items[keys.indexOf(chosen)] || items[0];
+  }
+
+  function homeFeaturedResources() {
+    // Edit this list to change the rotation; keep affiliate tracking intact.
+    // window.SQT_CONFIG.homeFeaturedResources can optionally override the list.
+    var defaults = [
+      {
+        id: "bigger-budget-projects",
+        name: (C.opportunity && C.opportunity.name) || "Bigger Budget Projects",
+        url: (C.opportunity && C.opportunity.url) || "/rfps",
+        text: (C.opportunity && C.opportunity.text) || "Website RFPs and opportunities for independent designers and studios.",
+        cta: "Explore opportunities →"
+      },
+      {
+        id: "lightbox-anything",
+        name: "Lightbox Anything",
+        url: "https://www.creem.io/affiliate?code=AFFFM2BA5FQ6&p=lightbox",
+        text: "Add popups and lightboxes for forms, videos, and other content on your Squarespace site.",
+        cta: "Explore the plugin →",
+        affiliate: true
+      },
+      {
+        id: "squarekicker",
+        name: "SquareKicker",
+        url: "https://squarekicker.com/?ref=omariharebin16k",
+        text: "A visual toolkit for customizing Squarespace designs without writing every line of code.",
+        cta: "Explore SquareKicker →",
+        affiliate: true
+      },
+      {
+        id: "spark-plugin",
+        name: "Spark Plugin",
+        url: "https://sparkplugin.com/?via=omari",
+        text: "More design and styling options for Squarespace websites.",
+        cta: "Explore Spark →",
+        affiliate: true
+      }
+    ];
+    var resources = Array.isArray(C.homeFeaturedResources) ? C.homeFeaturedResources : defaults;
+    return resources.filter(function (item) {
+      return item && item.name && item.url &&
+        (/^https?:\/\//i.test(item.url) || (/^\//.test(item.url) && !/^\/\//.test(item.url)));
+    });
+  }
+
+  function homeResourceMarkup(resource) {
+    if (!resource) return '<a href="/squarespace-resources">Browse Squarespace resources →</a>';
+    var outside = !isInternalUrl(resource.url);
+    var linkAttrs = outside ? ' target="_blank" rel="' + (resource.affiliate ? 'sponsored ' : '') + 'noopener noreferrer"' : '';
+    return '<a class="sqt-home-side-title" href="' + esc(resource.url) + '"' + linkAttrs + '>' + esc(resource.name) + '</a>' +
+      (resource.text ? '<p>' + esc(resource.text) + '</p>' : '') +
+      '<a href="' + esc(resource.url) + '"' + linkAttrs + '>' + esc(resource.cta || "Explore resource →") + '</a>' +
+      (resource.affiliate ? '<div class="sqt-meta-row"><span>Affiliate link</span></div>' : '');
+  }
+
   function mountHomepage() {
     var marker = d.getElementById("sqt-home-source");
     if (!marker) return false;
@@ -683,11 +778,7 @@
 
               '<section class="sqt-home-box sqt-home-resource-box sqt-panel">' +
                 '<div class="sqt-home-box-head sqt-panel__head">Featured Resource</div>' +
-                '<div class="sqt-home-side-body sqt-panel__body">' +
-                  '<a class="sqt-home-side-title" href="' + esc((C.opportunity && C.opportunity.url) || "/rfps") + '">' + esc((C.opportunity && C.opportunity.name) || "Bigger Budget Projects") + '</a>' +
-                  '<p>' + esc((C.opportunity && C.opportunity.text) || "Website RFPs and opportunities for independent designers and studios.") + '</p>' +
-                  '<a href="' + esc((C.opportunity && C.opportunity.url) || "/rfps") + '">Explore opportunities →</a>' +
-                '</div>' +
+                '<div class="sqt-home-side-body sqt-panel__body" data-home-resource></div>' +
               '</section>' +
 
               '<section class="sqt-home-box sqt-panel">' +
@@ -707,6 +798,12 @@
     if (skip) skip.href = "#sqt-content";
 
     wireSubscribe(root);
+
+    // Select once per homepage load, independently of slower directory/blog requests.
+    var resource = homeRotationPick(homeFeaturedResources(), "resources", function (item) {
+      return String(item.id || item.url);
+    });
+    root.querySelector("[data-home-resource]").innerHTML = homeResourceMarkup(resource);
 
     Promise.all([
       getJSON("/blog").catch(function () { return null; }),
@@ -737,7 +834,15 @@
       root.querySelector("[data-home-explore]").innerHTML = homeExploreMarkup(templateCount, designerCount);
 
       var designers = directory && directory.designers || [];
-      var designer = designers.find(function (x) { return x.avatarReady === "Yes" && x.image; }) || designers[0];
+      var eligibleDesigners = designers.filter(function (x) {
+        return x.avatarReady === "Yes" && x.image && (x.studio || x.person || x.name);
+      });
+      if (!eligibleDesigners.length) {
+        eligibleDesigners = designers.filter(function (x) { return x.image && (x.studio || x.person || x.name); });
+      }
+      var designer = homeRotationPick(eligibleDesigners, "designers", function (item) {
+        return String(item.name || item.studio || item.person);
+      });
       var designerBox = root.querySelector("[data-home-designer]");
       if (designerBox) {
         if (designer) {
