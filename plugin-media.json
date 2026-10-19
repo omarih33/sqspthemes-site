@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19-initial-20",
-  "note": "Direct official-site image links; not downloaded or uploaded to R2. Credit sources in interface; obtain clearance before rehosting.",
+  "version": "2026-10-19-product-media-53",
+  "note": "Maker-hosted media previews; each preview links to creator source. Thumbnails and maker descriptions come from official URLs, assets not copied or hosted in R2. Source reuse permissions not yet verified for mirroring.",
   "products": {
     "SOL-009": {
       "thumbnail": "https://images.squarespace-cdn.com/content/v1/504fafcf84ae1835d7e5c807/1525981199708-O7A257FI3XKW2OS9ETRM/Universal+Filter+-+Modern+View.png",
@@ -180,7 +180,9 @@
       "credit": "will-myers.com",
       "status": "maker-hosted preview",
       "rights": "not-cleared-for-rehosting",
-      "checkedOn": "2026-10-19"
+      "checkedOn": "2026-10-19",
+      "summary": "Present portfolios or featured items in an interactive Squarespace showcase carousel.",
+      "details": "Will Myers’ Showcase Carousel displays visual content in a carousel suitable for portfolio and gallery presentation."
     },
     "SOL-096": {
       "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/d179004a-ec7b-4fb2-a18e-a2c8849beac9/Blog+Pagination.gif",
@@ -201,6 +203,349 @@
       "status": "maker-hosted preview",
       "rights": "not-cleared-for-rehosting",
       "checkedOn": "2026-10-19"
+    },
+    "SOL-002": {
+      "sourceUrl": "https://www.beyondspace.studio/synced-blocks",
+      "credit": "beyondspace.studio",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Update repeated text, images, or videos across multiple Squarespace pages from a single place.",
+      "details": "Beyondspace Synced Blocks keeps reused content consistent when the original content is edited. Its product page specifies a Business/Core plan or higher.",
+      "demoUrl": "https://www.beyondspace.studio/synced-blocks"
+    },
+    "SOL-011": {
+      "sourceUrl": "https://monocle-search.com/",
+      "credit": "monocle-search.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add fast, typo-tolerant search across Squarespace pages, products and other content.",
+      "details": "Monocle provides a customizable search experience with instant results and support for Squarespace content, including products.",
+      "demoUrl": "https://www.beyondspace.studio/monocle-preview"
+    },
+    "SOL-019": {
+      "sourceUrl": "https://www.will-myers.com/products/p/secondary-navigation-for-squarespace-71",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add a secondary navigation bar above or below your Squarespace 7.1 header.",
+      "details": "Offers customizable positions and elements such as links, dropdowns, buttons, and social links, with a mobile-friendly layout.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/a9f0ec5d-dafa-4c49-a385-d99c5a6e1b87/product+page.gif",
+      "demoUrl": "https://secondary-nav-wm-plugin.squarespace.com/?password=demo"
+    },
+    "SOL-020": {
+      "sourceUrl": "https://www.will-myers.com/products/p/main-nav-replacer",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Replace your Squarespace navigation on selected pages without changing it site-wide.",
+      "details": "Useful when different sections need different menus, such as member areas, language-specific content, or sub-brands.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/1618319838445-WI0B0432HUB7QQX5LM9K/Switch+Main+Nav.001-min.jpeg",
+      "demoUrl": "https://site-nav-replacer-plugin.squarespace.com/?password=demo"
+    },
+    "SOL-024": {
+      "sourceUrl": "https://squarekicker.com/squarespace-extension",
+      "credit": "squarekicker.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Visually customize Squarespace design details, styling and effects with SquareKicker.",
+      "details": "SquareKicker provides controls for customizing layouts and interactions directly in the Squarespace design workflow.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/641260bc3155d748b2f63ffa/1687312177373-PLGY9OMJD7ATF6F5K8D4/Iris_ButtonHover.gif"
+    },
+    "SOL-025": {
+      "sourceUrl": "https://monocle-search.com/",
+      "credit": "monocle-search.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Improve your Squarespace site search with Monocle’s fast search interface.",
+      "details": "Monocle focuses on site-wide Squarespace content discovery with typo tolerance, searchable products, and customization options.",
+      "demoUrl": "https://www.beyondspace.studio/monocle-preview"
+    },
+    "SOL-029": {
+      "sourceUrl": "https://www.squarekicker.com/templates",
+      "credit": "squarekicker.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Browse ready-made Squarespace website designs from SquareKicker.",
+      "details": "The SquareKicker template store offers customizable website designs with built-in styling for different business and creative uses.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/641260bc3155d748b2f63ffa/b7690d34-67f6-4588-9d91-35dc08688a85/1-home-hOkl6fxxkwubgBEmjkdyTGyi105JFH.png"
+    },
+    "SOL-030": {
+      "sourceUrl": "https://www.kleemt.app/",
+      "credit": "kleemt.app",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add editable prebuilt Squarespace sections such as portfolios, timelines and pricing tables.",
+      "details": "Kleemt provides a library of configurable blocks and sections that can be added to Squarespace pages from the editing environment.",
+      "thumbnail": "https://klmtcdn.uk/kleemt-sections/portfolio/portfolio.webp"
+    },
+    "SOL-032": {
+      "sourceUrl": "https://sf.digital/currencies",
+      "credit": "sf.digital",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Let international shoppers view Squarespace store prices in their own currency.",
+      "details": "SF Digital Currencies adds a local-currency display selector to help shoppers understand pricing. This does not imply multi-currency checkout.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/535522c9e4b0ecf5755f4156/1707650574010-RE52L9ZGCBI2Z4Z1P7VP/VELOCOLOUR-Currencies2.jpg"
+    },
+    "SOL-073": {
+      "sourceUrl": "https://www.seospace.co/",
+      "credit": "seospace.co",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Find Squarespace SEO issues and follow recommendations inside the editor.",
+      "details": "SEOSpace helps site owners audit SEO and work through prioritized improvements without checking every page manually.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/63a41a4ed3b7e0520fe05d49/c6548475-945a-4ee5-94de-1c7212feaf57/seospace_dashboard.png"
+    },
+    "SOL-074": {
+      "sourceUrl": "https://www.seospace.co/",
+      "credit": "seospace.co",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Review Squarespace SEO improvements through SEOSpace tools.",
+      "details": "SEOSpace offers Squarespace-focused SEO checks and guidance to improve on-page search readiness.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/63a41a4ed3b7e0520fe05d49/c6548475-945a-4ee5-94de-1c7212feaf57/seospace_dashboard.png"
+    },
+    "SOL-087": {
+      "sourceUrl": "https://www.will-myers.com/products/p/floating-navbar",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add a floating navigation bar to your Squarespace website.",
+      "details": "Will Myers’ Floating Navbar provides a separate floating navigation treatment for site visitors.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/8677d6d7-18bf-4f15-b619-adeb3fd9a57d/ScreenRecording2026-08-26at14.45.09-ezgif.com-video-to-gif-converter.gif"
+    },
+    "SOL-089": {
+      "sourceUrl": "https://www.will-myers.com/products/p/step-flow-timeline",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Turn Squarespace List Sections into visual, step-by-step timelines.",
+      "details": "Step Flow Timeline transforms a list-based section into a timeline presentation for processes and sequences.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/45332a48-1085-46ae-92db-a065fba24d97/ScreenRecording2026-07-21at14.50.30-ezgif.com-video-to-gif-converter.gif"
+    },
+    "SOL-090": {
+      "sourceUrl": "https://www.will-myers.com/products/p/flipbook",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Transform Squarespace List Sections into interactive flipbooks.",
+      "details": "The Flipbook plugin presents List Section content in a page-flipping format for a more engaging visual sequence.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/9d803763-e6ce-49ca-b828-0c181e7472d7/ScreenRecording2026-06-12at13.01.29-ezgif.com-crop.gif"
+    },
+    "SOL-091": {
+      "sourceUrl": "https://www.will-myers.com/products/p/horizontal-timeline",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Turn a Squarespace List Section into a horizontal, scroll-driven timeline.",
+      "details": "Will Myers’ Horizontal Timeline moves through sequential content as visitors scroll and includes a progress indicator.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/5cd05246-77af-4eb5-a0c7-a1af719aebb4/ScreenRecording2026-01-26at14.36.48-ezgif.com-video-to-gif-converter.gif"
+    },
+    "SOL-092": {
+      "sourceUrl": "https://www.will-myers.com/products/p/website-showcase",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Show web design projects in a more interactive portfolio experience.",
+      "details": "Website Showcase helps Squarespace designers present and let prospective clients explore their site builds.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/467d3f33-7d2f-4dda-8204-3568ee2479e5/Screenshot+2026-01-12+at+15.59.47.png",
+      "demoUrl": "https://website-showcase.squarespace.com/?password=demo"
+    },
+    "SOL-093": {
+      "sourceUrl": "https://www.will-myers.com/products/p/simple-tables",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add structured tables to Squarespace pages for schedules, services or comparisons.",
+      "details": "Will Myers’ Simple Tables displays tabular information in-page, useful for timetables, portfolios, and organized data.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/2b48d313-f990-4ba4-aad0-72f05e21e668/screenshot_2025-12-02_at_14.30.26_720.png",
+      "demoUrl": "https://simple-table.squarespace.com/?password=demo"
+    },
+    "SOL-094": {
+      "sourceUrl": "https://www.will-myers.com/products/p/scroll-away-hero",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Create a full-screen Squarespace hero that transitions away as visitors scroll.",
+      "details": "Scroll Away Hero holds the opening visual on screen, then reveals the rest of the page through a scroll-based transition.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/f2b0290c-088c-44c1-8e64-b2125aadbbc6/blog+scroll+away.gif",
+      "demoUrl": "https://scroll-away-hero.squarespace.com/?password=demo"
+    },
+    "SOL-095": {
+      "sourceUrl": "https://www.will-myers.com/products/p/infinite-logo-gallery-slider",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Turn a Squarespace List Section into a continuously moving logo or image slider.",
+      "details": "The Infinite Gallery Slider can display logos, product photography or other visuals in an automatically scrolling reel.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/f611ea92-90cb-4c89-b315-1bdb3588e8f1/GIF+-+Custom+Cursor+Slider.gif",
+      "demoUrl": "https://infinite-gallery-slider.squarespace.com/?password=demo"
+    },
+    "SOL-097": {
+      "sourceUrl": "https://www.will-myers.com/products/p/horizontal-scrolling-sections",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Turn Squarespace page sections into horizontally scrolling experiences.",
+      "details": "Horizontal Scrolling Sections can create sideways movement for image galleries, case studies, and visual storytelling.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/1762558641095-CQX3XF8W8ILSOY9SO2CW/Horizontal+Scrolling+Section.gif",
+      "demoUrl": "https://horizontal-scroll-plugin.squarespace.com/?password=demo"
+    },
+    "SOL-099": {
+      "sourceUrl": "https://www.will-myers.com/products/p/tooltips-for-squarespace",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add small pop-up tooltips containing text, images or links.",
+      "details": "Will Myers’ Tooltips can provide contextual explanations on Squarespace pages without permanently adding visible text.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/2e19eb4b-62a2-4834-ae3a-7c642470fd60/Screen+Recording+2025-06-23+at+2.35.14%E2%80%AFPM.gif",
+      "demoUrl": "https://tooltips-plugin.squarespace.com/?password=demo"
+    },
+    "SOL-100": {
+      "sourceUrl": "https://www.will-myers.com/products/p/pocket-view",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Display Squarespace List Section content as an organized tab interface.",
+      "details": "Pocket View transforms List Sections into tabs so visitors can switch between groups of content.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/d5c0f09e-b19b-4709-96f0-775c1ca9de71/Screenshot+2025-01-23+at+15.46.14.png",
+      "demoUrl": "https://pocket-view.squarespace.com/?password=demo"
+    },
+    "SOL-102": {
+      "sourceUrl": "https://www.will-myers.com/products/p/pricing-table",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Compare service packages using styled pricing tables on Squarespace.",
+      "details": "Pricing Table provides preset layouts for clearly showing packages, services and pricing side by side.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/eb3999b2-fccb-4d46-a349-f4eaaa1ff50e/Screenshot+2024-08-09+at+15.14.30.png",
+      "demoUrl": "https://pricing-table.squarespace.com?password=demo"
+    },
+    "SOL-104": {
+      "sourceUrl": "https://www.will-myers.com/products/p/countdown-timer",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add a countdown timer to a Squarespace page or announcement bar.",
+      "details": "Will Myers’ Countdown Timer can highlight an approaching event or deadline, with several built-in display styles.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/c805ed31-4bb3-46d7-9b86-65cb304461e4/Countdown+Timer.gif"
+    },
+    "SOL-105": {
+      "sourceUrl": "https://www.will-myers.com/products/p/pinned-page-nav-bar",
+      "credit": "will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add sticky in-page navigation to long Squarespace pages.",
+      "details": "Pinned Page Nav Bar lets visitors jump among named sections while keeping a compact navigation control visible.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5dec0d775605ee7848f9f1e6/1708970173696-FRQNMDUNGXPV2MCFAZKU/Screen+Recording+2024-02-26+at+12.54.39%E2%80%AFPM.gif",
+      "demoUrl": "https://pinned-page-navbar-demo.squarespace.com/services?password=demo"
+    },
+    "SOL-853": {
+      "sourceUrl": "https://www.squarekicker.com/compose",
+      "credit": "squarekicker.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Generate and refine Squarespace designs by describing the result you want.",
+      "details": "SquareKicker Compose is an AI-assisted design workflow that turns prompts into working Squarespace design ideas, including interactive layouts.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/641260bc3155d748b2f63ffa/dd96db79-70c3-476f-95ed-9b8f8197a9ce/Mega-Menus.gif"
+    },
+    "SOL-982": {
+      "sourceUrl": "https://toolkit.will-myers.com/code/item/gallery-section-image-flip",
+      "credit": "toolkit.will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Flip Squarespace gallery images to reveal information on their reverse side.",
+      "details": "Will’s Toolkit Gallery Section Image Flip reveals back-side content when gallery images are interacted with. The code is available to paid Toolkit members.",
+      "thumbnail": "https://axumesoffyxvpdveiayx.supabase.co/storage/v1/object/public/code-catalog-thumbnails/explore/3c53313a-a8d9-4cd4-9d2a-7dd4352b7b7d/d79f4614ce35b3da396f6bfc9bdf71bd2f8094fcc37c749b8575311a1dbd9ac4.gif"
+    },
+    "SOL-983": {
+      "sourceUrl": "https://toolkit.will-myers.com/code/item/custom-css-search",
+      "credit": "toolkit.will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Find matching code within your Squarespace Custom CSS area.",
+      "details": "Custom CSS Search is a Will’s Toolkit member-only utility designed to make locating CSS in an existing code area easier.",
+      "thumbnail": "https://axumesoffyxvpdveiayx.supabase.co/storage/v1/object/public/code-catalog-thumbnails/explore/ba35d941-597c-4507-bc7e-93437d146d02/beb765d0ae95b43d2430e849c851580d739d11b84e2a3b594ca07b1e271b2620.jpg"
+    },
+    "SOL-984": {
+      "sourceUrl": "https://toolkit.will-myers.com/code/item/simple-logo-cloud",
+      "credit": "toolkit.will-myers.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Show client or partner logos in a responsive cloud with hover effects.",
+      "details": "Will’s Toolkit Simple Logo Cloud is a member-only code solution for logo collections with interactive hover treatments.",
+      "thumbnail": "https://axumesoffyxvpdveiayx.supabase.co/storage/v1/object/public/code-catalog-thumbnails/explore/74c7a3e9-98a2-4fd0-83e5-cba7b4de33ae/4fcdedf2eb2de57eb2445ce7952d4529407019d5d1fe5f46772d63f86a6b2df3.gif"
+    },
+    "SOL-985": {
+      "sourceUrl": "https://www.memberspace.com/squarespace/",
+      "credit": "memberspace.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add member-only content, community discussions and flexible course access to Squarespace.",
+      "details": "MemberSpace adds membership management features to an existing Squarespace site, including member access, course experiences, and a content library.",
+      "thumbnail": "https://www.memberspace.com/wp-content/uploads/2026/06/squarespace-membership-plugin-hero-image.webp",
+      "demoUrl": "https://www.memberspace.com/demo/"
+    },
+    "SOL-986": {
+      "sourceUrl": "https://www.powr.io/squarespace-plugins",
+      "credit": "powr.io",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Add embeddable forms, popups, countdown timers and social feeds to Squarespace.",
+      "details": "POWR offers a collection of widgets that can be embedded in Squarespace, including forms, feeds, countdowns and promotional tools.",
+      "thumbnail": "https://www.powrcdn.com/images/landing_pages/squarespace/squarespace_form_builder.jpg",
+      "demoUrl": "https://www.powr.io/demo"
+    },
+    "SOL-988": {
+      "sourceUrl": "https://www.sqsmods.com/store/p/mki99j79ilnd46u8j21l13ql4zjhy1-3f3na-rzfs5",
+      "credit": "sqsmods.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Create a visual grid-style Squarespace menu with slide or fade transitions.",
+      "details": "SQSMods Grid Menu presents navigation destinations in a grid rather than a plain list, with animated transitions between views.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/5faed57913eba3050d670768/24d9a379-c2af-4713-9f5d-55348d8d6ee7/SQSMods+-+Grid+Menu+Slide.gif"
+    },
+    "SOL-940": {
+      "sourceUrl": "https://sqplugins.com/plugins/p/mega-menu",
+      "credit": "sqplugins.com",
+      "status": "maker-hosted preview",
+      "rights": "not-cleared-for-rehosting",
+      "checkedOn": "2026-10-19",
+      "summary": "Turn Squarespace page content into a customizable mega menu.",
+      "details": "SQPlugins’ Enhanced Mega Menu allows a Squarespace page to serve as a content-rich navigation panel without custom coding.",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/6a7c2ccb3077c82a1afd9742/37a94c31-360a-47b2-a89b-2ba9022fda7b/Screenshot+2026-08-26+at+10.06.27.png"
     }
   }
 }
