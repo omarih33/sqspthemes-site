@@ -56,3 +56,46 @@ html[data-theme="dark"] #sqt-plugin-finder {--pf-bg:#15171d;--pf-text:#f1f1f3;--
 #sqt-plugin-finder .pf-viz-note{font:500 11px 'IBM Plex Mono',monospace;color:var(--pf-muted);margin:7px 0 14px}
 @media(max-width:950px){#sqt-plugin-finder .pf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){#sqt-plugin-finder{padding:22px 0 70px;max-width:100%;}#sqt-plugin-finder .pf-searchbox{padding-left:12px;gap:7px;}#sqt-plugin-finder .pf-searchbox input{font-size:14px}#sqt-plugin-finder .pf-searchbox button{padding:12px 13px;min-width:unset}#sqt-plugin-finder .pf-controls{align-items:flex-start;flex-direction:column}#sqt-plugin-finder .pf-filters,#sqt-plugin-finder .pf-filters select{width:100%;max-width:unset;flex:1}#sqt-plugin-finder .pf-grid{grid-template-columns:1fr;gap:13px}#sqt-plugin-finder .pf-palette{height:175px}#sqt-plugin-finder .pf-gap{display:block;padding:16px}#sqt-plugin-finder .pf-gap__flag{display:inline-block;margin-top:12px}#sqt-plugin-finder h1{font-size:clamp(37px,10vw,49px)}#sqt-plugin-finder .pf-try{margin-bottom:25px}}
+
+
+/* SQSPThemes directory consistency pass — both site view modes */
+#sqt-plugin-finder{--pf-bg:var(--sqt-bg,#fff);--pf-text:var(--sqt-ink,#151515);--pf-muted:var(--sqt-meta,#595959);--pf-line:var(--sqt-rule,#d0d0d0);--pf-panel:var(--sqt-bg-alt,#f8f9fa);--pf-blue:var(--sqt-link,#0645ad);max-width:var(--sqt-max,1080px);padding:20px 0 56px;font-size:14px}
+html[data-theme="dark"] #sqt-plugin-finder{--pf-bg:var(--sqt-bg,#111214);--pf-text:var(--sqt-ink,#ecebe8);--pf-muted:var(--sqt-meta,#aaa);--pf-line:var(--sqt-rule,#36373c);--pf-panel:var(--sqt-bg-alt,#18191c);--pf-blue:var(--sqt-link,#8ab4f8)}
+/* Own page search replaces the header search. Remove Squarespace's empty hero gap. */
+html:has(#sqt-plugin-finder) #sqt-header .sqt-searchbar{display:none!important}
+html:has(#sqt-plugin-finder) .page-section:has(#sqt-plugin-finder){min-height:0!important;padding-top:0!important;padding-bottom:0!important}
+html:has(#sqt-plugin-finder) .page-section:has(#sqt-plugin-finder) .content-wrapper{padding-top:0!important;padding-bottom:0!important}
+#sqt-plugin-finder .pf-topline{font-size:10px}
+#sqt-plugin-finder h1{font-size:clamp(30px,3.7vw,42px);line-height:1.13;letter-spacing:-.035em;margin:14px 0 9px;max-width:none}
+#sqt-plugin-finder .pf-sub{font-size:15px;line-height:1.55;margin:0 0 18px;max-width:820px}
+#sqt-plugin-finder .pf-searchbox{border:1px solid var(--pf-line);box-shadow:none;border-radius:0;padding:6px 6px 6px 12px;gap:10px}
+#sqt-plugin-finder .pf-searchbox input{font-size:14px;padding:10px 2px}
+#sqt-plugin-finder .pf-searchbox button{border-radius:0;padding:11px 14px}
+#sqt-plugin-finder .pf-try{margin:12px 0 21px}
+#sqt-plugin-finder .pf-try button{border-radius:0}
+#sqt-plugin-finder .pf-workspace{padding-top:13px}
+#sqt-plugin-finder .pf-controls{margin-bottom:13px}
+#sqt-plugin-finder .pf-card{border-radius:0;transition:border-color .15s ease}
+#sqt-plugin-finder .pf-card:hover{transform:none}
+#sqt-plugin-finder .pf-card__main{padding:13px 13px 11px}
+#sqt-plugin-finder .pf-card h3{font-size:17px}
+#sqt-plugin-finder .pf-grid{gap:14px}
+#sqt-plugin-finder .pf-filters select{border-radius:0}
+#sqt-plugin-finder .pf-palette{height:auto;aspect-ratio:16/9}
+#sqt-plugin-finder .pf-palette img{object-position:center top}
+#sqt-plugin-finder .pf-dialog,#sqt-plugin-finder .pf-action{border-radius:0}
+html[data-sqt-style="editorial"] #sqt-plugin-finder{max-width:1280px;padding:27px 0 72px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder h1{font-size:clamp(38px,4.8vw,58px);letter-spacing:-.048em;margin:17px 0 12px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-sub{font-size:18px;margin-bottom:23px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-searchbox{border:2px solid var(--pf-text);border-radius:8px;box-shadow:4px 4px 0 var(--pf-line);padding:7px 7px 7px 17px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-searchbox button{border-radius:5px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-try{margin:16px 0 28px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-try button{border-radius:5px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-grid{gap:19px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-card{border-radius:7px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-card__main{padding:16px 17px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-card h3{font-size:20px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-filters select,#sqt-plugin-finder .pf-action{border-radius:5px}
+html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-dialog{border-radius:9px}
+@media(max-width:760px){#sqt-plugin-finder{padding:16px 0 48px}#sqt-plugin-finder .pf-topline>span:last-child{display:none}#sqt-plugin-finder .pf-searchbox{max-width:100%}html[data-sqt-style="editorial"] #sqt-plugin-finder{padding:22px 0 54px}}
+@media(max-width:620px){#sqt-plugin-finder h1{font-size:clamp(29px,8vw,38px);margin:12px 0 9px}#sqt-plugin-finder .pf-sub{font-size:14px;margin-bottom:15px}#sqt-plugin-finder .pf-try{gap:6px}#sqt-plugin-finder .pf-modes{gap:12px}#sqt-plugin-finder .pf-searchbox button{padding:11px 10px;font-size:12px}html[data-sqt-style="editorial"] #sqt-plugin-finder h1{font-size:clamp(35px,9vw,44px)}html[data-sqt-style="editorial"] #sqt-plugin-finder .pf-sub{font-size:15px}}
