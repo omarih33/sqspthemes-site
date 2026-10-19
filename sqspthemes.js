@@ -13,6 +13,7 @@
   var html = d.documentElement;
   var C = window.SQT_CONFIG || {};
   if (/^\/find-templates\/?$/.test(location.pathname)) html.classList.add("sqt-matchmaker-page");
+  if (/^\/plugin-directory\/?$/.test(location.pathname)) html.classList.add("sqt-plugin-directory-page");
   if (/^\/best-squarespace-designers\/?$/.test(location.pathname)) html.classList.add("sqt-directory-route");
 
   var DEFAULTS = {
@@ -1455,6 +1456,48 @@
     }
   }
 
+  /* ======================= plugins directory route ======================= */
+  // Squarespace owns the blank /plugin-directory page, but the actual finder
+  // lives in this repository. No Code Block or page-specific injection needed.
+  function mountPluginDirectory() {
+    if (!/^\/plugin-directory\/?$/.test(location.pathname)) return false;
+    var page = d.getElementById("page");
+    var root = d.getElementById("sqt-plugin-finder");
+    if (!root) {
+      var shell = d.createElement("main");
+      shell.id = "sqt-plugin-directory-shell";
+      shell.setAttribute("aria-label", "Squarespace plugin and solution directory");
+      shell.innerHTML = '<div id="sqt-plugin-finder" data-catalog-url="https://sqspthemes-assets.pages.dev/plugin-solutions.json" data-media-url="https://sqspthemes-assets.pages.dev/plugin-media.json"><p role="status">Loading the Squarespace solution directory…</p></div>';
+      if (page) {
+        page.insertBefore(shell, page.firstChild);
+      } else {
+        var anchor = d.getElementById("footer-sections") || d.querySelector("footer.sections") || d.getElementById("sqt-footer");
+        if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(shell,anchor);
+        else d.body.appendChild(shell);
+      }
+      html.classList.add("sqt-plugin-directory-autoload");
+      root = shell.querySelector("#sqt-plugin-finder");
+    }
+    var skip = d.querySelector("#sqt-header .sqt-skip");
+    if (skip) { root.id = "sqt-plugin-finder"; root.setAttribute("tabindex","-1"); skip.href = "#sqt-plugin-finder"; }
+    if (!d.querySelector('link[href*="plugin-finder.css"]')) {
+      var style = d.createElement("link");
+      style.rel = "stylesheet";
+      style.href = "https://sqspthemes-assets.pages.dev/plugin-finder.css";
+      d.head.appendChild(style);
+    }
+    if (!root.dataset.initialized && !d.querySelector('script[src*="plugin-finder.js"]')) {
+      var script = d.createElement("script");
+      script.src = "https://sqspthemes-assets.pages.dev/plugin-finder.js";
+      script.defer = true;
+      script.onerror = function () {
+        root.innerHTML = '<p role="alert">The plugin finder could not load. Please refresh this page.</p>';
+      };
+      d.body.appendChild(script);
+    }
+    return true;
+  }
+
   /* ================================= run ================================= */
 
   function fallback(err) {
@@ -1478,6 +1521,7 @@
       var post = d.querySelector(".blog-item-wrapper");
       if (mountHomepage()) {}
       else if (mountDirectory()) {}
+      else if (mountPluginDirectory()) {}
       else if (list && list.querySelector("article.blog-item")) listPage(list);
       else if (post && post.querySelector(".blog-item-content")) postPage(post);
       else {
