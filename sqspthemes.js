@@ -710,6 +710,42 @@
       (resource.affiliate ? '<div class="sqt-meta-row"><span>Affiliate link</span></div>' : '');
   }
 
+
+  function aroundWebAge(iso) {
+    var days = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 86400000));
+    if (days === 0) return "today";
+    if (days < 7) return days + "d ago";
+    if (days < 35) return Math.floor(days / 7) + "w ago";
+    return Math.floor(days / 30) + "mo ago";
+  }
+
+  function loadAroundWeb(root) {
+    var target = root.querySelector("[data-home-around-web]");
+    if (!target) return;
+    fetch("https://sqspthemes-assets.pages.dev/api/around-web", { credentials: "omit" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("RSS feed unavailable");
+        return response.json();
+      })
+      .then(function (data) {
+        var posts = Array.isArray(data.posts) ? data.posts : [];
+        if (!posts.length) {
+          target.innerHTML = '<div class="sqt-home-empty">No recent posts across the blogs we follow.</div>';
+          return;
+        }
+        target.innerHTML = posts.slice(0, 9).map(function (item) {
+          if (!/^https?:\/\//i.test(item.url || "")) return "";
+          return '<article class="sqt-home-around-item">' +
+            '<a class="sqt-home-around-title" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(item.title) + '</a>' +
+            '<div class="sqt-home-around-meta">' + esc(item.blog) + ' ↗ · ' + esc(aroundWebAge(item.publishedAt)) + '</div>' +
+          '</article>';
+        }).join("");
+      })
+      .catch(function () {
+        target.innerHTML = '<div class="sqt-home-empty">Around the Web is temporarily unavailable.</div>';
+      });
+  }
+
   function mountHomepage() {
     var marker = d.getElementById("sqt-home-source");
     if (!marker) return false;
@@ -782,6 +818,10 @@
                 '<div class="sqt-home-box-head sqt-panel__head">From the Directory</div>' +
                 '<div class="sqt-home-side-body sqt-panel__body" data-home-designer><div class="sqt-home-empty">Loading a featured designer…</div></div>' +
               '</section>' +
+              '<section class="sqt-home-box sqt-panel sqt-home-around-box">' +
+                '<div class="sqt-home-box-head sqt-panel__head">Around the Web</div>' +
+                '<div class="sqt-home-around-list" data-home-around-web><div class="sqt-home-empty">Loading from the Squarespace community…</div></div>' +
+              '</section>' +
             '</aside>' +
           '</div>' +
         '</main>' +
@@ -795,6 +835,7 @@
     if (skip) skip.href = "#sqt-content";
 
     wireSubscribe(root);
+    loadAroundWeb(root);
 
     // Select once per homepage load, independently of slower directory/blog requests.
     var resource = homeRotationPick(homeFeaturedResources(), "resources", function (item) {
