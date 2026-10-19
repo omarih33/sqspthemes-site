@@ -4,7 +4,7 @@
   "native_count": 172,
   "third_party_count": 404,
   "summary": {
-    "native_screenshots": "All 172 historical imghippo URLs reported invalid by site owner; new captures required.",
+    "native_screenshots": "172/172 real demo captures verified, visually reviewed, and stored in R2; 0 unresolved.",
     "native_affiliates": "Historical squarespace.syuh.net redirect links are present for all 172; need click-to-landing and attribution verification",
     "third_party_missing_links": 3,
     "third_party_unverified_tracking": 22
@@ -170,7 +170,12 @@
       "demo_url": "https://achromatic-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/achromatic-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/FFIca1721734699.png",
-      "affiliate_url": "https://squarespace.syuh.net/5g6ov2"
+      "affiliate_url": "https://squarespace.syuh.net/5g6ov2",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/achromatic/2026-10-18.webp",
+      "screenshot_sha256": "687ea31e5547c1fcfe7009171aeaa18cd02c90f274eceb7582fc6a6741025037",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-adri",
@@ -178,7 +183,12 @@
       "demo_url": "https://adri-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/adri-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Hfnv01721734628.png",
-      "affiliate_url": "https://squarespace.syuh.net/eK9YLO"
+      "affiliate_url": "https://squarespace.syuh.net/eK9YLO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/adri/2026-10-18.webp",
+      "screenshot_sha256": "b395fb819686d9b6df3cb5557331395f80966cda9b89d6abf1db6e6d81a16f64",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-agaro",
@@ -186,7 +196,12 @@
       "demo_url": "https://agaro-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/agaro-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/sicHO1721734753.png",
-      "affiliate_url": "https://squarespace.syuh.net/AW977o"
+      "affiliate_url": "https://squarespace.syuh.net/AW977o",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/agaro/2026-10-18.webp",
+      "screenshot_sha256": "2dc1ce47d77eb654c7c77314a48ff8e6eba9455a64d21cf290c8237569d8bd36",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-alameda",
@@ -194,7 +209,12 @@
       "demo_url": "https://alameda-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/alameda-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Y7l0a1721734721.png",
-      "affiliate_url": "https://squarespace.syuh.net/1r0JJ9"
+      "affiliate_url": "https://squarespace.syuh.net/1r0JJ9",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/alameda/2026-10-18.webp",
+      "screenshot_sha256": "5893822cfa4e0accb1317dd9bf67a15fc29b9238d5d2430244bd7451d82aff3a",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-alignflow",
@@ -202,7 +222,12 @@
       "demo_url": "https://alignflow-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/alignflow-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/caT3j1721734541.png",
-      "affiliate_url": "https://squarespace.syuh.net/VmE77O"
+      "affiliate_url": "https://squarespace.syuh.net/VmE77O",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/alignflow/2026-10-18.webp",
+      "screenshot_sha256": "cbeaf213c47d56d4fd9f85218123b4b370acfef47470b94d2397ddc34809199c",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-almar",
@@ -210,7 +235,12 @@
       "demo_url": "https://almar-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/almar-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/KWwTv1721734399.png",
-      "affiliate_url": "https://squarespace.syuh.net/anK3nR"
+      "affiliate_url": "https://squarespace.syuh.net/anK3nR",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/almar/2026-10-18.webp",
+      "screenshot_sha256": "29976b9a0a498b79478d16c18d3d7187e602ce1fa1756dc0c64a906af14efe25",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-altaloma",
@@ -218,7 +248,12 @@
       "demo_url": "https://altaloma-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/altaloma-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/5ZP681721734777.png",
-      "affiliate_url": "https://squarespace.syuh.net/21E4dO"
+      "affiliate_url": "https://squarespace.syuh.net/21E4dO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/altaloma/2026-10-18.webp",
+      "screenshot_sha256": "f4ad3edaa14e37519d8a12e399cc1aa7046543923c1460c6b36553ed4490eede",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-amal",
@@ -226,7 +261,12 @@
       "demo_url": "https://amal-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/amal-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Kv8pg1721734506.png",
-      "affiliate_url": "https://squarespace.syuh.net/R5Bebg"
+      "affiliate_url": "https://squarespace.syuh.net/R5Bebg",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/amal/2026-10-18.webp",
+      "screenshot_sha256": "fe57a5ed865fa6d63977ba3ed054bfdab31f47e72cdc364de1abe85c3f349cbc",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-anise",
@@ -234,7 +274,12 @@
       "demo_url": "https://anise-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/anise-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/W4kgV1721734170.png",
-      "affiliate_url": "https://squarespace.syuh.net/4Pb4EZ"
+      "affiliate_url": "https://squarespace.syuh.net/4Pb4EZ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/anise/2026-10-18.webp",
+      "screenshot_sha256": "e14ae609266ad0ea0a3af9d0cb2636ffd554c0bdc45c6509158e074d15da67d1",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-auburn",
@@ -242,7 +287,12 @@
       "demo_url": "https://auburn-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/auburn-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/9PTEb1721734235.png",
-      "affiliate_url": "https://squarespace.syuh.net/Kj1QXx"
+      "affiliate_url": "https://squarespace.syuh.net/Kj1QXx",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/auburn/2026-10-18.webp",
+      "screenshot_sha256": "7307821dec30b3b3a4da87a0858391c0109d00f50eca4b8147a21d37dfdc4e46",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-atlantic",
@@ -250,7 +300,12 @@
       "demo_url": "https://atlantic-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/atlantic-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/LgRIN1721734784.png",
-      "affiliate_url": "https://squarespace.syuh.net/MmJrBK"
+      "affiliate_url": "https://squarespace.syuh.net/MmJrBK",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/atlantic/2026-10-18.webp",
+      "screenshot_sha256": "30963268f2c8c3da23289598443108a6ed72a4b4bc6be821f39352ca164f86a6",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-bailard",
@@ -258,7 +313,12 @@
       "demo_url": "https://bailard-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/bailard-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/WILJm1721734758.png",
-      "affiliate_url": "https://squarespace.syuh.net/vnLa4L"
+      "affiliate_url": "https://squarespace.syuh.net/vnLa4L",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/bailard/2026-10-18.webp",
+      "screenshot_sha256": "a3d87a46ffc8a002ccec804a234538f94981daf020e063b2faf6e8b72528beb7",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-balboa",
@@ -266,7 +326,12 @@
       "demo_url": "https://balboa-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/balboa-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/sREct1721734899.png",
-      "affiliate_url": "https://squarespace.syuh.net/q4JPxy"
+      "affiliate_url": "https://squarespace.syuh.net/q4JPxy",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/balboa/2026-10-18.webp",
+      "screenshot_sha256": "fd1c43f0d976e264887510bfc376f93e456687bcfe8db593905d7037e6a03ef4",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-barbosa",
@@ -274,7 +339,12 @@
       "demo_url": "https://barbosa-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/barbosa-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/SOwJI1721734696.png",
-      "affiliate_url": "https://squarespace.syuh.net/xkW155"
+      "affiliate_url": "https://squarespace.syuh.net/xkW155",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/barbosa/2026-10-18.webp",
+      "screenshot_sha256": "8d5f089ba2a9faa9222591de2ffd1333686c257fca9d4baf157c237751886712",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-beaumont",
@@ -282,7 +352,12 @@
       "demo_url": "https://beaumont-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/beaumont-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/j5sMt1721734665.png",
-      "affiliate_url": "https://squarespace.syuh.net/Yg5aqr"
+      "affiliate_url": "https://squarespace.syuh.net/Yg5aqr",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/beaumont/2026-10-18.webp",
+      "screenshot_sha256": "eaedd1073e33f42a44ca33f4dd306fba58209f33ef8748b5c986097b44b2fc23",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-belisa",
@@ -290,7 +365,12 @@
       "demo_url": "https://belisa-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/belisa-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/tHCHy1721734477.png",
-      "affiliate_url": "https://squarespace.syuh.net/9gRKzy"
+      "affiliate_url": "https://squarespace.syuh.net/9gRKzy",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/belisa/2026-10-18.webp",
+      "screenshot_sha256": "50345b76fb407469978962715dc89f5a6f0272705e2ea7304c0c3314251a0292",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-bergen",
@@ -298,7 +378,12 @@
       "demo_url": "https://bergen-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/bergen-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/r1mFe1721734142.png",
-      "affiliate_url": "https://squarespace.syuh.net/zNjyX7"
+      "affiliate_url": "https://squarespace.syuh.net/zNjyX7",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/bergen/2026-10-18.webp",
+      "screenshot_sha256": "ad5dc4df02c924a45ecde7bb85fcaaf0a8b3cb47dbfe3d238a23e04829932542",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-bleecker",
@@ -306,7 +391,12 @@
       "demo_url": "https://bleecker-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/bleecker-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/8Hv3z1721734584.png",
-      "affiliate_url": "https://squarespace.syuh.net/jrkqy5"
+      "affiliate_url": "https://squarespace.syuh.net/jrkqy5",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/bleecker/2026-10-18.webp",
+      "screenshot_sha256": "29bd8aa5c038c42c5b0c10a994a5089157569fea1549431ac108a37df5aa9706",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-bloom",
@@ -314,7 +404,12 @@
       "demo_url": "https://bloom-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/bloom-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/dqd5j1721734241.png",
-      "affiliate_url": "https://squarespace.syuh.net/PyX5VY"
+      "affiliate_url": "https://squarespace.syuh.net/PyX5VY",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/bloom/2026-10-18.webp",
+      "screenshot_sha256": "522a8a504787c294423968790d24ce4aea41e046a28e1ca6511a421088ee91c8",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-bogart",
@@ -322,7 +417,12 @@
       "demo_url": "https://bogart-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/bogart-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/phPau1721734336.png",
-      "affiliate_url": "https://squarespace.syuh.net/5g64ZL"
+      "affiliate_url": "https://squarespace.syuh.net/5g64ZL",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/bogart/2026-10-18.webp",
+      "screenshot_sha256": "512e6e6685fe308d15b573960f1f7128fa849adf44120e75332bd3aa0be21254",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-brower",
@@ -330,7 +430,12 @@
       "demo_url": "https://brower-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/brower-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/AEayU1721734795.png",
-      "affiliate_url": "https://squarespace.syuh.net/9gRKz3"
+      "affiliate_url": "https://squarespace.syuh.net/9gRKz3",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/brower/2026-10-18.webp",
+      "screenshot_sha256": "88693374f696dd0c05050482341f0ae236d8d94d529466d8a2386600227649ea",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-byron",
@@ -338,7 +443,12 @@
       "demo_url": "https://byron-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/byron-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/t9eJa1721734375.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQZ5D3"
+      "affiliate_url": "https://squarespace.syuh.net/rQZ5D3",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/byron/2026-10-18.webp",
+      "screenshot_sha256": "cf1da70d402d79ef434eaf0dc5f4483538f8c15b524311291d1cef2536a77d37",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-cailles",
@@ -346,7 +456,12 @@
       "demo_url": "https://cailles-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/cailles-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/MhCav1721734306.png",
-      "affiliate_url": "https://squarespace.syuh.net/4Pa6XZ"
+      "affiliate_url": "https://squarespace.syuh.net/4Pa6XZ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/cailles/2026-10-18.webp",
+      "screenshot_sha256": "6ad712a9b35f8fc2d1c41fa584a63b0be86dd89f609103b50fb508dbbccc080c",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-camdez",
@@ -354,7 +469,12 @@
       "demo_url": "https://camdez-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/camdez-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/NoXE51721734182.png",
-      "affiliate_url": "https://squarespace.syuh.net/jrkqy0"
+      "affiliate_url": "https://squarespace.syuh.net/jrkqy0",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/camdez/2026-10-18.webp",
+      "screenshot_sha256": "3a296cb078d9f74de84fee1a792cecbb94b6405e56b71b2e2c7d3faf7f234447",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-cami",
@@ -362,7 +482,12 @@
       "demo_url": "https://cami-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/cami-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Ky7Er1721734829.png",
-      "affiliate_url": "https://squarespace.syuh.net/5g64ZN"
+      "affiliate_url": "https://squarespace.syuh.net/5g64ZN",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/cami/2026-10-18.webp",
+      "screenshot_sha256": "c3353eacb532646a86aef1d818e9a8d94d8914e0a08c6e43ae489333d7342c20",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-carmine",
@@ -370,7 +495,12 @@
       "demo_url": "https://carmine-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/carmine-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/fBhVF1721734343.png",
-      "affiliate_url": "https://squarespace.syuh.net/eK9mEz"
+      "affiliate_url": "https://squarespace.syuh.net/eK9mEz",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/carmine/2026-10-18.webp",
+      "screenshot_sha256": "c2172f89f0b5a1b12086473cdc6ac037bb67fb27d980cff3c66f77929820044d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-carroll",
@@ -378,7 +508,12 @@
       "demo_url": "https://carroll-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/carroll-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/AwwoC1721734825.png",
-      "affiliate_url": "https://squarespace.syuh.net/AW9437"
+      "affiliate_url": "https://squarespace.syuh.net/AW9437",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/carroll/2026-10-18.webp",
+      "screenshot_sha256": "fda89ac59dabc3e03f915f2c0f5284211197eaf955b0b72723105dbdb3a9b6b2",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-cedar",
@@ -386,7 +521,12 @@
       "demo_url": "https://cedar-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/cedar-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/i6tDj1721734223.png",
-      "affiliate_url": "https://squarespace.syuh.net/GmeLVL"
+      "affiliate_url": "https://squarespace.syuh.net/GmeLVL",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/cedar/2026-10-18.webp",
+      "screenshot_sha256": "584a6ad7a3466907a88f5038064315c26e88cbf616e9b4d3a4ceb8629a1e4766",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-chotto",
@@ -394,7 +534,12 @@
       "demo_url": "https://chotto-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/chotto-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/iTLyg1721734686.png",
-      "affiliate_url": "https://squarespace.syuh.net/VmE1YE"
+      "affiliate_url": "https://squarespace.syuh.net/VmE1YE",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/chotto/2026-10-18.webp",
+      "screenshot_sha256": "ef2b669fc5e4c7b0e636bf4aa49131399855fcffa0d274bb39335bba278a86a2",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-cimen",
@@ -402,7 +547,12 @@
       "demo_url": "https://cimen-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/cimen-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/252xQ1721734356.png",
-      "affiliate_url": "https://squarespace.syuh.net/g1j369"
+      "affiliate_url": "https://squarespace.syuh.net/g1j369",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/cimen/2026-10-18.webp",
+      "screenshot_sha256": "e8f4484684ab3f431f3be64fd072d17e235e4dcaf0608490b7bff18086addbb4",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-clarkson",
@@ -410,7 +560,12 @@
       "demo_url": "https://clarkson-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/clarkson-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/AUlHq1721734868.png",
-      "affiliate_url": "https://squarespace.syuh.net/q4gA0O"
+      "affiliate_url": "https://squarespace.syuh.net/q4gA0O",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/clarkson/2026-10-18.webp",
+      "screenshot_sha256": "7014ec610c994f69fb422dec8796d33df3b1d2428732a4d9c27be4652f331a81",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-clove",
@@ -418,7 +573,12 @@
       "demo_url": "https://clove-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/clove-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/DIEzZ1721734368.png",
-      "affiliate_url": "https://squarespace.syuh.net/5gjOb2"
+      "affiliate_url": "https://squarespace.syuh.net/5gjOb2",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/clove/2026-10-18.webp",
+      "screenshot_sha256": "665f32c94cf7b1ec919b869676d849aef1dd909746544a006ae455f79204a584",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-clune",
@@ -426,7 +586,12 @@
       "demo_url": "https://clune-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/clune-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Ba2mK1721734649.png",
-      "affiliate_url": "https://squarespace.syuh.net/oq1rLm"
+      "affiliate_url": "https://squarespace.syuh.net/oq1rLm",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/clune/2026-10-18.webp",
+      "screenshot_sha256": "f50ea2fdb1d955a5f3de2eeb89be7a66429eae621b35d6288423fd2daadbac3f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-cole",
@@ -434,7 +599,12 @@
       "demo_url": "https://cole-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/cole-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/zYSdn1721734878.png",
-      "affiliate_url": "https://squarespace.syuh.net/B0r4yq"
+      "affiliate_url": "https://squarespace.syuh.net/B0r4yq",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/cole/2026-10-18.webp",
+      "screenshot_sha256": "32344d9fd9efea786b7105a6e8ae4ba9198928c2a79e472a0b8da58206a56fdd",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-colima",
@@ -442,7 +612,12 @@
       "demo_url": "https://colima-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/colima-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/6K9OI1721734246.png",
-      "affiliate_url": "https://squarespace.syuh.net/zNEJb6"
+      "affiliate_url": "https://squarespace.syuh.net/zNEJb6",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/colima/2026-10-18.webp",
+      "screenshot_sha256": "4c728dd28b267f5c7daac0ff2dba71d1bd4fb19d94c8330d23c0341dd8efcc5e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-colton",
@@ -450,7 +625,12 @@
       "demo_url": "https://colton-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/colton-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Fhtge1721734325.png",
-      "affiliate_url": "https://squarespace.syuh.net/WqnVRX"
+      "affiliate_url": "https://squarespace.syuh.net/WqnVRX",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/colton/2026-10-18.webp",
+      "screenshot_sha256": "e411d9dd1731745e37a76fb78ba9fbf592c9e7e00a653ae067ef54e1e701f0cb",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-comet",
@@ -458,7 +638,12 @@
       "demo_url": "https://comet-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/comet-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/DMDXV1721734893.png",
-      "affiliate_url": "https://squarespace.syuh.net/9geA9Q"
+      "affiliate_url": "https://squarespace.syuh.net/9geA9Q",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/comet/2026-10-18.webp",
+      "screenshot_sha256": "2a903e9bb5fac42e08f192e31f826af6f1d4783118cc7351d314ef2801929ad4",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-condesa",
@@ -466,7 +651,12 @@
       "demo_url": "https://condesa-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/condesa-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/a8nY21721734835.png",
-      "affiliate_url": "https://squarespace.syuh.net/0ZW4AJ"
+      "affiliate_url": "https://squarespace.syuh.net/0ZW4AJ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/condesa/2026-10-18.webp",
+      "screenshot_sha256": "7a57cfeaa043f89c28105d0049467de6abad8b90fc350f43dde5f68496280f22",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-corrigan",
@@ -474,7 +664,12 @@
       "demo_url": "https://corrigan-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/corrigan-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/AhceB1721734449.png",
-      "affiliate_url": "https://squarespace.syuh.net/EKm4JK"
+      "affiliate_url": "https://squarespace.syuh.net/EKm4JK",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/corrigan/2026-10-18.webp",
+      "screenshot_sha256": "fb8cab5bbb4c617cdac7f8c77152c995bfefb20cb87d47fec74fd1a76ded20bc",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-crosby",
@@ -482,7 +677,12 @@
       "demo_url": "https://crosby-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/crosby-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/ugROL1721734274.png",
-      "affiliate_url": "https://squarespace.syuh.net/rnvP2D"
+      "affiliate_url": "https://squarespace.syuh.net/rnvP2D",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/crosby/2026-10-18.webp",
+      "screenshot_sha256": "873aeb7459f14583822e9f93a8bb4f3a8035117d6f87e9fd9c97ae4d12ba0a74",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-cruz",
@@ -490,7 +690,12 @@
       "demo_url": "https://cruz-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/cruz-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/iJ3IH1721734316.png",
-      "affiliate_url": "https://squarespace.syuh.net/nLGmoX"
+      "affiliate_url": "https://squarespace.syuh.net/nLGmoX",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/cruz/2026-10-18.webp",
+      "screenshot_sha256": "b16a409bea732f8c22333a29e4f672c94d7eff71936db7c6dadc80abb9c78f3a",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-dario",
@@ -498,7 +703,12 @@
       "demo_url": "https://dario-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/dario-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/xax9o1721734189.png",
-      "affiliate_url": "https://squarespace.syuh.net/6eO4oG"
+      "affiliate_url": "https://squarespace.syuh.net/6eO4oG",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/dario/2026-10-18.webp",
+      "screenshot_sha256": "5ef705a7578d8bfc0c380e8e8796242cafce9a087a000b9008683169bdc00320",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-devoe",
@@ -506,7 +716,12 @@
       "demo_url": "https://devoe-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/devoe-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/uYrVj1721734903.png",
-      "affiliate_url": "https://squarespace.syuh.net/21E4MQ"
+      "affiliate_url": "https://squarespace.syuh.net/21E4MQ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/devoe/2026-10-18.webp",
+      "screenshot_sha256": "05a56bf271669dd08d06baec16d90f036136ea0b964cf2d22a0ba9850cb1e5f2",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-eldridge",
@@ -514,7 +729,12 @@
       "demo_url": "https://eldridge-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/eldridge-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/SBsYH1721734485.png",
-      "affiliate_url": "https://squarespace.syuh.net/R5Bemb"
+      "affiliate_url": "https://squarespace.syuh.net/R5Bemb",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/eldridge/2026-10-18.webp",
+      "screenshot_sha256": "f1abd50b5a56fee2e7d4b5a4798c4676cb8eb5a881edbb9280919245c0f3078b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-elliott",
@@ -522,7 +742,12 @@
       "demo_url": "https://elliott-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/elliott-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/rFve81721734362.png",
-      "affiliate_url": "https://squarespace.syuh.net/mgKbdX"
+      "affiliate_url": "https://squarespace.syuh.net/mgKbdX",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/elliott/2026-10-18.webp",
+      "screenshot_sha256": "3d60055dfea9768485494b5c6e3a72cac751374b451e0b1dc335d9b37fa538dc",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-emmeline",
@@ -530,7 +755,12 @@
       "demo_url": "https://emmeline-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/emmeline-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/KfAFx1721734207.png",
-      "affiliate_url": "https://squarespace.syuh.net/NkZj42"
+      "affiliate_url": "https://squarespace.syuh.net/NkZj42",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/emmeline/2026-10-18.webp",
+      "screenshot_sha256": "07dfea1f6f17f1eb38ed9d9a04fce198b366d042980bcac6657c7a57fa892d52",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-essex",
@@ -538,7 +768,12 @@
       "demo_url": "https://essex-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/essex-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/YH6nZ1721734210.png",
-      "affiliate_url": "https://squarespace.syuh.net/Y96ZBj"
+      "affiliate_url": "https://squarespace.syuh.net/Y96ZBj",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/essex/2026-10-18.webp",
+      "screenshot_sha256": "9c6f9a4d83dd2668649b1f58575e1d1d2ec11373923bac86e0d438efef76c59b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-euclid",
@@ -546,7 +781,12 @@
       "demo_url": "https://euclid-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/euclid-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/lVqNV1721734389.png",
-      "affiliate_url": "https://squarespace.syuh.net/MmJryo"
+      "affiliate_url": "https://squarespace.syuh.net/MmJryo",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/euclid/2026-10-18.webp",
+      "screenshot_sha256": "d31f42c6eb9d3b2560378c0e44062cd26de79a322bba42611786b26b3c2d11f1",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-falodu",
@@ -554,7 +794,12 @@
       "demo_url": "https://falodu-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/falodu-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/5y64c1721734683.png",
-      "affiliate_url": "https://squarespace.syuh.net/Kj1Q49"
+      "affiliate_url": "https://squarespace.syuh.net/Kj1Q49",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/falodu/2026-10-18.webp",
+      "screenshot_sha256": "dce28e692cf5c3dc73b6302fbe941525df7cc281630f4b06161a455929535652",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-fayette",
@@ -562,7 +807,12 @@
       "demo_url": "https://fayette-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/fayette-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/xqnae1721734850.png",
-      "affiliate_url": "https://squarespace.syuh.net/752YoQ"
+      "affiliate_url": "https://squarespace.syuh.net/752YoQ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/fayette/2026-10-18.webp",
+      "screenshot_sha256": "6295cd0ce942bf292c56ebe2a3b7b00ed0334a997e839b9de77b1952da136e7b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-fillmore",
@@ -570,7 +820,12 @@
       "demo_url": "https://fillmore-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/fillmore-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/OtxMw1721734176.png",
-      "affiliate_url": "https://squarespace.syuh.net/m5AQZ1"
+      "affiliate_url": "https://squarespace.syuh.net/m5AQZ1",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/fillmore/2026-10-18.webp",
+      "screenshot_sha256": "cb3248a55d0ec0b2fbf88cf62d25d074539ea216d14ffb328789f3136e0cb4af",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-fletcher",
@@ -578,7 +833,12 @@
       "demo_url": "https://fletcher-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/fletcher-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/NhGlu1721734799.png",
-      "affiliate_url": "https://squarespace.syuh.net/LXV94Y"
+      "affiliate_url": "https://squarespace.syuh.net/LXV94Y",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/fletcher/2026-10-18.webp",
+      "screenshot_sha256": "f850dd75e95aa7743d2d5b6916fe4419f5b8e0aea2bbe2e5e69ea5dc6f5e8352",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-florence",
@@ -586,7 +846,12 @@
       "demo_url": "https://florence-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/florence-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Gjz891721734371.png",
-      "affiliate_url": "https://squarespace.syuh.net/q4JPZL"
+      "affiliate_url": "https://squarespace.syuh.net/q4JPZL",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/florence/2026-10-18.webp",
+      "screenshot_sha256": "0c89808addf0f576406494b5df0f8f33bd12c736321fb5f15bc4599feda9dd34",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-forma",
@@ -594,7 +859,12 @@
       "demo_url": "https://forma-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/forma-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/NF7xg1721734298.png",
-      "affiliate_url": "https://squarespace.syuh.net/xkW1Qv"
+      "affiliate_url": "https://squarespace.syuh.net/xkW1Qv",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/forma/2026-10-18.webp",
+      "screenshot_sha256": "9111160f2d9b0904258be53c1c4ad9e362a4a4c45397d87d0b8d8d5475805277",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-galena",
@@ -602,7 +872,12 @@
       "demo_url": "https://galena-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/galena-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/tAYsz1721734725.png",
-      "affiliate_url": "https://squarespace.syuh.net/DKP4nd"
+      "affiliate_url": "https://squarespace.syuh.net/DKP4nd",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/galena/2026-10-18.webp",
+      "screenshot_sha256": "5afec134a574da0ade81dcaed14f4a1c54e88a9097bd2d65d6552ebceff472f9",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-gates",
@@ -610,7 +885,12 @@
       "demo_url": "https://gates-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/gates-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/RvJfW1721734444.png",
-      "affiliate_url": "https://squarespace.syuh.net/EKz0GQ"
+      "affiliate_url": "https://squarespace.syuh.net/EKz0GQ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/gates/2026-10-18.webp",
+      "screenshot_sha256": "44f1915fcd92716d0206d4fc97084d5fb615cdbeba2e68813ecad305dd348b39",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-gilden",
@@ -618,7 +898,12 @@
       "demo_url": "https://gilden-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/gilden-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/wrqO11721734577.png",
-      "affiliate_url": "https://squarespace.syuh.net/Qyok43"
+      "affiliate_url": "https://squarespace.syuh.net/Qyok43",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/gilden/2026-10-18.webp",
+      "screenshot_sha256": "46d4019ba08f0d04bd32ae50175dd7481f3b895a4ce0b18d40f21b1e687eb3f9",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-aue-sobol",
@@ -626,7 +911,12 @@
       "demo_url": "https://aue-sobol-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/aue-sobol-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/7DcEB1721734736.png",
-      "affiliate_url": "https://squarespace.syuh.net/m5AQEX"
+      "affiliate_url": "https://squarespace.syuh.net/m5AQEX",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/aue-sobol/2026-10-18.webp",
+      "screenshot_sha256": "927ad21deba3438a90d628b3586dcf7b55e7672c1c098e97727700763b62ff97",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-granger",
@@ -634,7 +924,12 @@
       "demo_url": "https://granger-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/granger-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/XuOgs1721734614.png",
-      "affiliate_url": "https://squarespace.syuh.net/9gRKO3"
+      "affiliate_url": "https://squarespace.syuh.net/9gRKO3",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/granger/2026-10-18.webp",
+      "screenshot_sha256": "8100130df54e479f6c449b1f305307951a4e5919e17643d273b8769b61203e2d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-grove",
@@ -642,7 +937,12 @@
       "demo_url": "https://grove-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/grove-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/jm90x1721734522.png",
-      "affiliate_url": "https://squarespace.syuh.net/b3Y74g"
+      "affiliate_url": "https://squarespace.syuh.net/b3Y74g",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/grove/2026-10-18.webp",
+      "screenshot_sha256": "b34b36bbe50a70dc7cfa3c4d8679c10fc9e9b51967f6b14f0f307bcd60c72e0d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hales",
@@ -650,7 +950,12 @@
       "demo_url": "https://hales-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hales-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/7Vxy91721734134.png",
-      "affiliate_url": "https://squarespace.syuh.net/jrkqZ0"
+      "affiliate_url": "https://squarespace.syuh.net/jrkqZ0",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hales/2026-10-18.webp",
+      "screenshot_sha256": "69dd738592f55f11819f8784fcb18767dd7b960115ca966433f0da9af38f7f45",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-harbor",
@@ -658,7 +963,12 @@
       "demo_url": "https://harbor-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/harbor-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/N7WW61721734591.png",
-      "affiliate_url": "https://squarespace.syuh.net/PyX54Q"
+      "affiliate_url": "https://squarespace.syuh.net/PyX54Q",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/harbor/2026-10-18.webp",
+      "screenshot_sha256": "eccb7868651f51f005c2b67e1750a55e1a3b032aa57b3e389cd021cd1fc41db7",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-harman",
@@ -666,7 +976,12 @@
       "demo_url": "https://harman-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/harman-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/2AHSd1721734543.png",
-      "affiliate_url": "https://squarespace.syuh.net/DVENkb"
+      "affiliate_url": "https://squarespace.syuh.net/DVENkb",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/harman/2026-10-18.webp",
+      "screenshot_sha256": "2aa47ff381a5dc2ece0f7ece21e49081930e4bbb001bbad631f10c62352dd47c",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hart",
@@ -674,7 +989,12 @@
       "demo_url": "https://hart-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hart-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/94w8Q1721734844.png",
-      "affiliate_url": "https://squarespace.syuh.net/k0exZd"
+      "affiliate_url": "https://squarespace.syuh.net/k0exZd",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hart/2026-10-18.webp",
+      "screenshot_sha256": "79dbcdde1066a14be93b734667d56885364e412034ae0261535ac01767ade0a8",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-grant",
@@ -682,7 +1002,12 @@
       "demo_url": "https://grant-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/grant-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/qKVQl1721734823.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQZ5O3"
+      "affiliate_url": "https://squarespace.syuh.net/rQZ5O3",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/grant/2026-10-18.webp",
+      "screenshot_sha256": "bef03bcb4aa33a7dc25b2afa7f29c31e25040e0ef2440374946a4960be240a4d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hemlock",
@@ -690,7 +1015,12 @@
       "demo_url": "https://hemlock-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hemlock-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/o8FdO1721734413.png",
-      "affiliate_url": "https://squarespace.syuh.net/GmeLGL"
+      "affiliate_url": "https://squarespace.syuh.net/GmeLGL",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hemlock/2026-10-18.webp",
+      "screenshot_sha256": "ecf89326370f47e9de0b21667775e502445298972e5b089706e81c99540fd12d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hester",
@@ -698,7 +1028,12 @@
       "demo_url": "https://hester-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hester-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/VS47N1721734717.png",
-      "affiliate_url": "https://squarespace.syuh.net/9W1YJE"
+      "affiliate_url": "https://squarespace.syuh.net/9W1YJE",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hester/2026-10-18.webp",
+      "screenshot_sha256": "79c0a8d2574ce4dea2cca58cb01c1ab91d4ae291d5e7d5ff3b5daf80db3e4d27",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hidano",
@@ -706,7 +1041,12 @@
       "demo_url": "https://hidano-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hidano-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Ie1601721734679.png",
-      "affiliate_url": "https://squarespace.syuh.net/VmE1BE"
+      "affiliate_url": "https://squarespace.syuh.net/VmE1BE",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hidano/2026-10-18.webp",
+      "screenshot_sha256": "f9ae0038e9e018eebac1cbfc227ffd23d2d0ad98360b8757aee5a68d330375b9",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hawley",
@@ -714,7 +1054,12 @@
       "demo_url": "https://hawley-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hawley-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/xvg4Y1721734737.png",
-      "affiliate_url": "https://squarespace.syuh.net/eK9mgz"
+      "affiliate_url": "https://squarespace.syuh.net/eK9mgz",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hawley/2026-10-18.webp",
+      "screenshot_sha256": "ecb4dba81c1694cb923c371aec5dc33bbe4eec7716df8db93efecbfc740fc2eb",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hoyd",
@@ -722,7 +1067,12 @@
       "demo_url": "https://hoyd-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hoyd-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/zzkUi1721734260.png",
-      "affiliate_url": "https://squarespace.syuh.net/XYbJOg"
+      "affiliate_url": "https://squarespace.syuh.net/XYbJOg",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hoyd/2026-10-18.webp",
+      "screenshot_sha256": "380cc186403c234627263f8031fae7f29b758ddddeacd2b0eaa11312630462ea",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-idrah",
@@ -730,7 +1080,12 @@
       "demo_url": "https://idrah-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/idrah-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/t6crq1721734912.png",
-      "affiliate_url": "https://squarespace.syuh.net/B0r4bq"
+      "affiliate_url": "https://squarespace.syuh.net/B0r4bq",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/idrah/2026-10-18.webp",
+      "screenshot_sha256": "3bf441c02b5f00c5e2c801688ebef6de41c0ba373f48f2d33b588c2bc02d17ef",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-iduma",
@@ -738,7 +1093,12 @@
       "demo_url": "https://iduma-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/iduma-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/SAo4D1721734151.png",
-      "affiliate_url": "https://squarespace.syuh.net/0ZW4yJ"
+      "affiliate_url": "https://squarespace.syuh.net/0ZW4yJ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/iduma/2026-10-18.webp",
+      "screenshot_sha256": "a892530ec2777e2428a3970d04b203e0b332d43c4b9ad0ad2451e04643e4c13b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-irving",
@@ -746,7 +1106,12 @@
       "demo_url": "https://irving-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/irving-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/maAjl1721734773.png",
-      "affiliate_url": "https://squarespace.syuh.net/EKm4OK"
+      "affiliate_url": "https://squarespace.syuh.net/EKm4OK",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/irving/2026-10-18.webp",
+      "screenshot_sha256": "0921a4673e63455ec13bb14bfd910204f68fa56658afde11e70678d0c284536f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-hill",
@@ -754,7 +1119,12 @@
       "demo_url": "https://hill-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/hill-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/ZZkzg1721734394.png",
-      "affiliate_url": "https://squarespace.syuh.net/g1j3g9"
+      "affiliate_url": "https://squarespace.syuh.net/g1j3g9",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/hill/2026-10-18.webp",
+      "screenshot_sha256": "0b417fdf55516b3dbe38cdf339717ae1c8aa6dc15a4e5ba77e84da0e74931e3d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-jenani",
@@ -762,7 +1132,12 @@
       "demo_url": "https://jenani-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/jenani-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/mvIAn1721734312.png",
-      "affiliate_url": "https://squarespace.syuh.net/21E4yQ"
+      "affiliate_url": "https://squarespace.syuh.net/21E4yQ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/jenani/2026-10-18.webp",
+      "screenshot_sha256": "335fdf9c885f31bedf2637932aded501e5b612ed31af9ecd7c33d0cfe2efa2d7",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-jotterpress",
@@ -770,7 +1145,12 @@
       "demo_url": "https://jotterpress-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/jotterpress-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/1GYyt1721734464.png",
-      "affiliate_url": "https://squarespace.syuh.net/3en4yd"
+      "affiliate_url": "https://squarespace.syuh.net/3en4yd",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/jotterpress/2026-10-18.webp",
+      "screenshot_sha256": "f79a38500dc244817ea9162d26bbcccc824fbb290b9094b871d51754630b0d40",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-juniper",
@@ -778,7 +1158,12 @@
       "demo_url": "https://juniper-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/juniper-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/xKwWh1721734457.png",
-      "affiliate_url": "https://squarespace.syuh.net/R5BeZb"
+      "affiliate_url": "https://squarespace.syuh.net/R5BeZb",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/juniper/2026-10-18.webp",
+      "screenshot_sha256": "767adef809c6ee89aae14cf20825e28faf41d7e52aaf21eea1cb341b977f3d54",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-kearny",
@@ -786,7 +1171,12 @@
       "demo_url": "https://kearny-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/kearny-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/fMMxZ1721734417.png",
-      "affiliate_url": "https://squarespace.syuh.net/daQ6kk"
+      "affiliate_url": "https://squarespace.syuh.net/daQ6kk",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/kearny/2026-10-18.webp",
+      "screenshot_sha256": "53f1181ac260fdcc4af19db4977a973995528033946a40f0dbc987311f57bea7",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-keo",
@@ -794,7 +1184,12 @@
       "demo_url": "https://keo-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/keo-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/zjxoO1721734645.png",
-      "affiliate_url": "https://squarespace.syuh.net/NkZjR2"
+      "affiliate_url": "https://squarespace.syuh.net/NkZjR2",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/keo/2026-10-18.webp",
+      "screenshot_sha256": "2f388046043c1b2eda403ad5c61d221076d37f1e843d92c16bb9404f449d8cc5",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-kester",
@@ -802,7 +1197,12 @@
       "demo_url": "https://kester-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/kester-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/e0hMb1721734561.png",
-      "affiliate_url": "https://squarespace.syuh.net/x9xGNy"
+      "affiliate_url": "https://squarespace.syuh.net/x9xGNy",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/kester/2026-10-18.webp",
+      "screenshot_sha256": "a9b1f8a29df15433702e8c8434d7d76afc773257434274757c70dc9053513e1d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-kitui",
@@ -810,7 +1210,12 @@
       "demo_url": "https://kitui-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/kitui-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Il1in1721734291.png",
-      "affiliate_url": "https://squarespace.syuh.net/DKbWqa"
+      "affiliate_url": "https://squarespace.syuh.net/DKbWqa",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/kitui/2026-10-18.webp",
+      "screenshot_sha256": "83d2d9d6fe4197c151d28a0bf8f293646583e35cc2a8e998f16b8b6448fb116f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-klipsan",
@@ -818,7 +1223,12 @@
       "demo_url": "https://klipsan-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/klipsan-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Wri5i1721734748.png",
-      "affiliate_url": "https://squarespace.syuh.net/Y96Zbj"
+      "affiliate_url": "https://squarespace.syuh.net/Y96Zbj",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/klipsan/2026-10-18.webp",
+      "screenshot_sha256": "273c1a70dc0098a388ec5eebc67214dae0b6433806f74b4c3f6e4b564b4508f4",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-kusa",
@@ -826,7 +1236,12 @@
       "demo_url": "https://kusa-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/kusa-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/iyDe81721734405.png",
-      "affiliate_url": "https://squarespace.syuh.net/Kj1QO9"
+      "affiliate_url": "https://squarespace.syuh.net/Kj1QO9",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/kusa/2026-10-18.webp",
+      "screenshot_sha256": "8c9169ec96da66fc22d34818d59cef51b5c936075d4ceb7e1965de914f14a3a2",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-lakshi",
@@ -834,7 +1249,12 @@
       "demo_url": "https://lakshi-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/lakshi-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/oddSm1721734673.png",
-      "affiliate_url": "https://squarespace.syuh.net/B05qjy"
+      "affiliate_url": "https://squarespace.syuh.net/B05qjy",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/lakshi/2026-10-18.webp",
+      "screenshot_sha256": "33600dabf70ceb2f284bd5ab06de923191f4258035b6f4a58b7726d23bd08c54",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-laurie",
@@ -842,7 +1262,12 @@
       "demo_url": "https://laurie-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/laurie-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/3Hv861721734744.png",
-      "affiliate_url": "https://squarespace.syuh.net/752YnQ"
+      "affiliate_url": "https://squarespace.syuh.net/752YnQ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/laurie/2026-10-18.webp",
+      "screenshot_sha256": "7bf4e6d0642c56f48e98fe72c52ba2cce9677c24baaf9e755d5d6891f24c754f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-lenoix",
@@ -850,7 +1275,12 @@
       "demo_url": "https://lenoix-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/lenoix-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/ZLgbI1721734263.png",
-      "affiliate_url": "https://squarespace.syuh.net/m5AQj1"
+      "affiliate_url": "https://squarespace.syuh.net/m5AQj1",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/lenoix/2026-10-18.webp",
+      "screenshot_sha256": "45d20b10a16777d5ae311b5a707c42b69842d2af8ed787bad739e41e77f2f4c9",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-lexington",
@@ -858,7 +1288,12 @@
       "demo_url": "https://lexington-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/lexington-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/TLbTM1721734875.png",
-      "affiliate_url": "https://squarespace.syuh.net/LXV9OY"
+      "affiliate_url": "https://squarespace.syuh.net/LXV9OY",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/lexington/2026-10-18.webp",
+      "screenshot_sha256": "719e79d17bcfe6bbf9f5741e7c7e5f4ccdacf4e76b4303ee71d0a9040959c793",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-loam",
@@ -866,7 +1301,12 @@
       "demo_url": "https://loam-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/loam-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/yMWAM1721734571.png",
-      "affiliate_url": "https://squarespace.syuh.net/LPvNZ0"
+      "affiliate_url": "https://squarespace.syuh.net/LPvNZ0",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/loam/2026-10-18.webp",
+      "screenshot_sha256": "a316b58bf69450f336f9ccb4dccb1a2babba1f15c56c70874a9a66afdecc1926",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-looped",
@@ -874,7 +1314,12 @@
       "demo_url": "https://looped-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/looped-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/TXi5x1721734503.png",
-      "affiliate_url": "https://squarespace.syuh.net/DKP4Od"
+      "affiliate_url": "https://squarespace.syuh.net/DKP4Od",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/looped/2026-10-18.webp",
+      "screenshot_sha256": "a52e414f78a82714b1c4d8ea3152190fffe68f63f8af3e67b9e0031b304611e7",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-lusaka",
@@ -882,7 +1327,12 @@
       "demo_url": "https://lusaka-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/lusaka-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Vgy4e1721734817.png",
-      "affiliate_url": "https://squarespace.syuh.net/7mANJ5"
+      "affiliate_url": "https://squarespace.syuh.net/7mANJ5",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/lusaka/2026-10-18.webp",
+      "screenshot_sha256": "bf72913bc8c8264d3d24d412f6f6a81ef620c7fb7b22c44f0079c818c7f7574e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-maca",
@@ -890,7 +1340,12 @@
       "demo_url": "https://maca-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/maca-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/sldL01721734409.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQZ5L3"
+      "affiliate_url": "https://squarespace.syuh.net/rQZ5L3",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/maca/2026-10-18.webp",
+      "screenshot_sha256": "52822ca6acc53595c2851621b7a3235dea79d1ebfc7a4be1e95bb4b935440f7d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-malcolm",
@@ -898,7 +1353,12 @@
       "demo_url": "https://malcolm-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/malcolm-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/0hEFu1721734906.png",
-      "affiliate_url": "https://squarespace.syuh.net/5g64yN"
+      "affiliate_url": "https://squarespace.syuh.net/5g64yN",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/malcolm/2026-10-18.webp",
+      "screenshot_sha256": "2bce1241f929be5ffe5db8ccfd76d6e15b3247cedc76af7f2277f80f48afe72b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-malone",
@@ -906,7 +1366,12 @@
       "demo_url": "https://malone-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/malone-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/ofokH1721734489.png",
-      "affiliate_url": "https://squarespace.syuh.net/k0ex9d"
+      "affiliate_url": "https://squarespace.syuh.net/k0ex9d",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/malone/2026-10-18.webp",
+      "screenshot_sha256": "aa0636579ccd3d620f43e33a6632c799356280aa9a46cf5a04ccec10ef137f6e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-manor",
@@ -914,7 +1379,12 @@
       "demo_url": "https://manor-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/manor-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/GagES1721734163.png",
-      "affiliate_url": "https://squarespace.syuh.net/eK9mez"
+      "affiliate_url": "https://squarespace.syuh.net/eK9mez",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/manor/2026-10-18.webp",
+      "screenshot_sha256": "f8ac0f1cc656e4509279d57b555977d39e0a015faee55d501c343e97b7e3c49c",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-manual",
@@ -922,7 +1392,12 @@
       "demo_url": "https://manual-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/manual-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/EPKs71721734340.png",
-      "affiliate_url": "https://squarespace.syuh.net/0ZNJ4P"
+      "affiliate_url": "https://squarespace.syuh.net/0ZNJ4P",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/manual/2026-10-18.webp",
+      "screenshot_sha256": "ba639d8c30c0faca3f3f8ab96dcd5e5bde5800902017f93fca68051726132c3e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-maqueda",
@@ -930,7 +1405,12 @@
       "demo_url": "https://maqueda-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/maqueda-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/dLQFC1721734885.png",
-      "affiliate_url": "https://squarespace.syuh.net/QyokAo"
+      "affiliate_url": "https://squarespace.syuh.net/QyokAo",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/maqueda/2026-10-18.webp",
+      "screenshot_sha256": "73bc41f90d41abc680bdff3db5fad88a5e98ab31ac15a06e11c045c837dde470",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-mariana",
@@ -938,7 +1418,12 @@
       "demo_url": "https://mariana-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/mariana-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/IZ27C1721734934.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQZ5Lv"
+      "affiliate_url": "https://squarespace.syuh.net/rQZ5Lv",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/mariana/2026-10-18.webp",
+      "screenshot_sha256": "961a412b72443d654cf41218a384a66a7713074ba2b122fc1cb42de7bd8323b1",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-maru",
@@ -946,7 +1431,12 @@
       "demo_url": "https://maru-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/maru-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/cgtiF1721734347.png",
-      "affiliate_url": "https://squarespace.syuh.net/PyX5Re"
+      "affiliate_url": "https://squarespace.syuh.net/PyX5Re",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/maru/2026-10-18.webp",
+      "screenshot_sha256": "ded59e5aca2d16cf17835d3c22a3dccc6506c52776b52d85891868cb56dbff8a",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-mason",
@@ -954,7 +1444,12 @@
       "demo_url": "https://mason-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/mason-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Ipv5M1721734526.png",
-      "affiliate_url": "https://squarespace.syuh.net/k0ex9L"
+      "affiliate_url": "https://squarespace.syuh.net/k0ex9L",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/mason/2026-10-18.webp",
+      "screenshot_sha256": "9272a34505736828001fe39cc9bec9bb0572c87191a236924726cdeb3a17371d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-matsuya",
@@ -962,7 +1457,12 @@
       "demo_url": "https://matsuya-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/matsuya-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/z5uMB1721734552.png",
-      "affiliate_url": "https://squarespace.syuh.net/eK9meO"
+      "affiliate_url": "https://squarespace.syuh.net/eK9meO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/matsuya/2026-10-18.webp",
+      "screenshot_sha256": "a7569a70d7e697f9037b5415cf524b698f612c1a7cd7a5149b0e45b1a1da10ff",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-jasonwild",
@@ -970,7 +1470,12 @@
       "demo_url": "https://jasonwild-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/jasonwild-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/7bDEF1721734766.png",
-      "affiliate_url": "https://squarespace.syuh.net/OrgPOn"
+      "affiliate_url": "https://squarespace.syuh.net/OrgPOn",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/jasonwild/2026-10-18.webp",
+      "screenshot_sha256": "e910021b5ecd31241383a5a4577ea31c445f1dd6e8fd09f18eb6e76f68f55815",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-merida",
@@ -978,7 +1483,12 @@
       "demo_url": "https://merida-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/merida-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/dMHoK1721734732.png",
-      "affiliate_url": "https://squarespace.syuh.net/Ryx9Ov"
+      "affiliate_url": "https://squarespace.syuh.net/Ryx9Ov",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/merida/2026-10-18.webp",
+      "screenshot_sha256": "d90910f76571dde43f3c6b8fe384425e61e64325d94f4720fb616dc9e61a8861",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-meriden",
@@ -986,7 +1496,12 @@
       "demo_url": "https://meriden-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/meriden-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/bKVqS1721734713.png",
-      "affiliate_url": "https://squarespace.syuh.net/eKRd4O"
+      "affiliate_url": "https://squarespace.syuh.net/eKRd4O",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/meriden/2026-10-18.webp",
+      "screenshot_sha256": "f48a85bb160f25513bf265a1618681d7a46fe7c10ef1d730114c46d25b5be5c6",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-minetta",
@@ -994,7 +1509,12 @@
       "demo_url": "https://minetta-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/minetta-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/pmjoZ1721734159.png",
-      "affiliate_url": "https://squarespace.syuh.net/AW94Ro"
+      "affiliate_url": "https://squarespace.syuh.net/AW94Ro",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/minetta/2026-10-18.webp",
+      "screenshot_sha256": "056dec8368f69b5a2b69c17161ed630794ae94f6cb776b242e6f14fecef1657b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-minoru",
@@ -1002,7 +1522,12 @@
       "demo_url": "https://minoru-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/minoru-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/1fIhL1721734618.png",
-      "affiliate_url": "https://squarespace.syuh.net/VmE12O"
+      "affiliate_url": "https://squarespace.syuh.net/VmE12O",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/minoru/2026-10-18.webp",
+      "screenshot_sha256": "283d64d4e5caadc3aed8c3e58a13e3249c18cc3abaf771f3a3e1e5b226bde9ea",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-montclaire",
@@ -1010,7 +1535,12 @@
       "demo_url": "https://montclaire-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/montclaire-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/bOHRX1721734277.png",
-      "affiliate_url": "https://squarespace.syuh.net/ZQOgYX"
+      "affiliate_url": "https://squarespace.syuh.net/ZQOgYX",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/montclaire/2026-10-18.webp",
+      "screenshot_sha256": "569423e620d35a23d9c4ade8bb6ddd71b28a4c21c6811ec4401683c6545efddf",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-morais",
@@ -1018,7 +1548,12 @@
       "demo_url": "https://morais-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/morais-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/QYvLO1721734453.png",
-      "affiliate_url": "https://squarespace.syuh.net/g1j3aA"
+      "affiliate_url": "https://squarespace.syuh.net/g1j3aA",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/morais/2026-10-18.webp",
+      "screenshot_sha256": "ee666af68eaa33a394cafdbff8e6d15bbbdf78ec56ed057696836881adcbddae",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-morena",
@@ -1026,7 +1561,12 @@
       "demo_url": "https://morena-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/morena-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/8WDJS1721734887.png",
-      "affiliate_url": "https://squarespace.syuh.net/XYbJ2X"
+      "affiliate_url": "https://squarespace.syuh.net/XYbJ2X",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/morena/2026-10-18.webp",
+      "screenshot_sha256": "977d4478082463f815c51f827586a36f46c1ccc6f184acfd6e4e89cffd540bdf",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-mycelium",
@@ -1034,7 +1574,12 @@
       "demo_url": "https://mycelium-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/mycelium-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/UFMjj1721734427.png",
-      "affiliate_url": "https://squarespace.syuh.net/yR72nD"
+      "affiliate_url": "https://squarespace.syuh.net/yR72nD",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/mycelium/2026-10-18.webp",
+      "screenshot_sha256": "f713c923925c2b4745afaac182c6a58c7d282527ce38da0be8dec95ae374a1b4",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-myhra",
@@ -1042,7 +1587,12 @@
       "demo_url": "https://myhra-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/myhra-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/YIzrU1721734599.png",
-      "affiliate_url": "https://squarespace.syuh.net/3en4mM"
+      "affiliate_url": "https://squarespace.syuh.net/3en4mM",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/myhra/2026-10-18.webp",
+      "screenshot_sha256": "92f63ab5131687d01b9c53f12bb6edf50683c392a5d9f12231bcbe02cf8b02a4",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-nevins",
@@ -1050,7 +1600,12 @@
       "demo_url": "https://nevins-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/nevins-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/fM3Er1721734359.png",
-      "affiliate_url": "https://squarespace.syuh.net/yRD1eG"
+      "affiliate_url": "https://squarespace.syuh.net/yRD1eG",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/nevins/2026-10-18.webp",
+      "screenshot_sha256": "863e104d280a074f27443aec5163b66fa97d29f403cc78012e686316ec003fdd",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-nolan",
@@ -1058,7 +1613,12 @@
       "demo_url": "https://nolan-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/nolan-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/OQ02s1721734147.png",
-      "affiliate_url": "https://squarespace.syuh.net/k0a4kV"
+      "affiliate_url": "https://squarespace.syuh.net/k0a4kV",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/nolan/2026-10-18.webp",
+      "screenshot_sha256": "ed1ac65e822997b5d60caadf8b27e09a42220d17d4938260ba824eaaee06e9d0",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-noll",
@@ -1066,7 +1626,12 @@
       "demo_url": "https://noll-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/noll-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/aKHSu1721734322.png",
-      "affiliate_url": "https://squarespace.syuh.net/vNBAEv"
+      "affiliate_url": "https://squarespace.syuh.net/vNBAEv",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/noll/2026-10-18.webp",
+      "screenshot_sha256": "1b3cc08ce9f46509b305b5c1be330beb9bbd3804da2f9d6fff8241942578c314",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-novo",
@@ -1074,7 +1639,12 @@
       "demo_url": "https://novo-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/novo-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/bwERA1721734468.png",
-      "affiliate_url": "https://squarespace.syuh.net/QyNYG6"
+      "affiliate_url": "https://squarespace.syuh.net/QyNYG6",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/novo/2026-10-18.webp",
+      "screenshot_sha256": "83b2db56d979cf4e6ed48e1353e0fe717ca23bb36de7819d85ee1f16a7e7d838",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-ocotillo",
@@ -1082,7 +1652,12 @@
       "demo_url": "https://ocotillo-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/ocotillo-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Z3PGN1721734703.png",
-      "affiliate_url": "https://squarespace.syuh.net/752Y1g"
+      "affiliate_url": "https://squarespace.syuh.net/752Y1g",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/ocotillo/2026-10-18.webp",
+      "screenshot_sha256": "5f6bc01806eb1bb4c11c317da9ef845ed2183a88b0441bee87d6718c983dc54b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-oranssi",
@@ -1090,7 +1665,12 @@
       "demo_url": "https://oranssi-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/oranssi-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/jTez21721734623.png",
-      "affiliate_url": "https://squarespace.syuh.net/jrkqJP"
+      "affiliate_url": "https://squarespace.syuh.net/jrkqJP",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/oranssi/2026-10-18.webp",
+      "screenshot_sha256": "29d85e7cfcdc65b0c67eb4a32eb02968aeccc8f62ccd07a17bbce1ee7fe921ce",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-ortiz",
@@ -1098,7 +1678,12 @@
       "demo_url": "https://ortiz-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/ortiz-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/wn2rg1721734531.png",
-      "affiliate_url": "https://squarespace.syuh.net/WqeNbZ"
+      "affiliate_url": "https://squarespace.syuh.net/WqeNbZ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/ortiz/2026-10-18.webp",
+      "screenshot_sha256": "c4fc1a84e878aa4295b510bb29f90f1b143aa4ea9a77a8f47c628a030eee2c1f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-otroquest",
@@ -1106,7 +1691,12 @@
       "demo_url": "https://otroquest-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/otroquest-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/HlB1s1721734193.png",
-      "affiliate_url": "https://squarespace.syuh.net/PyX5me"
+      "affiliate_url": "https://squarespace.syuh.net/PyX5me",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/otroquest/2026-10-18.webp",
+      "screenshot_sha256": "8ff5f51de6d1c09a9e7e214e35f782ee2983980f2914df7060e2c11eefc8bfe6",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-otto",
@@ -1114,7 +1704,12 @@
       "demo_url": "https://otto-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/otto-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/JtJq81721734564.png",
-      "affiliate_url": "https://squarespace.syuh.net/eK9mkO"
+      "affiliate_url": "https://squarespace.syuh.net/eK9mkO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/otto/2026-10-18.webp",
+      "screenshot_sha256": "b6e2a3cf08f2c56be2b66f1d55c540bf2b77c760b136919d55fbbc3285955902",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-palermo",
@@ -1122,7 +1717,12 @@
       "demo_url": "https://palermo-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/palermo-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/g9f791721734196.png",
-      "affiliate_url": "https://squarespace.syuh.net/MmKarK"
+      "affiliate_url": "https://squarespace.syuh.net/MmKarK",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/palermo/2026-10-18.webp",
+      "screenshot_sha256": "c8e162c0551a87dcda3d646a12da76016e058897fb09264960f86504868eddd2",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-palmer",
@@ -1130,7 +1730,12 @@
       "demo_url": "https://palmer-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/palmer-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/DeXay1721734333.png",
-      "affiliate_url": "https://squarespace.syuh.net/anqEPR"
+      "affiliate_url": "https://squarespace.syuh.net/anqEPR",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/palmer/2026-10-18.webp",
+      "screenshot_sha256": "98833eb54caee7c17a0c878f11d51b2a773baab14613d909b2e81fb742282d6d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-palmera",
@@ -1138,7 +1743,12 @@
       "demo_url": "https://palmera-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/palmera-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/LrOMy1721734438.png",
-      "affiliate_url": "https://squarespace.syuh.net/0JVYEO"
+      "affiliate_url": "https://squarespace.syuh.net/0JVYEO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/palmera/2026-10-18.webp",
+      "screenshot_sha256": "b7a21b96e07f0c583727076da50b04aca3d7abd25c0112ce3a1d16c5531e1f7d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-paloma",
@@ -1146,7 +1756,12 @@
       "demo_url": "https://paloma-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/paloma-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Iic611721734923.png",
-      "affiliate_url": "https://squarespace.syuh.net/Kj1QyN"
+      "affiliate_url": "https://squarespace.syuh.net/Kj1QyN",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/paloma/2026-10-18.webp",
+      "screenshot_sha256": "3a023e5def5236b2ff9c847535a7b4aca9d51e0c2f2d272cbc868538fe9218af",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-passero",
@@ -1154,7 +1769,12 @@
       "demo_url": "https://passero-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/passero-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/yeqJr1721734808.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQzE0y"
+      "affiliate_url": "https://squarespace.syuh.net/rQzE0y",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/passero/2026-10-18.webp",
+      "screenshot_sha256": "ffcbf267cc8371aa88349cc07bccb3683859ad8717ef7b12185a628773be6b32",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-pazari",
@@ -1162,7 +1782,12 @@
       "demo_url": "https://pazari-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/pazari-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/D7tzJ1721734839.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQZ5Jv"
+      "affiliate_url": "https://squarespace.syuh.net/rQZ5Jv",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/pazari/2026-10-18.webp",
+      "screenshot_sha256": "1821c34de49c6c38634de19c5ff10c8a02099f14e22a542dbdc1216b8ecf45fb",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-pine",
@@ -1170,7 +1795,12 @@
       "demo_url": "https://pine-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/pine-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/azqFW1721734690.png",
-      "affiliate_url": "https://squarespace.syuh.net/OrgPzW"
+      "affiliate_url": "https://squarespace.syuh.net/OrgPzW",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/pine/2026-10-18.webp",
+      "screenshot_sha256": "4a49153caaedaeba215b69743e854d97e9ba99081a9364ded4a70f5eca0825bc",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-pulaski",
@@ -1178,7 +1808,12 @@
       "demo_url": "https://pulaski-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/pulaski-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/vK6LV1721734447.png",
-      "affiliate_url": "https://squarespace.syuh.net/BX7KmB"
+      "affiliate_url": "https://squarespace.syuh.net/BX7KmB",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/pulaski/2026-10-18.webp",
+      "screenshot_sha256": "94db353b5eb3900f7be088011677c558d84f72124a51d01efb608095605641ec",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-quincy",
@@ -1186,7 +1821,12 @@
       "demo_url": "https://quincy-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/quincy-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/bZsmY1721734535.png",
-      "affiliate_url": "https://squarespace.syuh.net/3en4YM"
+      "affiliate_url": "https://squarespace.syuh.net/3en4YM",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/quincy/2026-10-18.webp",
+      "screenshot_sha256": "5e35178ffc0bf5b90c69ff476d978be3b540e5d74e17ee113a582f3ee840f345",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-quinn",
@@ -1194,7 +1834,12 @@
       "demo_url": "https://quinn-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/quinn-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/ht8Gg1721734882.png",
-      "affiliate_url": "https://squarespace.syuh.net/R5BeKN"
+      "affiliate_url": "https://squarespace.syuh.net/R5BeKN",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/quinn/2026-10-18.webp",
+      "screenshot_sha256": "2fd1ed5e9221cf58c74e8306772f74a80fb79fcc77f0d45bee983b14f127dbab",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-radian",
@@ -1202,7 +1847,12 @@
       "demo_url": "https://radian-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/radian-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/8AHTr1721734481.png",
-      "affiliate_url": "https://squarespace.syuh.net/vNBAWv"
+      "affiliate_url": "https://squarespace.syuh.net/vNBAWv",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/radian/2026-10-18.webp",
+      "screenshot_sha256": "b32ab9c76218731a827eaf76aa47295735f38c30e8a12f116c307b6e2fd174d7",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-randi",
@@ -1210,7 +1860,12 @@
       "demo_url": "https://randi-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/randi-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/H7Osu1721734491.png",
-      "affiliate_url": "https://squarespace.syuh.net/daQ6ej"
+      "affiliate_url": "https://squarespace.syuh.net/daQ6ej",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/randi/2026-10-18.webp",
+      "screenshot_sha256": "2ff813f7e4f4a169b374f0c63fd8f164ee048bdd39b1272ee7bb4bfa0b799cd8",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-mccurry",
@@ -1218,7 +1873,12 @@
       "demo_url": "https://mccurry-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/mccurry-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/qXV9r1721734283.png",
-      "affiliate_url": "https://squarespace.syuh.net/anqErR"
+      "affiliate_url": "https://squarespace.syuh.net/anqErR",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/mccurry/2026-10-18.webp",
+      "screenshot_sha256": "dc4614ff3dbe55907c5f69e3ad52e26de44ef72ad7faa01ad753950fbf137d08",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-rey",
@@ -1226,7 +1886,12 @@
       "demo_url": "https://rey-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/rey-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/jjf831721734213.png",
-      "affiliate_url": "https://squarespace.syuh.net/NkZjXV"
+      "affiliate_url": "https://squarespace.syuh.net/NkZjXV",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/rey/2026-10-18.webp",
+      "screenshot_sha256": "ece0feed129391334de1d6c72699f93b32f58de6690683465e95729e1c57fb6d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-rivoli",
@@ -1234,7 +1899,12 @@
       "demo_url": "https://rivoli-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/rivoli-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/hAYcs1721734548.png",
-      "affiliate_url": "https://squarespace.syuh.net/MmJrgq"
+      "affiliate_url": "https://squarespace.syuh.net/MmJrgq",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/rivoli/2026-10-18.webp",
+      "screenshot_sha256": "9f5b767c7c13471e4c0c235d4576a59ed945ee176eb46a30fb515c739abb22b9",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-reseda",
@@ -1242,7 +1912,12 @@
       "demo_url": "https://reseda-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/reseda-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/tBWhq1721734518.png",
-      "affiliate_url": "https://squarespace.syuh.net/baBV6b"
+      "affiliate_url": "https://squarespace.syuh.net/baBV6b",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/reseda/2026-10-18.webp",
+      "screenshot_sha256": "00893499871013abcbe5025b869a52fd3544d7b08e8e924374604dc786c9d3c2",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-rotate",
@@ -1250,7 +1925,12 @@
       "demo_url": "https://rotate-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/rotate-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/11KpS1721734789.png",
-      "affiliate_url": "https://squarespace.syuh.net/m5AQoM"
+      "affiliate_url": "https://squarespace.syuh.net/m5AQoM",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/rotate/2026-10-18.webp",
+      "screenshot_sha256": "cfa8eef5208be08c585ab338efcd95b37b7318a35b8ff34a4df7b56885b70279",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-roseti",
@@ -1258,7 +1938,12 @@
       "demo_url": "https://roseti-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/roseti-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/M41kv1721734129.png",
-      "affiliate_url": "https://squarespace.syuh.net/rQgG0G"
+      "affiliate_url": "https://squarespace.syuh.net/rQgG0G",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/roseti/2026-10-18.webp",
+      "screenshot_sha256": "a86d94d3971b775fda9b5238cefbadfb93efd970017a5208bd5bd2ae3bbf0432",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-sackett",
@@ -1266,7 +1951,12 @@
       "demo_url": "https://sackett-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/sackett-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/8vm1p1721734610.png",
-      "affiliate_url": "https://squarespace.syuh.net/LXV9RM"
+      "affiliate_url": "https://squarespace.syuh.net/LXV9RM",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/sackett/2026-10-18.webp",
+      "screenshot_sha256": "9cdaf540eb312d9cb6904d4b3a01d5efab6836cf502e607e622f17f02353427a",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-sawyer",
@@ -1274,7 +1964,12 @@
       "demo_url": "https://sawyer-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/sawyer-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/yQZ7J1721734511.png",
-      "affiliate_url": "https://squarespace.syuh.net/GmeLEm"
+      "affiliate_url": "https://squarespace.syuh.net/GmeLEm",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/sawyer/2026-10-18.webp",
+      "screenshot_sha256": "71a8c0ad4eab2a32a4588e4c86d89c84c6e08a19109341dcec0121d544c0cb6d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-saltless",
@@ -1282,7 +1977,12 @@
       "demo_url": "https://saltless-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/saltless-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/o40Gh1721734219.png",
-      "affiliate_url": "https://squarespace.syuh.net/AW94Bo"
+      "affiliate_url": "https://squarespace.syuh.net/AW94Bo",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/saltless/2026-10-18.webp",
+      "screenshot_sha256": "a21fa7ef9b06db481aabf3689d00af06be157460325732f18f7eb6c47b15f390",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-seen",
@@ -1290,7 +1990,12 @@
       "demo_url": "https://seen-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/seen-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/hRz7n1721734658.png",
-      "affiliate_url": "https://squarespace.syuh.net/VmE1gO"
+      "affiliate_url": "https://squarespace.syuh.net/VmE1gO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/seen/2026-10-18.webp",
+      "screenshot_sha256": "fd5fe4f982d441ad47f0241a2068b7f568d8b6c92d78df8081a8f05c31079c66",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-sellwood",
@@ -1298,7 +2003,12 @@
       "demo_url": "https://sellwood-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/sellwood-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/OZUuu1721734652.png",
-      "affiliate_url": "https://squarespace.syuh.net/XYbJWX"
+      "affiliate_url": "https://squarespace.syuh.net/XYbJWX",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/sellwood/2026-10-18.webp",
+      "screenshot_sha256": "23a59cbcee86f70feb3ac3e05dc77e53531a5a3adca0cb2d7d884fad9e7d6bb1",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-sidney",
@@ -1306,7 +2016,12 @@
       "demo_url": "https://sidney-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/sidney-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/qbmMM1721734166.png",
-      "affiliate_url": "https://squarespace.syuh.net/oq1rVO"
+      "affiliate_url": "https://squarespace.syuh.net/oq1rVO",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/sidney/2026-10-18.webp",
+      "screenshot_sha256": "5e71f818727113dfbff7230895cd44dc47517907541b43ba4d8f4b4d00efb617",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-singularity",
@@ -1314,7 +2029,12 @@
       "demo_url": "https://singularity-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/singularity-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/O22ua1721734812.png",
-      "affiliate_url": "https://squarespace.syuh.net/B0r4By"
+      "affiliate_url": "https://squarespace.syuh.net/B0r4By",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/singularity/2026-10-18.webp",
+      "screenshot_sha256": "488f8a9d115bae04d17738108942e7179725ebf80633533533a483c8154ebe72",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-selene",
@@ -1322,7 +2042,12 @@
       "demo_url": "https://selene-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/selene-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/EnfOk1721734635.png",
-      "affiliate_url": "https://squarespace.syuh.net/JzGDBq"
+      "affiliate_url": "https://squarespace.syuh.net/JzGDBq",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/selene/2026-10-18.webp",
+      "screenshot_sha256": "b5e6e0927dfc054fd6dea49dd93ccd2a74476dbe8e03a7955756a1d8c70ad670",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-skyloop",
@@ -1330,7 +2055,12 @@
       "demo_url": "https://skyloop-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/skyloop-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/zwXa51721734642.png",
-      "affiliate_url": "https://squarespace.syuh.net/zNEJRr"
+      "affiliate_url": "https://squarespace.syuh.net/zNEJRr",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/skyloop/2026-10-18.webp",
+      "screenshot_sha256": "72c7fd894f0544c934093b7c2f4138d499a0531e01ffe863e95b7fb9b1953f16",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-soony",
@@ -1338,7 +2068,12 @@
       "demo_url": "https://soony-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/soony-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/bPadu1721734201.png",
-      "affiliate_url": "https://squarespace.syuh.net/WqnVgA"
+      "affiliate_url": "https://squarespace.syuh.net/WqnVgA",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/soony/2026-10-18.webp",
+      "screenshot_sha256": "3b250c5fda7302e4ad4973dadaceee903f60771a3523249ae9becf932fea5f0e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-soria",
@@ -1346,7 +2081,12 @@
       "demo_url": "https://soria-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/soria-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/HVcKY1721734709.png",
-      "affiliate_url": "https://squarespace.syuh.net/0ZW42R"
+      "affiliate_url": "https://squarespace.syuh.net/0ZW42R",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/soria/2026-10-18.webp",
+      "screenshot_sha256": "885c84f814aca4cfac0c5d50d211810a0d83e35e86f2c28357e5638e46296438",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-spotted",
@@ -1354,7 +2094,12 @@
       "demo_url": "https://spotted-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/spotted-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Gw2tF1721734857.png",
-      "affiliate_url": "https://squarespace.syuh.net/QyNYGx"
+      "affiliate_url": "https://squarespace.syuh.net/QyNYGx",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/spotted/2026-10-18.webp",
+      "screenshot_sha256": "b0a2588933460840631dba505389c97fe8ace675071ade09a169169402536fd3",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-souto",
@@ -1362,7 +2107,12 @@
       "demo_url": "https://souto-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/souto-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/m6RBM1721734499.png",
-      "affiliate_url": "https://squarespace.syuh.net/nLGmgA"
+      "affiliate_url": "https://squarespace.syuh.net/nLGmgA",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/souto/2026-10-18.webp",
+      "screenshot_sha256": "551fc90537eac0fe090d892fea3a8a9978b51ba5c80ef1d1af1355ca08d8d07b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-stanton",
@@ -1370,7 +2120,12 @@
       "demo_url": "https://stanton-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/stanton-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/4v7xo1721734252.png",
-      "affiliate_url": "https://squarespace.syuh.net/1rN5Ja"
+      "affiliate_url": "https://squarespace.syuh.net/1rN5Ja",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/stanton/2026-10-18.webp",
+      "screenshot_sha256": "6522839211d37a3942d49c7e1add107171be47de2eb4e3ab6e1d749e5e42e8e9",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-suhama",
@@ -1378,7 +2133,12 @@
       "demo_url": "https://suhama-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/suhama-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/yfh1H1721734470.png",
-      "affiliate_url": "https://squarespace.syuh.net/anX17b"
+      "affiliate_url": "https://squarespace.syuh.net/anX17b",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/suhama/2026-10-18.webp",
+      "screenshot_sha256": "cb81754780c93d3e7700a5d412ed057c62cb31174d5004246d036db6c6bf27fd",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-sundew",
@@ -1386,7 +2146,12 @@
       "demo_url": "https://sundew-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/sundew-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/2o81u1721734603.png",
-      "affiliate_url": "https://squarespace.syuh.net/q4EW0N"
+      "affiliate_url": "https://squarespace.syuh.net/q4EW0N",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/sundew/2026-10-18.webp",
+      "screenshot_sha256": "f66eb7302413982009b3504622f31b88c5725bcdf3c4dceb618e6ec2c86d44f1",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-suffolk",
@@ -1394,7 +2159,12 @@
       "demo_url": "https://suffolk-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/suffolk-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/4WYQs1721734288.png",
-      "affiliate_url": "https://squarespace.syuh.net/bakRYx"
+      "affiliate_url": "https://squarespace.syuh.net/bakRYx",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/suffolk/2026-10-18.webp",
+      "screenshot_sha256": "245c23164524f37e311491b5dec6bb071179a51579ba33a4edf94c416e44929b",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-talva",
@@ -1402,7 +2172,12 @@
       "demo_url": "https://talva-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/talva-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/J1XD91721734268.png",
-      "affiliate_url": "https://squarespace.syuh.net/KeRNZe"
+      "affiliate_url": "https://squarespace.syuh.net/KeRNZe",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/talva/2026-10-18.webp",
+      "screenshot_sha256": "674ba2f24388868a63597e50eb51cac59c9b6c08f69190c6522c66e947234d72",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-tantillo",
@@ -1410,7 +2185,12 @@
       "demo_url": "https://tantillo-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/tantillo-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/2t2401721734460.png",
-      "affiliate_url": "https://squarespace.syuh.net/xkW1z1"
+      "affiliate_url": "https://squarespace.syuh.net/xkW1z1",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/tantillo/2026-10-18.webp",
+      "screenshot_sha256": "9f4243a3538c49521e54a42637f33a40c11bcea94aceea80d1b0dbb84e5c8dfd",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-toledo",
@@ -1418,7 +2198,12 @@
       "demo_url": "https://toledo-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/toledo-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Ums7D1721734819.png",
-      "affiliate_url": "https://squarespace.syuh.net/y20V43"
+      "affiliate_url": "https://squarespace.syuh.net/y20V43",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/toledo/2026-10-18.webp",
+      "screenshot_sha256": "99e7e72a0b3cef5661b7c81715a020ae7a4c62c16cda340fff03e1595c05660e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-transmission",
@@ -1426,7 +2211,12 @@
       "demo_url": "https://transmission-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/transmission-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/UrRJV1721734802.png",
-      "affiliate_url": "https://squarespace.syuh.net/NkZj2V"
+      "affiliate_url": "https://squarespace.syuh.net/NkZj2V",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/transmission/2026-10-18.webp",
+      "screenshot_sha256": "a28334cad8c463cfdc0123661d7c92dc3a203599b9ab96e2e50cac8b1776212e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-tresoire",
@@ -1434,7 +2224,12 @@
       "demo_url": "https://tresoire-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/tresoire-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/NSDLT1721734256.png",
-      "affiliate_url": "https://squarespace.syuh.net/4Pb4gn"
+      "affiliate_url": "https://squarespace.syuh.net/4Pb4gn",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/tresoire/2026-10-18.webp",
+      "screenshot_sha256": "0fd33f9b389e00d2fb6a179169eb7225d22c8864af74b5eb08bc06c7be3093e1",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-tepito",
@@ -1442,7 +2237,12 @@
       "demo_url": "https://tepito-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/tepito-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/wBkgm1721734595.png",
-      "affiliate_url": "https://squarespace.syuh.net/Nkxb5b"
+      "affiliate_url": "https://squarespace.syuh.net/Nkxb5b",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/tepito/2026-10-18.webp",
+      "screenshot_sha256": "0b9f4cb5ccfa55794b5906a9348c8951cf72c8a6c833e22879d5095e3a6c6578",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-troutman",
@@ -1450,7 +2250,12 @@
       "demo_url": "https://troutman-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/troutman-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/2EUUN1721734927.png",
-      "affiliate_url": "https://squarespace.syuh.net/21E4V7"
+      "affiliate_url": "https://squarespace.syuh.net/21E4V7",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/troutman/2026-10-18.webp",
+      "screenshot_sha256": "8e8f995bcf9eed918392f67db2a8697a43170ccece635d1c7f774b2d418162bf",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-utica",
@@ -1458,7 +2263,12 @@
       "demo_url": "https://utica-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/utica-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/uEQ9x1721734431.png",
-      "affiliate_url": "https://squarespace.syuh.net/Or9Y5r"
+      "affiliate_url": "https://squarespace.syuh.net/Or9Y5r",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/utica/2026-10-18.webp",
+      "screenshot_sha256": "a6956e59a3ca575a85763a99328762c380dad73e84770b436f08d91818c1986e",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-vandam",
@@ -1466,7 +2276,12 @@
       "demo_url": "https://vandam-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/vandam-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/hE6EV1721734138.png",
-      "affiliate_url": "https://squarespace.syuh.net/OrgPyW"
+      "affiliate_url": "https://squarespace.syuh.net/OrgPyW",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/vandam/2026-10-18.webp",
+      "screenshot_sha256": "38303e8ca46f12143902765bbd181c5cee8ffd17068d126fd7729f67ac89b7ab",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-ventura",
@@ -1474,7 +2289,12 @@
       "demo_url": "https://ventura-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/ventura-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/G7iBk1721734854.png",
-      "affiliate_url": "https://squarespace.syuh.net/6eO4Vq"
+      "affiliate_url": "https://squarespace.syuh.net/6eO4Vq",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/ventura/2026-10-18.webp",
+      "screenshot_sha256": "f0a8b14100c997d8c010caad0ca6e4f01f25c055d51c6313110e41c94cf4bc51",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-vance",
@@ -1482,7 +2302,12 @@
       "demo_url": "https://vance-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/vance-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/RjCpO1721734380.png",
-      "affiliate_url": "https://squarespace.syuh.net/jWELOZ"
+      "affiliate_url": "https://squarespace.syuh.net/jWELOZ",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/vance/2026-10-18.webp",
+      "screenshot_sha256": "4a4a2372f67851d9bcb11d97a33a873e2c2e7047679700ff5897c5f67f05c829",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-waverly",
@@ -1490,7 +2315,12 @@
       "demo_url": "https://waverly-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/waverly-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/Ii94q1721734762.png",
-      "affiliate_url": "https://squarespace.syuh.net/baxnjv"
+      "affiliate_url": "https://squarespace.syuh.net/baxnjv",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/waverly/2026-10-18.webp",
+      "screenshot_sha256": "1c743ad9a8461da10752e171c4bf49d031f62d377581ec7ab036aae0a7546182",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-wesley",
@@ -1498,7 +2328,12 @@
       "demo_url": "https://wesley-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/wesley-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/EibJT1721734662.png",
-      "affiliate_url": "https://squarespace.syuh.net/EKm4R2"
+      "affiliate_url": "https://squarespace.syuh.net/EKm4R2",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/wesley/2026-10-18.webp",
+      "screenshot_sha256": "179a391bbfb22388575c4b9345731b6dde86a3149814ca74c74e4a1a08b5f394",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-vester",
@@ -1506,7 +2341,12 @@
       "demo_url": "https://vester-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/vester-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/agxQ31721734352.png",
-      "affiliate_url": "https://squarespace.syuh.net/NKdqQ1"
+      "affiliate_url": "https://squarespace.syuh.net/NKdqQ1",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/vester/2026-10-18.webp",
+      "screenshot_sha256": "e0c03e5d4133c1b284e218139491f8a349f989f2c46fefdbbc5fa701d837fc5d",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-zaatar",
@@ -1514,7 +2354,12 @@
       "demo_url": "https://zaatar-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/zaatar-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/54cqo1721734862.png",
-      "affiliate_url": "https://squarespace.syuh.net/WqnV2A"
+      "affiliate_url": "https://squarespace.syuh.net/WqnV2A",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/zaatar/2026-10-18.webp",
+      "screenshot_sha256": "6f84dd4b195960c27aadd1d06c9eef81f3da20afd9ea7435263b21381351550f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-wycoff",
@@ -1522,7 +2367,12 @@
       "demo_url": "https://wycoff-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/wycoff-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/bVxPc1721734558.png",
-      "affiliate_url": "https://squarespace.syuh.net/0ZW4RR"
+      "affiliate_url": "https://squarespace.syuh.net/0ZW4RR",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/wycoff/2026-10-18.webp",
+      "screenshot_sha256": "1e5a609c393e0907d4b1d628e1627f62bf13cbcbdf3c817b547de8ce66ecc568",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-zorayda",
@@ -1530,7 +2380,12 @@
       "demo_url": "https://zorayda-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/zorayda-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/pMdFZ1721734179.png",
-      "affiliate_url": "https://squarespace.syuh.net/B0r4Ry"
+      "affiliate_url": "https://squarespace.syuh.net/B0r4Ry",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/zorayda/2026-10-18.webp",
+      "screenshot_sha256": "33c3dbf97c778eec0adaacb0cf8a4117f0c63830e749457560edff0930a0129f",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     },
     {
       "id": "native-zion",
@@ -1538,7 +2393,36 @@
       "demo_url": "https://zion-fluid-demo.squarespace.com/",
       "official_url": "https://www.squarespace.com/templates/zion-fluid-demo",
       "old_image_url": "https://i.imghippo.com/files/KCia91721734384.png",
-      "affiliate_url": "https://squarespace.syuh.net/zNEJnr"
+      "affiliate_url": "https://squarespace.syuh.net/zNEJnr",
+      "screenshot_status": "verified",
+      "verified_image_url": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/zion/2026-10-18.webp",
+      "screenshot_sha256": "8fef70999a0686e9e557000200b1de9ff5ba3c1d40822bae972991966ed50fc8",
+      "demo_http_status": 200,
+      "checked_on": "2026-10-18"
     }
-  ]
+  ],
+  "screenshot_recovery": {
+    "verified_on": "2026-10-18",
+    "scope": 172,
+    "verified_screenshots": 172,
+    "unresolved_ids": [],
+    "pilot_ids": [
+      "native-achromatic",
+      "native-adri",
+      "native-agaro",
+      "native-alameda",
+      "native-alignflow",
+      "native-almar",
+      "native-altaloma",
+      "native-amal",
+      "native-anise",
+      "native-auburn"
+    ],
+    "pilot_status": "passed",
+    "r2_bucket": "sqspthemes-template-screenshots",
+    "permanent_image_host": "https://sqspthemes-template-images.omari-6b8.workers.dev",
+    "total_bytes": 13767490,
+    "report_directory": "reports/template-screenshots-2026-10-18",
+    "affiliate_attribution": "unchanged; not verified by screenshot recovery"
+  }
 }

@@ -1,0 +1,24 @@
+{
+  "verified_on": "2026-10-18",
+  "scope": 172,
+  "verified_screenshots": 172,
+  "unresolved_ids": [],
+  "pilot_ids": [
+    "native-achromatic",
+    "native-adri",
+    "native-agaro",
+    "native-alameda",
+    "native-alignflow",
+    "native-almar",
+    "native-altaloma",
+    "native-amal",
+    "native-anise",
+    "native-auburn"
+  ],
+  "pilot_status": "passed",
+  "r2_bucket": "sqspthemes-template-screenshots",
+  "permanent_image_host": "https://sqspthemes-template-images.omari-6b8.workers.dev",
+  "total_bytes": 13767490,
+  "report_directory": "reports/template-screenshots-2026-10-18",
+  "affiliate_attribution": "unchanged; not verified by screenshot recovery"
+}
