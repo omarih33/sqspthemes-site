@@ -271,7 +271,7 @@
         '<label class="sqt-sr" for="sqt-q">Search SQSPThemes</label>' +
         '<div class="sqt-search-field">' +
           '<input class="sqt-input" id="sqt-q" type="search" name="q" autocomplete="off" spellcheck="false" ' +
-            'placeholder="Search articles, templates, designers, and Squarespace resources…">' +
+            'placeholder="What are you trying to do in Squarespace?">' +
           '<kbd class="sqt-kbd" id="sqt-q-hint" title="Press / to search">/</kbd>' +
         '</div>' +
         '<button class="sqt-btn" type="submit">Search</button>' +
