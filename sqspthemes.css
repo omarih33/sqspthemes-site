@@ -6978,30 +6978,6 @@ html[data-sqt-style="editorial"] #sqt-customizer .sqt-pref-choice {
   color: var(--sqt-accent);
   background: var(--sqt-bg);
 }
-#sqt-customizer .sqt-swatches {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-}
-#sqt-customizer .sqt-swatch {
-  position: relative;
-  width: 34px;
-  height: 34px;
-  min-height: 0;
-  padding: 0;
-  border-radius: 50% !important;
-  background: var(--sqt-swatch, var(--sqt-bg-alt));
-}
-#sqt-customizer .sqt-swatch::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  border: 1px solid rgba(0,0,0,.12);
-  border-radius: inherit;
-}
-#sqt-customizer .sqt-swatch.is-active {
-  box-shadow: 0 0 0 2px var(--sqt-bg), 0 0 0 4px var(--sqt-accent);
-}
 #sqt-customizer .sqt-customizer__foot {
   display: flex;
   align-items: center;
@@ -7106,16 +7082,6 @@ html[data-sqt-accent="custom"] {
   color: var(--sqt-ink);
   font: 12px var(--sqt-mono);
   text-transform: uppercase;
-}
-#sqt-customizer .sqt-swatch--custom {
-  display: inline-grid;
-  place-items: center;
-}
-#sqt-customizer .sqt-swatch--custom span {
-  position: relative;
-  z-index: 1;
-  color: var(--sqt-custom-accent-ink, #fff);
-  font: 700 17px/1 var(--sqt-text);
 }
 
 /* Text size: scale the entire SQSPThemes interface, not only article text. */
