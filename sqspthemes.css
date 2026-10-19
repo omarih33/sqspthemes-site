@@ -6522,3 +6522,11 @@ html[data-sqt-style="editorial"] #sqt-dir-sticky-filters {
   line-height: 1.45;
   color: var(--sqt-meta);
 }
+
+/* Plugin directory: repository-mounted page (no Squarespace Code Block). */
+html.sqt-plugin-directory-page #sqt-header .sqt-searchbar{display:none!important}
+html.sqt-plugin-directory-page #sqt-plugin-directory-shell{width:min(var(--sqt-max,1080px),calc(100% - 2 * var(--sqt-gutter,24px)));margin:0 auto;min-height:50vh}
+html[data-sqt-style="editorial"].sqt-plugin-directory-page #sqt-plugin-directory-shell{width:min(1280px,calc(100% - 2 * var(--sqt-gutter,24px)))}
+html.sqt-plugin-directory-autoload #page>section.page-section{display:none!important}
+html.sqt-plugin-directory-autoload #page{min-height:0!important}
+@media(max-width:640px){html.sqt-plugin-directory-page #sqt-plugin-directory-shell{width:calc(100% - 32px)}}
