@@ -6530,3 +6530,94 @@ html[data-sqt-style="editorial"].sqt-plugin-directory-page #sqt-plugin-directory
 html.sqt-plugin-directory-autoload #page>section.page-section{display:none!important}
 html.sqt-plugin-directory-autoload #page{min-height:0!important}
 @media(max-width:640px){html.sqt-plugin-directory-page #sqt-plugin-directory-shell{width:calc(100% - 32px)}}
+
+
+/* ================== shared wordmark + footer signup ================== */
+/* Keep the brand treatment consistent in both modes and themes. */
+#sqt-header a.sqt-wordmark,
+#sqt-footer a.sqt-wordmark {
+  display: inline-flex !important;
+  align-items: baseline;
+  font-family: var(--sqt-head) !important;
+  font-weight: 700 !important;
+  text-transform: lowercase !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+#sqt-header .sqt-wordmark__sqsp,
+#sqt-footer .sqt-wordmark__sqsp {
+  color: var(--sqt-link) !important;
+}
+#sqt-header .sqt-wordmark__themes,
+#sqt-footer .sqt-wordmark__themes {
+  color: var(--sqt-ink) !important;
+}
+#sqt-footer a.sqsp-footer__wordmark,
+html[data-sqt-style="editorial"].sqt-ready #sqt-footer a.sqsp-footer__wordmark {
+  margin: 0 0 11px !important;
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.03em !important;
+}
+#sqt-footer .sqsp-footer__tagline {
+  margin: 0 0 6px !important;
+  font: 600 13px/1.45 var(--sqt-text) !important;
+  color: var(--sqt-ink) !important;
+}
+#sqt-footer .sqsp-footer__note,
+html[data-sqt-style="editorial"].sqt-ready #sqt-footer .sqsp-footer__note {
+  margin: 0 !important;
+  font: 400 13px/1.5 var(--sqt-text) !important;
+  color: var(--sqt-body) !important;
+}
+#sqt-footer .sqsp-footer__signup {
+  width: 100%;
+  margin: 22px 0 0;
+}
+#sqt-footer .sqsp-footer__signup-heading {
+  margin: 0 0 8px !important;
+  font: 500 11px/1.3 var(--sqt-mono) !important;
+  color: var(--sqt-meta) !important;
+}
+#sqt-footer .sqsp-footer__signup .sqt-subscribe {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  gap: 7px !important;
+}
+#sqt-footer .sqsp-footer__signup .sqt-subscribe > label {
+  display: block;
+  width: 100%;
+  font: 500 11px/1.3 var(--sqt-text);
+  color: var(--sqt-body);
+}
+#sqt-footer .sqsp-footer__signup .sqt-subscribe-row {
+  width: 100%;
+  flex: 1 1 100%;
+  gap: 6px;
+}
+#sqt-footer .sqsp-footer__signup .sqt-input {
+  min-width: 0;
+  flex: 1 1 auto;
+  height: 38px;
+  font-size: 13px;
+  background: var(--sqt-bg);
+}
+#sqt-footer .sqsp-footer__signup .sqt-btn {
+  flex: 0 0 auto;
+  height: 38px;
+  padding: 0 10px;
+  font: 600 12px/1 var(--sqt-text);
+}
+#sqt-footer .sqsp-footer__signup .sqt-count {
+  font-size: 10px;
+}
+#sqt-footer .sqsp-footer__signup .sqt-subscribe-status {
+  font-size: 12px;
+}
+@media (max-width: 360px) {
+  #sqt-footer .sqsp-footer__signup .sqt-subscribe-row { flex-wrap: wrap; }
+  #sqt-footer .sqsp-footer__signup .sqt-input { flex-basis: 100%; }
+}
