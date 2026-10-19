@@ -31,12 +31,14 @@
     return /discovery keywords only|refine after product review|review product documentation before publishing|potential squarespace solution/i.test(String(p.problem||'')+' '+String(p.how||''));
   }
   function publicSummary(p) {
+    if (p.editorialSummary) return p.editorialSummary;
     if (PUBLIC_BLURBS[p.id]) return PUBLIC_BLURBS[p.id];
     if (hasResearchOnlyCopy(p)) return 'Explore '+p.name+' from '+p.provider+'. See the maker’s site for features and compatibility.';
     var copy=String(p.problem||p.how||p.category||'').replace(/\s*\[Discovery keywords only[^\]]*\]/gi,'').trim();
     return copy||'Explore this Squarespace solution and its available features.';
   }
   function publicExtra(p,key) {
+    if (key==='how'&&p.editorialDetails) return p.editorialDetails;
     if (hasResearchOnlyCopy(p)) return '';
     var copy=String(p[key]||'').trim();
     if (!copy||/^\d{1,3}$/.test(copy)||/discovered from provider catalog|not individually checked|verify product|pending review|internal only|review product documentation|discovery keywords|not yet confirmed/i.test(copy)) return '';
@@ -53,7 +55,7 @@
   $('.pf-searchbox').addEventListener('submit',function(e){e.preventDefault();setQ(qs.value);var u=new URL(location.href);if(state.q)u.searchParams.set('q',state.q);else u.searchParams.delete('q');history.replaceState(null,'',u.toString());});
   qs.addEventListener('input',function(){state.q=qs.value;state.limit=CONFIG.pageSize;draw()});maker.addEventListener('change',function(){state.maker=maker.value;state.limit=CONFIG.pageSize;draw()});
   dialog.addEventListener('click',function(e){if(e.target===dialog)dialog.close()});
-  function attachMedia(data,media){var items=media&&media.products||{};(data.solutions||[]).forEach(function(p){var m=items[p.id];if(!m)return;var img=m.thumbnail||'';if(/^https:\/\/images\.squarespace-cdn\.com\//.test(img)){p.screenshot=img;p.mediaSource=m.sourceUrl||p.url;p.mediaCredit=m.credit||p.provider;p.demoImage=m.demoImage||'';p.demoUrl=m.demoUrl||''}});boot(data)}
+  function attachMedia(data,media){var items=media&&media.products||{};(data.solutions||[]).forEach(function(p){var m=items[p.id];if(!m)return;var img=m.thumbnail||'';if(/^https:\/\//.test(img)&&!/\s|[<>]/.test(img)){p.screenshot=img;p.mediaSource=m.sourceUrl||p.url;p.mediaCredit=m.credit||p.provider;p.demoImage=m.demoImage||'';p.demoUrl=m.demoUrl||'';}if(m.summary)p.editorialSummary=m.summary;if(m.details)p.editorialDetails=m.details;});boot(data)}
   var mediaURL=root.dataset.mediaUrl||'https://sqspthemes-assets.pages.dev/plugin-media.json';
   var mediaFetch=fetch(mediaURL).then(function(r){return r.ok?r.json():{}}).catch(function(){return {}});
   var catalogFetch=window.SQT_PLUGIN_SOLUTIONS?Promise.resolve(window.SQT_PLUGIN_SOLUTIONS):fetch(root.dataset.catalogUrl||'https://sqspthemes-assets.pages.dev/plugin-solutions.json').then(function(r){if(!r.ok)throw Error('catalog');return r.json()});
