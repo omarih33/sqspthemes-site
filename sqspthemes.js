@@ -187,7 +187,9 @@
     vibe: "2010",
     mode: "auto",
     background: "default",
+    customBackground: "#f6f4ef",
     accent: "default",
+    customAccent: "#e24a2a",
     textSize: "default",
     density: "comfortable"
   };
@@ -234,6 +236,62 @@
     return html.getAttribute("data-sqt-style") === "editorial" ? "editorial" : "2010";
   }
 
+  function normalizeHex(value) {
+    value = String(value || "").trim();
+    if (/^#[0-9a-f]{3}$/i.test(value)) {
+      return "#" + value.slice(1).split("").map(function (c) { return c + c; }).join("").toLowerCase();
+    }
+    return /^#[0-9a-f]{6}$/i.test(value) ? value.toLowerCase() : "";
+  }
+
+  function contrastInk(hex) {
+    hex = normalizeHex(hex);
+    if (!hex) return "#111111";
+    var n = parseInt(hex.slice(1), 16);
+    var r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+    function linear(c) {
+      c /= 255;
+      return c <= .03928 ? c / 12.92 : Math.pow((c + .055) / 1.055, 2.4);
+    }
+    var lum = .2126 * linear(r) + .7152 * linear(g) + .0722 * linear(b);
+    return lum > .48 ? "#111111" : "#f7f5ef";
+  }
+
+  function applyCustomColors() {
+    var bg = normalizeHex(appearancePrefs.customBackground);
+    var accent = normalizeHex(appearancePrefs.customAccent);
+    if (appearancePrefs.background === "custom" && bg) {
+      html.style.setProperty("--sqt-custom-bg", bg);
+      html.style.setProperty("--sqt-custom-ink", contrastInk(bg));
+    } else {
+      html.style.removeProperty("--sqt-custom-bg");
+      html.style.removeProperty("--sqt-custom-ink");
+    }
+    if (appearancePrefs.accent === "custom" && accent) {
+      html.style.setProperty("--sqt-custom-accent", accent);
+      html.style.setProperty("--sqt-custom-accent-ink", contrastInk(accent));
+    } else {
+      html.style.removeProperty("--sqt-custom-accent");
+      html.style.removeProperty("--sqt-custom-accent-ink");
+    }
+  }
+
+  function setCustomColor(kind, value) {
+    var hex = normalizeHex(value);
+    if (!hex) return false;
+    if (kind === "background") {
+      appearancePrefs.customBackground = hex;
+      appearancePrefs.background = "custom";
+    } else if (kind === "accent") {
+      appearancePrefs.customAccent = hex;
+      appearancePrefs.accent = "custom";
+    } else {
+      return false;
+    }
+    applyPrefs(true);
+    return true;
+  }
+
   function syncCustomizerUI() {
     var root = d.getElementById("sqt-customizer");
     if (!root) return;
@@ -242,6 +300,12 @@
       var value = b.getAttribute("data-value");
       b.classList.toggle("is-active", appearancePrefs[key] === value);
       b.setAttribute("aria-pressed", appearancePrefs[key] === value ? "true" : "false");
+    });
+    root.querySelectorAll("[data-custom-color]").forEach(function (input) {
+      var kind = input.getAttribute("data-custom-color");
+      var value = kind === "background" ? appearancePrefs.customBackground : appearancePrefs.customAccent;
+      if (input.type === "color" && normalizeHex(value)) input.value = normalizeHex(value);
+      if (input.classList.contains("sqt-hex-input")) input.value = String(value || "").toUpperCase();
     });
     var status = root.querySelector(".sqt-save-status");
     if (status) status.textContent = "Saved automatically";
@@ -255,6 +319,7 @@
     html.setAttribute("data-sqt-accent", appearancePrefs.accent || "default");
     html.setAttribute("data-sqt-text-size", appearancePrefs.textSize || "default");
     html.setAttribute("data-sqt-density", appearancePrefs.density || "comfortable");
+    applyCustomColors();
     if (save) savePrefs();
     syncCustomizerUI();
   }
@@ -288,20 +353,20 @@
           ["dark", "Night"],
           ["auto", "Auto"]
         ], true) +
-        swatchGroup("Background", "background", [
+        colorGroup("Background", "background", [
           ["default", "Default", "linear-gradient(135deg,#fff 50%,#111 50%)"],
           ["white", "White", "#ffffff"],
           ["paper", "Paper", "#f6f4ef"],
           ["cool", "Cool", "#eaf0f4"],
           ["sage", "Sage", "#e7ede4"]
-        ]) +
-        swatchGroup("Accent", "accent", [
+        ], appearancePrefs.customBackground) +
+        colorGroup("Accent", "accent", [
           ["default", "Default", "linear-gradient(135deg,#0645ad 50%,#e24a2a 50%)"],
           ["blue", "Blue", "#1769e0"],
           ["orange", "Orange", "#e24a2a"],
           ["green", "Green", "#17734b"],
           ["purple", "Purple", "#6b4ba1"]
-        ]) +
+        ], appearancePrefs.customAccent) +
         prefGroup("Text size", "textSize", [
           ["default", "Default"],
           ["large", "Large"]
@@ -326,6 +391,21 @@
       if (e.target.closest(".sqt-customizer__close")) closeCustomizer();
       if (e.target.closest(".sqt-reset")) resetPreferences();
     });
+    panel.addEventListener("input", function (e) {
+      if (e.target.matches('input[type="color"][data-custom-color]')) {
+        setCustomColor(e.target.getAttribute("data-custom-color"), e.target.value);
+      } else if (e.target.matches(".sqt-hex-input[data-custom-color]")) {
+        var hex = normalizeHex(e.target.value);
+        if (hex) setCustomColor(e.target.getAttribute("data-custom-color"), hex);
+      }
+    });
+    panel.addEventListener("change", function (e) {
+      if (e.target.matches(".sqt-hex-input[data-custom-color]")) {
+        var kind = e.target.getAttribute("data-custom-color");
+        var current = kind === "background" ? appearancePrefs.customBackground : appearancePrefs.customAccent;
+        if (!setCustomColor(kind, e.target.value)) e.target.value = String(current || "").toUpperCase();
+      }
+    });
     syncCustomizerUI();
     return panel;
   }
@@ -341,13 +421,18 @@
     '</fieldset>';
   }
 
-  function swatchGroup(label, key, values) {
+  function colorGroup(label, key, values, customValue) {
     return '<fieldset class="sqt-pref-group">' +
       '<legend>' + esc(label) + '</legend>' +
       '<div class="sqt-swatches">' +
         values.map(function (v) {
           return '<button class="sqt-pref-choice sqt-swatch" type="button" data-pref="' + esc(key) + '" data-value="' + esc(v[0]) + '" aria-pressed="false" aria-label="' + esc(v[1]) + '" title="' + esc(v[1]) + '" style="--sqt-swatch:' + esc(v[2]) + '"></button>';
         }).join("") +
+        '<button class="sqt-pref-choice sqt-swatch sqt-swatch--custom" type="button" data-pref="' + esc(key) + '" data-value="custom" aria-pressed="false" aria-label="Custom ' + esc(label.toLowerCase()) + '" title="Custom ' + esc(label.toLowerCase()) + '" style="--sqt-swatch:' + esc(customValue || "#888888") + '"><span>+</span></button>' +
+      '</div>' +
+      '<div class="sqt-custom-color-row">' +
+        '<label class="sqt-color-wheel"><span>Pick</span><input type="color" data-custom-color="' + esc(key) + '" value="' + esc(normalizeHex(customValue) || "#888888") + '"></label>' +
+        '<label class="sqt-hex"><span>Hex</span><input class="sqt-hex-input" type="text" inputmode="text" maxlength="7" spellcheck="false" data-custom-color="' + esc(key) + '" value="' + esc(String(customValue || "").toUpperCase()) + '" placeholder="#0645AD"></label>' +
       '</div>' +
     '</fieldset>';
   }
