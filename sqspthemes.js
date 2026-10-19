@@ -17,7 +17,7 @@
   if (/^\/best-squarespace-designers\/?$/.test(location.pathname)) html.classList.add("sqt-directory-route");
 
   var DEFAULTS = {
-    wordmark: "SQSPThemes",
+    wordmark: "sqspthemes",
     tagline: "",
     headline: "What's New Across the Squarespace Ecosystem",
     subhead: "Practical solutions, useful tools, design ideas, and Squarespace news worth your attention.",
@@ -34,7 +34,7 @@
     showLogin: true,
     nav: [],                    // only used if the Squarespace nav can't be read
     footer: [],
-    footerNote: "An independent guide to everything you can accomplish with Squarespace. Not affiliated with Squarespace.",
+    footerNote: "Your guide through the Squarespace ecosystem.",
     owner: ""
   };
   Object.keys(DEFAULTS).forEach(function (k) {
@@ -353,6 +353,12 @@
       (current ? ' aria-current="page"' : "") + '>' + esc(n.label) + '</a>';
   }
 
+  // A single wordmark renderer keeps the header and footer visually identical.
+  function wordmarkMarkup(extraClass) {
+    return '<a class="sqt-wordmark' + (extraClass ? ' ' + esc(extraClass) : '') + '" href="/" aria-label="SQSPThemes">' +
+      '<span class="sqt-wordmark__sqsp">sqsp</span><span class="sqt-wordmark__themes">themes</span></a>';
+  }
+
   function header() {
     if (d.getElementById("sqt-header")) return;
     var native = d.getElementById("header");
@@ -384,7 +390,7 @@
         '<a class="sqt-skip" href="#sqt-content">Skip to content</a>' +
         '<div class="sqt-hd">' +
           '<div class="sqt-brand">' +
-            '<a class="sqt-wordmark" href="/">' + esc(C.wordmark) + '</a>' +
+            wordmarkMarkup() +
             '<span class="sqt-tagline">' + esc(C.tagline) + '</span>' +
           '</div>' +
           '<div class="sqt-hd-tools">' +
@@ -458,9 +464,13 @@
         '<div class="sqsp-footer__inner">' +
           '<div class="sqsp-footer__main">' +
             '<section class="sqsp-footer__brand">' +
-              '<p class="sqsp-footer__eyebrow">SQSPThemes</p>' +
-              '<p class="sqsp-footer__note">An independent directory of useful tools, ideas, and people.</p>' +
-              '<p class="sqsp-footer__brand-link"><a href="/newsletter">Get the newsletter →</a></p>' +
+              wordmarkMarkup("sqsp-footer__wordmark") +
+              '<p class="sqsp-footer__tagline">Your guide through the Squarespace ecosystem.</p>' +
+              '<p class="sqsp-footer__note">Tools, templates and opportunities for people building with Squarespace.</p>' +
+              '<div class="sqsp-footer__signup">' +
+                '<p class="sqsp-footer__signup-heading">Get the good stuff by email</p>' +
+                subscribeForm("Email address") +
+              '</div>' +
             '</section>' +
             '<nav class="sqsp-footer__nav" aria-label="Footer navigation">' +
               '<div class="sqsp-footer__column">' +
@@ -468,7 +478,7 @@
                   '<li><a href="/templates">Browse Templates</a></li>' +
                   '<li><a href="/find-templates">Find Templates</a></li>' +
                   '<li><a href="/best-squarespace-designers">Designer Directory</a></li>' +
-                  '<li><a href="/squarespace-integrations">Plugins &amp; Integrations</a></li>' +
+                  '<li><a href="/plugin-directory">Plugins &amp; Solutions</a></li>' +
                   '<li><a href="/squarespace-resources">Resources</a></li>' +
                 '</ul>' +
               '</div>' +
@@ -476,7 +486,7 @@
                 '<h2>SQSPThemes</h2><ul>' +
                   '<li><a href="/blog">Blog</a></li>' +
                   '<li><a href="/newsletter">Newsletter</a></li>' +
-                  '<li><a href="/about-us">Our Story</a></li>' +
+                  '<li><a href="/our-story">Our Story</a></li>' +
                   '<li><a href="/contact">Contact</a></li>' +
                   '<li><a href="/privacy-policy">Privacy</a></li>' +
                 '</ul>' +
@@ -484,13 +494,14 @@
             '</nav>' +
           '</div>' +
           '<div class="sqsp-footer__bottom">' +
-            '<p class="sqsp-footer__asset">© ' + new Date().getFullYear() + ' Vizier Media. Independent publication.</p>' +
+            '<p class="sqsp-footer__asset">© ' + new Date().getFullYear() + ' SQSPThemes. Not affiliated with or endorsed by Squarespace.</p>' +
           '</div>' +
         '</div>' +
       '</footer>'
     );
     if (native && native.parentNode) native.parentNode.insertBefore(f, native.nextSibling);
     else d.body.appendChild(f);
+    wireSubscribe(f);
   }
 
 
@@ -603,7 +614,7 @@
     var items = [
       ["Templates", "/templates", templateCount ? templateCount + " Squarespace templates to browse." : "Standout Squarespace templates for every kind of project."],
       ["Designers", "/best-squarespace-designers", "Explore directory listings from independent designers and studios."],
-      ["Plugins", "/squarespace-integrations", "Tools and integrations that extend what Squarespace can do."],
+      ["Plugins & Solutions", "/plugin-directory", "Tools and solutions that extend what Squarespace can do."],
       ["Resources", "/squarespace-resources", "Guides, tools, and freebies to help you do more with Squarespace."],
       ["Opportunities", (C.opportunity && C.opportunity.url) || "/rfps", "Bigger-budget website projects, RFPs, and opportunities."]
     ];
@@ -743,7 +754,7 @@
         }).join("");
       })
       .catch(function () {
-        target.innerHTML = '<div class="sqt-home-empty">Around the Web is temporarily unavailable.</div>';
+        target.innerHTML = '<div class="sqt-home-empty">Around the Square Web is temporarily unavailable.</div>';
       });
   }
 
@@ -806,7 +817,7 @@
                 '<div class="sqt-home-side-body sqt-panel__body"><ol class="sqt-home-start-list">' +
                   '<li><a href="/find-templates">Find a Template</a></li>' +
                   '<li><a href="/best-squarespace-designers">Hire a Squarespace Designer</a></li>' +
-                  '<li><a href="/squarespace-integrations">Explore Plugins & Integrations</a></li>' +
+                  '<li><a href="/plugin-directory">Explore Plugins &amp; Solutions</a></li>' +
                 '</ol></div>' +
               '</section>' +
 
@@ -820,7 +831,7 @@
                 '<div class="sqt-home-side-body sqt-panel__body" data-home-designer><div class="sqt-home-empty">Loading a featured designer…</div></div>' +
               '</section>' +
               '<section class="sqt-home-box sqt-panel sqt-home-around-box">' +
-                '<div class="sqt-home-box-head sqt-panel__head">Around the Web</div>' +
+                '<div class="sqt-home-box-head sqt-panel__head">Around the Square Web</div>' +
                 '<div class="sqt-home-around-list" data-home-around-web><div class="sqt-home-empty">Loading from the Squarespace community…</div></div>' +
               '</section>' +
             '</aside>' +
