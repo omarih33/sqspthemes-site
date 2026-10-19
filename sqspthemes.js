@@ -353,20 +353,8 @@
           ["dark", "Night"],
           ["auto", "Auto"]
         ], true) +
-        colorGroup("Background", "background", [
-          ["default", "Default", "linear-gradient(135deg,#fff 50%,#111 50%)"],
-          ["white", "White", "#ffffff"],
-          ["paper", "Paper", "#f6f4ef"],
-          ["cool", "Cool", "#eaf0f4"],
-          ["sage", "Sage", "#e7ede4"]
-        ], appearancePrefs.customBackground) +
-        colorGroup("Accent", "accent", [
-          ["default", "Default", "linear-gradient(135deg,#0645ad 50%,#e24a2a 50%)"],
-          ["blue", "Blue", "#1769e0"],
-          ["orange", "Orange", "#e24a2a"],
-          ["green", "Green", "#17734b"],
-          ["purple", "Purple", "#6b4ba1"]
-        ], appearancePrefs.customAccent) +
+        colorGroup("Background", "background", appearancePrefs.customBackground) +
+        colorGroup("Accent", "accent", appearancePrefs.customAccent) +
         prefGroup("Text size", "textSize", [
           ["default", "Default"],
           ["large", "Large"]
@@ -421,15 +409,9 @@
     '</fieldset>';
   }
 
-  function colorGroup(label, key, values, customValue) {
+  function colorGroup(label, key, customValue) {
     return '<fieldset class="sqt-pref-group">' +
       '<legend>' + esc(label) + '</legend>' +
-      '<div class="sqt-swatches">' +
-        values.map(function (v) {
-          return '<button class="sqt-pref-choice sqt-swatch" type="button" data-pref="' + esc(key) + '" data-value="' + esc(v[0]) + '" aria-pressed="false" aria-label="' + esc(v[1]) + '" title="' + esc(v[1]) + '" style="--sqt-swatch:' + esc(v[2]) + '"></button>';
-        }).join("") +
-        '<button class="sqt-pref-choice sqt-swatch sqt-swatch--custom" type="button" data-pref="' + esc(key) + '" data-value="custom" aria-pressed="false" aria-label="Custom ' + esc(label.toLowerCase()) + '" title="Custom ' + esc(label.toLowerCase()) + '" style="--sqt-swatch:' + esc(customValue || "#888888") + '"><span>+</span></button>' +
-      '</div>' +
       '<div class="sqt-custom-color-row">' +
         '<label class="sqt-color-wheel"><span>Pick</span><input type="color" data-custom-color="' + esc(key) + '" value="' + esc(normalizeHex(customValue) || "#888888") + '"></label>' +
         '<label class="sqt-hex"><span>Hex</span><input class="sqt-hex-input" type="text" inputmode="text" maxlength="7" spellcheck="false" data-custom-color="' + esc(key) + '" value="' + esc(String(customValue || "").toUpperCase()) + '" placeholder="#0645AD"></label>' +
