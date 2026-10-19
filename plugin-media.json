@@ -212,7 +212,11 @@
       "checkedOn": "2026-10-19",
       "summary": "Update repeated text, images, or videos across multiple Squarespace pages from a single place.",
       "details": "Beyondspace Synced Blocks keeps reused content consistent when the original content is edited. Its product page specifies a Business/Core plan or higher.",
-      "demoUrl": "https://www.beyondspace.studio/synced-blocks"
+      "demoUrl": "https://www.beyondspace.studio/synced-blocks",
+      "thumbnail": "https://images.squarespace-cdn.com/content/v1/615d0bdeb9e47e1e585827d3/c2105177-325f-4e79-9cd7-b2cc630f4717/synced+blocks+-+sync+content+button.gif",
+      "demoImage": "https://images.squarespace-cdn.com/content/v1/615d0bdeb9e47e1e585827d3/756b5eea-164b-42cb-9eba-f9f3347add10/reveal+reusables.gif",
+      "mediaSource": "https://www.beyondspace.studio/blog/using-synced-blocks-effectively/",
+      "description": "An official Beyondspace tutorial image showing the Sync Content control in Squarespace."
     },
     "SOL-011": {
       "sourceUrl": "https://monocle-search.com/",
