@@ -25,3 +25,11 @@
 /plugin-media.json
   Cache-Control: no-cache, must-revalidate
   Access-Control-Allow-Origin: *
+
+/template-matchmaker.js
+  Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/template-matchmaker.css
+  Cache-Control: no-cache, must-revalidate
+  Access-Control-Allow-Origin: *
