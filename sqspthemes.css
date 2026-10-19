@@ -6876,17 +6876,24 @@ html[data-sqt-density="compact"] .sqt-panel__body {
   padding-bottom: 12px;
 }
 
-/* One trigger replaces the two separate View/Dark controls. */
-#sqt-header .sqt-customize,
-body > .sqt-modes .sqt-customize {
+/* Keep the customizer trigger legible with every theme, vibe, and user color.
+   Background and foreground must always come from the same contrast pair. */
+html[data-theme] #sqt-header .sqt-customize,
+html[data-theme] body > .sqt-modes .sqt-customize {
   white-space: nowrap;
+  background: var(--sqt-btn);
+  border-color: var(--sqt-btn);
+  color: var(--sqt-btn-ink);
+  box-shadow: none;
+  opacity: 1;
 }
-html[data-sqt-style="editorial"] #sqt-header .sqt-customize,
-html[data-sqt-style="editorial"] body > .sqt-modes .sqt-customize {
-  background: var(--sqt-ink);
-  border-color: var(--sqt-ink);
-  color: var(--sqt-bg);
+html[data-theme] #sqt-header .sqt-customize:hover,
+html[data-theme] body > .sqt-modes .sqt-customize:hover {
+  background: var(--sqt-btn-hover);
+  border-color: var(--sqt-btn-hover);
+  color: var(--sqt-btn-ink);
 }
+
 
 /* Customizer popover / mobile sheet. It lives directly under <body> so it is
    not trapped by Squarespace stacking contexts or the sticky header blur. */
