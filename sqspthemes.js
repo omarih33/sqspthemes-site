@@ -1843,7 +1843,7 @@
         var panel = d.createElement("section");
         panel.className = "sqt-home-box sqt-panel sqt-site-activity";
         panel.hidden = true;
-        panel.innerHTML = '<div class="sqt-home-box-head sqt-panel__head">On the site</div><div class="sqt-home-side-body sqt-panel__body"><p class="sqt-presence"></p><p class="sqt-subscribers"></p></div>';
+        panel.innerHTML = '<div class="sqt-home-box-head sqt-panel__head">On the site</div><div class="sqt-home-side-body sqt-panel__body"><p class="sqt-presence"></p></div>';
         if (host) host.insertBefore(panel, host.children[1] || null);
         var sid;
         try {sid=sessionStorage.getItem("sqt-presence-id");if(!sid){sid=crypto.randomUUID();sessionStorage.setItem("sqt-presence-id",sid);}}catch(e){return;}
@@ -1858,12 +1858,6 @@
               if(!host || !Number.isInteger(data.online))return;
               panel.hidden=false;
               panel.querySelector(".sqt-presence").textContent="● "+data.online+" visitor"+(data.online===1?"":"s")+" online now";
-              var movement="";
-              if(Number.isInteger(data.change_since_previous_snapshot)){
-                var delta=data.change_since_previous_snapshot;
-                movement=" "+(delta>0?"↑ +":delta<0?"↓ ":"→ ")+(delta>0?delta:delta)+" since "+data.change_baseline;
-              }
-              panel.querySelector(".sqt-subscribers").textContent=data.subscribers.toLocaleString()+" email subscribers"+movement;
             }).catch(function(){if(panel) panel.hidden=true;});
         }
         refresh();
