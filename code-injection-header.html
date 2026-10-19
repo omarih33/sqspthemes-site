@@ -43,12 +43,36 @@ window.SQT_CONFIG = {
     x = x.replace(/\/+$/, "") || "/";
     return x === "/" ? p === "/" : (p === x || p.indexOf(x + "/") === 0);
   });
-  var t = "light";
+  var prefs = { vibe: "2010", mode: "auto", background: "default", accent: "default", textSize: "default", density: "comfortable" };
   if (themed) {
-    try { t = localStorage.getItem("sqt-theme") || ""; } catch (e) {}
-    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    try {
+      var raw = localStorage.getItem("sqt-preferences");
+      if (raw) {
+        var saved = JSON.parse(raw);
+        if (saved && typeof saved === "object") {
+          Object.keys(prefs).forEach(function (k) {
+            if (saved[k]) prefs[k] = saved[k];
+          });
+        }
+      } else {
+        var legacyTheme = localStorage.getItem("sqt-theme") || "";
+        var legacyStyle = localStorage.getItem("sqt-style") || "";
+        if (legacyTheme === "light" || legacyTheme === "dark") prefs.mode = legacyTheme;
+        if (legacyStyle === "editorial" || legacyStyle === "2010") prefs.vibe = legacyStyle;
+      }
+    } catch (e) {}
   }
-  h.setAttribute("data-theme", t);
+  var resolvedTheme = prefs.mode;
+  if (resolvedTheme !== "light" && resolvedTheme !== "dark") {
+    resolvedTheme = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  h.setAttribute("data-theme", resolvedTheme);
+  h.setAttribute("data-sqt-mode", prefs.mode);
+  h.setAttribute("data-sqt-style", prefs.vibe === "editorial" ? "editorial" : "2010");
+  h.setAttribute("data-sqt-bg", prefs.background || "default");
+  h.setAttribute("data-sqt-accent", prefs.accent || "default");
+  h.setAttribute("data-sqt-text-size", prefs.textSize || "default");
+  h.setAttribute("data-sqt-density", prefs.density || "comfortable");
   h.classList.add("sqt-on");
   setTimeout(function () {
     if (!h.classList.contains("sqt-ready")) h.classList.remove("sqt-on");
