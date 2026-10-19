@@ -6492,3 +6492,33 @@ html[data-sqt-style="editorial"] #sqt-dir-sticky-filters {
     padding-top: 16px !important;
   }
 }
+
+
+/* Curated community RSS — compact, consistent with the homepage panels */
+#sqt-home .sqt-home-around-list {
+  display: grid;
+  min-width: 0;
+}
+#sqt-home .sqt-home-around-item {
+  min-width: 0;
+  padding: 10px 12px;
+  border-bottom: 1px dotted var(--sqt-rule);
+}
+#sqt-home .sqt-home-around-item:last-child { border-bottom: 0; }
+#sqt-home .sqt-home-around-title {
+  display: block;
+  font-family: var(--sqt-head);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+#sqt-home .sqt-home-around-meta {
+  margin-top: 5px;
+  font-family: var(--sqt-mono);
+  font-size: 10px;
+  line-height: 1.45;
+  color: var(--sqt-meta);
+}
