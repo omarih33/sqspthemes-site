@@ -87,7 +87,7 @@ html.sqt-on #itemPagination {
 
 /* ============================ shared base =============================== */
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) {
   all: initial;
   display: block;
   box-sizing: border-box;
@@ -102,14 +102,14 @@ html.sqt-on #itemPagination {
   -webkit-text-size-adjust: 100%;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) *,
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) *::before,
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) *::after {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) *,
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) *::before,
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) *::after {
   box-sizing: border-box;
 }
 
 /* neutralise Squarespace's global typography inside our parts */
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) :is(h1, h2, h3, h4, p, ul, ol, li, a, button, input, label, dl, dt, dd, pre, nav, aside, section, form, summary, kbd) {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) :is(h1, h2, h3, h4, p, ul, ol, li, a, button, input, label, dl, dt, dd, pre, nav, aside, section, form, summary, kbd) {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -122,41 +122,41 @@ html.sqt-on #itemPagination {
   color: inherit;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) :is(h1, h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, form) {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) :is(h1, h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, form) {
   margin: 0;
   padding: 0;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) :is(ul, ol) {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) :is(ul, ol) {
   list-style: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) li::before {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) li::before {
   content: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) a {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) a {
   color: var(--sqt-link);
   text-decoration: none;
   background: none;
   border: 0;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) a:hover {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) a:hover {
   color: var(--sqt-link-hover);
   text-decoration: underline;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) :focus-visible {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) :focus-visible {
   outline: 2px solid var(--sqt-focus);
   outline-offset: 2px;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) [hidden] {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) [hidden] {
   display: none !important;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-sr {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-sr {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -165,7 +165,7 @@ html.sqt-on #itemPagination {
   white-space: nowrap;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-label {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-label {
   display: block;
   margin: 0 0 6px;
   font-family: var(--sqt-mono);
@@ -179,7 +179,7 @@ html.sqt-on #itemPagination {
 
 /* inputs + buttons */
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-input {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-input {
   display: block;
   width: 100%;
   min-width: 0;
@@ -197,12 +197,12 @@ html.sqt-on #itemPagination {
   appearance: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-input::placeholder {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-input::placeholder {
   color: var(--sqt-faint);
   opacity: 1;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-btn {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -224,34 +224,34 @@ html.sqt-on #itemPagination {
   appearance: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) a.sqt-btn:hover,
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-btn:hover {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) a.sqt-btn:hover,
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-btn:hover {
   background: var(--sqt-btn-hover);
   border-color: var(--sqt-btn-hover);
   color: var(--sqt-btn-ink);
   text-decoration: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-btn--ghost {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-btn--ghost {
   background: var(--sqt-bg);
   color: var(--sqt-ink);
   border-color: var(--sqt-ink);
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-btn--ghost:hover {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-btn--ghost:hover {
   background: var(--sqt-box-head);
   border-color: var(--sqt-ink);
   color: var(--sqt-ink);
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-btn:disabled {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-btn:disabled {
   opacity: 0.6;
   cursor: progress;
 }
 
 /* subscribe form (blog intro, post sidebar, footer) */
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -262,39 +262,39 @@ html.sqt-on #itemPagination {
   background: var(--sqt-note);
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe label {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe label {
   font-size: 14px;
   font-weight: 600;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe-row {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe-row {
   display: flex;
   flex: 1 1 280px;
   gap: 8px;
   min-width: 0;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-count {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-count {
   font-family: var(--sqt-mono);
   font-size: 12px;
   color: var(--sqt-meta);
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe-status {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe-status {
   flex-basis: 100%;
   font-size: 14px;
   color: var(--sqt-body);
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe-status:empty {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe-status:empty {
   display: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe.is-done :is(.sqt-subscribe-row, label, .sqt-count) {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe.is-done :is(.sqt-subscribe-row, label, .sqt-count) {
   display: none;
 }
 
-:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-footer) .sqt-subscribe.is-done .sqt-subscribe-status {
+:is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) .sqt-subscribe.is-done .sqt-subscribe-status {
   font-weight: 600;
   color: var(--sqt-ink);
 }
@@ -7091,7 +7091,7 @@ html[data-sqt-text-size="large"] {
 html:not([data-sqt-text-size="large"]) {
   --sqt-type-scale: 1;
 }
-html[data-sqt-text-size="large"] :is(#sqt-home,#sqt-blog,#sqt-directory,#sqt-template-browser,#sqt-template-matchmaker,#sqt-plugin-finder,#sqt-footer) {
+html[data-sqt-text-size="large"] :is(#sqt-home,#sqt-blog,#sqt-newsletter,#sqt-directory,#sqt-template-browser,#sqt-template-matchmaker,#sqt-plugin-finder,#sqt-footer) {
   font-size: calc(16px * var(--sqt-type-scale));
 }
 html[data-sqt-text-size="large"] #sqt-home .sqt-home-intro h1 { font-size: 29px; }
