@@ -11,13 +11,13 @@ const MAX_VISIBLE = 9;
 
 function xmlValue(block, tag) {
   const safeTag = tag.replace(/:/g, "\\:");
-  const found = block.match(new RegExp("<" + safeTag + "(?:\\s[^>]*)?>([\\s\\S]*?)<\\/" + safeTag + "\\s*>", "i"));
+  const found = block.match(new RegExp("<" + safeTag + "(?:\s[^>]*)?>([\s\S]*?)<\\/" + safeTag + "\s*>", "i"));
   return found ? found[1] : "";
 }
 
 function xmlDecode(value) {
   return String(value || "")
-    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, "$1")
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
     .replace(/&#(x[0-9a-f]+|[0-9]+);/gi, (_, value) => {
       const n = value[0].toLowerCase() === "x" ? parseInt(value.slice(1), 16) : parseInt(value, 10);
       return n > 0 && n <= 0x10ffff ? String.fromCodePoint(n) : "";
@@ -26,16 +26,16 @@ function xmlDecode(value) {
       amp:"&", lt:"<", gt:">", quot:'"', apos:"'", nbsp:" "
     }[entity.toLowerCase()] || ""))
     .replace(/<[^>]*>/g, "")
-    .replace(/\\s+/g, " ")
+    .replace(/\s+/g, " ")
     .trim();
 }
 
 function linkFrom(block, base) {
   let link = xmlDecode(xmlValue(block, "link"));
   if (!link) {
-    const tags = block.match(/<link\\b[^>]*>/gi) || [];
-    const preferred = tags.find(tag => /rel\\s*=\\s*["']alternate["']/i.test(tag)) || tags[0] || "";
-    const href = preferred.match(/href\\s*=\\s*["']([^"']+)["']/i);
+    const tags = block.match(/<link\b[^>]*>/gi) || [];
+    const preferred = tags.find(tag => /rel\s*=\s*["']alternate["']/i.test(tag)) || tags[0] || "";
+    const href = preferred.match(/href\s*=\s*["']([^"']+)["']/i);
     if (href) link = xmlDecode(href[1]);
   }
   try {
@@ -47,8 +47,8 @@ function linkFrom(block, base) {
 }
 
 function extractPosts(xml, feed, now) {
-  const blocks = xml.match(/<item(?:\\s[^>]*)?>[\\s\\S]*?<\\/item\\s*>/gi) ||
-                 xml.match(/<entry(?:\\s[^>]*)?>[\\s\\S]*?<\\/entry\\s*>/gi) || [];
+  const blocks = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\\/item\s*>/gi) ||
+                 xml.match(/<entry(?:\s[^>]*)?>[\s\S]*?<\\/entry\s*>/gi) || [];
   const posts = [];
   const seen = new Set();
   for (const block of blocks) {
