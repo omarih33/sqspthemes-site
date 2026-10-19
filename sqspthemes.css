@@ -6648,3 +6648,399 @@ html.sqt-plugin-directory-autoload #page > section.page-section {display:none!im
     padding:20px var(--sqt-gutter,16px) 54px;
   }
 }
+
+
+/* ================= MAKE IT YOUR OWN / APPEARANCE SYSTEM ================= */
+/* Layered on top of the existing 2010 + Editorial themes. "default" preserves
+   each vibe's current palette; explicit visitor choices override it. */
+
+:root {
+  --sqt-accent: #0645ad;
+  --sqt-accent-ink: #ffffff;
+}
+html[data-theme="dark"] {
+  --sqt-accent: #8ab4f8;
+  --sqt-accent-ink: #111214;
+}
+html[data-sqt-style="editorial"] {
+  --sqt-accent: #e24a2a;
+  --sqt-accent-ink: #ffffff;
+}
+html[data-sqt-style="editorial"][data-theme="dark"] {
+  --sqt-accent: #ff795c;
+  --sqt-accent-ink: #121210;
+}
+
+/* Background presets. Night mode receives a corresponding dark surface rather
+   than forcing a light page. */
+html[data-sqt-bg="white"][data-theme="light"] {
+  --sqt-bg: #ffffff;
+  --sqt-bg-alt: #f7f7f7;
+  --sqt-box: #ffffff;
+  --sqt-box-head: #eeeeee;
+  --sqt-rule: #d0d0d0;
+  --sqt-rule-soft: #e6e6e6;
+}
+html[data-sqt-bg="white"][data-theme="dark"] {
+  --sqt-bg: #111214;
+  --sqt-bg-alt: #18191c;
+  --sqt-box: #18191c;
+  --sqt-box-head: #222328;
+  --sqt-rule: #36373c;
+  --sqt-rule-soft: #26272b;
+}
+html[data-sqt-bg="paper"][data-theme="light"] {
+  --sqt-bg: #f6f4ef;
+  --sqt-bg-alt: #efede7;
+  --sqt-box: #fffdfa;
+  --sqt-box-head: #e9e5dd;
+  --sqt-rule: #c9c4ba;
+  --sqt-rule-soft: #dedad1;
+}
+html[data-sqt-bg="paper"][data-theme="dark"] {
+  --sqt-bg: #151410;
+  --sqt-bg-alt: #1d1b17;
+  --sqt-box: #1d1b17;
+  --sqt-box-head: #28251f;
+  --sqt-rule: #403d35;
+  --sqt-rule-soft: #2d2b25;
+}
+html[data-sqt-bg="cool"][data-theme="light"] {
+  --sqt-bg: #f4f7f9;
+  --sqt-bg-alt: #eaf0f4;
+  --sqt-box: #ffffff;
+  --sqt-box-head: #e2e9ee;
+  --sqt-rule: #c6d0d7;
+  --sqt-rule-soft: #dce4e9;
+}
+html[data-sqt-bg="cool"][data-theme="dark"] {
+  --sqt-bg: #11161a;
+  --sqt-bg-alt: #182026;
+  --sqt-box: #182026;
+  --sqt-box-head: #202a31;
+  --sqt-rule: #37444d;
+  --sqt-rule-soft: #263038;
+}
+html[data-sqt-bg="sage"][data-theme="light"] {
+  --sqt-bg: #f2f5f0;
+  --sqt-bg-alt: #e7ede4;
+  --sqt-box: #fbfdf9;
+  --sqt-box-head: #dfe8dc;
+  --sqt-rule: #c4cec0;
+  --sqt-rule-soft: #dbe3d8;
+}
+html[data-sqt-bg="sage"][data-theme="dark"] {
+  --sqt-bg: #121713;
+  --sqt-bg-alt: #192019;
+  --sqt-box: #192019;
+  --sqt-box-head: #222b22;
+  --sqt-rule: #39453a;
+  --sqt-rule-soft: #29322a;
+}
+
+/* Accent presets. These intentionally affect links/focus as well as the new
+   semantic accent token so custom components inherit the same personality. */
+html[data-sqt-accent="blue"][data-theme="light"] {
+  --sqt-accent: #0645ad;
+  --sqt-accent-ink: #ffffff;
+  --sqt-link: #0645ad;
+  --sqt-link-hover: #0b0080;
+  --sqt-focus: #0645ad;
+}
+html[data-sqt-accent="blue"][data-theme="dark"] {
+  --sqt-accent: #8ab4f8;
+  --sqt-accent-ink: #111214;
+  --sqt-link: #8ab4f8;
+  --sqt-link-hover: #b5cefb;
+  --sqt-focus: #8ab4f8;
+}
+html[data-sqt-accent="orange"][data-theme="light"] {
+  --sqt-accent: #c83f22;
+  --sqt-accent-ink: #ffffff;
+  --sqt-link: #b7381e;
+  --sqt-link-hover: #e24a2a;
+  --sqt-focus: #c83f22;
+}
+html[data-sqt-accent="orange"][data-theme="dark"] {
+  --sqt-accent: #ff795c;
+  --sqt-accent-ink: #121210;
+  --sqt-link: #ff8a70;
+  --sqt-link-hover: #ffab99;
+  --sqt-focus: #ff795c;
+}
+html[data-sqt-accent="green"][data-theme="light"] {
+  --sqt-accent: #17734b;
+  --sqt-accent-ink: #ffffff;
+  --sqt-link: #14653f;
+  --sqt-link-hover: #0f5234;
+  --sqt-focus: #17734b;
+}
+html[data-sqt-accent="green"][data-theme="dark"] {
+  --sqt-accent: #58c98d;
+  --sqt-accent-ink: #101713;
+  --sqt-link: #67d49a;
+  --sqt-link-hover: #8be0b1;
+  --sqt-focus: #58c98d;
+}
+html[data-sqt-accent="purple"][data-theme="light"] {
+  --sqt-accent: #6b4ba1;
+  --sqt-accent-ink: #ffffff;
+  --sqt-link: #624494;
+  --sqt-link-hover: #503579;
+  --sqt-focus: #6b4ba1;
+}
+html[data-sqt-accent="purple"][data-theme="dark"] {
+  --sqt-accent: #c4a3f5;
+  --sqt-accent-ink: #15111b;
+  --sqt-link: #c4a3f5;
+  --sqt-link-hover: #dbc7fa;
+  --sqt-focus: #c4a3f5;
+}
+
+/* Replace the last Editorial-only orange islands with the semantic accent. */
+html[data-sqt-style="editorial"] #sqt-blog .sqt-filter a[aria-current] {
+  box-shadow: inset 0 -2px 0 var(--sqt-accent);
+}
+html[data-sqt-style="editorial"] #sqt-blog .sqt-num,
+html[data-sqt-style="editorial"] #sqt-blog .sqt-featured-kicker,
+html[data-sqt-style="editorial"] #sqt-blog .sqt-side-action,
+html[data-sqt-style="editorial"] #sqt-directory .sqt-dir-badge,
+html[data-sqt-style="editorial"] #sqt-directory .sqt-dir-num {
+  color: var(--sqt-accent);
+}
+html[data-sqt-style="editorial"] #sqt-directory .sqt-dir-links a:last-of-type {
+  background: var(--sqt-accent);
+  border-color: var(--sqt-accent);
+  color: var(--sqt-accent-ink);
+}
+html[data-sqt-style="editorial"].sqt-ready #sqt-footer .sqsp-footer__column a:hover {
+  color: var(--sqt-accent) !important;
+}
+
+/* Reader size. Keep each vibe's proportions instead of flattening them. */
+html[data-sqt-text-size="large"]:not([data-sqt-style="editorial"]) #sqt-blog .sqt-article {
+  font-size: 17px;
+}
+html[data-sqt-text-size="large"][data-sqt-style="editorial"] #sqt-blog .sqt-article {
+  font-size: 22px;
+}
+html[data-sqt-text-size="large"]:not([data-sqt-style="editorial"]) #sqt-blog .sqt-row-dek,
+html[data-sqt-text-size="large"]:not([data-sqt-style="editorial"]) #sqt-directory .sqt-dir-desc {
+  font-size: 16px;
+}
+html[data-sqt-text-size="large"][data-sqt-style="editorial"] #sqt-blog .sqt-row-dek,
+html[data-sqt-text-size="large"][data-sqt-style="editorial"] #sqt-directory .sqt-dir-desc {
+  font-size: 18px;
+}
+html[data-sqt-text-size="large"].sqt-ready .sqt-native-page .sqs-html-content :is(p,li) {
+  font-size: 19px !important;
+}
+
+/* Compact is intentionally modest: it tightens information density without
+   creating a second layout system. Comfortable is the existing site. */
+html[data-sqt-density="compact"] #sqt-blog .sqt-row {
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+html[data-sqt-density="compact"][data-sqt-style="editorial"] #sqt-blog .sqt-row {
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+html[data-sqt-density="compact"] #sqt-directory .sqt-dir-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+html[data-sqt-density="compact"][data-sqt-style="editorial"] #sqt-directory .sqt-dir-row {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+html[data-sqt-density="compact"] .sqt-panel__body {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* One trigger replaces the two separate View/Dark controls. */
+#sqt-header .sqt-customize,
+body > .sqt-modes .sqt-customize {
+  white-space: nowrap;
+}
+html[data-sqt-style="editorial"] #sqt-header .sqt-customize,
+html[data-sqt-style="editorial"] body > .sqt-modes .sqt-customize {
+  background: var(--sqt-ink);
+  border-color: var(--sqt-ink);
+  color: var(--sqt-bg);
+}
+
+/* Customizer popover / mobile sheet. It lives directly under <body> so it is
+   not trapped by Squarespace stacking contexts or the sticky header blur. */
+#sqt-customizer {
+  all: initial;
+  position: fixed;
+  z-index: 10070;
+  top: 72px;
+  right: 18px;
+  width: min(368px, calc(100vw - 24px));
+  max-height: calc(100vh - 88px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 18px;
+  border: 1px solid var(--sqt-rule);
+  border-radius: 3px;
+  background: var(--sqt-bg);
+  color: var(--sqt-ink);
+  box-shadow: var(--sqt-shadow);
+  font-family: var(--sqt-text);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+#sqt-customizer[hidden] { display: none !important; }
+#sqt-customizer *,
+#sqt-customizer *::before,
+#sqt-customizer *::after { box-sizing: border-box; }
+html[data-sqt-style="editorial"] #sqt-customizer {
+  border-radius: 14px;
+  box-shadow: 0 22px 70px rgba(0,0,0,.18);
+}
+#sqt-customizer .sqt-customizer__head {
+  position: relative;
+  padding-right: 34px;
+  margin-bottom: 16px;
+}
+#sqt-customizer .sqt-customizer__title {
+  margin: 0 0 4px;
+  color: var(--sqt-ink);
+  font: 700 22px/1.1 var(--sqt-head);
+  letter-spacing: -.025em;
+}
+#sqt-customizer .sqt-customizer__dek {
+  margin: 0;
+  color: var(--sqt-meta);
+  font: 13px/1.45 var(--sqt-text);
+}
+#sqt-customizer .sqt-customizer__close {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--sqt-meta);
+  font: 20px/1 var(--sqt-text);
+  cursor: pointer;
+}
+#sqt-customizer .sqt-pref-group {
+  margin: 0;
+  padding: 14px 0;
+  border: 0;
+  border-top: 1px solid var(--sqt-rule-soft);
+}
+#sqt-customizer .sqt-pref-group legend {
+  display: block;
+  width: 100%;
+  margin: 0 0 9px;
+  padding: 0;
+  color: var(--sqt-ink);
+  font: 600 11px/1.3 var(--sqt-mono);
+}
+#sqt-customizer .sqt-pref-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+#sqt-customizer .sqt-pref-options--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+#sqt-customizer .sqt-pref-choice {
+  min-height: 38px;
+  padding: 7px 9px;
+  border: 1px solid var(--sqt-rule);
+  border-radius: 2px;
+  background: var(--sqt-bg-alt);
+  color: var(--sqt-ink);
+  font: 12px/1.2 var(--sqt-text);
+  text-align: center;
+  cursor: pointer;
+}
+html[data-sqt-style="editorial"] #sqt-customizer .sqt-pref-choice {
+  border-radius: 8px;
+}
+#sqt-customizer .sqt-pref-choice:hover {
+  border-color: var(--sqt-ink);
+}
+#sqt-customizer .sqt-pref-choice.is-active {
+  border-color: var(--sqt-accent);
+  box-shadow: inset 0 0 0 1px var(--sqt-accent);
+  color: var(--sqt-accent);
+  background: var(--sqt-bg);
+}
+#sqt-customizer .sqt-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+#sqt-customizer .sqt-swatch {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  min-height: 0;
+  padding: 0;
+  border-radius: 50% !important;
+  background: var(--sqt-swatch, var(--sqt-bg-alt));
+}
+#sqt-customizer .sqt-swatch::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: inherit;
+}
+#sqt-customizer .sqt-swatch.is-active {
+  box-shadow: 0 0 0 2px var(--sqt-bg), 0 0 0 4px var(--sqt-accent);
+}
+#sqt-customizer .sqt-customizer__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--sqt-rule-soft);
+}
+#sqt-customizer .sqt-reset {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--sqt-link);
+  font: 12px/1.3 var(--sqt-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+#sqt-customizer .sqt-save-status {
+  color: var(--sqt-meta);
+  font: 10px/1.3 var(--sqt-mono);
+  text-align: right;
+}
+#sqt-customizer :focus-visible {
+  outline: 2px solid var(--sqt-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  #sqt-customizer {
+    top: auto;
+    right: 12px;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    left: 12px;
+    width: auto;
+    max-height: calc(100vh - 100px - env(safe-area-inset-bottom, 0px));
+    padding: 16px;
+    border-radius: 10px;
+  }
+  html[data-sqt-style="editorial"] #sqt-customizer { border-radius: 16px; }
+  #sqt-customizer .sqt-customizer__title { font-size: 20px; }
+}
