@@ -18,7 +18,7 @@
     for(var i=0;i<t.length;i++){var k=t[i],matched=false;if(name.includes(k)){score+=36;matched=true;}if(problems.includes(k)){score+=19;matched=true;}if(cat.includes(k)){score+=13;matched=true;}if(how.includes(k)) {score+=5;matched=true;}if(provider.includes(k)) {score+=7;matched=true;}if(matched)hit++;}
     if(hit===0)return-1;if(hit<t.length)score-=30*(t.length-hit);else score+=27;
     if(kind==='plugin')score+=9;else if(kind==='native')score+=5;else if(kind==='embed')score-=6;
-    if(p.priority==='High')score+=7;if(!p.url)score-=18;
+    if(p.priority==='High')score+=7;if(!p.url)score-=38;if(p.mediaSource&&p.screenshot)score+=70;else if(p.editorialSummary)score+=26;if(hasResearchOnlyCopy(p))score-=14;if(/provider catalog|toolkit feature/i.test(String(p.kind||''))&&!p.screenshot)score-=15;
     return score;
   }
   function gapScore(p,q,t){var question=norm(p.question),answer=norm(p.answer),area=norm(p.area),score=question.includes(q)?110:0,hit=0;for(var i=0;i<t.length;i++){var k=t[i],found=false;if(question.includes(k)){score+=20;found=true}if(area.includes(k)){score+=7;found=true}if(answer.includes(k)){score+=3;found=true}if(found)hit++}if(hit<t.length)score-=27*(t.length-hit);if(hit===0)return-1;return score}
