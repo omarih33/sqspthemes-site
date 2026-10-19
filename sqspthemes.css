@@ -6621,3 +6621,30 @@ html[data-sqt-style="editorial"].sqt-ready #sqt-footer .sqsp-footer__note {
   #sqt-footer .sqsp-footer__signup .sqt-subscribe-row { flex-wrap: wrap; }
   #sqt-footer .sqsp-footer__signup .sqt-input { flex-basis: 100%; }
 }
+
+
+/* /plugin-directory — use the same page shell dimensions as /home.
+   The finder node lives outside Fluid Engine's tall empty grid rows. */
+html.sqt-plugin-directory-page #sqt-plugin-directory-shell {
+  box-sizing:border-box;
+  width:100%;
+  max-width:var(--sqt-max,980px);
+  min-height:0;
+  margin:0 auto;
+  padding:18px var(--sqt-gutter,18px) 54px;
+}
+html[data-sqt-style="editorial"].sqt-plugin-directory-page #sqt-plugin-directory-shell {
+  max-width:1280px;
+  padding:36px var(--sqt-gutter,24px) 72px;
+}
+html.sqt-plugin-directory-autoload #page > section.page-section {display:none!important}
+@media(max-width:640px) {
+  html.sqt-plugin-directory-page #sqt-plugin-directory-shell {
+    width:100%;
+    padding:10px var(--sqt-gutter,16px) 40px;
+  }
+  html[data-sqt-style="editorial"].sqt-plugin-directory-page #sqt-plugin-directory-shell {
+    width:100%;
+    padding:20px var(--sqt-gutter,16px) 54px;
+  }
+}
