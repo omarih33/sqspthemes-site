@@ -1806,7 +1806,7 @@
         panel.className = "sqt-home-box sqt-panel sqt-site-activity";
         panel.hidden = true;
         panel.innerHTML = '<div class="sqt-home-box-head sqt-panel__head">On the site</div><div class="sqt-home-side-body sqt-panel__body"><p class="sqt-presence"></p><p class="sqt-subscribers"></p></div>';
-        if (host) host.insertBefore(panel, host.firstElementChild);
+        if (host) host.insertBefore(panel, host.children[1] || null);
         var sid;
         try {sid=sessionStorage.getItem("sqt-presence-id");if(!sid){sid=crypto.randomUUID();sessionStorage.setItem("sqt-presence-id",sid);}}catch(e){return;}
         var endpoint="https://sqspthemes-site-activity.omari-6b8.workers.dev/activity";
