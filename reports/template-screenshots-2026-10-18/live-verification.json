@@ -1,0 +1,34 @@
+{
+  "browser_initial": "404 templates found",
+  "initial_cards": 24,
+  "search": "1 templates found",
+  "search_name": [
+    "Abode"
+  ],
+  "category": "58 templates found",
+  "reset": "404 templates found",
+  "affiliate_hrefs": [
+    "https://omari--studiomesa.thrivecart.com/abode/",
+    "https://omari--brittaweickert.thrivecart.com/affiliate/60809638ab46e/",
+    "https://www.thecoastkit.com/adelaide?aff=3"
+  ],
+  "finder_catalog": "576 templates available",
+  "finder_result": "3 recommendations",
+  "images": [
+    {
+      "src": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/achromatic/2026-10-18.webp",
+      "loaded": true
+    },
+    {
+      "src": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/radian/2026-10-18.webp",
+      "loaded": true
+    },
+    {
+      "src": "https://sqspthemes-template-images.omari-6b8.workers.dev/native/mccurry/2026-10-18.webp",
+      "loaded": true
+    }
+  ],
+  "catalog_url": "https://sqspthemes-assets.pages.dev/template-catalog.json",
+  "verified_commit": "a00f77ec3bc984f6d14bd6abeff44c5d021d46c8",
+  "result": "passed"
+}
