@@ -565,3 +565,14 @@ html[data-sqt-style="editorial"] #sqt-template-matchmaker .sqt-tm-card h4 {
     border-right: 0 !important;
   }
 }
+
+
+/* SQSPThemes appearance bridge */
+#sqt-template-matchmaker {
+  --tm-ink: var(--sqt-ink, #111);
+  --tm-blue: var(--sqt-accent, var(--sqt-link, #0645ad));
+  --tm-line: var(--sqt-rule, #d0d0d0);
+  --tm-paper: var(--sqt-bg, #fff);
+  --tm-muted: var(--sqt-meta, #595959);
+}
+#sqt-template-matchmaker :focus-visible { outline-color: var(--sqt-focus, var(--tm-blue)); }
