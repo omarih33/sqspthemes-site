@@ -85,6 +85,18 @@ html.sqt-on #itemPagination {
 }
 
 
+
+/* The newsletter's Squarespace section adds padding around its embedded
+   shared page shell. Remove only that outer vertical padding. */
+section.page-section:has(#sqt-newsletter) {
+  min-height: 0 !important;
+}
+section.page-section:has(#sqt-newsletter) .content-wrapper,
+section.page-section:has(#sqt-newsletter) .sqs-block-code {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 /* ============================ shared base =============================== */
 
 :is(#sqt-header, #sqt-home, #sqt-blog, #sqt-newsletter, #sqt-footer) {
@@ -366,7 +378,8 @@ html.sqt-on #itemPagination {
   border-bottom: 1px solid var(--sqt-rule);
 }
 
-.sqt-page-intro > :is(h1, .sqt-page-title) {
+.sqt-page-intro > :is(h1, .sqt-page-title),
+#sqt-newsletter .sqt-page-intro > :is(h1, .sqt-page-title) {
   max-width: 820px;
   margin: 0 0 4px;
   font-family: var(--sqt-head);
@@ -376,7 +389,8 @@ html.sqt-on #itemPagination {
   letter-spacing: -.025em;
 }
 
-.sqt-page-intro > :is(p, .sqt-page-dek) {
+.sqt-page-intro > :is(p, .sqt-page-dek),
+#sqt-newsletter .sqt-page-intro > :is(p, .sqt-page-dek) {
   max-width: 700px;
   margin: 0;
   font-size: 14px;
@@ -750,7 +764,8 @@ html.sqt-on #itemPagination {
     --sqt-page-bottom: 40px;
   }
 
-  .sqt-page-intro > :is(h1, .sqt-page-title) {
+  .sqt-page-intro > :is(h1, .sqt-page-title),
+  #sqt-newsletter .sqt-page-intro > :is(h1, .sqt-page-title) {
     font-size: 28px;
   }
 
@@ -783,14 +798,16 @@ html[data-sqt-style="editorial"] .sqt-page-intro {
   border-bottom: 1px solid var(--sqt-rule);
 }
 
-html[data-sqt-style="editorial"] .sqt-page-intro > :is(h1, .sqt-page-title) {
+html[data-sqt-style="editorial"] .sqt-page-intro > :is(h1, .sqt-page-title),
+html[data-sqt-style="editorial"] #sqt-newsletter .sqt-page-intro > :is(h1, .sqt-page-title) {
   max-width: 1040px;
   font-size: clamp(52px, 7vw, 92px);
   line-height: .94;
   letter-spacing: -.06em;
 }
 
-html[data-sqt-style="editorial"] .sqt-page-intro > :is(p, .sqt-page-dek) {
+html[data-sqt-style="editorial"] .sqt-page-intro > :is(p, .sqt-page-dek),
+html[data-sqt-style="editorial"] #sqt-newsletter .sqt-page-intro > :is(p, .sqt-page-dek) {
   max-width: 760px;
   margin-top: 16px;
   font-family: Georgia, "Times New Roman", serif;
