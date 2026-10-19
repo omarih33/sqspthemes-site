@@ -767,12 +767,9 @@
               '<section class="sqt-home-box sqt-panel">' +
                 '<div class="sqt-home-box-head sqt-panel__head">Start Here</div>' +
                 '<div class="sqt-home-side-body sqt-panel__body"><ol class="sqt-home-start-list">' +
-                  '<li><a href="/templates">Browse Templates</a></li>' +
-                  '<li><a href="/find-templates">Find Templates</a></li>' +
-                  '<li><a href="/best-squarespace-designers">Hire a Squarespace designer</a></li>' +
-                  '<li><a href="/squarespace-integrations">Explore plugins & integrations</a></li>' +
-                  '<li><a href="/squarespace-resources">Browse Squarespace resources</a></li>' +
-                  '<li><a href="/blog">Read the latest articles</a></li>' +
+                  '<li><a href="/find-templates">Find a Template</a></li>' +
+                  '<li><a href="/best-squarespace-designers">Hire a Squarespace Designer</a></li>' +
+                  '<li><a href="/squarespace-integrations">Explore Plugins & Integrations</a></li>' +
                 '</ol></div>' +
               '</section>' +
 
