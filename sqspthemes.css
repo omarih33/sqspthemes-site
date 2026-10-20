@@ -7190,3 +7190,210 @@ html[data-sqt-density="compact"] #sqt-plugin-finder .pf-card__main { padding: 11
   }
   html[data-sqt-text-size="large"] #sqt-home .sqt-home-intro h1 { font-size: 25px; }
 }
+
+
+/* ==================== partner campaign & commerce pages ==================== */
+/* Theme only /partner and its product details. All product form, gallery,
+   filtering and cart interactions remain owned by Squarespace.
+   Supports the 2025+ Products V2 markup and the older ProductItem markup. */
+html.sqt-partner-page.sqt-ready {
+  --sqt-partner-space: 20px;
+  --sqt-partner-card-radius: 0px;
+}
+
+html.sqt-partner-page.sqt-ready body,
+html.sqt-partner-page.sqt-ready #page,
+html.sqt-partner-page.sqt-ready .product-list,
+html.sqt-partner-page.sqt-ready .product-detail,
+html.sqt-partner-page.sqt-ready [data-product-detail-layout],
+html.sqt-partner-page.sqt-ready .ProductItem {
+  background-color: var(--sqt-bg) !important;
+  color: var(--sqt-ink);
+}
+
+html.sqt-partner-page.sqt-ready #page {
+  font-family: var(--sqt-text);
+}
+
+/* A consistent color surface for native section backgrounds, without
+   blanking background images, video, or sponsor logos. */
+html.sqt-partner-page.sqt-ready #page .page-section:not(.has-background) .section-background:not(:has(img,video)),
+html.sqt-partner-page.sqt-ready #page .sqt-native-plain .section-background,
+html.sqt-partner-page.sqt-ready #page .product-list-header {
+  background-color: var(--sqt-bg) !important;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-header, .product-list-container, .products-flex-container, .product-content-wrapper, .product-meta, .ProductItem-details) {
+  color: var(--sqt-ink);
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-header, .product-list-container, .product-detail, .product-meta, .ProductItem-details) :is(h1,h2,h3,h4) {
+  color: var(--sqt-ink) !important;
+  font-family: var(--sqt-head) !important;
+  letter-spacing: -.025em;
+  text-transform: none !important;
+}
+
+/* Campaign index: native Squarespace product list, not a custom replacement. */
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item, .grid-item) {
+  background: var(--sqt-box);
+  border: 1px solid var(--sqt-rule);
+  border-radius: var(--sqt-partner-card-radius);
+  overflow: hidden;
+  color: var(--sqt-ink);
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item-meta, .grid-meta-wrapper) {
+  padding: var(--sqt-partner-space);
+  color: var(--sqt-ink);
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item-title, .ProductList-title, .grid-title) {
+  font-family: var(--sqt-head) !important;
+  color: var(--sqt-ink) !important;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item-price, .grid-prices) {
+  color: var(--sqt-body) !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 13px;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item-link, .grid-item-link, .product-list-header a, .product-nav a, .ProductItem-nav a) {
+  color: var(--sqt-link) !important;
+  text-decoration: none;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item-link, .grid-item-link, .product-list-header a, .product-nav a, .ProductItem-nav a):hover {
+  color: var(--sqt-link-hover) !important;
+  text-decoration: underline;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-item, .grid-item) :is(img, .product-list-image-wrapper, .grid-image) {
+  border-radius: 0 !important;
+}
+
+/* Product detail: retain the native image gallery, variants and checkout. */
+html.sqt-partner-page.sqt-ready #page :is(.product-title, .ProductItem-details-title, .pdp-details-title) {
+  font-family: var(--sqt-head) !important;
+  color: var(--sqt-ink) !important;
+  font-size: clamp(30px, 4vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.04em;
+  text-transform: none !important;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-price, .ProductItem-product-price, .pdp-details-price, .product-price-value) {
+  color: var(--sqt-ink) !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 17px;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt, .product-additional-info) {
+  color: var(--sqt-body) !important;
+  font-family: var(--sqt-text) !important;
+  line-height: 1.65;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt) :is(h2,h3,h4) {
+  color: var(--sqt-ink) !important;
+  font-family: var(--sqt-head) !important;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.variant-option-title, .quantity-label, .product-variant label, .product-quantity-input-wrapper label) {
+  color: var(--sqt-meta) !important;
+  font-family: var(--sqt-mono) !important;
+  font-size: 12px;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.variant-select-wrapper select, .product-variant select, .product-add-to-cart select, .product-quantity-input-wrapper input, .product-quantity-input) {
+  background: var(--sqt-box) !important;
+  border: 1px solid var(--sqt-box-line) !important;
+  border-radius: 0 !important;
+  color: var(--sqt-ink) !important;
+  font-family: var(--sqt-text) !important;
+  color-scheme: normal;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.variant-select-wrapper select, .product-variant select, .product-add-to-cart select, .product-quantity-input-wrapper input, .product-quantity-input):focus-visible {
+  outline: 2px solid var(--sqt-focus) !important;
+  outline-offset: 2px;
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.sqs-add-to-cart-button, .product-add-to-cart button.sqs-add-to-cart-button) {
+  background: var(--sqt-btn) !important;
+  color: var(--sqt-btn-ink) !important;
+  border: 1px solid var(--sqt-ink) !important;
+  border-radius: 0 !important;
+  font-family: var(--sqt-head) !important;
+  font-weight: 600 !important;
+}
+
+html.sqt-partner-page.sqt-ready #page .sqs-add-to-cart-button:hover:not([disabled]) {
+  background: var(--sqt-btn-hover) !important;
+}
+
+/* Existing Squarespace filter widget and labels retain their functionality. */
+html.sqt-partner-page.sqt-ready #page :is(.product-list-filter, .product-list-filters, .product-list-header) :is(button,select) {
+  color: var(--sqt-ink);
+  font-family: var(--sqt-mono);
+}
+
+html.sqt-partner-page.sqt-ready #page :is(.product-list-filter, .product-list-filters) :is(button,select) {
+  background-color: var(--sqt-box);
+  border-color: var(--sqt-rule);
+}
+
+/* Modern Editorial is a presentation change, not a different commerce DOM. */
+html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] {
+  --sqt-partner-space: 24px;
+  --sqt-partner-card-radius: 6px;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] #page :is(.product-list-item-title, .ProductList-title, .grid-title) {
+  font-size: 23px;
+  letter-spacing: -.04em;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] #page :is(.product-title, .ProductItem-details-title, .pdp-details-title) {
+  font-size: clamp(38px, 5vw, 62px) !important;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-density="compact"] {
+  --sqt-partner-space: 12px;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-density="compact"] #page :is(.product-list-container, .products-flex-container) {
+  row-gap: 14px;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-density="compact"] #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt) {
+  line-height: 1.48;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt) {
+  font-size: 19px !important;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-list-item-title, .ProductList-title, .grid-title) {
+  font-size: 23px;
+}
+
+html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-list-item-price, .grid-prices, .product-price, .product-price-value, .ProductItem-product-price) {
+  font-size: 18px !important;
+}
+
+@media (max-width: 760px) {
+  html.sqt-partner-page.sqt-ready {
+    --sqt-partner-space: 14px;
+  }
+
+  html.sqt-partner-page.sqt-ready #page :is(.product-title, .ProductItem-details-title, .pdp-details-title) {
+    font-size: clamp(28px, 7vw, 38px) !important;
+  }
+}
