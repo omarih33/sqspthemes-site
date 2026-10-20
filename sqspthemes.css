@@ -7501,3 +7501,27 @@ html.sqt-partner-page.sqt-ready #page .product-list-section :is(
 html.sqt-partner-page.sqt-ready #page .page-section.sqt-native-plain .sqs-html-content :is(.sqs-block-button-element, .sqs-button-element--primary) {
   color: var(--sqt-btn-ink) !important;
 }
+
+
+/* Partner night mode: native white content blocks and multicolor logo assets. */
+/* Squarespace's block background option remains #fff even when the page switches
+   theme; the existing night-mode text colors then become invisible. */
+html.sqt-partner-page.sqt-ready[data-theme="dark"] #page .page-section .sqs-block-html.sqs-background-enabled {
+  background-color: var(--sqt-box) !important;
+  color: var(--sqt-ink) !important;
+  border: 1px solid var(--sqt-rule);
+}
+/* Some native markup gives the block's inner wrappers a separate foreground. */
+html.sqt-partner-page.sqt-ready[data-theme="dark"] #page .sqs-block-html.sqs-background-enabled :is(.sqs-block-content,.sqs-text-block-container,.sqs-html-content) {
+  color: var(--sqt-ink) !important;
+}
+/* Logos were uploaded for a light background; keep their original artwork and
+   give each tile a consistent light surface rather than applying an invert filter. */
+html.sqt-partner-page.sqt-ready[data-theme="dark"] #page section[data-section-id="6ac947aab26649429e50f4f1"] .sqs-gallery-design-grid-slide .margin-wrapper {
+  background: #ffffff !important;
+  padding: 8px;
+  box-sizing: border-box;
+}
+html.sqt-partner-page.sqt-ready[data-theme="dark"] #page section[data-section-id="6ac947aab26649429e50f4f1"] .sqs-gallery-design-grid-slide .image-slide-anchor {
+  background: #ffffff !important;
+}
