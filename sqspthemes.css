@@ -7457,3 +7457,47 @@ html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-l
     --sqt-product-subhead-size: 20px;
   }
 }
+
+
+/* Partner landing page: Squarespace's section palette classes (white, light,
+   black, dark) must not override visitor-selected appearance. Scoped to the
+   landing page to leave native checkout and image galleries untouched. */
+html.sqt-partner-page.sqt-ready body:not(.collection-type-products) #page .page-section.sqt-native-plain {
+  color: var(--sqt-ink) !important;
+}
+html.sqt-partner-page.sqt-ready #page .page-section.sqt-native-plain :is(
+  .sqs-html-content, .sqs-html-content :is(h1,h2,h3,h4,h5,h6),
+  .sqs-html-content :is(p,li,blockquote,strong,em,span),
+  .product-list-header, .product-list-header :is(h1,h2,h3,h4),
+  .product-list-filters, .product-list-filter,
+  .product-list-item, .product-list-item :is(h2,h3,p,span),
+  .product-list-item-meta, .product-list-item-title, .product-list-item-price
+) {
+  color: var(--sqt-ink) !important;
+}
+html.sqt-partner-page.sqt-ready #page .page-section.sqt-native-plain .sqs-html-content :is(p,li,blockquote) {
+  color: var(--sqt-body) !important;
+}
+html.sqt-partner-page.sqt-ready #page .page-section.sqt-native-plain .sqs-html-content a {
+  color: var(--sqt-link) !important;
+}
+/* Native product-list filters are often styled with their own section palette. */
+html.sqt-partner-page.sqt-ready #page .product-list-section :is(
+  .product-list-header, .product-list-filters, .product-list-filter,
+  .product-list-item-meta, .product-list-item-title, .product-list-item-price
+) {
+  color: var(--sqt-ink) !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-list-section :is(
+  .product-list-filter button, .product-list-filters button,
+  .product-list-filter select, .product-list-filters select
+) {
+  color: var(--sqt-ink) !important;
+  background: var(--sqt-box) !important;
+  border-color: var(--sqt-rule) !important;
+}
+/* Preserve legitimate contrast: don't recolor image gallery labels or buttons
+   with their own foreground/background pairing. */
+html.sqt-partner-page.sqt-ready #page .page-section.sqt-native-plain .sqs-html-content :is(.sqs-block-button-element, .sqs-button-element--primary) {
+  color: var(--sqt-btn-ink) !important;
+}
