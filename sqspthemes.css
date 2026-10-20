@@ -7199,6 +7199,9 @@ html[data-sqt-density="compact"] #sqt-plugin-finder .pf-card__main { padding: 11
 html.sqt-partner-page.sqt-ready {
   --sqt-partner-space: 20px;
   --sqt-partner-card-radius: 0px;
+  --sqt-product-title-size: 32px;
+  --sqt-product-body-size: 16px;
+  --sqt-product-subhead-size: 19px;
 }
 
 html.sqt-partner-page.sqt-ready body,
@@ -7213,6 +7216,27 @@ html.sqt-partner-page.sqt-ready .ProductItem {
 
 html.sqt-partner-page.sqt-ready #page {
   font-family: var(--sqt-text);
+}
+
+/* Native product layouts were inheriting a 980px content cap and 96px
+   side padding, squeezing the two columns unnecessarily. */
+html.sqt-partner-page.sqt-ready #page .product-detail-section .content-wrapper {
+  max-width: 1120px !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section [data-product-detail-layout] {
+  box-sizing: border-box;
+  padding: 30px 24px 60px !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-nav {
+  font-family: var(--sqt-mono) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 18px;
+  color: var(--sqt-meta) !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-nav a {
+  font-family: inherit !important;
+  color: var(--sqt-link) !important;
 }
 
 /* A consistent color surface for native section backgrounds, without
@@ -7281,23 +7305,51 @@ html.sqt-partner-page.sqt-ready #page :is(.product-list-item, .grid-item) :is(im
 html.sqt-partner-page.sqt-ready #page :is(.product-title, .ProductItem-details-title, .pdp-details-title) {
   font-family: var(--sqt-head) !important;
   color: var(--sqt-ink) !important;
-  font-size: clamp(30px, 4vw, 48px) !important;
+  font-size: var(--sqt-product-title-size) !important;
   font-weight: 700 !important;
-  line-height: 1.12 !important;
-  letter-spacing: -.04em;
+  line-height: 1.14 !important;
+  letter-spacing: -.035em;
+  margin: 0 0 12px !important;
   text-transform: none !important;
 }
 
 html.sqt-partner-page.sqt-ready #page :is(.product-price, .ProductItem-product-price, .pdp-details-price, .product-price-value) {
   color: var(--sqt-ink) !important;
   font-family: var(--sqt-mono) !important;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 html.sqt-partner-page.sqt-ready #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt, .product-additional-info) {
   color: var(--sqt-body) !important;
   font-family: var(--sqt-text) !important;
-  line-height: 1.65;
+  font-size: var(--sqt-product-body-size) !important;
+  line-height: 1.55 !important;
+}
+
+/* Squarespace applies native font sizes to individual rich-text nodes. */
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-description :is(p,li) {
+  color: var(--sqt-body) !important;
+  font-family: var(--sqt-text) !important;
+  font-size: var(--sqt-product-body-size) !important;
+  line-height: 1.55 !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-description p {
+  margin: 0 0 12px !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-description li p {
+  margin-bottom: 5px !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-description :is(h2,h3,h4) {
+  font-family: var(--sqt-head) !important;
+  color: var(--sqt-ink) !important;
+  font-size: var(--sqt-product-subhead-size) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  margin: 22px 0 9px !important;
+}
+html.sqt-partner-page.sqt-ready #page .product-detail-section .product-description :is(ul,ol) {
+  margin: 8px 0 18px !important;
+  padding-left: 22px !important;
 }
 
 html.sqt-partner-page.sqt-ready #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt) :is(h2,h3,h4) {
@@ -7353,6 +7405,8 @@ html.sqt-partner-page.sqt-ready #page :is(.product-list-filter, .product-list-fi
 html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] {
   --sqt-partner-space: 24px;
   --sqt-partner-card-radius: 6px;
+  --sqt-product-title-size: 40px;
+  --sqt-product-subhead-size: 21px;
 }
 
 html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] #page :is(.product-list-item-title, .ProductList-title, .grid-title) {
@@ -7360,9 +7414,7 @@ html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] #page :is(.product-l
   letter-spacing: -.04em;
 }
 
-html.sqt-partner-page.sqt-ready[data-sqt-style="editorial"] #page :is(.product-title, .ProductItem-details-title, .pdp-details-title) {
-  font-size: clamp(38px, 5vw, 62px) !important;
-}
+/* The same title selector reads the editorial token above. */
 
 html.sqt-partner-page.sqt-ready[data-sqt-density="compact"] {
   --sqt-partner-space: 12px;
@@ -7376,9 +7428,12 @@ html.sqt-partner-page.sqt-ready[data-sqt-density="compact"] #page :is(.product-d
   line-height: 1.48;
 }
 
-html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-description, .ProductItem-details-excerpt, .pdp-details-excerpt) {
-  font-size: 19px !important;
+html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] {
+  --sqt-product-body-size: 18px;
+  --sqt-product-title-size: 36px;
+  --sqt-product-subhead-size: 21px;
 }
+/* Large text remains available in both view modes without affecting checkout. */
 
 html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-list-item-title, .ProductList-title, .grid-title) {
   font-size: 23px;
@@ -7391,9 +7446,14 @@ html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] #page :is(.product-l
 @media (max-width: 760px) {
   html.sqt-partner-page.sqt-ready {
     --sqt-partner-space: 14px;
+    --sqt-product-title-size: 28px;
+    --sqt-product-subhead-size: 18px;
   }
-
-  html.sqt-partner-page.sqt-ready #page :is(.product-title, .ProductItem-details-title, .pdp-details-title) {
-    font-size: clamp(28px, 7vw, 38px) !important;
+  html.sqt-partner-page.sqt-ready #page .product-detail-section [data-product-detail-layout] {
+    padding: 22px 18px 48px !important;
+  }
+  html.sqt-partner-page.sqt-ready[data-sqt-text-size="large"] {
+    --sqt-product-title-size: 31px;
+    --sqt-product-subhead-size: 20px;
   }
 }
