@@ -1820,6 +1820,11 @@
   }
 
   function run() {
+    // Native Squarespace store and product pages share the sitewide appearance tokens.
+    // Scope commerce styling to this collection, without replacing checkout controls.
+    if (/^\/partner(?:\/|$)/.test(window.location.pathname)) {
+      html.classList.add("sqt-partner-page");
+    }
     // The Code Injection guard turns the layer on (html.sqt-on). It stays off
     // inside Squarespace's editor and if this file took too long to load.
     if (!html.classList.contains("sqt-on")) return;
