@@ -1,5 +1,59 @@
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4N8q4NFNQ-NYCHrDh31oGNBXNPn5wYH_OYB6IPO0S0Z-3S6aTAZ0EdVMK9CR1x7tw/exec";
 
+
+// The legacy JSON is retained as a restoration fallback until the deployed
+// Apps Script explicitly emits the Description column from Directory Inventory.
+// Source-of-truth priority: Google Sheet JSON description > legacy text.
+const NEW_LISTING_FALLBACKS = {
+  "christina dean design": "Christina Dean Design is led by Christina Dean, an award-winning Squarespace website designer with 8+ years of experience and 100+ websites launched. A Squarespace Marketplace Expert and Circle Platinum member, she combines strategic design, built-in SEO, and custom CSS with a marketing background. Christina designs new websites and redesigns, including ecommerce, courses, and memberships, and can turn AI- or HTML-generated concepts into fully editable Squarespace sites. She also provides post-launch support, email campaigns, automations, and brand materials for businesses worldwide."
+};
+
+function normalizeUrl(value) {
+  try {
+    const url = new URL(String(value || ""));
+    return (url.hostname.replace(/^www\./i, "") + url.pathname.replace(/\/+$/, "")).toLowerCase();
+  } catch (_) {
+    return String(value || "").trim().toLowerCase();
+  }
+}
+
+async function restoreDescriptions(payload, context) {
+  let archived = [];
+  try {
+    // Cloudflare Pages asset binding serves the original 67 complete bios.
+    const asset = await context.env.ASSETS.fetch(
+      new Request(new URL("/directory-data.json", context.request.url).toString())
+    );
+    if (asset.ok) {
+      const staticData = await asset.json();
+      archived = Array.isArray(staticData.designers) ? staticData.designers : [];
+    }
+  } catch (error) {
+    console.error("Directory description backup unavailable:", error);
+  }
+
+  const byPortfolio = new Map();
+  const byStudio = new Map();
+  for (const row of archived) {
+    const portfolio = normalizeUrl(row.portfolio);
+    if (portfolio) byPortfolio.set(portfolio, row);
+    const studio = String(row.studio || "").trim().toLowerCase();
+    if (studio && !byStudio.has(studio)) byStudio.set(studio, row);
+  }
+
+  for (const person of payload.designers) {
+    if (person.description && String(person.description).trim()) continue;
+    const portfolio = normalizeUrl(person.portfolioUrl || person.portfolio);
+    const studio = String(person.studio || "").trim().toLowerCase();
+    const backup = (portfolio && byPortfolio.get(portfolio)) ||
+      (studio && byStudio.get(studio));
+    if (backup && backup.description) person.description = backup.description;
+    else if (NEW_LISTING_FALLBACKS[studio]) person.description = NEW_LISTING_FALLBACKS[studio];
+  }
+
+  return payload;
+}
+
 const JSON_HEADERS = {
   "Content-Type": "application/json; charset=utf-8",
   "Cache-Control": "no-store, max-age=0",
@@ -45,6 +99,8 @@ export async function onRequest(context) {
     if (!payload || payload.ok !== true || !Array.isArray(payload.designers)) {
       throw new Error(payload && payload.error ? payload.error : "Invalid directory payload");
     }
+
+    await restoreDescriptions(payload, context);
 
     return new Response(JSON.stringify(payload), {
       status: 200,
