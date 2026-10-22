@@ -1333,18 +1333,61 @@
       clear.focus();
     });
 
-    fetch("https://sqspthemes-assets.pages.dev/directory-data.json", { cache: "no-cache" })
+    function normalizeDirectoryDesigner(x) {
+      x = x || {};
+      var person = x.person || x.name || "";
+      var studio = x.studio || "";
+      var displayName = x.listingName || x.currentListingName || person || studio;
+
+      if (!x.listingName && !x.currentListingName && person && studio &&
+          person.toLowerCase() !== studio.toLowerCase()) {
+        displayName = person + " – " + studio;
+      }
+
+      var clientTypes = Array.isArray(x.clientTypes)
+        ? x.clientTypes
+        : String(x.clients || "").split(",").map(function (item) {
+            return item.trim();
+          }).filter(Boolean);
+
+      return {
+        order: x.order,
+        name: displayName,
+        person: person,
+        studio: studio,
+        location: x.location || "",
+        region: x.region || "global",
+        projectRange: x.projectRange || x.range || "",
+        budgets: Array.isArray(x.budgets) ? x.budgets : [],
+        clientTypes: clientTypes,
+        needs: Array.isArray(x.needs) ? x.needs : [],
+        portfolio: x.portfolio || x.portfolioUrl || "",
+        contact: x.contact || x.contactUrl || "",
+        image: x.image || x.imageUrl || "",
+        imageType: x.imageType || "",
+        avatarReady: x.avatarReady,
+        description: x.description || x.moreAbout || x.blurb || "",
+        profileUrl: x.profileUrl || x.portfolio || x.portfolioUrl || x.contact || x.contactUrl || ""
+      };
+    }
+
+    fetch("https://sqspthemes-assets.pages.dev/api/designers", { cache: "no-store" })
       .then(function (r) {
         if (!r.ok) throw new Error(r.status);
         return r.json();
       })
       .then(function (data) {
-        designers = (data.designers || []).slice().sort(function (a,b) {
+        if (!data || data.ok !== true || !Array.isArray(data.designers)) {
+          throw new Error(data && data.error ? data.error : "Invalid directory response");
+        }
+
+        designers = data.designers.map(normalizeDirectoryDesigner).sort(function (a,b) {
           return (a.order || 999) - (b.order || 999);
         });
         apply();
       })
-      .catch(function () {
+      .catch(function (error) {
+        console.error("SQSPThemes directory load error:", error);
         count.textContent = "Directory data could not load.";
         empty.hidden = false;
         empty.textContent = "Please refresh the page in a moment.";
